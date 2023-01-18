@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  text-shadow:-1px 0 rgb(255, 0, 0), 0 1px rgb(0, 0, 0), 1px 0 rgb(255, 242, 101), 0 -1px rgb(89, 255, 180);
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0 0 #00F, 0 0 #00F, 0 0 #00F;
+  }
+  20% {
+    text-shadow: -1px 0 #00F, 0 1px #00F, 1px 0 #00F, 0 -1px #00F;
+  }
+  40% {
+    text-shadow: -2px 0 #00F, 0 2px #00F, 2px 0 #00F, 0 -2px #00F;
+  }
+  60% {
+    text-shadow: -1px 0 #00F, 0 1px #00F, 1px 0 #00F, 0 -1px #00F;
+  }
+  100% {
+    text-shadow: 0 0 #00F, 0 0 #00F, 0 0 #00F;
+  }
+  
+}
+
+.glitch {
+  animation: glitch 2s infinite linear alternate;
+}
