@@ -7,6 +7,7 @@
 }
 
 body {
+  scroll-snap-type: both mandatory;
   margin: 0;
   font-family: bender, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
