@@ -53,7 +53,8 @@
 }
 
 .font-shadow-white-light{
-  text-shadow:rgba(255, 255, 255, 0.87) 0px 0 4px,
+  text-shadow:
+  rgba(210, 182, 0, 0.87) 0px 0 4px,
   rgb(255, 255, 255) 0px 0 10px ;
 }
 
@@ -77,6 +78,19 @@
     rgba(127, 127, 127, 0.3),
     rgba(0, 0, 0, 0.5),
     rgba(127, 127, 127, 0.3))
+  ,url(./background-images/dev-pattern.png);
+  
+  background-position: center;
+  background-size: 75px;
+  
+}
+
+.bg-dev-centered-reversed{
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(127, 127, 127, 0.2),
+    rgba(0, 0, 0, 0.7))
   ,url(./background-images/dev-pattern.png);
   
   background-position: center;
@@ -114,10 +128,10 @@
   background-size: 800px;
 }
 
-.intro:before, 
-.intro:after, 
-.intro>:last-child:before, 
-.intro>:last-child:after {
+.corners:before, 
+.corners:after, 
+.corners>:last-child:before, 
+.corners>:last-child:after {
     position: absolute;
     width: 10px; 
     height: 10px;
@@ -128,28 +142,43 @@
     
 }
 
-.intro:before {
+.corners:before {
     top: 20px;
     left: 20px;
     border-width: 2px 0 0 2px
 }
 
-.intro:after {
+.corners:after {
     top: 20px;
     right: 20px;
     border-width: 2px 2px 0 0
 }
 
-.intro>:last-child:before {
+.corners>:last-child:before {
     bottom: 20px;
     right: 20px;     
     border-width: 0 2px 2px 0
 }
 
-.intro>:last-child:after {
+.corners>:last-child:after {
     bottom: 20px;
     left: 20px;
     border-width: 0 0 2px 2px
+}
+
+.top-neg-5{
+  top: -1.25rem
+}
+.top-neg-20{
+  top: -5rem;
+}
+
+.max-height-125{
+  max-height: 125%;
+}
+
+.w-initial{
+  width: initial;
 }
 
 @keyframes rotate {
