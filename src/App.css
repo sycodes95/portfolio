@@ -54,7 +54,7 @@
 
 .font-shadow-white-light{
   text-shadow:
-  rgba(210, 182, 0, 0.87) 0px 0 4px,
+  rgba(255, 255, 255, 0.87) 0px 0 4px,
   rgb(255, 255, 255) 0px 0 10px ;
 }
 
@@ -122,6 +122,14 @@
   
 }
 
+.bg-striped-content-red{
+  
+  background:linear-gradient(rgba(83, 0, 0, 0.85), rgba(105, 0, 0, 0.85)), url(./background-images/striped-mesh.jpg);
+  background-position: cover;
+  background-size: 500px;
+  
+}
+
 .bg-striped-content-big{
   background:linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url(./background-images/striped-mesh.jpg);
   background-position: cover;
@@ -179,6 +187,34 @@
 
 .w-initial{
   width: initial;
+}
+
+.PROJ-CONTAINER{
+  grid-template-columns: repeat(4,1fr);
+  
+}
+@media (max-width: 1200px) {
+  .PROJ-CONTAINER{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .PROJ-CONTAINER{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .PROJ-CONTAINER{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .PROJ-CONTAINER{
+    grid-template-columns: repeat(3,1fr);
+  }
 }
 
 @keyframes rotate {
