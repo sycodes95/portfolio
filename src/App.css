@@ -3,16 +3,17 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar{
-  width: 14px;
+  width: 12px;
   height: 10px;
+  
 }
 
 ::-webkit-scrollbar-track{
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(21, 21, 21);
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: rgb(159, 159, 159);
+  background-color: rgb(0, 0, 0);
 }
 
 
@@ -63,6 +64,16 @@
   rgb(255, 255, 255) 0px 0 50px ; 
 }
 
+.text-bg {
+  background:linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.6)), url(./background-images/stripes.webp);
+  background-position: cover;
+  background-size: 125px;
+  background-clip: text;
+  
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent;
+}
+
 .menu:hover{
   
   text-shadow:rgba(255, 255, 255, 0.87) 0px 0 4px,
@@ -108,7 +119,7 @@
 
 .bg-dev-top-dark{
   background:
-  linear-gradient( rgba(0, 0, 0, 0.7), rgba(7, 14, 53, 0.2)),url(./background-images/dev-pattern.png);
+  linear-gradient( rgba(0, 0, 0, 0.6), rgba(7, 14, 53, 0.2)),url(./background-images/dev-pattern.png);
   background-position: center;
   background-size: 80px;
   
@@ -153,7 +164,7 @@
     position: absolute;
     width: 10px; 
     height: 10px;
-    border-color: red; 
+    border-color: rgb(0, 0, 0); 
     border-style: solid;
     content: ' ';
     opacity: 0.4;
@@ -199,11 +210,18 @@
   width: initial;
 }
 
-
-
+.PRO-ONE-DIV{
+  
+}
+.PROJECT-CONTAINER{
+  
+}
 .PROJECT-CONTENT {
   grid-template-columns: repeat(2, 1fr);
+  
 }
+
+
 
 .DEMO{
   grid-column: 1/3;
@@ -228,34 +246,52 @@
   grid-template-columns: repeat(6, 1fr);
 }
 
+.PROJECTS{
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .PROJECT-ONE-IMAGE {
   background:linear-gradient(rgba(40, 40, 40, 0.78), rgba(0, 0, 0, 0.85)), url(./images/dummyimage.png);
   background-position: cover;
   background-size:auto;
 }
 
-
-.PROJECT-CONTAINER {
-  width: 60%;
-  
-
+.ICON-CONTAINER{
+  width: 90%;
 }
-@media (max-width: 1200px) {
+.PROJECT-CONTAINER {
+  width: 90%;
+}
+@media (max-width: 1440px) {
+  
+  .TOOLS{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1200px) 
+{
+  .ICON-CONTAINER{
+    width: 80%;
+  }
   .PROJECT-CONTAINER {
     width: 80%;
+  }
+  .PROJECTS{
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 992px) {
+  .ICON-CONTAINER{
+    width: 90%;
+  }
   .PROJECT-CONTAINER {
     width: 90%;
   }
 }
 
 @media (max-width: 768px) {
-  .PROJECT-CONTAINER {
-    width: 90%;
-  }
+  
   .PROJECT-CONTENT {
     grid-template-columns: 1fr;
   }
@@ -277,6 +313,22 @@
 @media (max-width: 480px) {
   .PROJECT-CONTAINER {
     width: 90%;
+  }
+  .PROJECT-CONTENT {
+    grid-template-columns: 1fr;
+  }
+  .DETAIL{
+    height: 24rem;
+  }
+  
+}
+
+@media (max-width: 300px) {
+  .APP{
+    width: 300px;
+  }
+  .PROJECT-CONTAINER {
+    width: 280px;
   }
   .PROJECT-CONTENT {
     grid-template-columns: 1fr;

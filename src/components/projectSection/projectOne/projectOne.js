@@ -14,7 +14,7 @@ function ProjectOne () {
     >
 
       <section className='TITLE
-      bg-striped-content-red bg-opacity-50 rounded-sm bottom-left-round  bottom-right-round
+      bg-black bg-opacity-50  rounded-sm bottom-left-round  bottom-right-round
       font-black-outline-light 
       text-center text-white
       col-span-2'>

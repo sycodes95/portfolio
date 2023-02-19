@@ -9,11 +9,11 @@ function Demo () {
   }
   return (
     <section className=" col-span-2 pt-2 pr-2 pl-2 flex justify-center">
-      <div className="relative bg-black bg-opacity-25 flex justify-center items-center overflow-hidden p-4 h-2/4">
+      <div className="relative bg-black bg-opacity-25 flex justify-center items-center overflow-hidden p-4 h">
         
         
           
-        <img className="bg-center grayscale h-full hover:cursor-pointer z-10" src={dummyimage} ref={imageRef}/>
+        <img className=" grayscale hover:cursor-pointer z-10 " src={dummyimage} ref={imageRef}/>
         <div className={`overlay absolute bg-black bg-opacity-50 z-10 w-full h-full
         hover:bg-opacity-0 hover:cursor-pointer
         transition-all`}

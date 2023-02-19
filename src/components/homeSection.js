@@ -23,11 +23,11 @@ function HomeSection() {
 
   const bulbRef = useRef(null);
   return (
-    <section className="content-con max-h-screen grid bg-dev corners">
+    <section className="content-con max-h-screen w-full grid corners">
 
-      <div className="bg-dev-top-dark flex justify-center items-center h-screen w-full ">
+      <div className=" flex justify-center items-center h-screen w-full ">
 
-        <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden">
+        <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden ">
           <img
             className="absolute top-neg-20 pointer-events-none"
             src={bulb}
@@ -36,13 +36,23 @@ function HomeSection() {
           />
         </div>
 
-        <div className="border-opacity-0 flex flex-col justify-center text-center">
-          <span className="font-shadow-white-light text-white">
-            Kevin <span className="">S.Y</span> Kim
-          </span>
-          <span className="font-shadow-white-light text-white ">
-            Fullstack Developer.
-          </span>
+        <div className="
+        absolute left-2/4 -translate-x-1/2 
+        p-2 
+        bg-black bg-opacity-25 shadow-2xl
+        rounded-sm min-w-max
+        
+        "
+        >
+          <div className="p-2 bg-black bg-opacity-10 flex items-end gap-x-2 ">
+            <h2 className=" text-white text-opacity-75 text-4xl text-bg font-bold">
+              Kevin Kim
+            </h2>
+            <span className=" text-red-700 text-opacity-70 font-bold ">
+              Fullstack Developer.
+            </span>
+          </div>
+          
         </div>
 
       </div>

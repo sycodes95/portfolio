@@ -19,7 +19,7 @@ function Feature () {
     >  
       <div className='text-md text-center  font-bold text-white'>FEATURES</div>
       
-      <ul className='text-xs text-yellow-200 font-black-outline-light flex flex-col justify-center gap-y-2 p-2 w-full'>
+      <ul className='text-xs text-orange-300 font-black-outline-light flex flex-col justify-center gap-y-2 p-2 w-full'>
       {
         featuresElements.map(feature => (
           <li className='bg-black bg-opacity-25 rounded-sm p-1'>{feature}</li>

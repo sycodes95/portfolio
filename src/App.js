@@ -26,10 +26,10 @@ function App() {
   },[])
     
   return (
-    <div className='app-con '>
+    <div className='APP bg-dev-top-dark'>
       
-      <div className='nav w-52 fixed right-0  h-8 bg-striped-content bg-opacity-80 text-white  
-      bottom-left-round bottom-right-round p-2 text-xs grid grid-cols-3 gap-x-4 z-10'>
+      <div className='nav w-52 fixed left-1/2 -translate-x-1/2 h-8 bg-black bg-opacity-60 text-white  
+      bottom-left-round bottom-right-round p-2 text-xs grid grid-cols-3 gap-x-4 z-20'>
         <button className='menu transition-all'>ABOUT</button>
         <button className='menu transition-all' onClick={scrollToProjects}>PROJECTS</button>
         <button className='menu transition-all'>CONTACT</button>
@@ -86,7 +86,7 @@ function App() {
 
       
 
-      <div className='h-screen w-full bg-dev-centered-reversed  grid'>
+      <div className=' w-full bg-dev-centered-reversed  grid'>
         
         
 
