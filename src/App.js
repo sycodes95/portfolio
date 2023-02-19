@@ -13,7 +13,7 @@ import { mdiRun, mdiFinance, mdiWeightLifter } from '@mdi/js';
 import ProjectSection from './components/projectSection/projectSection';
 import HomeSection from './components/homeSection';
 
-
+import downArrow from './icons/down-arrow.svg'
 
 function App() {
 
@@ -33,6 +33,16 @@ function App() {
         <button className='menu transition-all'>ABOUT</button>
         <button className='menu transition-all' onClick={scrollToProjects}>PROJECTS</button>
         <button className='menu transition-all'>CONTACT</button>
+      </div>
+
+      <div className='nav absolute left-1/2 top-3/4 -translate-x-1/2   bg-opacity-25 text-white  
+      top-left-round bottom-right-round p-2 text-xs gap-x-4 z-20 '>
+        
+        <button className='transition-all flex justify-center items-center 
+        text-white  text-opacity-50  hover:text-red-700 hover:text-opacity-50' onClick={scrollToProjects}>
+          <ReactSVG className=' ' src={downArrow}/>
+        </button>
+        
       </div>
 
       

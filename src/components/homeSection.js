@@ -45,7 +45,7 @@ function HomeSection() {
         "
         >
           <div className="p-2 bg-black bg-opacity-10 flex items-end gap-x-2 ">
-            <h2 className=" text-white text-opacity-75 text-4xl text-bg font-bold">
+            <h2 className=" text-white text-opacity-75 text-4xl font-bg-gradient font-bold">
               Kevin Kim
             </h2>
             <span className=" text-red-700 text-opacity-70 font-bold ">

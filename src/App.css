@@ -64,7 +64,7 @@
   rgb(255, 255, 255) 0px 0 50px ; 
 }
 
-.text-bg {
+.font-bg-gradient {
   background:linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.6)), url(./background-images/stripes.webp);
   background-position: cover;
   background-size: 125px;
@@ -256,12 +256,8 @@
   background-size:auto;
 }
 
-.ICON-CONTAINER{
-  width: 90%;
-}
-.PROJECT-CONTAINER {
-  width: 90%;
-}
+
+
 @media (max-width: 1440px) {
   
   .TOOLS{
@@ -270,24 +266,14 @@
 }
 @media (max-width: 1200px) 
 {
-  .ICON-CONTAINER{
-    width: 80%;
-  }
-  .PROJECT-CONTAINER {
-    width: 80%;
-  }
+  
   .PROJECTS{
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 992px) {
-  .ICON-CONTAINER{
-    width: 90%;
-  }
-  .PROJECT-CONTAINER {
-    width: 90%;
-  }
+  
 }
 
 @media (max-width: 768px) {
@@ -311,9 +297,6 @@
 }
 
 @media (max-width: 480px) {
-  .PROJECT-CONTAINER {
-    width: 90%;
-  }
   .PROJECT-CONTENT {
     grid-template-columns: 1fr;
   }
@@ -327,9 +310,7 @@
   .APP{
     width: 300px;
   }
-  .PROJECT-CONTAINER {
-    width: 280px;
-  }
+  
   .PROJECT-CONTENT {
     grid-template-columns: 1fr;
   }
@@ -342,15 +323,12 @@
 }
 
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rotate {
+  animation: rotate 2s linear infinite;
 }
 
-.glitch {
-  animation: glitch 2s infinite linear alternate;
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
