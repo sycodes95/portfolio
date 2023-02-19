@@ -25,7 +25,7 @@ function HomeSection() {
   return (
     <section className="content-con max-h-screen grid bg-dev corners">
 
-      <div className="bg-dev-centered-reversed flex justify-center items-center h-screen w-full ">
+      <div className="bg-dev-top-dark flex justify-center items-center h-screen w-full ">
 
         <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden">
           <img
