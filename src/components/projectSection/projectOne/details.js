@@ -34,11 +34,11 @@ function Detail () {
 
   return (
     <div className='DETAIL 
-    m-2 p-2 
+    ml-2 mt-2 mb-2 p-2
     bg-black bg-opacity-25
     text-white
     rounded-sm
-    
+    w-full
     flex flex-col justify-between
     '>
       <div className=
@@ -52,7 +52,8 @@ function Detail () {
       >
         <em>BUILT TO HELP TRADERS FIND, EXECUTE, AND REFINE THEIR EDGE USING STATISTICS IN ORDER TO INCREASE PROFITABILITY IN THE FINANCIAL MARKETS.</em>
       </div>
-
+      {
+       
       <div className='TOOLS-CONTAINER
       m-2 p-2 bg-black bg-opacity-25 rounded-sm
       
@@ -78,7 +79,8 @@ function Detail () {
         
         
       </div>
-
+      
+      }
       <div className='LINKS 
       m-2 p-2 bg-black bg-opacity-25 rounded-sm
       

@@ -2,7 +2,7 @@
 import Demo from "./demo";
 import Detail from "./details";
 import Feature from "./feature";
-
+import Tools from "./tools";
 function ProjectOne () {
 
   
@@ -10,36 +10,35 @@ function ProjectOne () {
   
   return (
     <div className='PROJECT-CONTAINER 
-    bg-black bg-opacity-25 '
+    bg-black bg-opacity-25 grid '
     >
-
-      <section className='TITLE
-      bg-black bg-opacity-50  rounded-sm bottom-left-round  bottom-right-round
-      font-black-outline-light 
-      text-center text-white
-      col-span-2'>
-
-        <span>PROJECT "EDGE SCOUT"</span>
-
-      </section>
-      <section className="PROJECT-CONTENT 
-      grid "
-      >
-
-        <div className="DEMO ">
-          <Demo/> 
-        </div>
-        <div className="DETAIL flex flex-grow">
-          <Detail/>
-        </div>
-        <div className="FEATURE flex flex-grow">
-          <Feature/>
-        </div>
+      
+      <div className="DEMO 
+        ">
         
-        
+      
+        <Demo/> 
+      </div>
+      <div className="DETAIL flex flex-grow z-30">
+        <Detail/>
+      </div>
+      <div className="FEATURE flex flex-grow z-30">
+        <Feature/>
+      </div>
+      {
+        /*
+        <div className="TOOLS 
+          ">
+          <Tools/> 
+        </div>
+        */
+      }
+      
         
 
-      </section>
+      
+
+      
       
       
     </div>

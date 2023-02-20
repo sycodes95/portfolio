@@ -35,8 +35,13 @@ function App() {
         <button className='menu transition-all'>CONTACT</button>
       </div>
 
-      <div className='nav absolute left-1/2 top-3/4 -translate-x-1/2   bg-opacity-25 text-white  
-      top-left-round bottom-right-round p-2 text-xs gap-x-4 z-20 '>
+      <div className='nav 
+      absolute left-1/2 top-3/4 -translate-x-1/2   
+      bg-opacity-25 
+      text-white text-xs
+      top-left-round bottom-right-round
+      p-2 
+      z-20 '>
         
         <button className='transition-all flex justify-center items-center 
         text-white  text-opacity-50  hover:text-red-700 hover:text-opacity-50' onClick={scrollToProjects}>
@@ -50,7 +55,8 @@ function App() {
 
       <HomeSection/>
 
-      <section ref={projectsRef}>
+      <section className='flex justify-center relative' ref={projectsRef}>
+        
         <ProjectSection />
       </section>
       

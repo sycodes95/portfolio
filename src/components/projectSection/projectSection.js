@@ -1,15 +1,17 @@
 import ProjectOne from "./projectOne/projectOne";
 import { ReactSVG } from "react-svg";
 import triangledots from "../../icons/triangledots.svg"
+import edgescoutPNG from "../../images/edgescout.png"
 
 function ProjectSection () {
 
   return (
-    <section className='PROJECT-SECTION pb-96 pt-12 gap-y-12 ml-12 mr-12'>
+    <section className='PROJECT-SECTION pb-96 pt-12 gap-y-12'>
+
       <div className="
        row-span-1 col-span-2 row-start-1 
        flex justify-center items-center 
-       mb-8 
+       mb-4
        
        rounded-sm h-12">
         
@@ -21,12 +23,16 @@ function ProjectSection () {
         
       </div>
         
-      <section className='PROJECTS grid gap-x-8'>
-        <div className="PRO-ONE-DIV flex justify-center h-auto ">
-          <ProjectOne/> 
+      <section className=' grid gap-x-8'>
+        <div className="SIDE-INFO text-white absolute left-0 bg-black bg-opacity-25 w-48 h-48
+         flex justify-center items-center text-center text-8xl">
+          <div className="">01</div>
         </div>
-
-        <div className="PRO-ONE-DIV flex justify-center h-auto">
+        <div className="SIDE-INFO text-white absolute right-0 bg-black bg-opacity-25 w-48 h-48
+         flex justify-center items-center text-center text-8xl bg-edgescout">
+          
+        </div>
+        <div className="flex justify-center h-auto ">
           <ProjectOne/> 
         </div>
       </section>
