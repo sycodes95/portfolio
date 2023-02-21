@@ -18,6 +18,18 @@ import downArrow from './icons/down-arrow.svg'
 function App() {
 
   const projectsRef = useRef(null)
+  const arrowRef = useRef(null)
+  const navRef = useRef(null)
+
+  useEffect(() => {
+    arrowRef.current.classList.add('opacity-100')
+    arrowRef.current.classList.remove('opacity-0')
+  }, []);
+
+  useEffect(() => {
+    navRef.current.classList.add('top-0')
+    navRef.current.classList.remove('-top-1/4')
+  }, []);
 
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
 
@@ -29,7 +41,9 @@ function App() {
     <div className='APP bg-dev-top-dark'>
       
       <div className='nav w-52 fixed left-1/2 -translate-x-1/2 h-8 bg-black bg-opacity-60 text-white  
-      bottom-left-round bottom-right-round p-2 text-xs grid grid-cols-3 gap-x-4 z-20'>
+      bottom-left-round bottom-right-round p-2 text-xs grid grid-cols-3 gap-x-4 z-20
+      -top-1/4 transition-all delay-300 duration-1000'
+      ref={navRef}>
         <button className='menu transition-all'>ABOUT</button>
         <button className='menu transition-all' onClick={scrollToProjects}>PROJECTS</button>
         <button className='menu transition-all'>CONTACT</button>
@@ -44,20 +58,25 @@ function App() {
       z-20 '>
         
         <button className='transition-all flex justify-center items-center 
-        text-white  text-opacity-50  hover:text-red-700 hover:text-opacity-50' onClick={scrollToProjects}>
+        text-white  text-opacity-50 opacity-0  hover:text-red-700 hover:text-opacity-50 
+        transition-opacity delay-500 duration-1000'
+         onClick={scrollToProjects} ref={arrowRef}>
           <ReactSVG className=' ' src={downArrow}/>
         </button>
         
       </div>
 
       
-      
+      <section className='flex justify-center relative'>
+        <HomeSection/>
+      </section>
 
-      <HomeSection/>
-
-      <section className='flex justify-center relative' ref={projectsRef}>
-        
+      <section className='flex justify-center relative overflow-hidden' ref={projectsRef}>
         <ProjectSection />
+      </section>
+
+      <section className='flex justify-center relative overflow-hidden'>
+        
       </section>
       
 
@@ -102,11 +121,7 @@ function App() {
 
       
 
-      <div className=' w-full bg-dev-centered-reversed  grid'>
-        
-        
-
-      </div>
+      
 
       
     </div>

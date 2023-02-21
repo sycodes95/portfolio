@@ -9,7 +9,8 @@
 }
 
 ::-webkit-scrollbar-track{
-  background-color: rgb(21, 21, 21);
+  background-color: rgba(21, 21, 21);
+  
 }
 
 ::-webkit-scrollbar-thumb{
@@ -232,9 +233,19 @@
   
 }
 
+.BULB{
+  
+  transition: top ease-in 800ms;
+
+}
+
+.TOP-BULB{
+  top: -10%;
+}
 .PROJECT-SECTION{
   width: 50%;
 }
+
 .PROJECT-CONTAINER{
   grid-template-columns: repeat(2, 1fr);
   
@@ -282,6 +293,10 @@
   background:linear-gradient(rgba(40, 40, 40, 0.78), rgba(0, 0, 0, 0.85)), url(./images/dummyimage.png);
   background-position: cover;
   background-size:auto;
+}
+
+.INTRO-DEV{
+  font-size: 0.9rem;
 }
 
 
@@ -342,6 +357,14 @@
   .DETAIL{
     height: 24rem;
   }
+  .INTRO-DEV{
+    font-size: 0.5rem;
+  }
+  
+  .INTRO-NAME{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
   
 }
 
@@ -349,6 +372,7 @@
   .APP{
     width: 300px;
   }
+  
   
   .PROJECT-CONTENT-RIGHT {
     grid-template-columns: 1fr;

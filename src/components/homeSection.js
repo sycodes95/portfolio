@@ -4,6 +4,10 @@ import bulb from '../images/bulb.png'
 
 function HomeSection() {
 
+  const bulbRef = useRef(null);
+
+  const introRef = useRef(null)
+
   const handleMouseMove = (event) => {
     const x = event.clientX;
     const y = event.clientY;
@@ -21,7 +25,17 @@ function HomeSection() {
     };
   }, []);
 
-  const bulbRef = useRef(null);
+  useEffect(() => {
+    bulbRef.current.classList.add('TOP-BULB')
+    bulbRef.current.classList.remove('-top-3/4')
+  }, []);
+
+  useEffect(() => {
+    introRef.current.classList.add('opacity-100')
+    introRef.current.classList.remove('opacity-0')
+  }, []);
+
+  
   return (
     <section className="content-con max-h-screen w-full grid corners">
 
@@ -29,7 +43,7 @@ function HomeSection() {
 
         <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden ">
           <img
-            className="absolute top-neg-20 pointer-events-none"
+            className="absolute -top-3/4 pointer-events-none BULB"
             src={bulb}
             ref={bulbRef}
             alt=''
@@ -41,16 +55,22 @@ function HomeSection() {
         p-2 
         bg-black bg-opacity-25 shadow-2xl
         rounded-sm min-w-max
-        
+        flex justify-center flex-shrink
+        opacity-0 transition-opacity delay-500 duration-1000
         "
+        ref={introRef}
         >
-          <div className="p-2 bg-black bg-opacity-10 flex items-end gap-x-2 ">
-            <h2 className=" text-white text-opacity-75 text-4xl font-bg-gradient font-bold">
+          <div className=" p-2 bg-black bg-opacity-10 flex items-end gap-x-2">
+            
+            <span className="text-white text-opacity-75 font-bg-gradient font-bold text-3xl INTRO-NAME" >
               Kevin Kim
-            </h2>
-            <span className=" text-red-700 text-opacity-70 font-bold ">
-              Fullstack Developer.
             </span>
+            <div className="">
+              <span className="items-end text-red-700 text-opacity-70 font-bold INTRO-DEV " >
+                Fullstack Developer.
+              </span>
+            </div>
+            
           </div>
           
         </div>
