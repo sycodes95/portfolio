@@ -14,16 +14,20 @@ import ProjectSection from './components/projectSection/projectSection';
 import HomeSection from './components/homeSection';
 
 import downArrow from './icons/down-arrow.svg'
+import AboutSection from './components/aboutSection/aboutSection';
 
 function App() {
 
   const projectsRef = useRef(null)
+  const aboutRef = useRef(null)
   const arrowRef = useRef(null)
   const navRef = useRef(null)
 
   useEffect(() => {
     arrowRef.current.classList.add('opacity-100')
     arrowRef.current.classList.remove('opacity-0')
+    
+    
   }, []);
 
   useEffect(() => {
@@ -32,34 +36,38 @@ function App() {
   }, []);
 
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
-
-  useEffect(()=>{
-    console.log(projectsRef);
-  },[])
+  const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  
     
   return (
-    <div className='APP bg-dev-top-dark'>
+    <div className='APP bg-dev-top-dark' onLoad={handleScrollToTop}>
       
       <div className='nav w-52 fixed left-1/2 -translate-x-1/2 h-8 bg-black bg-opacity-60 text-white  
-      bottom-left-round bottom-right-round p-2 text-xs grid grid-cols-3 gap-x-4 z-20
+      bottom-left-round bottom-right-round p-2 text-xs grid grid-cols-3 gap-x-4 z-50
       -top-1/4 transition-all delay-300 duration-1000'
       ref={navRef}>
-        <button className='menu transition-all'>ABOUT</button>
+        <button className='menu transition-all' onClick={scrollToAbout}>ABOUT</button>
         <button className='menu transition-all' onClick={scrollToProjects}>PROJECTS</button>
-        <button className='menu transition-all'>CONTACT</button>
+        <button className='menu transition-all' >CONTACT</button>
       </div>
 
       <div className='nav 
-      absolute left-1/2 top-3/4 -translate-x-1/2   
+      absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2  
       bg-opacity-25 
       text-white text-xs
       top-left-round bottom-right-round
       p-2 
       z-20 '>
         
-        <button className='transition-all flex justify-center items-center 
-        text-white  text-opacity-50 opacity-0  hover:text-red-700 hover:text-opacity-50 
-        transition-opacity delay-500 duration-1000'
+        <button className='flex justify-center items-center 
+        text-white text-opacity-50 opacity-0 delay-500 duration-1000 
+        rounded-full bg-black bg-opacity-25 p-2 '
          onClick={scrollToProjects} ref={arrowRef}>
           <ReactSVG className=' ' src={downArrow}/>
         </button>
@@ -75,8 +83,8 @@ function App() {
         <ProjectSection />
       </section>
 
-      <section className='flex justify-center relative overflow-hidden'>
-        
+      <section className='flex justify-center relative overflow-hidden' ref={aboutRef}>
+        <AboutSection/>
       </section>
       
 

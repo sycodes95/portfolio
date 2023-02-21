@@ -3,6 +3,9 @@ import { ReactSVG } from "react-svg";
 import triangledots from "../../icons/triangledots.svg"
 import edgescoutPNG from "../../images/edgescout.png"
 import { useEffect, useRef } from "react";
+import Icon from '@mdi/react';
+import { mdiHammerWrench } from '@mdi/js';
+
 
 
 function ProjectSection () {
@@ -49,7 +52,7 @@ function ProjectSection () {
   }, [projectOne.current]);
 
   return (
-    <section className='PROJECT-SECTION pb-96 pt-12 gap-y-12'>
+    <section className='PROJECT-SECTION pb-24 pt-12 gap-y-12'>
 
       <div className="
        row-span-1 col-span-2 row-start-1 
@@ -58,9 +61,10 @@ function ProjectSection () {
        
        rounded-sm h-12">
         
-        <div className="ICON-CONTAINER bg-black bg-opacity-25 h-full w-full flex items-center">
+        <div className="ICON-CONTAINER bg-black bg-opacity-25 h-full w-full flex items-center border-2 border-black ">
           <div className="flex justify-start ml-2 w-fit">
-            <ReactSVG className="h-8 w-8 text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md " src={triangledots}/>
+            <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md" path={mdiHammerWrench} size={1.5} />
+            
           </div>
 
           <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-red-700 text-opacity-70 text-xl">
@@ -68,7 +72,7 @@ function ProjectSection () {
           </div>
 
           <div className="flex justify-end mr-2 w-fit">
-            <ReactSVG className="h-8 w-8 text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md " src={triangledots}/>
+            <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md flip" path={mdiHammerWrench} size={1.5} />
           </div>
           
           
@@ -77,16 +81,16 @@ function ProjectSection () {
         
       </div>
         
-      <section className=' grid gap-x-8 shadow-md' ref={projectOne}>
+      <section className=' grid gap-x-8 shadow-md ' ref={projectOne}>
 
-        <div className="SIDE-INFO text-white absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
-         flex justify-center items-center text-center text-8xl transition-all duration-500" ref={projectOneLeft}>
+        <div className="SIDE-INFO border-2 border-black text-white absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
+         flex justify-center items-center text-center text-8xl transition-all duration-500 bg-striped-3 right-corner-clip" ref={projectOneLeft}>
           <div className="">01</div>
         </div>
 
-        <div className="SIDE-INFO text-white absolute -right-1/4 bg-black bg-opacity-25 w-48 h-48
-         flex justify-center items-center text-center text-8xl bg-edgescout transition-all duration-500" ref={projectOneRight}>
-
+        <div className="SIDE-INFO border-2 border-black text-white absolute -right-1/4 bg-black bg-opacity-25 w-48 h-48
+         flex justify-center items-center text-center text-8xl bg-striped-3 transition-all duration-500" ref={projectOneRight}>
+          <img src={edgescoutPNG}/>
         </div>
 
 

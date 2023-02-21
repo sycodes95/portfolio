@@ -1,12 +1,14 @@
 import { useRef, useEffect } from "react";
 import bulb from '../images/bulb.png'
-
+import windowLight from '../images/windowlight.png'
 
 function HomeSection() {
 
   const bulbRef = useRef(null);
 
   const introRef = useRef(null)
+
+  const windowRef = useRef(null)
 
   const handleMouseMove = (event) => {
     const x = event.clientX;
@@ -35,6 +37,11 @@ function HomeSection() {
     introRef.current.classList.remove('opacity-0')
   }, []);
 
+  useEffect(() => {
+    windowRef.current.classList.add('opacity-100')
+    windowRef.current.classList.remove('opacity-0')
+  }, []);
+
   
   return (
     <section className="content-con max-h-screen w-full grid corners">
@@ -50,9 +57,19 @@ function HomeSection() {
           />
         </div>
 
+        <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden ">
+          <img
+            className="absolute right-0 pointer-events-none WINDOW opacity-0 transition-all delay-500 duration-1000"
+            src={windowLight}
+            ref={windowRef}
+            alt=''
+          />
+        </div>
+
         <div className="
         absolute left-2/4 -translate-x-1/2 
         p-2 
+        border-2 border-black border-opacity-50
         bg-black bg-opacity-25 shadow-2xl
         rounded-sm min-w-max
         flex justify-center flex-shrink

@@ -13,7 +13,7 @@ function Feature () {
       m-2 p-2 
       bg-black bg-opacity-25 
       rounded-sm
-      
+      bg-striped-2
       flex flex-col 
       '
     >  

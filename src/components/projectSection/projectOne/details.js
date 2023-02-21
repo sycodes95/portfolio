@@ -40,6 +40,7 @@ function Detail () {
     rounded-sm
     w-full
     flex flex-col justify-between
+    bg-striped-2
     '>
       <div className=
       'text-md text-center font-bold pb-2'
