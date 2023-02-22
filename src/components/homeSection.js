@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import bulb from '../images/bulb.png'
+import dust from '../images/dust.png'
 import windowLight from '../images/windowlight.png'
 
 function HomeSection() {
@@ -65,6 +66,8 @@ function HomeSection() {
             alt=''
           />
         </div>
+
+        
 
         <div className="
         absolute left-2/4 -translate-x-1/2 

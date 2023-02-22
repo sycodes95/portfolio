@@ -20,10 +20,13 @@ function AboutSection () {
        row-span-1 col-span-2 row-start-1 
        flex justify-center items-center 
        mb-4
-       
        rounded-sm h-12">
         
-        <div className="ICON-CONTAINER bg-black bg-opacity-25 h-full w-full flex items-center border-2 border-black bg-striped">
+        <div className="ICON-CONTAINER
+         bg-black bg-opacity-25 bg-striped
+         h-full w-full 
+         flex items-center 
+         border-2 border-black ">
           <div className="flex justify-start ml-2 w-fit">
             <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md" path={mdiDna} size={1.5} />
           </div>
@@ -42,11 +45,30 @@ function AboutSection () {
         
       </div>
 
-      <div className="grid grid-cols-2 bg-black bg-opacity-25">
-        <div className="col-span-1 m-2 p-2 bg-black bg-opacity-25 flex justify-center">
+      <div className="
+      grid grid-cols-2 
+      bg-black bg-opacity-25
+      ">
+
+        <div className="
+        col-span-1 
+        m-2 p-2
+      bg-black bg-opacity-25  
+        flex justify-center 
+        border-8 border-opacity-50 border-black">
+
           <img className="SILHOUTTE " src={silhoutte}/>
         </div>
-        <div className="col-span-1"></div>
+
+        <div className="
+        col-span-1 
+        m-2 p-2 
+        bg-black bg-opacity-25 bg-striped-2 
+        flex justify-center 
+        border-opacity-50 border-black">
+          
+          
+        </div>
 
       </div>
      
