@@ -38,10 +38,12 @@ function App() {
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
   const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: 'smooth' });
   const handleScrollToTop = () => {
+    /*
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
+    */
   };
   
     

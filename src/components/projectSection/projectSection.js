@@ -127,7 +127,7 @@ function ProjectSection () {
         
       </div>
         
-      <section className=' grid gap-x-8 shadow-md ' ref={projectOne}>
+      <section className=' grid gap-x-8 shadow-md overflow-hidden' ref={projectOne}>
 
         <div className="SIDE-INFO border-2 border-black text-white absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
          flex justify-center items-center text-center text-8xl transition-all duration-500 bg-striped-3 right-corner-clip" ref={projectOneLeft}>
@@ -140,7 +140,7 @@ function ProjectSection () {
         </div>
 
 
-        <div className="flex justify-center h-auto ">
+        <div className="flex justify-center h-auto  ">
           <ProjectOne/> 
         </div>
 

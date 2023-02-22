@@ -152,6 +152,35 @@
   
 }
 
+.bg-dna::before {
+  content: "";
+  background-image: url("./images/dna.png");
+  background-position: center;
+  background-size: 26px;
+  background-repeat: round;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.bg-bear{
+  background:
+  url(./images/americaflag.png);
+  
+  
+  
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+
+
+
 .bg-striped-content{
   
   background:linear-gradient(rgba(40, 40, 40, 0.78), rgba(0, 0, 0, 0.85)), url(./background-images/striped-mesh.jpg);
@@ -268,7 +297,8 @@
 
 
 .SILHOUTTE{
-  height: 50vh;
+  height: 70vh;
+  min-height: 500px;
 }
 
 .PROJECT-SECTION, .ABOUT-SECTION {
