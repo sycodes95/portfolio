@@ -88,7 +88,7 @@ function AboutSection () {
           bg-black bg-opacity-40 
             h-16
           text-white text-4xl font-bold font-black-outline-light
-            flex justify-center items-center p-4 bg-bear">
+            flex justify-center items-center p-4">
 
               <span>95'</span>
             </div>
@@ -123,19 +123,13 @@ function AboutSection () {
             </div>
           </div>
 
-          <div className="absolute top-24 left-0 w-fit flex flex-col  items-center p-4 bg-black bg-opacity-40">
+          <div className="absolute top-24 left-0 w-1/6 flex flex-col  items-center p-4 bg-black bg-opacity-40">
             <div className="text-md font-bold text-white bg-black bg-opacity-25 w-full text-center">
               SKILLS
             </div>
-            <div className="grid grid-cols-2 gap-y-2 gap-x-2 mt-6"> 
-              {
-                toolsElements.map(tools =>(
-                  <div className='flex flex-col items-center gap-y-1 text-white font-black-outline-light col text-xs'>
-                    {tools.jsx}
-                    <span>{tools.name}</span>
-                  </div>
-                ))
-              }
+            <div className=" gap-y-2 gap-x-2 mt-6 text-white text-sm font-black-outline-light "> 
+              I'm a full-stack developer with an eye for design. I focus on creating responsive layouts and efficient code to the best of my ability.
+              Always building, always learning.
             </div>
           </div>
 
