@@ -2,14 +2,21 @@ import { useRef, useEffect } from "react";
 import bulb from '../images/bulb.png'
 import dust from '../images/dust.png'
 import windowLight from '../images/windowlight.png'
+import downArrow from '../icons/down-arrow.svg'
 
-function HomeSection() {
+import { ReactSVG } from "react-svg";
+
+function HomeSection(props) {
+
+  const projectsRef = props.projectsRef
 
   const bulbRef = useRef(null);
 
   const introRef = useRef(null)
 
   const windowRef = useRef(null)
+
+  const arrowRef = useRef(null)
 
   const handleMouseMove = (event) => {
     const x = event.clientX;
@@ -19,7 +26,7 @@ function HomeSection() {
     bulbRef.current.style.marginTop = `${y / 50}px`;
   };
 
-  
+  const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
 
   useEffect(() => {
     document.addEventListener('mousemove', handleMouseMove);
@@ -43,11 +50,17 @@ function HomeSection() {
     windowRef.current.classList.remove('opacity-0')
   }, []);
 
+  useEffect(() => {
+    arrowRef.current.classList.add('opacity-100')
+    arrowRef.current.classList.remove('opacity-0')
+    
+  }, []);
+
   
   return (
     <section className="content-con max-h-screen w-full grid corners">
 
-      <div className=" flex justify-center items-center h-screen w-full ">
+      <div className="relative flex justify-center items-center h-screen w-full ">
 
         <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden ">
           <img
@@ -92,6 +105,26 @@ function HomeSection() {
             </div>
             
           </div>
+          
+        </div>
+
+        <div className=' 
+        absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2  
+        p-2 
+        bg-opacity-25 
+        text-white text-xs
+        
+        z-20 
+        flex justify-center
+        ARROW-CONTAINER
+        '>
+          
+          <button className='flex justify-center items-center 
+          text-white text-opacity-50 opacity-0 delay-500 duration-1000 
+          rounded-full bg-black bg-opacity-25 p-2 '
+          onClick={scrollToProjects} ref={arrowRef}>
+            <ReactSVG className=' ' src={downArrow}/>
+          </button>
           
         </div>
 

@@ -171,7 +171,6 @@
 
 
 
-
 .bg-striped-content{
   
   background:linear-gradient(rgba(40, 40, 40, 0.78), rgba(0, 0, 0, 0.85)), url(./background-images/striped-mesh.jpg);
@@ -273,6 +272,7 @@
 }
 
 .BULB{
+  
   transition: top ease-in 800ms;
 }
 
@@ -286,7 +286,18 @@
 
 
 
+.WARMLIGHT-PROJECTS{
+  top: 20%;
+  opacity: 1;
+  width: initial;
+  height: initial;
+}
 
+.WARMLIGHT-ABOUT{
+  top: 69%;
+  opacity: 0.5;
+  filter: grayscale(80%);
+}
 .SILHOUTTE{
   height: 70vh;
   min-height: 500px;
@@ -355,11 +366,15 @@
   .PROJECT-SECTION, .ABOUT-SECTION{
     width: 60%;
   }
+  .TOP-BULB{
+    top: 0%;
+  }
   .TOOLS{
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 1200px) {
+  
   .INSIDE-INFO{
     display:inherit;
   }
@@ -426,6 +441,8 @@
   .APP{
     width: 300px;
   }
+
+  
   
   
   .PROJECT-CONTENT-RIGHT {

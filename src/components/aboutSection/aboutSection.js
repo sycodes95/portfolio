@@ -4,10 +4,17 @@ import triangledots from "../../icons/triangledots.svg"
 import silhoutte from "../../images/silhoutte.png"
 import Icon from '@mdi/react';
 import { mdiDna } from '@mdi/js';
+import { useState, useEffect, useRef } from "react";
+
+
 
 <Icon path={mdiDna} size={1} />
 
 function AboutSection () {
+  const useObserver = useRef(true);
+
+  const aboutSectionRef = useState(null)
+  const aboutContentRef = useState(null)
   
   const toolsElements = [
     {
@@ -34,12 +41,53 @@ function AboutSection () {
       jsx: <i class="devicon-mongodb-plain-wordmark text-4xl  fill-current "></i>,
       name: 'Mongo DB'
     },
+    
+    {
+      jsx: <i class="devicon-git-plain text-4xl  fill-current"></i>,
+      name: 'Git'
+    },
+
+    {
+      jsx: <i class="devicon-github-original text-4xl  fill-current"></i>,
+      name: 'Github'
+    },
   ]
 
+
+  useEffect(() => {
+    if(aboutSectionRef.current) {
+      
+
+      const options = {
+        root: null,
+        threshold: 0.2,
+      };
+      
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            aboutContentRef.current.classList.add('top-0');
+            aboutContentRef.current.classList.remove('-top-full');
+            
+          }
+        });
+      }, options);
+     
+      observer.observe(aboutSectionRef.current);
+      
+      
+      
+      
+      // Clean up the observer when the component unmounts
+      return () => observer.unobserve(aboutSectionRef.current);
+
+    }
+    
+  }, []);
   
 
   return (
-    <section className='ABOUT-SECTION pb-96 pt-12 gap-y-12'>
+    <section className='ABOUT-SECTION pb-96 pt-12 gap-y-12' ref={aboutSectionRef}>
 
       <div className="
        row-span-1 col-span-2 row-start-1 
@@ -73,7 +121,8 @@ function AboutSection () {
       <div className=" ABOUT
       grid grid-cols-2 
       bg-black bg-opacity-25
-      ">
+      relative overflow-hidden
+      " >
 
         <div className="
         col-span-2 
@@ -81,7 +130,8 @@ function AboutSection () {
       bg-black bg-opacity-25  
         flex justify-center 
         border-8 border-opacity-50 border-black
-        relative bg-dna">
+        relative bg-dna
+        -top-full transition-all duration-700" ref={aboutContentRef}>
           <div className="ABOUT-BANNER absolute top-0 h-16 w-full bg-black bg-opacity-40">
             <div className="absolute
             top-0 right-0
@@ -108,7 +158,7 @@ function AboutSection () {
           </div>
           
           <div className="absolute top-24 right-0 w-fit flex flex-col  items-center p-4 bg-black bg-opacity-40">
-            <div className="text-md font-bold text-white bg-black bg-opacity-25 w-full text-center">
+            <div className="text-md font-bold text-white bg-black bg-opacity-25 pb-2 border-b w-full text-center text-orange-300">
               SKILLS
             </div>
             <div className="grid grid-cols-2 gap-y-2 gap-x-2 mt-6"> 
@@ -123,13 +173,14 @@ function AboutSection () {
             </div>
           </div>
 
-          <div className="absolute top-24 left-0 w-1/6 flex flex-col  items-center p-4 bg-black bg-opacity-40">
-            <div className="text-md font-bold text-white bg-black bg-opacity-25 w-full text-center">
-              SKILLS
+          <div className="absolute top-24 left-0  w-44 flex flex-col  items-center p-4 bg-black bg-opacity-40">
+            <div className="text-md font-bold text-white pb-2 border-b w-full text-center text-orange-300 text-opacity-70">
+              BIO
             </div>
-            <div className=" gap-y-2 gap-x-2 mt-6 text-white text-sm font-black-outline-light "> 
-              I'm a full-stack developer with an eye for design. I focus on creating responsive layouts and efficient code to the best of my ability.
-              Always building, always learning.
+            <div className=" gap-y-2 gap-x-2 mt-6 text-white text-xs font-black-outline-light leading-relaxed"> 
+              I'M A FULL-STACK DEVELOPER WITH AN EYE FOR DESIGN, I UNDERSTAND THAT GOOD DESIGN DOESN'T JUST LOOK GOOD, IT ALSO BUILDS TRUST.
+              MY FOCUS IS ON CREATING RESPONSIVE LAYOUTS AND CRAFTING EASY TO READ & EFFICIENT CODE TO THE BEST OF MY ABILITY.
+              ALWAYS BUILDING, ALWAYS LEARNING.
             </div>
           </div>
 

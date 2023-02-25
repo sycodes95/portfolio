@@ -5,7 +5,7 @@ import edgescoutPNG from "../../images/edgescout.png"
 import { useEffect, useRef } from "react";
 import Icon from '@mdi/react';
 import { mdiHammerWrench } from '@mdi/js';
-
+import warmlight from "../../images/warmlight.png"
 
 
 function ProjectSection () {
@@ -38,15 +38,7 @@ function ProjectSection () {
             projectOneRight.current.classList.add('right-0');
             projectOneRight.current.classList.remove('-right-1/4');
             
-          } else {
-            projectOneLeft.current.classList.add('-left-1/4');
-            projectOneLeft.current.classList.remove('left-0');
-            
-
-            projectOneRight.current.classList.add('-right-1/4');
-            projectOneRight.current.classList.remove('right-0');
-            
-          }
+          } 
         });
       }, options);
       
@@ -76,15 +68,7 @@ function ProjectSection () {
           
           projectTwoRight.current.classList.add('right-0');
           projectTwoRight.current.classList.remove('-right-1/4');
-        } else {
-          
-          projectTwoLeft.current.classList.add('-left-1/4');
-          projectTwoLeft.current.classList.remove('left-0');
-
-          
-          projectTwoRight.current.classList.add('-right-1/4');
-          projectTwoRight.current.classList.remove('right-0');
-        }
+        } 
       });
     }, options);
     
@@ -99,15 +83,19 @@ function ProjectSection () {
 
   return (
     <section className='PROJECT-SECTION pb-24 pt-12 gap-y-12'>
-
-      <div className="
-       row-span-1 col-span-2 row-start-1 
-       flex justify-center items-center 
-       mb-4
        
-       rounded-sm h-12">
+      <div className="
+      relative
+      row-span-1 col-span-2 row-start-1 
+      flex justify-center items-center 
+      mb-4
+      
+      rounded-sm h-12">
         
-        <div className="ICON-CONTAINER bg-black bg-opacity-25 h-full w-full flex items-center border-2 border-black ">
+        
+        
+        <div className="ICON-CONTAINER bg-black bg-opacity-50 h-full w-full flex items-center border-2 border-black">
+          <img className="absolute WARMLIGHT-PROJECTS" src={warmlight}/>
           <div className="flex justify-start ml-2 w-fit">
             <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md" path={mdiHammerWrench} size={1.5} />
             
@@ -140,7 +128,7 @@ function ProjectSection () {
         </div>
 
 
-        <div className="flex justify-center h-auto  ">
+        <div className="flex justify-center  ">
           <ProjectOne/> 
         </div>
 
