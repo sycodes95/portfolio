@@ -8,7 +8,6 @@ import { useState, useEffect, useRef } from "react";
 
 
 
-<Icon path={mdiDna} size={1} />
 
 function AboutSection () {
   const useObserver = useRef(true);
@@ -18,76 +17,70 @@ function AboutSection () {
   
   const toolsElements = [
     {
-      jsx: <i class="devicon-javascript-plain text-4xl  fill-current "></i>,
+      jsx: <i class="devicon-javascript-plain text-3xl  fill-current "></i>,
       name: 'Javascript'
     },
     {
-      jsx: <i class="devicon-react-original text-4xl  fill-current "></i>,
+      jsx: <i class="devicon-react-original text-3xl  fill-current "></i>,
       name: 'React'
     },
     {
-      jsx: <i class="devicon-tailwindcss-plain text-4xl  fill-current "></i>,
+      jsx: <i class="devicon-tailwindcss-plain text-3xl  fill-current "></i>,
       name: 'Tailwind'
     },
     {
-      jsx: <i class="devicon-nodejs-plain text-4xl  fill-current "></i>,
+      jsx: <i class="devicon-nodejs-plain text-3xl  fill-current "></i>,
       name: 'Node JS'
     },
     {
-      jsx: <i class="devicon-express-original text-4xl  fill-current "></i>,
+      jsx: <i class="devicon-express-original text-3xl  fill-current "></i>,
       name: 'Express'
     },
     {
-      jsx: <i class="devicon-mongodb-plain-wordmark text-4xl  fill-current "></i>,
+      jsx: <i class="devicon-mongodb-plain-wordmark text-3xl  fill-current "></i>,
       name: 'Mongo DB'
     },
     
     {
-      jsx: <i class="devicon-git-plain text-4xl  fill-current"></i>,
+      jsx: <i class="devicon-git-plain text-3xl  fill-current"></i>,
       name: 'Git'
     },
 
     {
-      jsx: <i class="devicon-github-original text-4xl  fill-current"></i>,
+      jsx: <i class="devicon-github-original text-3xl  fill-current"></i>,
       name: 'Github'
     },
   ]
 
-
+  /*
   useEffect(() => {
-    if(aboutSectionRef.current) {
+    
       
 
-      const options = {
-        root: null,
-        threshold: 0.2,
-      };
-      
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            aboutContentRef.current.classList.add('top-0');
-            aboutContentRef.current.classList.remove('-top-full');
-            
-          }
-        });
-      }, options);
-     
-      observer.observe(aboutSectionRef.current);
-      
-      
-      
-      
-      // Clean up the observer when the component unmounts
-      return () => observer.unobserve(aboutSectionRef.current);
-
-    }
+    const options = {
+      root: null,
+      threshold: 0.2,
+    };
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          aboutContentRef.current.classList.add('top-0');
+          aboutContentRef.current.classList.remove('-top-full');
+          
+        }
+      });
+    }, options);
+    
+    observer.observe(aboutSectionRef.current);
+    
+    return () => observer.unobserve(aboutSectionRef.current);
     
   }, []);
-  
+  */
 
   return (
-    <section className='ABOUT-SECTION pb-96 pt-12 gap-y-12' ref={aboutSectionRef}>
+    <section className='ABOUT-SECTION pb-24 pt-12 gap-y-12' ref={aboutSectionRef}>
 
       <div className="
        row-span-1 col-span-2 row-start-1 
@@ -131,7 +124,7 @@ function AboutSection () {
         flex justify-center 
         border-8 border-opacity-50 border-black
         relative bg-dna
-        -top-full transition-all duration-700" ref={aboutContentRef}>
+         top-0 transition-all duration-700" ref={aboutContentRef}>
           <div className="ABOUT-BANNER absolute top-0 h-16 w-full bg-black bg-opacity-40">
             <div className="absolute
             top-0 right-0
@@ -157,30 +150,37 @@ function AboutSection () {
 
           </div>
           
-          <div className="absolute top-24 right-0 w-fit flex flex-col  items-center p-4 bg-black bg-opacity-40">
-            <div className="text-md font-bold text-white bg-black bg-opacity-25 pb-2 border-b w-full text-center text-orange-300">
-              SKILLS
-            </div>
-            <div className="grid grid-cols-2 gap-y-2 gap-x-2 mt-6"> 
+          <div className="absolute  top-28 right-0  w-fit   items-center p-4 
+          bg-black bg-opacity-25 
+          border-r-2 border-red-700 border-opacity-40">
+            
+            <div className="flex flex-col  gap-y-2 gap-x-2 "> 
               {
                 toolsElements.map(tools =>(
                   <div className='flex flex-col items-center gap-y-1 text-white font-black-outline-light col text-xs'>
                     {tools.jsx}
-                    <span>{tools.name}</span>
+                    <span className="ABOUT-SKILLS-TEXT">{tools.name}</span>
                   </div>
                 ))
               }
             </div>
           </div>
 
-          <div className="absolute top-24 left-0  w-44 flex flex-col  items-center p-4 bg-black bg-opacity-40">
-            <div className="text-md font-bold text-white pb-2 border-b w-full text-center text-orange-300 text-opacity-70">
-              BIO
-            </div>
-            <div className=" gap-y-2 gap-x-2 mt-6 text-white text-xs font-black-outline-light leading-relaxed"> 
-              I'M A FULL-STACK DEVELOPER WITH AN EYE FOR DESIGN, I UNDERSTAND THAT GOOD DESIGN DOESN'T JUST LOOK GOOD, IT ALSO BUILDS TRUST.
+          <div className="absolute  top-28 left-0  w-44 flex flex-col  items-center p-4 border-l-2 border-red-700 border-opacity-40 
+          bg-black bg-opacity-25">
+            
+            <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed w-36"> 
+              I'M A <span className="text-green-300">FULL-STACK DEVELOPER</span> WITH AN EYE FOR DESIGN.
               MY FOCUS IS ON CREATING RESPONSIVE LAYOUTS AND CRAFTING EASY TO READ & EFFICIENT CODE TO THE BEST OF MY ABILITY.
               ALWAYS BUILDING, ALWAYS LEARNING.
+            </div>
+          </div>
+
+          <div className="absolute  bottom-0 left-0   flex flex-col  items-center pl-2 pr-2 border-l-2 border-red-700 border-opacity-40 
+          bg-black bg-opacity-25">
+            
+            <div className="flex gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed w-fit"> 
+              <span>Github:</span> <a className="text-green-300" href="https://github.com/sycodes95" target="_blank">https://github.com/sycodes95</a>
             </div>
           </div>
 

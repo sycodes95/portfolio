@@ -15,6 +15,9 @@ import HomeSection from './components/homeSection';
 
 import downArrow from './icons/down-arrow.svg'
 import AboutSection from './components/aboutSection/aboutSection';
+import ContactSection from './components/contactSection/contactSection';
+
+
 
 function App() {
 
@@ -28,6 +31,7 @@ function App() {
   useEffect(() => {
     navRef.current.classList.add('top-0')
     navRef.current.classList.remove('-top-1/4')
+    console.log(process.env.REACT_APP_CONTACT_FORM_EMAIL);
   }, []);
 
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -69,6 +73,10 @@ function App() {
 
       <section className='flex justify-center relative overflow-hidden' ref={aboutRef}>
         <AboutSection/>
+      </section>
+
+      <section className='flex justify-center relative'>
+        <ContactSection/>
       </section>
       
 

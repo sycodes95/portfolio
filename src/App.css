@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-track{
-  background-color: rgba(21, 21, 21);
+  background-color: rgb(0, 0, 0);
   
 }
 
@@ -17,6 +17,18 @@
   background-color: rgb(0, 0, 0);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.25) inset !important;
+    
+    
+}
+
+input:focus, textarea:focus{
+  outline: none;
+}
 
 
 /* BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-*/
@@ -42,6 +54,11 @@
 .font-black-outline-light{
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, rgb(0, 0, 0) 1px 0 4px,
   rgb(0, 0, 0) 1px 0 2px ; 
+}
+
+.font-red-outline-light{
+  text-shadow: -1px 1px 0 #6a0000, 1px 1px 0 #6a0000, 1px -1px 0 #6a0000, -1px -1px 0 #6a0000, rgb(114, 0, 0) 1px 0 4px,
+  rgb(113, 0, 0) 1px 0 2px ; 
 }
 
 
@@ -303,8 +320,22 @@
   min-height: 500px;
 }
 
-.PROJECT-SECTION, .ABOUT-SECTION {
+.PROJECT-SECTION, .ABOUT-SECTION{
   width: 50%;
+}
+
+
+
+.CONTACT-SECTION {
+  width: 400px;
+}
+
+.CONTACT-FORM{
+  width: 100%;
+}
+
+.CONTACT-FORM > input, .CONTACT-FORM > textarea, .CONTACT-FORM > button {
+  width: 90%;
 }
 
 .PROJECT-CONTAINER{
@@ -372,6 +403,9 @@
   .TOOLS{
     grid-template-columns: repeat(3, 1fr);
   }
+  .ABOUT-SKILLS-TEXT{
+    display: none;
+  }
 }
 @media (max-width: 1200px) {
   
@@ -398,7 +432,7 @@
 }
 
 @media (max-width: 768px) {
-  .PROJECT-SECTION, .ABOUT-SECTION{
+  .PROJECT-SECTION, .ABOUT-SECTION, .CONTACT-SECTION {
     width: 90%;
   }
   .PROJECT-CONTAINER  {
@@ -434,6 +468,12 @@
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
+
+  
+
+  .SILHOUTTE{
+    object-fit: cover;
+  }
   
 }
 
@@ -441,7 +481,7 @@
   .APP{
     width: 300px;
   }
-
+  
   
   
   
