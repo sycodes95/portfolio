@@ -139,9 +139,25 @@ input:focus, textarea:focus{
 
 .bg-dev-top-dark{
   background:
-  linear-gradient( rgba(0, 0, 0, 0.6), rgba(7, 14, 53, 0.2)),url(./background-images/dev-pattern.png);
+  repeating-linear-gradient(
+     rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(4, 11, 51, 0.2)
+     )
+     ,url(./background-images/dev-pattern.png);
   background-position: center;
-  background-size: 80px;
+  background-size: 50px;
+  background-repeat:repeat;
+  
+}
+
+.bg-dev-classic{
+  background:
+  repeating-linear-gradient(
+     rgba(6, 6, 6, 0.5), rgba(0, 15, 20, 0.5)
+     )
+     ,url(./background-images/dev-pattern.png);
+  background-position: center;
+  background-size: 50px;
+  background-repeat:repeat;
   
 }
 
@@ -318,6 +334,10 @@ input:focus, textarea:focus{
 .SILHOUTTE{
   height: 70vh;
   min-height: 500px;
+}
+
+.HOME-SCREEN{
+  min-height: -webkit-fill-available;
 }
 
 .PROJECT-SECTION, .ABOUT-SECTION{

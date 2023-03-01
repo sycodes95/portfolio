@@ -46,7 +46,7 @@ function App() {
   
     
   return (
-    <div className='APP bg-dev-top-dark relative' onLoad={handleScrollToTop}>
+    <div className='APP bg-dev-classic relative' onLoad={handleScrollToTop}>
       
       
       <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 h-8 bg-black bg-opacity-60 text-white

@@ -60,7 +60,7 @@ function HomeSection(props) {
   return (
     <section className="content-con max-h-screen w-full grid corners">
 
-      <div className="relative flex justify-center items-center h-screen w-full ">
+      <div className="HOME-SCREEN relative flex justify-center items-center h-screen w-full ">
 
         <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden ">
           <img
