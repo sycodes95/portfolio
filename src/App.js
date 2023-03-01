@@ -18,7 +18,6 @@ import AboutSection from './components/aboutSection/aboutSection';
 import ContactSection from './components/contactSection/contactSection';
 
 
-
 function App() {
 
   const projectsRef = useRef(null)

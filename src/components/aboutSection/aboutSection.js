@@ -5,8 +5,7 @@ import silhoutte from "../../images/silhoutte.png"
 import Icon from '@mdi/react';
 import { mdiDna } from '@mdi/js';
 import { useState, useEffect, useRef } from "react";
-
-
+import cartoonlight from "../../images/cartoonlight.png"
 
 
 function AboutSection () {
@@ -82,7 +81,7 @@ function AboutSection () {
   return (
     <section className='ABOUT-SECTION pb-24 pt-12 gap-y-12' ref={aboutSectionRef}>
 
-      <div className="
+      <div className="ABOUT-TITLE-BANNER
        row-span-1 col-span-2 row-start-1 
        flex justify-center items-center 
        mb-4
@@ -111,11 +110,14 @@ function AboutSection () {
         
       </div>
 
+
+
       <div className=" ABOUT
       grid grid-cols-2 
       bg-black bg-opacity-25
       relative overflow-hidden
       " >
+        
 
         <div className="
         col-span-2 
@@ -125,6 +127,7 @@ function AboutSection () {
         border-8 border-opacity-50 border-black
         relative bg-dna
          top-0 transition-all duration-700" ref={aboutContentRef}>
+          <img className="absolute top-0 opacity-20" src={cartoonlight}/>
           <div className="ABOUT-BANNER absolute top-0 h-16 w-full bg-black bg-opacity-40">
             <div className="absolute
             top-0 right-0
