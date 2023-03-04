@@ -18,7 +18,7 @@ function ProjectSection () {
   const projectTwoRight = useRef(null);
 
   
-
+  /*
   useEffect(() => {
     if(projectOneLeft && projectOneRight) {
       
@@ -50,7 +50,7 @@ function ProjectSection () {
     }
     
   }, [projectOne.current]);
-
+  
   useEffect(() => {
 
     const options = {
@@ -80,7 +80,7 @@ function ProjectSection () {
    
     
   }, [projectTwo.current]);
-
+  */
   return (
     <section className='PROJECT-SECTION pb-24 pt-12 gap-y-12'>
        
@@ -94,7 +94,7 @@ function ProjectSection () {
         
         
         
-        <div className="ICON-CONTAINER bg-black bg-opacity-50 h-full w-full flex items-center border-2 border-black">
+        <div className="ICON-CONTAINER bg-black bg-opacity-25 h-full w-full flex items-center c">
           <img className="absolute WARMLIGHT-PROJECTS" src={warmlight}/>
           <div className="flex justify-start ml-2 w-fit">
             <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md" path={mdiHammerWrench} size={1.5} />
@@ -116,38 +116,42 @@ function ProjectSection () {
       </div>
         
       <section className=' grid gap-x-8 shadow-md overflow-hidden' ref={projectOne}>
-
-        <div className="SIDE-INFO border-2 border-black text-white absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
-         flex justify-center items-center text-center text-8xl transition-all duration-500 bg-striped-3 right-corner-clip" ref={projectOneLeft}>
-          <div className="">01</div>
-        </div>
-
-        <div className="SIDE-INFO border-2 border-black text-white absolute -right-1/4 bg-black bg-opacity-25 w-48 h-48
-         flex justify-center items-center text-center text-8xl bg-striped-3 transition-all duration-500" ref={projectOneRight}>
-          <img src={edgescoutPNG}/>
-        </div>
-
-
+        
         <div className="flex justify-center  ">
+          <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute left-0 bg-black bg-opacity-25 w-48 h-48
+          flex justify-center items-center text-center text-8xl transition-all duration-500 bg-striped-3 right-corner-clip" ref={projectOneLeft}>
+            <div className="">01</div>
+          </div>
+
+          <div className="SIDE-INFO  text-white absolute right-0  bg-black bg-opacity-25 w-48 h-48
+          flex justify-center items-center text-center text-8xl bg-striped-3 transition-all duration-500" ref={projectOneRight}>
+            <img src={edgescoutPNG}/>
+          </div>
           <ProjectOne/> 
         </div>
 
       </section>
+      {
+        /*
+        <section className=' grid gap-x-8 shadow-md mt-24' ref={projectTwo}>
+        
+          <div className="SIDE-INFO border-2 border-black text-white absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
+          flex justify-center items-center text-center text-8xl transition-all duration-500 bg-striped-3 right-corner-clip" ref={projectTwoLeft}>
+            <div className="">02</div>
+          </div>
 
-      <section className=' grid gap-x-8 shadow-md mt-24' ref={projectTwo}>
-        <div className="SIDE-INFO border-2 border-black text-white absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
-         flex justify-center items-center text-center text-8xl transition-all duration-500 bg-striped-3 right-corner-clip" ref={projectTwoLeft}>
-          <div className="">02</div>
-        </div>
+          <div className="SIDE-INFO border-2 border-black text-white absolute -right-1/4 bg-black bg-opacity-25 w-48 h-48
+          flex justify-center items-center text-center text-8xl bg-striped-3 transition-all duration-500" ref={projectTwoRight}>
+            <img src={edgescoutPNG}/>
+          </div>
+          <div className="flex justify-center h-auto ">
+            <ProjectOne/> 
+          </div>
+        </section>
+        */
+      }
 
-        <div className="SIDE-INFO border-2 border-black text-white absolute -right-1/4 bg-black bg-opacity-25 w-48 h-48
-         flex justify-center items-center text-center text-8xl bg-striped-3 transition-all duration-500" ref={projectTwoRight}>
-          <img src={edgescoutPNG}/>
-        </div>
-        <div className="flex justify-center h-auto ">
-          <ProjectOne/> 
-        </div>
-      </section>
+      
       
 
         

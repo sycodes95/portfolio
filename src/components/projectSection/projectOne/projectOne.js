@@ -4,6 +4,7 @@ import Demo from "./demo";
 import Detail from "./details";
 import Feature from "./feature";
 import Tools from "./tools";
+import edgescoutPNG from "../../../images/edgescout.png"
 function ProjectOne () {
   const detailRef = useRef(null)
   const featureRef = useRef(null)
@@ -44,10 +45,9 @@ function ProjectOne () {
   
   return (
     <div className='PROJECT-CONTAINER 
-    bg-black bg-opacity-25 grid relative overflow-hidden'
+    bg-black bg-opacity-25 grid '
     >
-     
-
+      
       
       <div className="DEMO"> 
         

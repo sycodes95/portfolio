@@ -9,7 +9,15 @@ import ProjectOne from './components/projectSection/projectSection';
 import warmlight from "./images/warmlight.png"
 
 import Icon from '@mdi/react';
-import { mdiRun, mdiFinance, mdiWeightLifter } from '@mdi/js';
+import {
+mdiRun,
+mdiFinance,
+mdiWeightLifter,
+mdiHome,
+mdiHammerWrench,
+mdiCardAccountDetailsOutline,
+mdiEmail
+} from '@mdi/js';
 import ProjectSection from './components/projectSection/projectSection';
 import HomeSection from './components/homeSection';
 
@@ -22,6 +30,7 @@ function App() {
 
   const projectsRef = useRef(null)
   const aboutRef = useRef(null)
+  const contactRef = useRef(null)
   const arrowRef = useRef(null)
   const navRef = useRef(null)
 
@@ -35,6 +44,8 @@ function App() {
 
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
   const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: 'smooth' });
+
   const handleScrollToTop = () => {
     
     window.scrollTo({
@@ -49,14 +60,15 @@ function App() {
     <div className='APP bg-dev-classic relative' onLoad={handleScrollToTop}>
       
       
-      <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 h-8 bg-black bg-opacity-60 text-white
-      bottom-left-round bottom-right-round p-2 text-xs gap-x-4 z-50 flex
+      <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 h-10 bg-black bg-opacity-50 text-white
+      rounded-sm p-2 text-xs gap-x-4 z-50 flex
       -top-1/4 transition-all delay-300 duration-1000'
       ref={navRef}>
-        <li className='menu transition-all cursor-pointer' onClick={handleScrollToTop}>HOME</li>
-        <li className='menu transition-all cursor-pointer' onClick={scrollToProjects}>PROJECTS</li>
-        <li className='menu transition-all cursor-pointer' onClick={scrollToAbout}>ABOUT</li>
-        <li className='menu transition-all cursor-pointer' >CONTACT</li>
+        <li className='menu transition-all cursor-pointer text-red-800 hover:text-white transition-colors' onClick={handleScrollToTop}><Icon path={mdiHome} size={1} /></li>
+        
+        <li className='menu transition-all cursor-pointer text-red-800 hover:text-white transition-colors' onClick={scrollToProjects}><Icon path={mdiHammerWrench} size={1} /></li>
+        <li className='menu transition-all cursor-pointer text-red-800 hover:text-white transition-colors' onClick={scrollToAbout}><Icon path={mdiCardAccountDetailsOutline} size={1} /></li>
+        <li className='menu transition-all cursor-pointer text-red-800 hover:text-white transition-colors' onClick={scrollToContact}><Icon path={mdiEmail} size={1} /></li>
       </ul>
 
       
@@ -74,7 +86,7 @@ function App() {
         <AboutSection/>
       </section>
 
-      <section className='flex justify-center relative'>
+      <section className='flex justify-center relative' ref={contactRef}>
         <ContactSection/>
       </section>
       

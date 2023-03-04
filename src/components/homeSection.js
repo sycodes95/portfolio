@@ -85,8 +85,8 @@ function HomeSection(props) {
         <div className="
         absolute left-2/4 -translate-x-1/2 
         p-2 
-        border-2 border-black border-opacity-50
-        bg-black bg-opacity-25 shadow-2xl
+         border-opacity-50
+        bg-black bg-opacity-25 shadow-lg
         rounded-sm min-w-max
         flex justify-center flex-shrink
         opacity-0 transition-opacity delay-500 duration-1000

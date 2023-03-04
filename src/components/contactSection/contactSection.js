@@ -9,7 +9,7 @@ function ContactSection () {
     console.log(process.env.REACT_APP_CONTACT_FORM_EMAIL);
   },[])
   return(
-    <div className="CONTACT-SECTION mb-48 relative">
+    <div className="CONTACT-SECTION mt-24 mb-72 relative">
       <div className="
        row-span-1 col-span-2 row-start-1 
        flex justify-center items-center 

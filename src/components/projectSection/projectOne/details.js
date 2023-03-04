@@ -88,25 +88,23 @@ function Detail () {
       flex  gap-x-4
       '>
         <div className="flex justify-center w-1/2 ">
-          <button className=" border border-red-700 w-full text-sm 
+          <button className=" bg-red-800 w-full text-sm text-white text-opa font-black-outline-light
           hover:bg-red-700
-          hover:text-black 
-          hover:font-bold
+          
+          
           transition-all
-          top-left-round
-          bottom-right-round
+          rounded-sm
           "
           onClick={handleViewSite}
           >VIEW SITE</button>
         </div>
         <div className="flex justify-center w-1/2 ">
-          <button className=" border border-yellow-700 h-8 w-full text-sm
-            hover:bg-yellow-700
-            hover:text-black 
-            hover:font-bold
+          <button className=" bg-green-400 h-8 w-full text-sm text-white font-black-outline-light
+            hover:bg-green-300
+            
+            
             transition-all
-            top-left-round
-            bottom-right-round
+            rounded-sm
           ">VIEW CODE</button>
         </div>
 

@@ -91,7 +91,7 @@ function AboutSection () {
          bg-black bg-opacity-25 bg-striped
          h-full w-full 
          flex items-center 
-         border-2 border-black ">
+         ">
           <div className="flex justify-start ml-2 w-fit">
             <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md" path={mdiDna} size={1.5} />
           </div>
