@@ -8,7 +8,7 @@ function Demo () {
     window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
   }
   return (
-    <section className=" col-span-2 pt-2 pr-2 pl-2 flex justify-center">
+    <section className=" col-span-2 mt-2 ml-2 mr-2 flex justify-center">
       <div className="relative bg-black bg-opacity-25 flex justify-center items-center overflow-hidden p-4 h">
         
         

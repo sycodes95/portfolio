@@ -10,11 +10,11 @@ function Feature () {
   ]
   return (
     <div className='FEATURE
-      m-2 p-2 
+      p-2 m-2
       bg-black bg-opacity-25 
       rounded-sm
       bg-striped-2
-      flex flex-col
+      flex flex-col 
       '
     >  
       <div className='text-md text-center  font-bold text-white'>FEATURES</div>

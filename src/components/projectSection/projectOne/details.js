@@ -34,13 +34,14 @@ function Detail () {
 
   return (
     <div className='DETAIL 
-    ml-2 mt-2 mb-2 p-2
+    p-2 m-2
     bg-black bg-opacity-25
     text-white
     rounded-sm
     w-full
-    flex flex-col justify-between
+    flex flex-col 
     bg-striped-2
+    
     '>
       <div className=
       'text-md text-center font-bold pb-2'

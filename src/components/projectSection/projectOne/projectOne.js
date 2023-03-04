@@ -45,10 +45,8 @@ function ProjectOne () {
   
   return (
     <div className='PROJECT-CONTAINER 
-    bg-black bg-opacity-25 grid '
+    bg-black bg-opacity-25 grid gap-y-2'
     >
-      
-      
       <div className="DEMO"> 
         
         <Demo/> 
@@ -59,15 +57,7 @@ function ProjectOne () {
       <div className="FEATURE flex flex-grow z-30">
         <Feature/>
       </div>
-      
-      {
-        /*
-        <div className="TOOLS 
-          ">
-          <Tools/> 
-        </div>
-        */
-      }
+       
     </div>
 
   )
