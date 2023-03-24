@@ -51,7 +51,7 @@ function AboutSection () {
     },
   ]
 
-  /*
+  
   useEffect(() => {
     
       
@@ -76,7 +76,7 @@ function AboutSection () {
     return () => observer.unobserve(aboutSectionRef.current);
     
   }, []);
-  */
+  
 
   return (
     <section className='ABOUT-SECTION pb-24 pt-12 gap-y-12' ref={aboutSectionRef}>
@@ -126,7 +126,7 @@ function AboutSection () {
         flex justify-center 
         border-8 border-opacity-50 border-black
         relative bg-dna
-         top-0 transition-all duration-700" ref={aboutContentRef}>
+        -top-full transition-all duration-700" ref={aboutContentRef}>
           <img className="absolute top-0 opacity-20" src={cartoonlight}/>
           <div className="ABOUT-BANNER absolute top-0 h-16 w-full bg-black bg-opacity-40">
             <div className="absolute

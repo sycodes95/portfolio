@@ -62,7 +62,7 @@ function HomeSection(props) {
 
       <div className="HOME-SCREEN relative flex justify-center items-center h-screen w-full ">
 
-        <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden ">
+        <div className="absolute right-40 h-full w-full max-w-full flex justify-center overflow-hidden ">
           <img
             className="absolute -top-3/4 pointer-events-none BULB"
             src={bulb}
@@ -93,13 +93,13 @@ function HomeSection(props) {
         "
         ref={introRef}
         >
-          <div className=" p-2 bg-black bg-opacity-10 flex items-end gap-x-2">
+          <div className=" p-2 bg-black bg-opacity-10 flex flex-col items-end gap-x-2">
             
-            <span className="text-white text-opacity-75 font-bg-gradient font-bold text-3xl INTRO-NAME" >
+            <span className="text-white text-opacity-75 font-bg-gradient font-bold text-5xl INTRO-NAME" >
               Kevin Kim
             </span>
-            <div className="">
-              <span className="items-end text-red-700 text-opacity-70 font-bold INTRO-DEV " >
+            <div className="w-full flex justify-center">
+              <span className="text-center w-full items-end text-red-700 text-opacity-70 text-xl font-bold INTRO-DEV " >
                 Fullstack Developer.
               </span>
             </div>

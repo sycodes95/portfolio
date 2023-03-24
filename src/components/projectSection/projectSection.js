@@ -18,7 +18,7 @@ function ProjectSection () {
   const projectTwoRight = useRef(null);
 
   
-  /*
+  
   useEffect(() => {
     if(projectOneLeft && projectOneRight) {
       
@@ -50,7 +50,7 @@ function ProjectSection () {
     }
     
   }, [projectOne.current]);
-  
+  /*
   useEffect(() => {
 
     const options = {
@@ -118,12 +118,12 @@ function ProjectSection () {
       <section className=' grid gap-x-8 shadow-md overflow-hidden' ref={projectOne}>
         
         <div className="flex justify-center  ">
-          <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute left-0 bg-black bg-opacity-25 w-48 h-48
+          <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl transition-all duration-500 bg-striped-3 right-corner-clip" ref={projectOneLeft}>
             <div className="">01</div>
           </div>
 
-          <div className="SIDE-INFO  text-white absolute right-0  bg-black bg-opacity-25 w-48 h-48
+          <div className="SIDE-INFO  text-white absolute -right-1/4  bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl bg-striped-3 transition-all duration-500" ref={projectOneRight}>
             <img src={edgescoutPNG}/>
           </div>
