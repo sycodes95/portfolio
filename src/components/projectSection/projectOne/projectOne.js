@@ -1,15 +1,15 @@
 
-import { useRef, useState } from "react";
+
 import Demo from "./demo";
 import Detail from "./details";
 import Feature from "./feature";
-import Tools from "./tools";
-import edgescoutPNG from "../../../images/edgescout.png"
+
 function ProjectOne () {
+  /*
   const detailRef = useRef(null)
   const featureRef = useRef(null)
   const projectRef = useRef(null)
-  /*
+  
   useEffect(() => {
     if(aboutSectionRef.current) {
       

@@ -1,6 +1,5 @@
 import ProjectOne from "./projectOne/projectOne";
-import { ReactSVG } from "react-svg";
-import triangledots from "../../icons/triangledots.svg"
+
 import edgescoutPNG from "../../images/edgescout.png"
 import { useEffect, useRef } from "react";
 import Icon from '@mdi/react';
@@ -12,12 +11,6 @@ function ProjectSection () {
   const projectOne = useRef(null)
   const projectOneLeft = useRef(null);
   const projectOneRight = useRef(null);
-
-  const projectTwo = useRef(null)
-  const projectTwoLeft = useRef(null);
-  const projectTwoRight = useRef(null);
-
-  
   
   useEffect(() => {
     if(projectOneLeft && projectOneRight) {
@@ -44,12 +37,10 @@ function ProjectSection () {
       
       observer.observe(projectOne.current);
       
-      // Clean up the observer when the component unmounts
-      return () => observer.unobserve(projectOne.current);
 
     }
     
-  }, [projectOne.current]);
+  }, []);
   /*
   useEffect(() => {
 
@@ -95,7 +86,7 @@ function ProjectSection () {
         
         
         <div className="ICON-CONTAINER bg-black bg-opacity-25 h-full w-full flex items-center c">
-          <img className="absolute WARMLIGHT-PROJECTS" src={warmlight}/>
+          <img className="absolute WARMLIGHT-PROJECTS" src={warmlight} alt=""/>
           <div className="flex justify-start ml-2 w-fit">
             <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md" path={mdiHammerWrench} size={1.5} />
             
@@ -125,7 +116,7 @@ function ProjectSection () {
 
           <div className="SIDE-INFO  text-white absolute -right-1/4  bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl bg-striped-3 transition-all duration-500" ref={projectOneRight}>
-            <img src={edgescoutPNG}/>
+            <img src={edgescoutPNG} alt=""/>
           </div>
           <ProjectOne/> 
         </div>
