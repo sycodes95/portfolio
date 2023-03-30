@@ -1,9 +1,9 @@
 import { useRef, useEffect } from "react";
-import bulb from '../images/bulb.png'
-import dust from '../images/dust.png'
-import windowLight from '../images/windowlight.png'
-import downArrow from '../icons/down-arrow.svg'
-
+import bulb from '../../images/bulb.png'
+import dust from '../../images/dust.png'
+import windowLight from '../../images/windowlight.png'
+import downArrow from '../../icons/down-arrow.svg'
+import topographic from '../../images/topographic.png'
 import { ReactSVG } from "react-svg";
 
 function HomeSection(props) {
@@ -80,27 +80,38 @@ function HomeSection(props) {
           />
         </div>
 
+        <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden z-0">
+          <img
+            className="absolute w-3/4 h-2/4 top-1/2 pointer-events-none  transition-all delay-500 duration-1000"
+            src={topographic}
+            
+            alt=''
+          />
+        </div>
+
         
 
         <div className="
         absolute left-2/4 -translate-x-1/2 
         p-2 
-         border-opacity-50
-        bg-black bg-opacity-25 shadow-lg
+        border-2 border-red-800 border-opacity-30
+        shadow-lg
+        bg-black bg-opacity-25 
         rounded-sm min-w-max
         flex justify-center flex-shrink
         opacity-0 transition-opacity delay-500 duration-1000
+        z-10
         "
         ref={introRef}
         >
-          <div className=" p-2 bg-black bg-opacity-10 flex flex-col items-end gap-x-2">
+          <div className="p-4 bg-striped-dark-alt bg-opacity-10 flex flex-col items-end gap-x-2">
             
             <span className="text-white text-opacity-75 font-bg-gradient font-bold text-5xl INTRO-NAME" >
-              Kevin Kim
+              KEVIN KIM
             </span>
-            <div className="w-full flex justify-center">
-              <span className="text-center w-full items-end text-red-700 text-opacity-70 text-xl font-bold INTRO-DEV " >
-                Fullstack Developer.
+            <div className="w-full h-full  flex justify-center items-end">
+              <span className="text-center h-fit w-full items-end text-red-800 text-opacity-70 text-xl font-thin INTRO-DEV " >
+                Fullstack Developer
               </span>
             </div>
             

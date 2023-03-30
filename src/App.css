@@ -14,7 +14,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(75, 43, 43, 0.5);
 }
 
 input:-webkit-autofill,
@@ -101,73 +101,51 @@ input:focus, textarea:focus{
   
 }
 
+
+
 /* BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-*/
-
-.bg-dev-centered{
-  background:
-  linear-gradient(
-    rgba(127, 127, 127, 0.3),
-    rgba(0, 0, 0, 0.5),
-    rgba(127, 127, 127, 0.3))
-  ,url(./background-images/dev-pattern.png);
-  
-  background-position: center;
-  background-size: 75px;
+.bg-striped-dark-thick{
+  background: repeating-linear-gradient( 
+  45deg,
+  rgba(0, 0, 0, 0.1),
+  rgba(0, 0, 0, 0.1) 2px,
+  rgba(0, 0, 0, 0.3) 2px,
+  rgba(0, 0, 0, 0.3) 10px)
   
 }
 
-.bg-dev-centered-reversed{
-  background:
-  linear-gradient(
-    rgba(0, 0, 0, 0.7),
-    rgba(7, 14, 53, 0.2),
-    rgba(0, 0, 0, 0.7))
-  ,url(./background-images/dev-pattern.png);
-  
-  background-position: center;
-  background-size: 75px;
+.bg-striped-dark-thick-red{
+  background: repeating-linear-gradient( 
+  45deg,
+  rgba(0, 0, 0, 0.1),
+  rgba(26, 0, 0, 0.1) 2px,
+  rgba(75, 0, 0, 0.3) 2px,
+  rgba(29, 0, 0, 0.3) 10px)
   
 }
 
-.bg-dev-bottom-dark{
-  background:
-  linear-gradient(rgba(127, 127, 127, 0.3), rgba(0, 0, 0, 0.3)),url(./background-images/dev-pattern.png);
-  background-position: center;
-  background-size: 75px;
-  
-}
-
-.bg-dev-top-dark{
-  background:
-  repeating-linear-gradient(
-     rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(4, 11, 51, 0.2)
-     )
-     ,url(./background-images/dev-pattern.png);
-  background-position: center;
-  background-size: 50px;
-  background-repeat:repeat;
+.bg-striped-dark-alt{
+  background: repeating-linear-gradient( 
+  45deg,
+  rgba(0, 0, 0, 0.1),
+  rgba(0, 0, 0, 0.1) 2px,
+  rgba(0, 0, 0, 0.3) 2px,
+  rgba(0, 0, 0, 0.3) 4px)
   
 }
 
 .bg-dev-classic{
   background:
   repeating-linear-gradient(
-     rgba(15, 15, 15, 0.5), rgba(0, 15, 20, 0.5)
+     rgba(12, 5, 5, 0.5), rgba(0, 6, 27, 0.5)
      )
      ,url(./background-images/dev-pattern.png);
   background-position: center;
-  background-size: 50px;
+  background-size: 69px;
   background-repeat:repeat;
   
 }
 
-.bg-dev-overall{
-  background:
-  linear-gradient( rgba(7, 14, 53, 0.2), rgba(7, 14, 53, 0.2)),url(./background-images/dev-pattern.png);
-  background-position: center;
-  background-size: 80px;
-  
-}
 
 .bg-edgescout{
   background-image:
@@ -244,45 +222,8 @@ input:focus, textarea:focus{
   rgba(0, 0, 0, 0.2) 10px)
 }
 
-
-
-
-.corners:before, 
-.corners:after, 
-.corners>:last-child:before, 
-.corners>:last-child:after {
-    position: absolute;
-    width: 10px; 
-    height: 10px;
-    border-color: rgb(0, 0, 0); 
-    border-style: solid;
-    content: ' ';
-    opacity: 0.4;
-    
-}
-
-.corners:before {
-    top: 20px;
-    left: 20px;
-    border-width: 2px 0 0 2px
-}
-
-.corners:after {
-    top: 20px;
-    right: 20px;
-    border-width: 2px 2px 0 0
-}
-
-.corners>:last-child:before {
-    bottom: 20px;
-    right: 20px;     
-    border-width: 0 2px 2px 0
-}
-
-.corners>:last-child:after {
-    bottom: 20px;
-    left: 20px;
-    border-width: 0 0 2px 2px
+.res-font{
+  font-size: clamp(50px, 8vw, 120px)
 }
 
 .top-neg-5{
@@ -480,6 +421,7 @@ input:focus, textarea:focus{
   .DETAIL{
     height: 24rem;
   }
+  /*
   .INTRO-DEV{
     font-size: 0.5rem;
   }
@@ -488,7 +430,7 @@ input:focus, textarea:focus{
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
-
+  */
   
 
   .SILHOUTTE{

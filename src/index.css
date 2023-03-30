@@ -5,6 +5,11 @@
   font-family: bender;
   src: url(./fonts/font.woff2);
 }
+
+@font-face {
+  font-family: Rajdhani;
+  src: url(./fonts/Rajdhani-Medium.ttf);
+}
 html {
   scroll-behavior: smooth;
 }
@@ -12,7 +17,7 @@ html {
 body {
   scroll-snap-type: both mandatory;
   margin: 0;
-  font-family: bender, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: Rajdhani, bender, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

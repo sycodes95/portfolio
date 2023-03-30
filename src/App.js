@@ -4,7 +4,7 @@ import './App.css';
 import { useEffect, useRef, useState } from 'react';
 import { ReactSVG } from 'react-svg';
 import ProjectOne from './components/projectSection/projectSection';
-
+import spotlight1 from './images/spotlight1.png'
 
 import warmlight from "./images/warmlight.png"
 
@@ -19,7 +19,7 @@ mdiCardAccountDetailsOutline,
 mdiEmail
 } from '@mdi/js';
 import ProjectSection from './components/projectSection/projectSection';
-import HomeSection from './components/homeSection';
+import HomeSection from './components/home/homeSection';
 
 import downArrow from './icons/down-arrow.svg'
 import AboutSection from './components/aboutSection/aboutSection';

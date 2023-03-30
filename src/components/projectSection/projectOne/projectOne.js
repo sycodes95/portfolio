@@ -47,8 +47,10 @@ function ProjectOne () {
     <div className='PROJECT-CONTAINER 
     bg-black bg-opacity-25 grid gap-y-2'
     >
+      <div className="h-12 w-full bg-black bg-opacity-30 col-span-4 text-white font-black-outline-light">
+        yo
+      </div>
       <div className="DEMO"> 
-        
         <Demo/> 
       </div>
       <div className="DETAIL flex flex-grow z-30 -left-1/2">
