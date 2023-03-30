@@ -310,6 +310,11 @@ input:focus, textarea:focus{
   width: 100%;
 }
 
+.PROJECT-IMAGE-1{
+  background-image: url("./images/edgescoutproject.png");
+  background-position: top;
+  background-size: cover;
+}
 
 
 .CONTACT-SECTION {
@@ -362,9 +367,7 @@ input:focus, textarea:focus{
 
 
 @media (max-width: 1440px) {
-  .PROJECT-SECTION, .ABOUT-SECTION{
-    width: 60%;
-  }
+  
   .TOP-BULB{
     top: 0%;
   }
@@ -380,12 +383,8 @@ input:focus, textarea:focus{
   .INSIDE-INFO{
     display:inherit;
   }
-  .SIDE-INFO{
-    display: none;
-  }
-  .PROJECT-SECTION, .ABOUT-SECTION {
-    width: 70%;
-  }
+  
+  
 
   .WINDOW{
     height: 25%;
@@ -393,17 +392,14 @@ input:focus, textarea:focus{
   
 }
 
-@media (max-width: 992px) {
-  .PROJECT-SECTION{
-    width: 80%;
-  }
-}
+
 
 @media (max-width: 768px) {
   .PROJECT-SECTION, .ABOUT-SECTION, .CONTACT-SECTION {
     width: 90%;
   }
   .PROJECT-CONTAINER  {
+    width: 100%;
     grid-template-columns: 1fr;
   }
   .DEMO{
@@ -418,6 +414,9 @@ input:focus, textarea:focus{
     grid-column: 1/2;
     grid-row: 3/4;
     
+  }
+  .SIDE-INFO{
+    display: none;
   }
 }
 

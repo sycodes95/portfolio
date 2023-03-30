@@ -73,7 +73,7 @@ function ProjectSection () {
   }, [projectTwo.current]);
   */
   return (
-    <section className='PROJECT-SECTION pb-24 pt-12 gap-y-12 bg-hammer'>
+    <section className='PROJECT-SECTION pb-24 pt-12 gap-y-12  bg-hammer'>
       <div className="relative">
         
       </div>
@@ -113,7 +113,7 @@ function ProjectSection () {
         
       <section className=' grid gap-x-8 overflow-hidden mt-12' ref={projectOne}>
         
-        <div className="flex justify-center  ">
+        <div className="flex justify-center ">
 
           <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
