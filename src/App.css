@@ -178,6 +178,21 @@ input:focus, textarea:focus{
   z-index: 0;
 }
 
+.bg-hammer::before {
+  content: "";
+  background-image: url("./images/hammer-wrench.png");
+  background-position: center;
+  background-size: 64px;
+  background-repeat:space;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.05;
+  z-index: 0;
+}
+
 
 
 
@@ -203,6 +218,16 @@ input:focus, textarea:focus{
   background-position: cover;
   background-size: 800px;
 }
+
+.bg-striped-white{
+  background: repeating-linear-gradient( 
+  45deg,
+  rgba(255, 255, 255, 0.1),
+  rgba(255, 255, 255, 0.1) 5px,
+  rgba(0, 0, 0, 0.3) 5px,
+  rgba(0, 0, 0, 0.3) 10px)
+}
+
 
 .bg-striped-3{
   background: repeating-linear-gradient( 
@@ -282,7 +307,7 @@ input:focus, textarea:focus{
 }
 
 .PROJECT-SECTION, .ABOUT-SECTION{
-  width: 50%;
+  width: 100%;
 }
 
 
@@ -299,10 +324,7 @@ input:focus, textarea:focus{
   width: 90%;
 }
 
-.PROJECT-CONTAINER{
-  grid-template-columns: repeat(2, 1fr);
-  
-}
+
 
 
 
@@ -312,10 +334,7 @@ input:focus, textarea:focus{
   grid-row: 1/2;
 }
 
-.DEMO{
-  grid-column: 1/4;
-  grid-row: 1/2;
-}
+
 
 .INSIDE-INFO{
   display: none;
@@ -323,19 +342,7 @@ input:focus, textarea:focus{
   width: 15%;
 }
 
-.DETAIL{
-  
-  grid-column: 1/2;
-  grid-row: 2/3;
-  
-}
 
-.FEATURE{
-  
-  grid-column: 2/3;
-  grid-row: 2/3;
-  
-}
 
 .TOOLS{
   grid-column: 2/3;
@@ -431,7 +438,9 @@ input:focus, textarea:focus{
     line-height: 1.5rem;
   }
   */
-  
+  .res-font{
+    font-size:xx-large;
+  }
 
   .SILHOUTTE{
     object-fit: cover;
@@ -444,9 +453,6 @@ input:focus, textarea:focus{
     width: 300px;
   }
   
-  
-  
-  
   .PROJECT-CONTENT-RIGHT {
     grid-template-columns: 1fr;
   }
@@ -455,6 +461,10 @@ input:focus, textarea:focus{
   }
   .TOOLS{
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .res-font{
+    font-size:large;
   }
 }
 

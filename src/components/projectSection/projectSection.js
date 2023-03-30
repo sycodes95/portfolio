@@ -73,7 +73,7 @@ function ProjectSection () {
   }, [projectTwo.current]);
   */
   return (
-    <section className='PROJECT-SECTION pb-24 pt-12 gap-y-12'>
+    <section className='PROJECT-SECTION pb-24 pt-12 gap-y-12 bg-hammer'>
       <div className="relative">
         
       </div>
@@ -90,14 +90,15 @@ function ProjectSection () {
         
         <div className="ICON-CONTAINER bg-red-800 bg-opacity-25 h-full w-full flex items-center
          border-2 border-red-800 border-opacity-30">
-          <img className="absolute WARMLIGHT-PROJECTS" src={warmlight} alt=""/>
+          
           <div className="flex justify-start ml-2 w-fit z-10">
             <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md" path={mdiHammerWrench} size={1.5} />
             
           </div>
 
-          <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-60 res-font">
-            <span>P R O J E C T S</span>
+          <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-60
+          whitespace-nowrap res-font">
+            <span className="transition-all">P R O J E C T S</span>
           </div>
 
           <div className="flex justify-end mr-2 w-fit">
@@ -110,12 +111,12 @@ function ProjectSection () {
         
       </div>
         
-      <section className=' grid gap-x-8 shadow-md overflow-hidden' ref={projectOne}>
+      <section className=' grid gap-x-8 overflow-hidden mt-12' ref={projectOne}>
         
         <div className="flex justify-center  ">
 
           <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
-          flex justify-center items-center text-center text-8xl transition-all duration-500  right-corner-clip
+          flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
           border-l-8 border-red-800 border-opacity-30 p-2" ref={projectOneLeft}>
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
             border-l-2 border-red-800 border-opacity-30 border-dashed">01</div>
@@ -123,7 +124,7 @@ function ProjectSection () {
           </div>
 
           <div className="SIDE-INFO  text-white absolute -right-1/4  bg-black bg-opacity-25 w-48 h-48
-          flex justify-center items-center text-center text-8xl transition-all duration-500
+          flex justify-center items-center text-center text-8xl transition-all duration-700
           border-r-8 border-red-800 border-opacity-30 p-2" ref={projectOneRight}>
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
             border-r-2 border-red-800 border-opacity-30 border-dashed">

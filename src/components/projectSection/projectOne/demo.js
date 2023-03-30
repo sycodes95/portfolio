@@ -9,7 +9,9 @@ function Demo () {
   }
   return (
     <section className=" col-span-2 mt-2 ml-2 mr-2 flex justify-center">
-      <div className="relative bg-black bg-opacity-25 flex justify-center items-center overflow-hidden p-4 h">
+      <div className="relative bg-black bg-opacity-25 flex justify-center items-center overflow-hidden p-4 
+      border-l-4 border-r-4 border-red-800
+      border-opacity-40">
         
         
           
