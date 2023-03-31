@@ -137,7 +137,7 @@ input:focus, textarea:focus{
 .bg-dev-classic{
   background:
   repeating-linear-gradient(
-     rgba(12, 5, 5, 0.5), rgba(0, 6, 27, 0.5)
+     rgba(12, 5, 5, 0.5), rgba(1, 8, 17, 0.5)
      )
      ,url(./background-images/dev-pattern.png);
   background-position: center;
@@ -190,6 +190,21 @@ input:focus, textarea:focus{
   left: 0;
   right: 0;
   opacity: 0.05;
+  z-index: 0;
+}
+
+.bg-dna-big::before {
+  content: "";
+  background-image: url("./images/dna-alt.png");
+  background-position: center;
+  background-size: 64px;
+  background-repeat: space;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.025;
   z-index: 0;
 }
 
@@ -367,7 +382,9 @@ input:focus, textarea:focus{
 
 
 @media (max-width: 1440px) {
-  
+  .max-width-1440px-grid-cols-1{
+    grid-template-columns: 1fr;
+  }
   .TOP-BULB{
     top: 0%;
   }
@@ -395,10 +412,17 @@ input:focus, textarea:focus{
 
 
 @media (max-width: 768px) {
+  .max-width-768px-width-full {
+    width: 100%;
+  }
+  .max-width-768px-gap-x-none{
+    column-gap: 0.75rem;
+  }
+  
   .PROJECT-SECTION, .ABOUT-SECTION, .CONTACT-SECTION {
     width: 90%;
   }
-  .PROJECT-CONTAINER  {
+  .PROJECT-CONTAINER, .ABOUT-CONTAINER  {
     width: 100%;
     grid-template-columns: 1fr;
   }
@@ -413,14 +437,17 @@ input:focus, textarea:focus{
   .FEATURE{
     grid-column: 1/2;
     grid-row: 3/4;
-    
   }
   .SIDE-INFO{
     display: none;
   }
+
 }
 
 @media (max-width: 480px) {
+  .max-width-768px-flex-col{
+    flex-direction: column;
+  }
   .PROJECT-CONTENT-RIGHT {
     grid-template-columns: 1fr;
   }

@@ -5,6 +5,7 @@ import silhoutte from "../../images/silhoutte.png"
 import Icon from '@mdi/react';
 import { mdiDna } from '@mdi/js';
 import { useState, useEffect, useRef } from "react";
+import embers from "../../images/embers.png"
 import cartoonlight from "../../images/cartoonlight.png"
 
 
@@ -73,22 +74,23 @@ function AboutSection () {
     
     observer.observe(aboutSectionRef.current);
     
-    return () => observer.unobserve(aboutSectionRef.current);
+   
     
   }, []);
   
 
   return (
-    <section className='ABOUT-SECTION pb-24 pt-12 gap-y-12' ref={aboutSectionRef}>
+    <section className='ABOUT-SECTION pb-24 pt-12 gap-y-12 flex-col items-center bg-dna-big relative' ref={aboutSectionRef}>
+      
 
       <div className="ABOUT-TITLE-BANNER
        row-span-1 col-span-2 row-start-1 
        flex justify-center items-center 
        mb-4
-       rounded-sm h-12">
+       rounded-sm h-10">
         
         <div className="ICON-CONTAINER
-         bg-black bg-opacity-25 bg-striped
+         bg-green-300 bg-opacity-25
          h-full w-full 
          flex items-center 
          ">
@@ -96,8 +98,16 @@ function AboutSection () {
             <Icon className=" text-red-700 text-opacity-50 bg-black bg-opacity-20 rounded-md" path={mdiDna} size={1.5} />
           </div>
 
-          <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-red-700 text-opacity-70 text-xl">
-            <span>A B O U T</span>
+          <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-60
+          whitespace-nowrap res-font transition-all gap-x-12 max-width-768px-gap-x-none ">
+            <p>A</p>
+            <p>B</p>
+            <p>O</p>
+            <p>U</p>
+            <p>T</p>
+           
+
+            
           </div>
 
           <div className="flex justify-end mr-2 w-fit">
@@ -112,39 +122,19 @@ function AboutSection () {
 
 
 
-      <div className=" ABOUT
-      grid grid-cols-2 
-      bg-black bg-opacity-25
-      relative overflow-hidden
-      " >
+      <div className="ABOUT-CONTAINER flex relative overflow-hidden justify-center mt-10">
         
+        <div className="relative flex justify-center p-2 bg-black bg-opacity-25
+        border-8 border-opacity-50 border-black bg-dna -top-full transition-all duration-700 w-1/2 max-width-768px-width-full" ref={aboutContentRef}>
+          
+          <div className="ABOUT-BANNER absolute top-0 h-16 w-full bg-striped-dark-alt">
 
-        <div className="
-        col-span-2 
-        m-2 p-2
-      bg-black bg-opacity-25  
-        flex justify-center 
-        border-8 border-opacity-50 border-black
-        relative bg-dna
-        -top-full transition-all duration-700" ref={aboutContentRef}>
-          <img className="absolute top-0 opacity-20" src={cartoonlight}/>
-          <div className="ABOUT-BANNER absolute top-0 h-16 w-full bg-black bg-opacity-40">
-            <div className="absolute
-            top-0 right-0
-          bg-black bg-opacity-40 
-            h-16
-          text-white text-4xl font-bold font-black-outline-light
-            flex justify-center items-center p-4">
-
+            <div className="absolute top-0 right-0 bg-black bg-opacity-40 h-16
+            text-white text-4xl font-bold font-black-outline-light flex justify-center items-center p-4">
               <span>95'</span>
             </div>
-            <div className="absolute
-            top-0 
-            left-0
-          
-            h-16
-          text-white text-xs font-bold font-black-outline-light
-            flex flex-col  p-2 ">
+            <div className="absolute flex flex-col top-0 left-0 h-16 text-white text-xs font-bold font-black-outline-light p-2 ">
+            
               <span>ID : * * * * * * * *</span>
               <span>DOB : * * * * - * * - * *</span>
               

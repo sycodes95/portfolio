@@ -3,19 +3,20 @@ import edgescoutproject from "../../../images/edgescoutproject.png"
 import edgescoutPNG from "../../../images/edgescout.png"
 function Demo () {
   const [imageRef, setImageRef] = useState(null)
+  
 
   const handleViewSite = () =>{
     window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
   }
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center border-l-4 border-r-4 border-red-800 border-opacity-25">
       <div className="relative  flex justify-center items-center overflow-hidden p-4 
-      border-l-4 border-r-4 border-red-800 border-opacity-40 bg-black">
+       bg-black">
       
         
         
           
-        <img className=" grayscale hover:cursor-pointer z-10" src={edgescoutproject} ref={imageRef}/>
+        <img className=" grayscale hover:cursor-pointer z-10 h-full" src={edgescoutproject} ref={imageRef}/>
         <div className={`overlay absolute bg-red-900 bg-opacity-10 z-10 w-full h-full
         hover:bg-opacity-0 hover:cursor-pointer
         transition-all bg-cover`}

@@ -24,6 +24,7 @@ import HomeSection from './components/home/homeSection';
 import downArrow from './icons/down-arrow.svg'
 import AboutSection from './components/aboutSection/aboutSection';
 import ContactSection from './components/contactSection/contactSection';
+import SmokeEffect from './components/smoke/smoke';
 
 
 function App() {

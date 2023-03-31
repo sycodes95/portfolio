@@ -4,7 +4,9 @@ import dust from '../../images/dust.png'
 import windowLight from '../../images/windowlight.png'
 import downArrow from '../../icons/down-arrow.svg'
 import topographic from '../../images/topographic.png'
+import smokebot from '../../images/smokebot.png'
 import { ReactSVG } from "react-svg";
+import SmokeEffect from "../smoke/smoke";
 
 function HomeSection(props) {
 
@@ -18,10 +20,12 @@ function HomeSection(props) {
 
   const arrowRef = useRef(null)
 
+  const smokeRef = useRef(null)
+
   const handleMouseMove = (event) => {
     const x = event.clientX;
     const y = event.clientY;
-    console.log(x);
+    
     bulbRef.current.style.marginLeft = `${x / 50}px`;
     bulbRef.current.style.marginTop = `${y / 50}px`;
   };
@@ -56,12 +60,20 @@ function HomeSection(props) {
     
   }, []);
 
+  useEffect(() => {
+    smokeRef.current.classList.add('opacity-10')
+    smokeRef.current.classList.remove('opacity-0')
+    
+    
+  }, []);
+
   
   return (
     <section className="content-con max-h-screen w-full grid corners">
-
+      
       <div className="HOME-SCREEN relative flex justify-center items-center h-screen w-full ">
-
+        
+        
         <div className="absolute right-40 h-full w-full max-w-full flex justify-center overflow-hidden ">
           <img
             className="absolute -top-3/4 pointer-events-none BULB"
@@ -80,12 +92,13 @@ function HomeSection(props) {
           />
         </div>
 
-        <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden z-0">
+        <div className="absolute h-full w-full max-w-full flex justify-center overflow-visible z-0">
           <img
-            className="absolute w-3/4 h-2/4 top-1/2 pointer-events-none  transition-all delay-500 duration-1000"
-            src={topographic}
-            
+            className="absolute w-full rotate-180 pointer-events-none  transition-all delay-500 duration-1000 opacity-0 z-50"
+            src={smokebot}
+            ref={smokeRef}
             alt=''
+            
           />
         </div>
 
