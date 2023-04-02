@@ -69,7 +69,7 @@ function HomeSection(props) {
 
   
   return (
-    <section className="content-con max-h-screen w-full grid corners">
+    <section className="content-con max-h-screen w-full corners">
       
       <div className="HOME-SCREEN relative flex justify-center items-center h-screen w-full ">
         

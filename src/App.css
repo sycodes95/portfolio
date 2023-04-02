@@ -101,9 +101,16 @@ input:focus, textarea:focus{
   
 }
 
+
+
 .text-glow-white{
   text-shadow:rgba(255, 255, 255, 0.87) 0px 0 1px,
   rgb(255, 255, 255) 0px 0 4px ;
+}
+
+.text-glow-red{
+  text-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
+  rgba(255, 1, 1, 0.564) 0px 0 10px ;
 }
 
 .border-glow-white{
@@ -111,9 +118,16 @@ input:focus, textarea:focus{
   rgba(255, 255, 255, 0.2) 0px 0 25px ;
 }
 
+
+
 .border-glow-emerald{
   box-shadow:rgba(5, 255, 184, 0.87) 0px 0 2px,
   rgba(5, 255, 193, 0.2) 0px 0 15px ;
+}
+
+.border-glow-red{
+  box-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
+  rgba(255, 0, 0, 0.2) 0px 0 25px ;
 }
 
 .border-glow-red{
@@ -151,6 +165,16 @@ input:focus, textarea:focus{
   rgba(0, 0, 0, 0.1) 2px,
   rgba(0, 0, 0, 0.3) 2px,
   rgba(0, 0, 0, 0.3) 4px)
+  
+}
+
+.bg-striped-dark-alt-darker{
+  background: repeating-linear-gradient( 
+  45deg,
+  rgba(0, 0, 0, 0.1),
+  rgba(0, 0, 0, 0.1) 2px,
+  rgba(0, 0, 0, 0.5) 2px,
+  rgba(0, 0, 0, 0.5) 4px)
   
 }
 
@@ -352,37 +376,20 @@ input:focus, textarea:focus{
 }
 
 
-.CONTACT-SECTION {
-  width: 400px;
-}
-
-.CONTACT-FORM{
-  width: 100%;
-}
-
 .CONTACT-FORM > input, .CONTACT-FORM > textarea, .CONTACT-FORM > button {
   width: 90%;
 }
-
-
-
-
-
 
 .TITLE{
   grid-column:1/2;
   grid-row: 1/2;
 }
 
-
-
 .INSIDE-INFO{
   display: none;
   height: 25%;
   width: 15%;
 }
-
-
 
 .TOOLS{
   grid-column: 2/3;
@@ -405,6 +412,9 @@ input:focus, textarea:focus{
   .max-width-1440px-grid-cols-1{
     grid-template-columns: 1fr;
   }
+  .max-width-1440px-w-50pct{
+    width: 50%;
+  }
   .TOP-BULB{
     top: 0%;
   }
@@ -416,7 +426,9 @@ input:focus, textarea:focus{
   }
 }
 @media (max-width: 1200px) {
-  
+  .max-width-1200px-w-60pct{
+    width: 60%;
+  }
   .INSIDE-INFO{
     display:inherit;
   }
@@ -463,7 +475,7 @@ input:focus, textarea:focus{
 }
 
 @media (max-width: 480px) {
-  .max-width-768px-flex-col{
+  .max-width-480px-flex-col{
     flex-direction: column;
   }
   .PROJECT-CONTENT-RIGHT {

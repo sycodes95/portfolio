@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Icon from '@mdi/react';
 import { mdiCrosshairs, mdiEmail } from '@mdi/js';
-
+import embers from "../../images/embers.png"
 
 function ContactSection () {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -9,11 +9,14 @@ function ContactSection () {
     console.log(process.env.REACT_APP_CONTACT_FORM_EMAIL);
   },[])
   return(
-    <div className="CONTACT-SECTION mt-24 mb-72 relative">
+    <div className="CONTACT-SECTION flex flex-col items-center  pb-48 relative w-full ">
+      
+
+      
       <div className="
        row-span-1 col-span-2 row-start-1 
        flex justify-center items-center 
-       mb-4
+       mb-4 w-full
        rounded-sm h-12">
         
         <div className="ICON-CONTAINER
@@ -38,7 +41,9 @@ function ContactSection () {
         
         
       </div>
-      <form className="CONTACT-FORM bg-black bg-opacity-25 flex flex-col gap-y-1 items-center p-2 text-white pb-8 " target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST">
+      <form className="CONTACT-FORM bg-black bg-opacity-25 flex flex-col gap-y-1 items-center 
+      p-2 text-white pb-8 w-96 max-width-768px-width-full" 
+      target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST">
         
         <input className="hidden" type="text" name="_honey"/>
         <input type="hidden" name="_captcha" value="false"/>
@@ -51,6 +56,11 @@ function ContactSection () {
         <textarea className="bg-black bg-opacity-25 w-80 h-80" type="text" name="text" placeholder="Text..." required/>
         <button className="bg-red-700 bg-opacity-25 w-full hover:bg-opacity-50 transition-colors h-8" type="submit">Submit</button>
       </form>
+
+      
+
+
+      
     </div>
   )
 }

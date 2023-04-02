@@ -116,7 +116,7 @@ function ProjectTwo () {
         <div className="text-gray-400 text-sm z-50  w-full flex flex-row  gap-4   p-2
          bg-black bg-opacity-25 font-bold">
           
-          <div className="flex w-full text-xs gap-1 max-width-768px-flex-col">
+          <div className="flex w-full text-xs gap-1 max-width-480px-flex-col">
             <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-50 rounded-sm">
               DATA VIS
             </p>

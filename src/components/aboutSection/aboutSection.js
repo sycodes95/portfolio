@@ -3,10 +3,14 @@ import { ReactSVG } from "react-svg";
 import triangledots from "../../icons/triangledots.svg"
 import silhoutte from "../../images/silhoutte.png"
 import Icon from '@mdi/react';
-import { mdiDna } from '@mdi/js';
+import { mdiDna , mdiCardAccountDetailsOutline} from '@mdi/js';
 import { useState, useEffect, useRef } from "react";
 import embers from "../../images/embers.png"
 import cartoonlight from "../../images/cartoonlight.png"
+import americanflag from "../../images/american-flag.png"
+
+
+
 
 
 function AboutSection () {
@@ -127,14 +131,14 @@ function AboutSection () {
       <div className="ABOUT-CONTAINER flex relative overflow-hidden justify-center mt-10 z-10 overflow-visible ">
         
         <div className="relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-emerald
-        border-4 border-opacity-50 border-white bg-dna -top-full transition-all duration-700 w-1/2 
-        max-width-768px-width-full" ref={aboutContentRef}>
+        border-4 border-opacity-50 border-white bg-dna -top-full transition-all duration-700 w-2/5 max-width-1440px-w-50pct
+        max-width-1200px-w-60pct max-width-768px-width-full" ref={aboutContentRef}>
           
           <div className="ABOUT-BANNER absolute top-0 h-16 w-full bg-striped-dark-alt">
 
-            <div className="absolute top-0 right-0 bg-black bg-opacity-40 h-16
-            text-white text-4xl font-bold font-black-outline-light flex justify-center items-center p-4">
-              <span>95'</span>
+            <div className="absolute top-0 right-0 h-16
+            text-white text-opacity-70 text-4xl font-bold font-black-outline-light flex justify-center items-center p-4">
+              <Icon path={mdiCardAccountDetailsOutline} size={2} />
             </div>
             <div className="absolute flex flex-col top-0 left-0 h-16 text-white text-xs font-bold font-black-outline-light p-2 ">
             
@@ -146,20 +150,25 @@ function AboutSection () {
 
           </div>
           
-          <div className="absolute top-24 left-0 w-44 max-width-768px-width-full flex flex-col  items-center p-4 border-l-2 border-red-700 border-opacity-40 
-          bg-black bg-opacity-25">
-            
+          <div className="absolute top-24 left-0 w-44 max-width-768px-width-full flex flex-col  items-center p-4 
+          border-l-4 border-green-300 border-opacity-40 bg-black bg-opacity-25">
             <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed"> 
               I'M A <span className="text-green-300">FULL-STACK DEVELOPER</span> WITH AN EYE FOR DESIGN.
-              MY FOCUS IS ON CREATING RESPONSIVE LAYOUTS AND CRAFTING EASY TO READ & EFFICIENT CODE TO THE BEST OF MY ABILITY.
-              ALWAYS BUILDING, ALWAYS LEARNING.
+              MY FOCUS IS ON CREATING RESPONSIVE LAYOUTS AND CRAFTING EASY TO READ & EFFICIENT CODE.
             </div>
+          </div>
+
+
+          <div className="absolute top-24 right-0 w-44 max-width-768px-width-full flex flex-col  items-center p-2 
+          border-r-4 border-green-300 border-opacity-40 bg-black bg-opacity-25">
+            
+            <img className=" " src={americanflag} alt=""/>
           </div>
 
           
           <div className="absolute top-1/2  left-0 w-44 max-width-768px-width-full  items-center p-4 
           bg-black bg-opacity-25 
-          border-l-2 border-red-700 border-opacity-40">
+          border-l-4 border-red-700 border-opacity-40">
             
             <div className="flex flex-wrap justify-evenly  gap-y-2 gap-x-2 "> 
               {

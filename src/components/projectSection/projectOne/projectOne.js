@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import edgescoutproject from "../../../images/edgescoutproject.png"
-
+import edgescoutPNG from "../../../images/edgescout.png"
 function ProjectOne () {
   
   const imageRef = useRef(null)
@@ -78,7 +78,7 @@ function ProjectOne () {
   
   return (
     <div className='PROJECT-CONTAINER w-2/4 transition-all
-    bg-black bg-opacity-25 grid grid-cols-2 gap-2'
+    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-red'
     >
       <section className="h-12 w-full  col-span-full text-white font-black-outline-light  text-md
       flex items-center relative overflow-hidden">
@@ -91,11 +91,12 @@ function ProjectOne () {
       </section>
 
       <section className="col-span-full h-full relative"> 
-        <div className="flex justify-center border-l-4 border-r-4 border-red-800 border-opacity-25 ">
-          <div className="relative  flex justify-center items-center overflow-hidden p-4 
+        <div className="flex justify-center">
+          <div className="relative  flex justify-center items-center overflow-hidden
           bg-black">
+            
             <img className=" grayscale hover:cursor-pointer z-10 h-full" src={edgescoutproject} ref={imageRef}/>
-            <div className={`overlay absolute bg-black bg-opacity-40 z-10 w-full h-full
+            <div className={`overlay absolute bg-red-900 bg-opacity-30 z-10 w-full h-full
             hover:bg-opacity-0 hover:cursor-pointer
             transition-all bg-cover`}
             onClick={handleViewSite}
@@ -104,55 +105,59 @@ function ProjectOne () {
             
           </div>
         </div>
-        <div className="text-gray-400 text-sm z-50  w-full flex gap-4  justify-between  p-2 
-         bg-striped-dark-alt">
-          
-          <p className="w-full flex text-xs text-center justify-center items-center p-1 gap-4 text-red-400 font-black-outline-light">
-            A TRADING JOURNAL APP, BUILT TO HELP TRADERS FIND AND REFINE THEIR STRATEGIES FOR BETTER PROFITABILITY IN THE FINANCIAL MARKETS.
-          </p>
-          
-        </div>
 
-        <div className="text-gray-400 text-sm z-50  w-full flex flex-row  gap-4   p-2
-         bg-black bg-opacity-25 font-bold">
-          
-          <div className="flex w-full text-xs gap-1 max-width-768px-flex-col">
-            <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-50 rounded-sm">
-              DATA VIS
+        <div className=" bottom-0 z-50 w-full">
+        
+          <div className="text-gray-400 text-sm z-50  w-full flex gap-4  justify-between  p-2 
+          bg-black bg-opacity-50">
+            
+            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-red-400 font-black-outline-light">
+              A TRADING JOURNAL APP, BUILT TO HELP TRADERS FIND AND REFINE THEIR STRATEGIES FOR BETTER PROFITABILITY IN THE FINANCIAL MARKETS.
             </p>
-            <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-30 rounded-sm">
-              CRUD
-            </p>
-            <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-20 rounded-sm">
-              FILTER
-            </p>
-            <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-30 rounded-sm">
-              SEARCH
-            </p>
-            <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-50 rounded-sm">
-              AUTHENTICATION
-            </p>
+            
           </div>
-          
-        </div>
 
-        <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-2 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
-         bg-black bg-opacity-75">
-          <div className="grid grid-cols-3 gap-1">
-            <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm p-2" onClick={handleViewSite}>
-              VIEW SITE
-            </button>
-            <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm" onClick={handleViewSite}>FRONT END REPO</button>
-            <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm" onClick={handleViewSite}>BACK END REPO</button>
+          <div className="text-gray-400 text-sm z-50  w-full flex flex-row  gap-4   p-2
+          bg-black font-bold">
+            
+            <div className="flex w-full text-xs gap-1 max-width-480px-flex-col">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-50 rounded-sm">
+                DATA VIS
+              </p>
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-30 rounded-sm">
+                CRUD
+              </p>
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-20 rounded-sm">
+                FILTER
+              </p>
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-30 rounded-sm">
+                SEARCH
+              </p>
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-50 rounded-sm">
+                AUTHENTICATION
+              </p>
+            </div>
+            
           </div>
-          <div className="flex justify-between pl-4 pr-4">
-            {
-            toolsElements.map(tool => (
-              tool.jsx
-            ))
-            }
+
+          <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-2 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
+          bg-black ">
+            <div className="grid grid-cols-3 gap-1">
+              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm p-2" onClick={handleViewSite}>
+                VIEW SITE
+              </button>
+              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm" onClick={handleViewSite}>FRONT END REPO</button>
+              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm" onClick={handleViewSite}>BACK END REPO</button>
+            </div>
+            <div className="flex justify-between pl-4 pr-4">
+              {
+              toolsElements.map(tool => (
+                tool.jsx
+              ))
+              }
+            </div>
+            
           </div>
-          
         </div>
       </section>
       {

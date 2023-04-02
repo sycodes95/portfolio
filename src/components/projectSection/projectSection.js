@@ -39,54 +39,54 @@ function ProjectSection () {
 
   
   useEffect(() => {
-    if(projectOneLeft && projectOneRight) {
+    
       
 
-      const options = {
-        root: null,
-        threshold: 0.1,
-      };
-      
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            projectOneLeft.current.classList.add('left-0');
-            projectOneLeft.current.classList.remove('-left-1/4');
+    const options = {
+      root: null,
+      threshold: 0.5,
+    };
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          projectOneLeft.current.classList.add('left-0');
+          projectOneLeft.current.classList.remove('-left-1/4');
 
-            projectOneRight.current.classList.add('right-0');
-            projectOneRight.current.classList.remove('-right-1/4');
+          projectOneRight.current.classList.add('right-0');
+          projectOneRight.current.classList.remove('-right-1/4');
 
-            projectOneDetails.current.classList.add('opacity-100');
-            projectOneDetails.current.classList.remove('opacity-0');
+          projectOneDetails.current.classList.add('opacity-100');
+          projectOneDetails.current.classList.remove('opacity-0');
 
-            const projectLettersArray = [
-              projectsTitleP,
-              projectsTitleR,
-              projectsTitleO,
-              projectsTitleJ,
-              projectsTitleE,
-              projectsTitleC,
-              projectsTitleT,
-              projectsTitleS
-            ]
+          const projectLettersArray = [
+            projectsTitleP,
+            projectsTitleR,
+            projectsTitleO,
+            projectsTitleJ,
+            projectsTitleE,
+            projectsTitleC,
+            projectsTitleT,
+            projectsTitleS
+          ]
 
-            projectLettersArray.forEach(letter => {
-              letter.current.classList.add('opacity-100');
-              letter.current.classList.remove('opacity-0');
-            })
-          } 
-        });
-      }, options);
-      
-      observer.observe(projectOne.current);
-    }
+          projectLettersArray.forEach(letter => {
+            letter.current.classList.add('opacity-100');
+            letter.current.classList.remove('opacity-0');
+          })
+        } 
+      });
+    }, options);
+    
+    observer.observe(projectOne.current);
+    
   }, []);
 
   useEffect(() => {
 
     const options = {
       root: null,
-      threshold: 0.1,
+      threshold: 0.5,
     };
     
     const observer = new IntersectionObserver(entries => {
@@ -110,12 +110,12 @@ function ProjectSection () {
   }, []);
   
   return (
-    <div className='PROJECT-SECTION flex flex-col pb-40 pt-12   bg-hammer'>
+    <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16  bg-hammer'>
         
       <section className=" relative row-span-1 col-span-2 row-start-1 flex justify-center items-center 
       rounded-sm h-10">
       
-        <div className="ICON-CONTAINER bg-red-800 bg-opacity-25 h-full w-full flex items-center relative border-glow-red">
+        <div className="ICON-CONTAINER bg-red-800 bg-opacity-25 h-full w-full flex items-center relative ">
           
           <div className="flex justify-start ml-2 w-fit z-10">
             <Icon className=" text-black" path={mdiHammerWrench} size={1.5} />
@@ -144,15 +144,16 @@ function ProjectSection () {
       </section>
 
         
-      <section className=' gap-x-8 overflow-hidden mt-10' ref={projectOne}>
+      <section className=' gap-x-8 overflow-hidden' ref={projectOne}>
         
         <div className="flex justify-center">
 
           <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
-          border-l-8 border-red-800 border-opacity-30 p-2" ref={projectOneLeft}>
+          border-l-8 border-red-800 border-opacity-30 border-glow-white-right p-2" ref={projectOneLeft}>
+
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-l-2 border-red-800 border-opacity-30 border-dashed">01</div>
+            border-l-2 border-red-800 border-opacity-30 border-dashed text-glow-red ">01</div>
             
           </div>
 
@@ -172,7 +173,7 @@ function ProjectSection () {
         </div>
 
       </section>
-      <section className=' gap-x-8 overflow-hidden mt-44' ref={projectTwo}>
+      <section className=' gap-x-8 overflow-hidden ' ref={projectTwo}>
         
         <div className="flex justify-center">
 
