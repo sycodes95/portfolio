@@ -74,7 +74,7 @@ function HomeSection(props) {
       <div className="HOME-SCREEN relative flex justify-center items-center h-screen w-full ">
         
         
-        <div className="absolute right-40 h-full w-full max-w-full flex justify-center overflow-hidden ">
+        <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden ">
           <img
             className="absolute -top-3/4 pointer-events-none BULB"
             src={bulb}
@@ -113,7 +113,7 @@ function HomeSection(props) {
         rounded-sm min-w-max
         flex justify-center flex-shrink
         opacity-0 transition-opacity delay-500 duration-1000
-        z-10
+        z-10 border-glow-red
         "
         ref={introRef}
         >
@@ -144,10 +144,10 @@ function HomeSection(props) {
         '>
           
           <button className='flex justify-center items-center 
-          text-white text-opacity-50 opacity-0 delay-500 duration-1000 
-          rounded-full bg-black bg-opacity-25 p-2 '
+          text-red-800 text-opacity-50 opacity-0 delay-500 duration-1000 
+          rounded-sm bg-striped-dark-alt'
           onClick={scrollToProjects} ref={arrowRef}>
-            <ReactSVG className=' ' src={downArrow}/>
+            <ReactSVG className='hover:text-white transition-colors w-full h-full p-2' src={downArrow}/>
           </button>
           
         </div>

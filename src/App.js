@@ -55,25 +55,69 @@ function App() {
     });
     
   };
+
+  let lastScrollY = 0
+  const handleScroll = () =>{
+    const nav = navRef.current
+    
+    if(nav){
+
+      let currentScrollY = window.scrollY;
+      console.log(currentScrollY);
+      if (currentScrollY < lastScrollY) {
+        nav.classList.add('top-0')
+        nav.classList.remove('-top-10')
+        console.log('lower');
+        
+      } else {
+        nav.classList.add('-top-10')
+        nav.classList.remove('top-0')
+        console.log('higher');
+      }
+      lastScrollY = currentScrollY
+
+    }
+
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll', handleScroll);
+
+    return ()=>{
+      window.removeEventListener('scroll', handleScroll)
+    }
+  },[])
+
+  useEffect(()=>{
+    console.log(lastScrollY);
+  },[lastScrollY])
   
     
   return (
     <div className='APP bg-dev-classic relative' onLoad={handleScrollToTop}>
       
       
-      <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 h-10 bg-black bg-opacity-50 text-white
-      rounded-sm p-2 text-xs gap-x-4 z-50 flex
-      -top-1/4 transition-all delay-300 duration-1000'
+      <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 h-10 
+       p-2 text-sm gap-x-4 z-50 flex bg-black bg-opacity-50
+      -top-1/4 transition-all border-t-4 border-b-2 border-b-white  border-red-800 border-opacity-50 duration-500'
       ref={navRef}>
-        <li className='menu transition-all cursor-pointer text-red-800 hover:text-white transition-colors' onClick={handleScrollToTop}><Icon path={mdiHome} size={1} /></li>
+        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={handleScrollToTop}>
+          
+        </li>
+        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={handleScrollToTop}>
+          [HOME]
+        </li>
+        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToProjects}>
+          [PROJECTS]
+        </li>
+        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToAbout}>
+          [ABOUT]
+        </li>
+        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToContact}>
+          [CONTACT]
+        </li>
         
-        <li className='menu transition-all cursor-pointer text-red-800 hover:text-white transition-colors' onClick={scrollToProjects}><Icon path={mdiHammerWrench} size={1} /></li>
-        <li className='menu transition-all cursor-pointer text-red-800 hover:text-white transition-colors' onClick={scrollToAbout}><Icon path={mdiCardAccountDetailsOutline} size={1} /></li>
-        <li className='menu transition-all cursor-pointer text-red-800 hover:text-white transition-colors' onClick={scrollToContact}><Icon path={mdiEmail} size={1} /></li>
       </ul>
-
-      
-
       
       <section className='flex justify-center relative'>
         <HomeSection projectsRef={projectsRef}/>
@@ -90,50 +134,6 @@ function App() {
       <section className='flex justify-center relative' ref={contactRef}>
         <ContactSection/>
       </section>
-      
-
-      
-
-      {
-        /*
-        <section className='h-screen w-full  bg-dev-centered-reversed '>
-        
-          <div className=' text-center flex justify-center row-span-1'>
-            <div className='h-36 text-center text-white text-6xl font-thin transition-all flex items-center font-shadow-white '>
-              ABOUT
-            </div>
-            
-            
-          </div>
-
-          <div className='flex justify-center'>
-            <i class="devicon-javascript-plain text-6xl text-white fill-current font-black-outline-light"></i>
-            <i class="devicon-react-original text-6xl text-white fill-current font-black-outline-light"></i>
-            
-            <i class="devicon-tailwindcss-plain text-6xl text-white fill-current font-black-outline-light"></i>
-            <i class="devicon-nodejs-plain text-6xl text-white fill-current font-black-outline-light"></i>
-            <i class="devicon-express-original text-6xl text-white fill-current font-black-outline-light"></i>
-            <i class="devicon-mongodb-plain-wordmark  text-6xl text-white fill-current font-black-outline-light"></i>
-          </div>
-
-          <div className='hidden '>
-            <Icon path={mdiRun} size={1} />
-            <Icon path={mdiFinance} size={1} />
-            <Icon path={mdiWeightLifter} size={1} />
-          </div>
-
-          
-          
-        </section>
-        */
-
-      }
-      
-
-
-      
-
-      
 
       
     </div>

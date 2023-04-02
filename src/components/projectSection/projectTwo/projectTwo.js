@@ -3,11 +3,11 @@
 import { useEffect, useRef } from "react";
 import edgescoutproject from "../../../images/edgescoutproject.png"
 
-function ProjectOne () {
+function ProjectTwo () {
   
   const imageRef = useRef(null)
 
-  const projectOneTitle = useRef(null)
+  const projectTwoTitle = useRef(null)
 
   const toolsElements = [
     {
@@ -31,8 +31,8 @@ function ProjectOne () {
       name: 'Express'
     },
     {
-      jsx: <i class="devicon-mongodb-plain-wordmark text-2xl  fill-current "></i>,
-      name: 'Mongo DB'
+      jsx: <i class="devicon-postgresql-plain-wordmark text-2xl  fill-current "></i>,
+      name: 'PostgreSQL'
     },
   ]
 
@@ -48,7 +48,7 @@ function ProjectOne () {
   }
   
   useEffect(() => {
-    if(projectOneTitle) {
+    if(projectTwoTitle) {
       
 
       const options = {
@@ -60,8 +60,8 @@ function ProjectOne () {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             console.log('intersect');
-            projectOneTitle.current.classList.add('left-0');
-            projectOneTitle.current.classList.remove('-left-full');
+            projectTwoTitle.current.classList.add('left-0');
+            projectTwoTitle.current.classList.remove('-left-full');
             
             
             
@@ -69,7 +69,7 @@ function ProjectOne () {
         });
       }, options);
       
-      observer.observe(projectOneTitle.current);
+      observer.observe(projectTwoTitle.current);
       
     }
     
@@ -83,8 +83,8 @@ function ProjectOne () {
       <section className="h-12 w-full  col-span-full text-white font-black-outline-light  text-md
       flex items-center relative overflow-hidden">
         <div className="p-4 bg-white bg-opacity-30 h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
-         ref={projectOneTitle}>
-          <p>[01] PROJECT:</p> <p>EDGE SCOUT</p> 
+         ref={projectTwoTitle}>
+          <p>[02] PROJECT:</p> <p>JOB TRACKR</p> 
         </div>
         <div className="h-full w-full bg-striped-dark-thick"></div>
 
@@ -108,7 +108,7 @@ function ProjectOne () {
          bg-striped-dark-alt">
           
           <p className="w-full flex text-xs text-center justify-center items-center p-1 gap-4 text-red-400 font-black-outline-light">
-            A TRADING JOURNAL APP, BUILT TO HELP TRADERS FIND AND REFINE THEIR STRATEGIES FOR BETTER PROFITABILITY IN THE FINANCIAL MARKETS.
+            A JOB APPLICATION TRACKER, BUILT TO HELP JOB SEEKERS IMPROVE THEIR APPLICATION STRATEGIES IN THE JOB MARKET. 
           </p>
           
         </div>
@@ -155,25 +155,10 @@ function ProjectOne () {
           
         </div>
       </section>
-      {
-      /*
-      
-      <div className="DEMO col-span-full"> 
-        <Demo/> 
-      </div>
-      <div className="DETAIL flex flex-grow z-30 -left-1/2">
-        <Detail/>
-      </div>
-      <div className="FEATURE flex flex-grow z-30">
-        <Feature/>
-      </div>
-      */
-      }
-      
        
     </div>
 
   )
 }
 
-export default ProjectOne;
+export default ProjectTwo;
