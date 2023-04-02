@@ -3,6 +3,10 @@
 import { useEffect, useRef } from "react";
 import edgescoutproject from "../../../images/edgescoutproject.png"
 import edgescoutPNG from "../../../images/edgescout.png"
+import Icon from '@mdi/react';
+import { mdiCheckboxMarkedCircleOutline } from '@mdi/js';
+
+
 function ProjectOne () {
   
   const imageRef = useRef(null)
@@ -82,7 +86,7 @@ function ProjectOne () {
     >
       <section className="h-12 w-full  col-span-full text-white font-black-outline-light  text-md
       flex items-center relative overflow-hidden">
-        <div className="p-4 bg-white bg-opacity-30 h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
+        <div className="p-4 bg-red-500 bg-opacity-50 h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
          ref={projectOneTitle}>
           <p>[01] PROJECT:</p> <p>EDGE SCOUT</p> 
         </div>
@@ -120,20 +124,20 @@ function ProjectOne () {
           <div className="text-gray-400 text-sm z-50  w-full flex flex-row  gap-4   p-2
           bg-black font-bold">
             
-            <div className="flex w-full text-xs gap-1 max-width-480px-flex-col">
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-50 rounded-sm">
-                DATA VIS
+            <div className="flex w-full text-xs  max-width-480px-flex-col">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm relative">
+                DATA VIS 
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-30 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
                 CRUD
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-20 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
                 FILTER
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-30 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
                 SEARCH
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-black bg-white bg-opacity-50 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white  rounded-sm">
                 AUTHENTICATION
               </p>
             </div>
@@ -142,12 +146,12 @@ function ProjectOne () {
 
           <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-2 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
           bg-black ">
-            <div className="grid grid-cols-3 gap-1">
-              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm p-2" onClick={handleViewSite}>
+            <div className="grid grid-cols-3 gap-1 transition-all">
+              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-500" onClick={handleViewSite}>
                 VIEW SITE
               </button>
-              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm" onClick={handleViewSite}>FRONT END REPO</button>
-              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm" onClick={handleViewSite}>BACK END REPO</button>
+              <button className="h-full w-full bg-red-400 bg-opacity-40 text-white rounded-sm" onClick={handleViewSite}>FRONT END REPO</button>
+              <button className="h-full w-full bg-red-400 bg-opacity-40 text-white rounded-sm" onClick={handleViewSite}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">
               {

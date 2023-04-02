@@ -37,6 +37,7 @@ function ProjectSection () {
   const projectsTitleT = useRef(null)
   const projectsTitleS = useRef(null)
 
+  const bannerLineRef = useRef(null)
   
   useEffect(() => {
     
@@ -58,6 +59,10 @@ function ProjectSection () {
 
           projectOneDetails.current.classList.add('opacity-100');
           projectOneDetails.current.classList.remove('opacity-0');
+
+          bannerLineRef.current.classList.add('h-10')
+
+          bannerLineRef.current.classList.remove('h-0')
 
           const projectLettersArray = [
             projectsTitleP,
@@ -112,10 +117,10 @@ function ProjectSection () {
   return (
     <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16  bg-hammer'>
         
-      <section className=" relative row-span-1 col-span-2 row-start-1 flex justify-center items-center 
-      rounded-sm h-10">
+      <section className=" relative  flex justify-center items-center 
+      rounded-sm h-0 transition-all duration-1000" ref={bannerLineRef}>
       
-        <div className="ICON-CONTAINER bg-red-800 bg-opacity-25 h-full w-full flex items-center relative ">
+        <div className="ICON-CONTAINER bg-white bg-opacity-25 h-full w-full flex items-center relative ">
           
           <div className="flex justify-start ml-2 w-fit z-10">
             <Icon className=" text-black" path={mdiHammerWrench} size={1.5} />
@@ -177,19 +182,19 @@ function ProjectSection () {
         
         <div className="flex justify-center">
 
-          <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
+          <div className="SIDE-INFO  text-orange-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
-          border-l-8 border-red-800 border-opacity-30 p-2" ref={projectTwoLeft}>
+          border-l-8 border-orange-800 border-opacity-40 p-2" ref={projectTwoLeft}>
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-l-2 border-red-800 border-opacity-30 border-dashed">02</div>
+            border-l-2 border-orange-800 border-opacity-40 border-dashed">02</div>
             
           </div>
 
           <div className="SIDE-INFO  text-white absolute -right-1/4  bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl transition-all duration-700
-          border-r-8 border-red-800 border-opacity-30 p-2" ref={projectTwoRight}>
+          border-r-8 border-orange-800 border-opacity-40 p-2" ref={projectTwoRight}>
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-r-2 border-red-800 border-opacity-30 border-dashed">
+            border-r-2 border-orange-800 border-opacity-40 border-dashed">
               <img src={edgescoutPNG} alt=""/>
             </div>
             

@@ -130,9 +130,9 @@ input:focus, textarea:focus{
   rgba(255, 0, 0, 0.2) 0px 0 25px ;
 }
 
-.border-glow-red{
-  box-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
-  rgba(255, 0, 0, 0.2) 0px 0 25px ;
+.border-glow-oj{
+  box-shadow:rgba(255, 136, 0, 0.6) 0px 0 2px,
+  rgba(255, 94, 0, 0.2) 0px 0 25px ;
 }
 
 
@@ -357,8 +357,8 @@ input:focus, textarea:focus{
   filter: grayscale(80%);
 }
 .SILHOUTTE{
-  height: 70vh;
-  min-height: 500px;
+  max-height: 70dvh;
+  min-height: 32rem;
 }
 
 .HOME-SCREEN{
@@ -497,7 +497,7 @@ input:focus, textarea:focus{
   .res-font{
     font-size:xx-large;
   }
-
+  
   .SILHOUTTE{
     object-fit: cover;
   }
