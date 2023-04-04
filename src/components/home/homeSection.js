@@ -142,7 +142,7 @@ function HomeSection(props) {
           
           <button className='flex justify-center items-center 
           text-red-800 text-opacity-50 opacity-0 delay-500 duration-1000 
-          rounded-sm border-glow-red-no-line'
+          rounded-full border-glow-red-no-line'
           onClick={scrollToProjects} ref={arrowRef}>
             <ReactSVG className='hover:text-red-600 transition-colors w-full h-full p-2' src={downArrow}/>
           </button>

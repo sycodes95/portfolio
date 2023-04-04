@@ -465,15 +465,18 @@ input:focus, textarea:focus{
 
 
 @media (max-width: 768px) {
+  .max-width-768px-left-0{
+    left: 0px;
+  }
   .max-width-768px-overflow-visible{
     overflow: visible;
   }
   .max-width-768px-width-full {
     width: 100%;
   }
-  .max-width-768px-neg-right-56 {
+  .max-width-768px-neg-top-full {
     top: 200%;
-    right: 0%;
+    
   }
   .max-width-768px-gap-x-none{
     column-gap: 0.75rem;

@@ -52,7 +52,7 @@ function ContactSection () {
     console.log(contactTitleLetters.current);
   },[])
   return(
-    <div className="CONTACT-SECTION relative flex flex-col items-center gap-y-12 pt-16 pb-48 w-full h-full  bg-at " >
+    <div className="CONTACT-SECTION relative flex flex-col items-center gap-y-12 pt-16 pb-24  w-full h-full  bg-at " >
       
       
       
@@ -130,6 +130,9 @@ function ContactSection () {
           type="text" name="text" placeholder="Text..." required/>
           <button className="bg-red-700 bg-opacity-25 w-full hover:bg-opacity-50 transition-colors h-8 z-50 mt-8" type="submit">Submit</button>
         </form>
+      </div>
+      <div className="h-fit w-full flex justify-center z-50">
+        <a href="https://github.com/sycodes95/portfolio" className="text-white hover:text-green-300 transition-all">DESIGNED AND CREATED BY KEVIN KIM</a>
       </div>
 
       
