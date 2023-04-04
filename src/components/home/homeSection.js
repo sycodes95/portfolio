@@ -144,7 +144,7 @@ function HomeSection(props) {
           text-red-800 text-opacity-50 opacity-0 delay-500 duration-1000 
           rounded-sm border-glow-red-no-line'
           onClick={scrollToProjects} ref={arrowRef}>
-            <ReactSVG className='hover:text-white transition-colors w-full h-full p-2' src={downArrow}/>
+            <ReactSVG className='hover:text-red-600 transition-colors w-full h-full p-2' src={downArrow}/>
           </button>
           
         </div>
