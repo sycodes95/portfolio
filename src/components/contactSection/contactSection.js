@@ -131,7 +131,7 @@ function ContactSection () {
           <button className="bg-red-700 bg-opacity-25 w-full hover:bg-opacity-50 transition-colors h-8 z-50 mt-8" type="submit">Submit</button>
         </form>
       </div>
-      <div className="h-fit w-full flex justify-center z-50">
+      <div className="h-fit w-full flex justify-center z-50 text-glow-white">
         <a href="https://github.com/sycodes95/portfolio" className="text-white hover:text-green-300 transition-all">DESIGNED AND CREATED BY KEVIN KIM</a>
       </div>
 

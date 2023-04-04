@@ -81,9 +81,9 @@ function ProjectTwo () {
     <div className='PROJECT-CONTAINER w-2/4 transition-all
     bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-oj'
     >
-      <section className="h-12 w-full  col-span-full text-white font-black-outline-light  text-md
+      <section className="h-12 w-full  col-span-full text-white text-glow-oj  text-md
       flex items-center relative overflow-hidden">
-        <div className="p-4 bg-orange-400 bg-opacity-50 h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
+        <div className="p-4 bg-striped-dark-alt h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
          ref={projectTwoTitle}>
           <p>[02] PROJECT:</p> <p>JOB TRACKR</p> 
         </div>
@@ -148,11 +148,14 @@ function ProjectTwo () {
           <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-2 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
           bg-black ">
             <div className="grid grid-cols-3 gap-1">
-              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm p-2" onClick={handleViewSite}>
+              <button className="h-full w-full bg-orange-400 bg-opacity-40 text-white rounded-sm p-2 transition-all hover:bg-gray-800" 
+              onClick={handleViewSite}>
                 VIEW SITE
               </button>
-              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm" onClick={handleViewSite}>FRONT END REPO</button>
-              <button className="h-full w-full bg-cyan-600 bg-opacity-25 text-white rounded-sm" onClick={handleViewSite}>BACK END REPO</button>
+              <button className="h-full w-full bg-orange-400 bg-opacity-40 text-white rounded-sm transition-all hover:bg-gray-800" 
+              onClick={handleViewSite}>FRONT END REPO</button>
+              <button className="h-full w-full bg-orange-400 bg-opacity-40 text-white rounded-sm transition-all hover:bg-gray-800" 
+              onClick={handleViewSite}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">
               {

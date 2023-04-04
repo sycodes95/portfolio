@@ -195,7 +195,7 @@ function ProjectSection () {
           flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
           border-l-8 border-orange-800 border-opacity-40 p-2" ref={projectTwoLeft}>
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-l-2 border-orange-800 border-opacity-40 border-dashed">02</div>
+            border-l-2 border-orange-800 border-opacity-40 border-dashed text-glow-oj">02</div>
             
           </div>
 

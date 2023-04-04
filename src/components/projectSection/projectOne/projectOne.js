@@ -84,9 +84,9 @@ function ProjectOne () {
     <div className='PROJECT-CONTAINER w-2/4 transition-all
     bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-red'
     >
-      <section className="h-12 w-full  col-span-full text-white font-black-outline-light  text-md
+      <section className="h-12 w-full bg-striped-dark-alt col-span-full text-white text-glow-red text-md
       flex items-center relative overflow-hidden">
-        <div className="p-4 bg-red-500 bg-opacity-50 h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
+        <div className="p-4  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700 "
          ref={projectOneTitle}>
           <p>[01] PROJECT:</p> <p>EDGE SCOUT</p> 
         </div>
