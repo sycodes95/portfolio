@@ -228,16 +228,20 @@ function AboutSection () {
           border-r-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
           transition-all delay-1000 duration-1000 max-width-768px-neg-right-56 " >
 
-            <div className="text-white text-md border-b w-full flex justify-center">EXTRA DETAILS :) </div>
+            <div className="text-white text-md border-b w-full flex justify-center">WHO AM I </div>
 
             
             <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
 
-              WHEN I'M NOT CODING, I LIKE TO RUN AND DO BODY WEIGHT EXERCISES, I LIED I HATE RUNNING AND EXERCISING BUT I STILL DO IT. 
-              FOR FUN I ENJOY WATCHING THE UFC WHEN THE CARD IS GOOD AND THE PREMIER LEAGUE (SOCCER).
-              I AM A TOTTENHAM FAN BECAUSE I HATE MYSELF BUT SON IS IN IT SO WHAT CAN I DO lol. 
-              I ALSO LOVE TO GAME SOMETIMES, I AM A GC IN ROCKET LEAGUE AND HAS BEEN MY MAIN GAME OF CHOICE FOR YEARS.
-              
+            WHEN I'M NOT BUSY CODING, I LIKE TO PUNISH MYSELF WITH A GOOD OL' RUN AND SOME TORTUROUS BODY WEIGHT EXERCISES. 
+            HONESTLY, I HATE DOING IT, BUT I'M DETERMINED TO KEEP UP THE CHARADE OF BEING A HEALTHY AND ACTIVE PERSON.
+            WHEN I'M FEELING ESPECIALLY LAZY, I'LL FIRE UP STEAM AND DIVE INTO THE WORLD OF ROCKET LEAGUE, 
+            WHERE I HOLD THE RANK OF GRAND CHAMPION.
+            BECAUSE WHAT BETTER WAY TO OFFSET MY SEDENTARY CODING LIFESTYLE THAN WITH ADDITIONAL HOURS OF SITTING AND STARING AT A SCREEN, AM I RIGHT?
+
+
+            
+                          
             </div>
             
             

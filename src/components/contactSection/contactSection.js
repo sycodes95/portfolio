@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react"
 import Icon from '@mdi/react';
 import { mdiCrosshairs, mdiEmail } from '@mdi/js';
+import yellowParticles from '../../images/yellow-particles.png'
 import embers from "../../images/embers.png"
 
 function ContactSection () {
@@ -51,7 +52,7 @@ function ContactSection () {
     console.log(contactTitleLetters.current);
   },[])
   return(
-    <div className="CONTACT-SECTION flex flex-col items-center gap-y-12 pt-16 pb-48 relative w-full  bg-at " >
+    <div className="CONTACT-SECTION relative flex flex-col items-center gap-y-12 pt-16 pb-48 w-full h-full  bg-at " >
       
       
       
@@ -112,7 +113,7 @@ function ContactSection () {
       
         <form className="CONTACT-FORM bg-black bg-opacity-30 flex flex-col gap-y-1 items-center 
         p-2 text-white pb-8 w-96 max-width-768px-width-full border-4 border-black border-glow-yellow 
-        opacity-0 transition-all delay-500 duration-1000" 
+        opacity-0 transition-opacity delay-500 duration-1000" 
         target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST" ref={formContainerRef}
         >
           
@@ -127,7 +128,7 @@ function ContactSection () {
           <label className="text-center font-black-outline-light flex flex-col ">Text <span className="text-xs text-red-700 ">(required)</span></label>
           <textarea className="bg-black bg-opacity-25 w-80 h-80 z-50 border-b-2 border-white border-opacity-50 resize-none" 
           type="text" name="text" placeholder="Text..." required/>
-          <button className="bg-red-700 bg-opacity-25 w-full hover:bg-opacity-50 transition-colors h-8 z-50" type="submit">Submit</button>
+          <button className="bg-red-700 bg-opacity-25 w-full hover:bg-opacity-50 transition-colors h-8 z-50 mt-8" type="submit">Submit</button>
         </form>
       </div>
 
