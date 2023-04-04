@@ -8,6 +8,7 @@ function ContactSection () {
   const bannerLineRef = useRef(null)
 
   const contactIconRef = useRef([]);
+  const formContainerRef = useRef(null)
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   useEffect(() => {
@@ -25,6 +26,9 @@ function ContactSection () {
 
           bannerLineRef.current.classList.add('h-10')
           bannerLineRef.current.classList.remove('h-0')
+
+          formContainerRef.current.classList.add('opacity-100')
+          formContainerRef.current.classList.remove('opacity-0')
 
           contactIconRef.current.forEach(ref => {
             ref.classList.add('opacity-100')
@@ -103,26 +107,28 @@ function ContactSection () {
         
         
       </div>
-      <div className="h-fit w-full flex justify-center overflow-hidden max-width-768px-overflow-visible">
+      <div className="h-fit w-full flex justify-center overflow-hidden max-width-768px-overflow-visible " >
 
       
-      <form className="CONTACT-FORM bg-black bg-opacity-30 flex flex-col gap-y-1 items-center 
-      p-2 text-white pb-8 w-96 max-width-768px-width-full border-4 border-black border-glow-yellow " 
-      target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST">
-        
-        <input className="hidden " type="text" name="_honey"/>
-        <input type="hidden" name="_captcha" value="false"/>
-        
-        <label className="text-center font-black-outline-light flex flex-col ">Email <span className="text-xs text-red-700 ">(required)</span></label>
-        <input className="bg-black bg-opacity-25 w-80 border-b-2 border-white border-opacity-50 z-50" type="email" name="email" placeholder="Email..." required/>
-        <label className="text-center font-black-outline-light flex flex-col">Phone <span className="text-xs text-red-300 ">(optional)</span></label>
-        <input className="bg-black bg-opacity-25 w-80 z-50 border-b-2 border-white border-opacity-50" 
-        type="tel" name="tel" placeholder="Phone...(optional)"/>
-        <label className="text-center font-black-outline-light flex flex-col ">Text <span className="text-xs text-red-700 ">(required)</span></label>
-        <textarea className="bg-black bg-opacity-25 w-80 h-80 z-50 border-b-2 border-white border-opacity-50 resize-none" 
-        type="text" name="text" placeholder="Text..." required/>
-        <button className="bg-red-700 bg-opacity-25 w-full hover:bg-opacity-50 transition-colors h-8 z-50" type="submit">Submit</button>
-      </form>
+        <form className="CONTACT-FORM bg-black bg-opacity-30 flex flex-col gap-y-1 items-center 
+        p-2 text-white pb-8 w-96 max-width-768px-width-full border-4 border-black border-glow-yellow 
+        opacity-0 transition-all delay-500 duration-1000" 
+        target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST" ref={formContainerRef}
+        >
+          
+          <input className="hidden " type="text" name="_honey"/>
+          <input type="hidden" name="_captcha" value="false"/>
+          
+          <label className="text-center font-black-outline-light flex flex-col ">Email <span className="text-xs text-red-700 ">(required)</span></label>
+          <input className="bg-black bg-opacity-25 w-80 border-b-2 border-white border-opacity-50 z-50" type="email" name="email" placeholder="Email..." required/>
+          <label className="text-center font-black-outline-light flex flex-col">Phone <span className="text-xs text-red-300 ">(optional)</span></label>
+          <input className="bg-black bg-opacity-25 w-80 z-50 border-b-2 border-white border-opacity-50" 
+          type="tel" name="tel" placeholder="Phone...(optional)"/>
+          <label className="text-center font-black-outline-light flex flex-col ">Text <span className="text-xs text-red-700 ">(required)</span></label>
+          <textarea className="bg-black bg-opacity-25 w-80 h-80 z-50 border-b-2 border-white border-opacity-50 resize-none" 
+          type="text" name="text" placeholder="Text..." required/>
+          <button className="bg-red-700 bg-opacity-25 w-full hover:bg-opacity-50 transition-colors h-8 z-50" type="submit">Submit</button>
+        </form>
       </div>
 
       
