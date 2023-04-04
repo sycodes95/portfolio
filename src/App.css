@@ -113,6 +113,8 @@ input:focus, textarea:focus{
   rgba(255, 1, 1, 0.564) 0px 0 10px ;
 }
 
+
+
 .text-glow-oj{
   text-shadow:rgba(255, 136, 0, 0.6) 0px 0 2px,
   rgba(255, 94, 0, 0.564) 0px 0 10px ;
@@ -137,6 +139,13 @@ input:focus, textarea:focus{
   box-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
   rgba(255, 0, 0, 0.2) 0px 0 25px ;
 }
+
+.border-glow-red-intro{
+  box-shadow:rgba(255, 0, 0, 0.8) 0px 0 2px,
+  rgba(255, 1, 1, 0.4) 0px 0 25px ;
+  
+}
+
 
 .border-glow-red-no-line{
   box-shadow:rgba(255, 0, 0, 0.6) 0px 0 0px,

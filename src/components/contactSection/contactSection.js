@@ -132,7 +132,7 @@ function ContactSection () {
         </form>
       </div>
       <div className="h-fit w-full flex justify-center z-50 text-glow-white">
-        <a href="https://github.com/sycodes95/portfolio" className="text-white hover:text-green-300 transition-all">DESIGNED AND CREATED BY KEVIN KIM</a>
+        <a href="https://github.com/sycodes95/portfolio" target="_blank" className="text-white hover:text-green-300 transition-all">DESIGNED AND CREATED BY KEVIN KIM</a>
       </div>
 
       

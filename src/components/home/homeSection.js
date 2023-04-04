@@ -61,9 +61,9 @@ function HomeSection(props) {
     smokeRef.current.classList.add('opacity-10')
     smokeRef.current.classList.remove('opacity-0')
     
-    
   }, []);
 
+  
   
   return (
     <section className="content-con max-h-screen w-full corners">
@@ -109,8 +109,9 @@ function HomeSection(props) {
         bg-black bg-opacity-25 
         rounded-sm min-w-max
         flex justify-center flex-shrink
+        border-glow-red-intro
         opacity-0 transition-opacity delay-500 duration-1000
-        z-10 border-glow-red
+        z-10 
         "
         ref={introRef}
         >

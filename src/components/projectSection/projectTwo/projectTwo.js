@@ -42,10 +42,10 @@ function ProjectTwo () {
   }
 
   const handleViewFrontEnd = () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    window.open('https://github.com/sycodes95/jobtrackr');
   }
   const handleViewBackEnd = () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    window.open('https://github.com/sycodes95/jobtrackr-api');
   }
   
   useEffect(() => {
@@ -153,16 +153,16 @@ function ProjectTwo () {
                 VIEW SITE
               </button>
               <button className="h-full w-full bg-orange-400 bg-opacity-40 text-white rounded-sm transition-all hover:bg-gray-800" 
-              onClick={handleViewSite}>FRONT END REPO</button>
+              onClick={handleViewFrontEnd}>FRONT END REPO</button>
               <button className="h-full w-full bg-orange-400 bg-opacity-40 text-white rounded-sm transition-all hover:bg-gray-800" 
-              onClick={handleViewSite}>BACK END REPO</button>
+              onClick={handleViewBackEnd}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">
               {
               toolsElements.map(tool => (
                 tool.jsx
               ))
-              }
+              } 
             </div>
             
           </div>
