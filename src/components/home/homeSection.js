@@ -1,12 +1,9 @@
 import { useRef, useEffect } from "react";
 import bulb from '../../images/bulb.png'
-import dust from '../../images/dust.png'
 import windowLight from '../../images/windowlight.png'
 import downArrow from '../../icons/down-arrow.svg'
-import topographic from '../../images/topographic.png'
 import smokebot from '../../images/smokebot.png'
 import { ReactSVG } from "react-svg";
-import SmokeEffect from "../smoke/smoke";
 
 function HomeSection(props) {
 
@@ -139,13 +136,13 @@ function HomeSection(props) {
         text-white text-xs
         
         z-20 
-        flex justify-center
+        flex justify-center 
         ARROW-CONTAINER
         '>
           
           <button className='flex justify-center items-center 
           text-red-800 text-opacity-50 opacity-0 delay-500 duration-1000 
-          rounded-sm bg-striped-dark-alt'
+          rounded-sm border-glow-red-no-line'
           onClick={scrollToProjects} ref={arrowRef}>
             <ReactSVG className='hover:text-white transition-colors w-full h-full p-2' src={downArrow}/>
           </button>

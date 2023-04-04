@@ -125,16 +125,20 @@ function ProjectOne () {
           bg-black font-bold">
             
             <div className="flex w-full text-xs  max-width-480px-flex-col">
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm relative">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
+              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm relative">
                 DATA VIS 
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
+              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
                 CRUD
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
+              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
                 FILTER
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
+              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
                 SEARCH
               </p>
               <p className="w-full flex justify-center items-center p-1 gap-4 text-white  rounded-sm">
@@ -147,11 +151,11 @@ function ProjectOne () {
           <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-2 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
           bg-black ">
             <div className="grid grid-cols-3 gap-1 transition-all">
-              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-500" onClick={handleViewSite}>
+              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewSite}>
                 VIEW SITE
               </button>
-              <button className="h-full w-full bg-red-400 bg-opacity-40 text-white rounded-sm" onClick={handleViewSite}>FRONT END REPO</button>
-              <button className="h-full w-full bg-red-400 bg-opacity-40 text-white rounded-sm" onClick={handleViewSite}>BACK END REPO</button>
+              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewSite}>FRONT END REPO</button>
+              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewSite}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">
               {

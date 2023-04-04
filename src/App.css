@@ -118,7 +118,10 @@ input:focus, textarea:focus{
   rgba(255, 255, 255, 0.2) 0px 0 25px ;
 }
 
-
+.border-glow-yellow{
+  box-shadow:rgba(251, 255, 0, 0.87) 0px 0 2px,
+  rgba(255, 230, 0, 0.2) 0px 0 15px ;
+}
 
 .border-glow-emerald{
   box-shadow:rgba(5, 255, 184, 0.87) 0px 0 2px,
@@ -127,6 +130,11 @@ input:focus, textarea:focus{
 
 .border-glow-red{
   box-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
+  rgba(255, 0, 0, 0.2) 0px 0 25px ;
+}
+
+.border-glow-red-no-line{
+  box-shadow:rgba(255, 0, 0, 0.6) 0px 0 0px,
   rgba(255, 0, 0, 0.2) 0px 0 25px ;
 }
 
@@ -252,6 +260,22 @@ input:focus, textarea:focus{
   z-index: 0;
 }
 
+.bg-at::before {
+  content: "";
+  background-image: url("./images/at-custom.png");
+  background-position: center;
+  background-size: 64px;
+  background-repeat:space;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.025;
+  z-index: 0;
+}
+
+
 
 
 
@@ -358,7 +382,7 @@ input:focus, textarea:focus{
 }
 .SILHOUTTE{
   max-height: 70dvh;
-  min-height: 32rem;
+  min-height: 40rem;
 }
 
 .HOME-SCREEN{
@@ -441,8 +465,15 @@ input:focus, textarea:focus{
 
 
 @media (max-width: 768px) {
+  .max-width-768px-overflow-visible{
+    overflow: visible;
+  }
   .max-width-768px-width-full {
     width: 100%;
+  }
+  .max-width-768px-neg-right-56 {
+    top: 200%;
+    right: 0%;
   }
   .max-width-768px-gap-x-none{
     column-gap: 0.75rem;
@@ -477,6 +508,9 @@ input:focus, textarea:focus{
 @media (max-width: 480px) {
   .max-width-480px-flex-col{
     flex-direction: column;
+  }
+  .max-width-480px-border-none{
+    border: none;
   }
   .PROJECT-CONTENT-RIGHT {
     grid-template-columns: 1fr;

@@ -31,6 +31,8 @@ function AboutSection () {
 
   const bannerLineRef = useRef(null)
 
+  const aboutIconRef = useRef([]);
+
   const toolsElements = [
     {
       jsx: <i class="devicon-javascript-plain text-4xl  fill-current hover:text-red-400 transition-all"></i>,
@@ -90,7 +92,7 @@ function AboutSection () {
           aboutHeaderRef.current.classList.remove('-top-16');
 
           aboutSideRef.current.classList.add('left-0')
-          aboutSideRef.current.classList.remove('-left-44');
+          aboutSideRef.current.classList.remove('-left-56');
           
           aboutSilhoutteRef.current.classList.add('opacity-100')
           aboutSilhoutteRef.current.classList.remove('opacity-0')
@@ -101,6 +103,11 @@ function AboutSection () {
           bannerLineRef.current.classList.add('h-10')
 
           bannerLineRef.current.classList.remove('h-0')
+
+          aboutIconRef.current.forEach(ref => {
+            ref.classList.add('opacity-100')
+            ref.classList.remove('opacity-0')
+          })
 
           const aboutLettersArray = [
             aboutTitleA,
@@ -139,7 +146,8 @@ function AboutSection () {
          flex items-center 
          ">
           <div className="flex justify-start ml-2 w-fit">
-            <Icon className=" text-black text-opacity-50 rounded-md" path={mdiDna} size={1.5} />
+            <Icon className=" text-black opacity-0 transition-all delay-500 duration-1000" 
+            path={mdiDna} size={1.5} ref={ref => aboutIconRef.current[0] = ref}/>
           </div>
 
           <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-70
@@ -153,20 +161,22 @@ function AboutSection () {
           </div>
 
           <div className="flex justify-end mr-2 w-fit">
-            <Icon className="text-black rounded-md" path={mdiDna} size={1.5} />
+            <Icon className="text-black opacity-0 transition-all delay-500 duration-1000 flip" 
+            path={mdiDna} size={1.5} ref={ref => aboutIconRef.current[1] = ref}/>
           </div>
           
         </div>
         
       </div> 
 
-      <div className="ABOUT-CONTAINER flex relative overflow-hidden justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000" ref={aboutContainerRef}>
+      <div className="ABOUT-CONTAINER flex relative overflow-hidden max-width-768px-overflow-visible 
+      justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000" ref={aboutContainerRef}>
         
         <div className="relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-emerald
-        border-4 border-opacity-50 border-white bg-dna -top-full transition-all  w-2/5 max-width-1440px-w-50pct
+        border-4 border-opacity-50 border-black bg-dna -top-full transition-all  w-2/5 max-width-1440px-w-50pct
         max-width-1200px-w-60pct max-width-768px-width-full z-10 overflow-hidden" ref={aboutContentRef}>
           
-          <div className="absolute -top-16 h-16 w-full bg-striped-dark-alt transition-all delay-500 duration-1000" ref={aboutHeaderRef}>
+          <section className="absolute -top-16 h-16 w-full bg-striped-dark-alt transition-all delay-500 duration-1000" ref={aboutHeaderRef}>
 
             <div className="absolute -top-0 right-0 h-full
             text-white text-opacity-70 text-4xl font-bold font-black-outline-light flex justify-center items-center p-4">
@@ -180,17 +190,23 @@ function AboutSection () {
               <span>LOCATION : LA County, CA</span>
             </div>
 
-          </div>
+          </section>
           
-          <div className="absolute top-1/2 -translate-y-1/2 -left-44 w-44 max-width-768px-width-full flex flex-col  items-center p-4 
-          border-l-4 border-green-300 border-opacity-40 bg-black bg-opacity-25 gap-y-4
+          <section className="absolute top-1/2 -translate-y-1/2 -left-56 w-56 max-width-768px-width-full flex flex-col  items-center p-4 
+          border-l-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
           transition-all delay-1000 duration-1000" ref={aboutSideRef}>
             
             <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
-              I'M A <span className="text-green-300">FULL-STACK DEVELOPER</span> WITH AN EYE FOR DESIGN.
-              MY FOCUS IS ON CREATING RESPONSIVE LAYOUTS AND CRAFTING EASY TO READ & EFFICIENT CODE.
+
+              I AM A <span className="text-green-300">FULL-STACK DEVELOPER</span> WITH AN EYE FOR DESIGN.
+              I TAKE PRIDE IN CRAFTING RESPONSIVE LAYOUTS AND WRITING EFFICIENT, EASY-TO-READ CODE.
+              ALONG WITH MY CORE DEVELOPMENT SKILLS,
+              I HAVE A DEEP PASSION FOR WORKING WITH DATA AND USING IT TO CREATE MEANINGFUL VISUALIZATIONS THAT CONVEY INSIGHTS IN AN ENGAGING WAY.
+              
             </div>
+
             <div className="text-white text-md border-b w-full flex justify-center">TOOLS</div>
+
             <div className="grid grid-cols-3 justify-evenly  gap-y-2 gap-x-4 "> 
             
               {
@@ -205,7 +221,28 @@ function AboutSection () {
             <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
             <a className="text-green-300" href="https://github.com/sycodes95" target="_blank">https://github.com/sycodes95</a>
             </div>
-          </div>
+          </section>
+
+
+          <section className="absolute top-1/2 -translate-y-1/2 right-0 w-56  flex flex-col  items-center p-4 
+          border-r-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
+          transition-all delay-1000 duration-1000 max-width-768px-neg-right-56 " >
+
+            <div className="text-white text-md border-b w-full flex justify-center">EXTRA DETAILS :) </div>
+
+            
+            <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
+
+              WHEN I'M NOT CODING, I LIKE TO RUN AND DO BODY WEIGHT EXERCISES, I LIED I HATE RUNNING AND EXERCISING BUT I STILL DO IT. 
+              FOR FUN I ENJOY WATCHING THE UFC WHEN THE CARD IS GOOD AND THE PREMIER LEAGUE (SOCCER).
+              I AM A TOTTENHAM FAN BECAUSE I HATE MYSELF BUT SON IS IN IT SO WHAT CAN I DO lol. 
+              I ALSO LOVE TO GAME SOMETIMES, I AM A GC IN ROCKET LEAGUE AND HAS BEEN MY MAIN GAME OF CHOICE FOR YEARS.
+              
+            </div>
+            
+            
+            
+          </section>
           
 
           <img className="SILHOUTTE " src={silhoutte} ref={aboutSilhoutteRef}/>

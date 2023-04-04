@@ -122,16 +122,20 @@ function ProjectTwo () {
           bg-black font-bold">
             
             <div className="flex w-full text-xs  max-width-480px-flex-col">
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm relative">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
+              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm relative">
                 DATA VIS 
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
+              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
                 CRUD
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
+              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
                 FILTER
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white border-r-2 border-white border-opacity-50 rounded-sm">
+              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
+              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
                 SEARCH
               </p>
               <p className="w-full flex justify-center items-center p-1 gap-4 text-white  rounded-sm">

@@ -28,6 +28,8 @@ function ProjectSection () {
 
   const projectTwoRight = useRef(null);
 
+  const projectIconRef = useRef([]);
+
   const projectsTitleP = useRef(null)
   const projectsTitleR = useRef(null)
   const projectsTitleO = useRef(null)
@@ -63,6 +65,11 @@ function ProjectSection () {
           bannerLineRef.current.classList.add('h-10')
 
           bannerLineRef.current.classList.remove('h-0')
+
+          projectIconRef.current.forEach(ref => {
+            ref.classList.add('opacity-100')
+            ref.classList.remove('opacity-0')
+          })
 
           const projectLettersArray = [
             projectsTitleP,
@@ -122,10 +129,11 @@ function ProjectSection () {
       
         <div className="ICON-CONTAINER bg-white bg-opacity-25 h-full w-full flex items-center relative ">
           
-          <div className="flex justify-start ml-2 w-fit z-10">
-            <Icon className=" text-black" path={mdiHammerWrench} size={1.5} />
+          <div className="flex justify-start ml-2 w-fit z-10  " >
+            <Icon className=" text-black opacity-0 transition-all delay-500 duration-1000" 
+            path={mdiHammerWrench} size={1.5} ref={ref => projectIconRef.current[0] = ref}/>
             
-          </div>
+          </div> 
 
           <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-70
           whitespace-nowrap res-font gap-x-12 max-width-768px-gap-x-none">
@@ -141,7 +149,8 @@ function ProjectSection () {
           </div>
 
           <div className="flex justify-end mr-2 w-fit">
-            <Icon className=" text-black flip" path={mdiHammerWrench} size={1.5} />
+            <Icon className=" text-black opacity-0 transition-all delay-500 duration-1000 flip" 
+            path={mdiHammerWrench} size={1.5} ref={ref => projectIconRef.current[1] = ref}/>
           </div>
           
         </div>
@@ -149,7 +158,7 @@ function ProjectSection () {
       </section>
 
         
-      <section className=' gap-x-8 overflow-hidden' ref={projectOne}>
+      <section className=' gap-x-8 overflow-hidden max-width-768px-overflow-visible' ref={projectOne}>
         
         <div className="flex justify-center">
 
@@ -178,7 +187,7 @@ function ProjectSection () {
         </div>
 
       </section>
-      <section className=' gap-x-8 overflow-hidden ' ref={projectTwo}>
+      <section className=' gap-x-8  overflow-hidden max-width-768px-overflow-visible' ref={projectTwo}>
         
         <div className="flex justify-center">
 

@@ -24,7 +24,6 @@ import HomeSection from './components/home/homeSection';
 import downArrow from './icons/down-arrow.svg'
 import AboutSection from './components/aboutSection/aboutSection';
 import ContactSection from './components/contactSection/contactSection';
-import SmokeEffect from './components/smoke/smoke';
 
 
 function App() {
@@ -89,7 +88,6 @@ function App() {
   },[])
 
   useEffect(()=>{
-    console.log(lastScrollY);
   },[lastScrollY])
   
     
@@ -101,9 +99,7 @@ function App() {
        p-2 text-sm gap-x-4 z-50 flex bg-black bg-opacity-50
       -top-1/4 transition-all border-t-4 border-b-2 border-b-white  border-red-800 border-opacity-50 duration-500'
       ref={navRef}>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={handleScrollToTop}>
           
-        </li>
         <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={handleScrollToTop}>
           [HOME]
         </li>
