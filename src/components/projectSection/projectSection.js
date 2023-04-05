@@ -156,59 +156,28 @@ function ProjectSection () {
         </div>
         
       </section>
-
-        
-      <section className=' gap-x-8 overflow-hidden max-width-768px-overflow-visible' ref={projectOne}>
-        
-        <div className="flex justify-center">
-
-          <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
-          flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
-          border-l-8 border-red-800 border-opacity-30 border-glow-white-right p-2" ref={projectOneLeft}>
-
-            <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-l-2 border-red-800 border-opacity-30 border-dashed text-glow-red ">01</div>
-            
-          </div>
-
-          <div className="SIDE-INFO  text-white absolute -right-1/4  bg-black bg-opacity-25 w-48 h-48
-          flex justify-center items-center text-center text-8xl transition-all duration-700
-          border-r-8 border-red-800 border-opacity-30 p-2" ref={projectOneRight}>
-            <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-r-2 border-red-800 border-opacity-30 border-dashed">
-              <img src={edgescoutPNG} alt=""/>
-            </div>
-            
-          </div>
-          <div className="flex justify-center opacity-0 transition-all delay-200 duration-1000" ref={projectOneDetails}>
-            <ProjectOne/> 
-          </div>
-          
-        </div>
-
-      </section>
-      <section className=' gap-x-8  overflow-hidden max-width-768px-overflow-visible' ref={projectTwo}>
+      <section className=' gap-x-8  overflow-hidden max-width-768px-overflow-visible' ref={projectOne}>
         
         <div className="flex justify-center">
 
           <div className="SIDE-INFO  text-orange-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
-          border-l-8 border-orange-800 border-opacity-40 p-2" ref={projectTwoLeft}>
+          border-l-8 border-orange-800 border-opacity-40 p-2" ref={projectOneLeft}>
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-l-2 border-orange-800 border-opacity-40 border-dashed text-glow-oj">02</div>
+            border-l-2 border-orange-800 border-opacity-40 border-dashed text-glow-oj">01</div>
             
           </div>
 
           <div className="SIDE-INFO  text-white absolute -right-1/4  bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl transition-all duration-700
-          border-r-8 border-orange-800 border-opacity-40 p-2" ref={projectTwoRight}>
+          border-r-8 border-orange-800 border-opacity-40 p-2" ref={projectOneRight}>
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
             border-r-2 border-orange-800 border-opacity-40 border-dashed">
               <img src={edgescoutPNG} alt=""/>
             </div>
             
           </div>
-          <div className="flex justify-center opacity-0 transition-all delay-200 duration-1000" ref={projectTwoDetails}>
+          <div className="flex justify-center opacity-0 transition-all delay-200 duration-1000" ref={projectOneDetails}>
             <ProjectTwo/> 
           </div>
           
@@ -216,6 +185,38 @@ function ProjectSection () {
 
       </section>
 
+
+        
+      <section className=' gap-x-8 overflow-hidden max-width-768px-overflow-visible' ref={projectTwo}>
+        
+        <div className="flex justify-center">
+
+          <div className="SIDE-INFO  text-red-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
+          flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
+          border-l-8 border-red-800 border-opacity-30 border-glow-white-right p-2" ref={projectTwoLeft}>
+
+            <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
+            border-l-2 border-red-800 border-opacity-30 border-dashed text-glow-red ">02</div>
+            
+          </div>
+
+          <div className="SIDE-INFO  text-white absolute -right-1/4  bg-black bg-opacity-25 w-48 h-48
+          flex justify-center items-center text-center text-8xl transition-all duration-700
+          border-r-8 border-red-800 border-opacity-30 p-2" ref={projectTwoRight}>
+            <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
+            border-r-2 border-red-800 border-opacity-30 border-dashed">
+              <img src={edgescoutPNG} alt=""/>
+            </div>
+            
+          </div>
+          <div className="flex justify-center opacity-0 transition-all delay-200 duration-1000" ref={projectTwoDetails}>
+            <ProjectOne/> 
+          </div>
+          
+        </div>
+
+      </section>
+      
       
 
 

@@ -300,6 +300,8 @@ function AboutSection () {
             <button className={`rounded-sm  bg-opacity-50 text-white p-1 w-full border border-slate-500 border-opacity-0 hover:border-opacity-100
             ${mobileTab.tab === 'WHOAMI?' && 'bg-slate-500'}`} onClick={handleMobileTab}>WHOAMI?</button>
           </section>
+
+          
           
           
           <img className="SILHOUTTE " src={silhoutte} ref={aboutSilhoutteRef}/>
