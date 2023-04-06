@@ -270,17 +270,26 @@ function AboutSection () {
             
             <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
 
-            <p>WHEN I'M NOT BUSY CODING, I LIKE TO PUNISH MYSELF WITH A GOOD OL' RUN AND SOME TORTUROUS BODY WEIGHT EXERCISES. 
-            HONESTLY, I HATE DOING IT, BUT I'M DETERMINED TO KEEP UP THE CHARADE OF BEING A HEALTHY AND ACTIVE PERSON.
-            </p>
-            <p>
-            WHEN I'M FEELING ESPECIALLY LAZY, I'LL FIRE UP STEAM AND DIVE INTO THE WORLD OF ROCKET LEAGUE, 
-            WHERE I HOLD THE RANK OF GRAND CHAMPION.
-            BECAUSE WHAT BETTER WAY TO OFFSET MY SEDENTARY CODING LIFESTYLE THAN WITH ADDITIONAL HOURS OF SITTING AND STARING AT A SCREEN, AM I RIGHT?
-            </p>
-            <p>
-            OCASSIONALLY, I LIKE TO WATCH THE UFC WHEN THE CARD LOOKS AMAZING, AS WELL AS THE PREMIER LEAGUE BECAUSE LET'S BE HONEST, WHO ACTUALLY WATCHES THE MLS?
-            </p>
+              <p>
+              As a naturally analytical person, I believe that self-reflection is crucial for personal and professional growth. Through self-analysis, I've learned to identify my strengths and weaknesses, and use them to my advantage. For example, I've discovered that I have a tendency to become frustrated when faced with difficult problems. However, I've also learned that this frustration can be a source of motivation for me. Instead of giving up and
+              throwing my monitor out the window, I use my frustration as a catalyst to keep pushing forward aggresively until I find a solution. By continually analyzing my thoughts, feelings, and subconscious tendencies, I'm able to identify areas where I can improve, and find ways to turn weakness into strength in order to achieve my goals.
+                
+              </p>
+              {
+              /*
+              <p>WHEN I'M NOT BUSY CODING, I LIKE TO PUNISH MYSELF WITH A GOOD OL' RUN AND SOME TORTUROUS BODY WEIGHT EXERCISES. 
+              HONESTLY, I HATE DOING IT, BUT I'M DETERMINED TO KEEP UP THE CHARADE OF BEING A HEALTHY AND ACTIVE PERSON.
+              </p>
+              <p>
+              WHEN I'M FEELING ESPECIALLY LAZY, I'LL FIRE UP STEAM AND DIVE INTO THE WORLD OF ROCKET LEAGUE, 
+              WHERE I HOLD THE RANK OF GRAND CHAMPION.
+              BECAUSE WHAT BETTER WAY TO OFFSET MY SEDENTARY CODING LIFESTYLE THAN WITH ADDITIONAL HOURS OF SITTING AND STARING AT A SCREEN, AM I RIGHT?
+              </p>
+              <p>
+              OCASSIONALLY, I LIKE TO WATCH THE UFC WHEN THE CARD LOOKS AMAZING, AS WELL AS THE PREMIER LEAGUE BECAUSE LET'S BE HONEST, WHO ACTUALLY WATCHES THE MLS?
+              </p>
+              */
+              }
 
 
 

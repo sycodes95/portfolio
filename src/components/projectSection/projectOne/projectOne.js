@@ -41,14 +41,14 @@ function ProjectOne () {
   ]
 
   const handleViewSite = () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    window.open('https://edgescout.up.railway.app/');
   }
 
   const handleViewFrontEnd = () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    window.open('https://github.com/sycodes95/trading-journal');
   }
   const handleViewBackEnd = () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    window.open('https://github.com/sycodes95/trading-journal-api');
   }
   
   useEffect(() => {
