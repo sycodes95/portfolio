@@ -102,7 +102,9 @@ input:focus, textarea:focus{
 }
 
 
-
+.text-shadow-black{
+  text-shadow: 5px 5px 10px red;
+}
 .text-glow-white{
   text-shadow:rgba(255, 255, 255, 0.87) 0px 0 1px,
   rgb(255, 255, 255) 0px 0 4px ;
@@ -112,8 +114,6 @@ input:focus, textarea:focus{
   text-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
   rgba(255, 1, 1, 0.564) 0px 0 10px ;
 }
-
-
 
 .text-glow-oj{
   text-shadow:rgba(255, 136, 0, 0.6) 0px 0 2px,
