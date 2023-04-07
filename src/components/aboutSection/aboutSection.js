@@ -271,8 +271,8 @@ function AboutSection () {
             <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
 
               <p>
-              As a naturally analytical person, I believe that self-reflection is crucial for personal and professional growth. Through self-analysis, I've learned to identify my strengths and weaknesses, and use them to my advantage. For example, I've discovered that I have a tendency to become frustrated when faced with difficult problems. However, I've also learned that this frustration can be a source of motivation for me. Instead of giving up and
-              throwing my monitor out the window, I use my frustration as a catalyst to keep pushing forward aggresively until I find a solution. By continually analyzing my thoughts, feelings, and subconscious tendencies, I'm able to identify areas where I can improve, and find ways to turn weakness into strength in order to achieve my goals.
+              I BELIEVE THAT SELF-REFLECTION IS CRUCIAL FOR PERSONAL AND PROFESSIONAL GROWTH. THROUGH SELF-ANALYSIS, I'VE LEARNED TO IDENTIFY MY STRENGTHS AND WEAKNESSES, AND USE THEM TO MY ADVANTAGE. FOR EXAMPLE, I'VE DISCOVERED THAT I HAVE A TENDENCY TO BECOME FRUSTRATED WHEN FACED WITH DIFFICULT PROBLEMS. HOWEVER, I'VE ALSO LEARNED THAT THIS FRUSTRATION CAN BE A SOURCE OF MOTIVATION FOR ME. INSTEAD OF GIVING UP
+              OR BEING DISCOURAGED, I USE MY FRUSTRATION AS A CATALYST TO KEEP PUSHING FORWARD AGGRESIVELY UNTIL I FIND A SOLUTION. BY CONTINUALLY ANALYZING MY THOUGHTS, FEELINGS, AND SUBCONSCIOUS TENDENCIES, I'M ABLE TO IDENTIFY AREAS WHERE I CAN IMPROVE, AND FIND WAYS TO TURN WEAKNESS INTO STRENGTH.
                 
               </p>
               {
