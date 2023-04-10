@@ -57,7 +57,7 @@ function AboutSection () {
 
   const toolsElements = [
     {
-      jsx: <i class="devicon-javascript-plain text-4xl  fill-current hover:text-red-400 transition-all"></i>,
+      jsx: <i class="devicon-javascript-plain text-4xl  fill-current"></i>,
       name: 'Javascript'
     },
     {
