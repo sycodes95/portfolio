@@ -154,8 +154,8 @@ function ProjectOne () {
               <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewSite}>
                 VIEW SITE
               </button>
-              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewSite}>FRONT END REPO</button>
-              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewSite}>BACK END REPO</button>
+              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewFrontEnd}>FRONT END REPO</button>
+              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewBackEnd}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">
               {

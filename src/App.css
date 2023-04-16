@@ -203,7 +203,7 @@ input:focus, textarea:focus{
 .bg-dev-classic{
   background:
   repeating-linear-gradient(
-     rgba(12, 5, 5, 0.5), rgba(1, 8, 17, 0.5)
+     rgba(12, 10, 5, 0.5), rgba(1, 8, 17, 0.5)
      )
      ,url(./background-images/dev-pattern.png);
   background-position: center;
