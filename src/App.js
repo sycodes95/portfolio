@@ -92,25 +92,25 @@ function App() {
   
     
   return (
-    <div className='APP bg-dev-classic relative' onLoad={handleScrollToTop}>
+    <div className='APP bg-jet-light relative' onLoad={handleScrollToTop}>
       
       
-      <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 h-10 
-       p-2 text-sm gap-x-4 z-50 flex bg-black bg-opacity-50
-      -top-1/4 transition-all border-t-4 border-b-2 border-b-white  border-red-800 border-opacity-50 duration-500'
+      <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 
+       p-2 text-xs gap-x-4 z-50 flex bg-black bg-opacity-50
+      -top-1/4 transition-all border-t-4  border-t-yellow-700 duration-500'
       ref={navRef}>
           
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={handleScrollToTop}>
-          [HOME]
+        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={handleScrollToTop}>
+        <p className='text-yellow-600'>01.</p> <p>HOME</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToProjects}>
-          [PROJECTS]
+        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToProjects}>
+          <p className='text-yellow-600'>02.</p> <p>PROJECTS</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToAbout}>
-          [ABOUT]
+        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToAbout}>
+          <p className='text-yellow-600'>03.</p> <p>ABOUT</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToContact}>
-          [CONTACT]
+        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToContact}>
+          <p className='text-yellow-600'>04.</p> <p>CONTACT</p>
         </li>
         
       </ul>

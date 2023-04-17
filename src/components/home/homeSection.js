@@ -3,6 +3,10 @@ import bulb from '../../images/bulb.png'
 import windowLight from '../../images/windowlight.png'
 import downArrow from '../../icons/down-arrow.svg'
 import smokebot from '../../images/smokebot.png'
+import Icon from '@mdi/react';
+import { mdiChevronDown } from '@mdi/js';
+
+
 import { ReactSVG } from "react-svg";
 
 function HomeSection(props) {
@@ -54,6 +58,10 @@ function HomeSection(props) {
   useEffect(() => {
     arrowRef.current.classList.add('opacity-100')
     arrowRef.current.classList.remove('opacity-0')
+    setTimeout(()=>{
+      arrowRef.current.classList.remove('delay-500')
+    },1000)
+    
     
   }, []);
 
@@ -100,22 +108,23 @@ function HomeSection(props) {
         </div>
 
         
+        
 
         <div className="
         absolute left-2/4 -translate-x-1/2 
         p-2 
-        border-2 border-red-800 border-opacity-30
+        
         shadow-lg
         bg-black bg-opacity-25 
         rounded-sm min-w-max
-        flex justify-center flex-shrink
-        border-glow-red-intro
+        flex justify-center flex-shrink bg-blur
+        
         opacity-0 transition-opacity delay-500 duration-1000
         z-10 
         "
         ref={introRef}
         >
-          <div className="p-4 bg-striped-dark-alt bg-opacity-10 flex flex-col items-end gap-x-2">
+          <div className="p-4  bg-opacity-10 flex flex-col  items-end gap-x-2 bg-black">
             
             <span className="text-white text-opacity-75 font-bg-gradient font-bold text-5xl INTRO-NAME" >
               KEVIN KIM
@@ -127,6 +136,11 @@ function HomeSection(props) {
             </div>
             
           </div>
+
+          <div className="h-6 w-6 absolute top-0 left-0 border-t-2 border-l-2 border-yellow-700"></div>
+          <div className="h-6 w-6 absolute bottom-0 right-0 border-b-2 border-r-2 border-yellow-700"></div>
+          <div className="h-6 w-6 absolute top-0 right-0 border-t-2 border-r-2 border-yellow-700"></div>
+          <div className="h-6 w-6 absolute bottom-0 left-0 border-b-2 border-l-2 border-yellow-700 "></div>
           
         </div>
 
@@ -141,11 +155,13 @@ function HomeSection(props) {
         ARROW-CONTAINER
         '>
           
-          <button className='flex justify-center items-center 
-          text-red-800 text-opacity-50 opacity-0 delay-500 duration-1000 
-          rounded-full border-glow-red-no-line'
+          <button className='flex flex-col justify-center items-center 
+          text-yellow-700 hover:text-yellow-600  text-opacity-50 opacity-0 delay-500 duration-1000 
+          rounded-md'
           onClick={scrollToProjects} ref={arrowRef}>
-            <ReactSVG className='hover:text-red-600 transition-colors w-full h-full p-2' src={downArrow}/>
+            <Icon   path={mdiChevronDown} size={2} />
+            <Icon  path={mdiChevronDown} size={2} />
+            <Icon  path={mdiChevronDown} size={2} />
           </button>
           
         </div>

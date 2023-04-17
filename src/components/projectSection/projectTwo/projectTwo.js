@@ -81,7 +81,7 @@ function ProjectTwo () {
     <div className='PROJECT-CONTAINER w-2/4 transition-all
     bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-oj'
     >
-      <section className="h-12 w-full  col-span-full text-white text-glow-oj  text-md
+      <section className="h-12 w-full  col-span-full text-white font-black-outline-light text-md
       flex items-center relative overflow-hidden">
         <div className="p-4 bg-striped-dark-alt h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
          ref={projectTwoTitle}>

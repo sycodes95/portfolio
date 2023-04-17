@@ -212,6 +212,10 @@ input:focus, textarea:focus{
   
 }
 
+.bg-jet-light{
+  background-color: rgb(37, 40, 48);
+}
+
 
 .bg-edgescout{
   background-image:
@@ -342,6 +346,10 @@ input:focus, textarea:focus{
   rgba(0, 0, 0, 0.1) 5px,
   rgba(0, 0, 0, 0.2) 5px,
   rgba(0, 0, 0, 0.2) 10px)
+}
+
+.bg-blur{
+  backdrop-filter: blur(5px);
 }
 
 .res-font{

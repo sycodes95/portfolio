@@ -127,7 +127,7 @@ function ProjectSection () {
       <section className=" relative  flex justify-center items-center 
       rounded-sm h-0 transition-all duration-1000" ref={bannerLineRef}>
       
-        <div className="ICON-CONTAINER bg-white bg-opacity-25 h-full w-full flex items-center relative ">
+        <div className="ICON-CONTAINER bg-yellow-700 bg-opacity-70 h-full w-full flex items-center relative ">
           
           <div className="flex justify-start ml-2 w-fit z-10  " >
             <Icon className=" text-black opacity-0 transition-all delay-500 duration-1000" 
@@ -160,11 +160,11 @@ function ProjectSection () {
         
         <div className="flex justify-center">
 
-          <div className="SIDE-INFO  text-orange-800 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
+          <div className="SIDE-INFO  text-yellow-700 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
           flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
-          border-l-8 border-orange-800 border-opacity-40 p-2" ref={projectOneLeft}>
+          border-l-8 border-yellow-700 p-2" ref={projectOneLeft}>
             <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-l-2 border-orange-800 border-opacity-40 border-dashed text-glow-oj">01</div>
+            border-l-2 border-yellow-700 border-dashed ">01</div>
             
           </div>
 
