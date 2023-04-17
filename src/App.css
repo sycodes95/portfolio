@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar{
-  width: 12px;
+  width: 10px;
   height: 10px;
   
 }
 
 ::-webkit-scrollbar-track{
-  background-color: rgb(0, 0, 0);
-  
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: rgba(75, 43, 43, 0.5);
+  background-color: rgba(52, 58, 77, 0.5);
+  border-radius: 8px;
 }
 
 input:-webkit-autofill,
@@ -126,8 +127,13 @@ input:focus, textarea:focus{
 }
 
 .border-glow-yellow{
-  box-shadow:rgba(251, 255, 0, 0.87) 0px 0 2px,
+  box-shadow:rgba(255, 179, 0, 0.87) 0px 0 2px,
   rgba(255, 230, 0, 0.2) 0px 0 15px ;
+}
+
+.border-glow-blue{
+  box-shadow:rgba(0, 102, 255, 0.87) 0px 0 2px,
+  rgba(0, 94, 255, 0.2) 0px 0 15px ;
 }
 
 .border-glow-emerald{
@@ -187,6 +193,16 @@ input:focus, textarea:focus{
   rgba(0, 0, 0, 0.1) 2px,
   rgba(0, 0, 0, 0.3) 2px,
   rgba(0, 0, 0, 0.3) 4px)
+  
+}
+
+.bg-striped-dark-alt-yellow{
+  background: repeating-linear-gradient( 
+  45deg,
+  rgba(0, 0, 0, 0.1),
+  rgba(0, 0, 0, 0.1) 2px,
+  rgba(255, 221, 0, 0.3) 2px,
+  rgba(255, 221, 0, 0.3) 6px)
   
 }
 
@@ -367,6 +383,8 @@ input:focus, textarea:focus{
   max-height: 125%;
 }
 
+
+
 .w-initial{
   width: initial;
 }
@@ -487,6 +505,10 @@ input:focus, textarea:focus{
 
 
 @media (max-width: 768px) {
+  .max-height-screen-10{
+    max-height: calc(100vh - 3rem);
+    
+  }
   .max-width-768px-left-0{
     left: 0px;
   }

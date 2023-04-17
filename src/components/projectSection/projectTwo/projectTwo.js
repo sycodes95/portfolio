@@ -79,13 +79,13 @@ function ProjectTwo () {
   
   return (
     <div className='PROJECT-CONTAINER w-2/4 transition-all
-    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-oj'
+    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-yellow'
     >
       <section className="h-12 w-full  col-span-full text-white font-black-outline-light text-md
       flex items-center relative overflow-hidden">
-        <div className="p-4 bg-striped-dark-alt h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
+        <div className="p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
          ref={projectTwoTitle}>
-          <p>[02] PROJECT:</p> <p>JOB TRACKR</p> 
+          <p>[01] PROJECT:</p> <p>JOB TRACKR</p> 
         </div>
         <div className="h-full w-full bg-striped-dark-thick"></div>
 
@@ -97,7 +97,7 @@ function ProjectTwo () {
           bg-black">
             
             <img className=" grayscale hover:cursor-pointer z-10 h-full" src={jobtrackrproject} ref={imageRef}/>
-            <div className={`overlay absolute bg-orange-900 bg-opacity-30 z-10 w-full h-full
+            <div className={`overlay absolute bg-yellow-700 bg-opacity-30 z-10 w-full h-full
             hover:bg-opacity-0 hover:cursor-pointer
             transition-all bg-cover`}
             onClick={handleViewSite}
@@ -112,7 +112,7 @@ function ProjectTwo () {
           <div className="text-gray-400 text-sm z-50  w-full flex gap-4  justify-between  p-2 
           bg-black bg-opacity-50">
             
-            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-orange-400 font-black-outline-light">
+            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-yellow-400 font-black-outline-light">
               A JOB APPLICATION TRACKER, BUILT TO HELP JOB SEEKERS IMPROVE THEIR APPLICATION STRATEGIES IN THE JOB MARKET.
             </p>
             
@@ -148,13 +148,13 @@ function ProjectTwo () {
           <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-2 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
           bg-black ">
             <div className="grid grid-cols-3 gap-1">
-              <button className="h-full w-full bg-orange-400 bg-opacity-40 text-white rounded-sm p-2 transition-all hover:bg-gray-800" 
+              <button className="h-full w-full bg-emerald-400 bg-opacity-40 text-white rounded-sm p-2 transition-all hover:bg-opacity-30" 
               onClick={handleViewSite}>
                 VIEW SITE
               </button>
-              <button className="h-full w-full bg-orange-400 bg-opacity-40 text-white rounded-sm transition-all hover:bg-gray-800" 
+              <button className="h-full w-full bg-gray-400 bg-opacity-40 text-white rounded-sm transition-all hover:bg-opacity-30" 
               onClick={handleViewFrontEnd}>FRONT END REPO</button>
-              <button className="h-full w-full bg-orange-400 bg-opacity-40 text-white rounded-sm transition-all hover:bg-gray-800" 
+              <button className="h-full w-full bg-gray-500 bg-opacity-40 text-white rounded-sm transition-all hover:bg-opacity-30" 
               onClick={handleViewBackEnd}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">

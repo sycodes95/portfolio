@@ -82,13 +82,13 @@ function ProjectOne () {
   
   return (
     <div className='PROJECT-CONTAINER w-2/4 transition-all
-    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-red'
+    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-yellow'
     >
-      <section className="h-12 w-full bg-striped-dark-alt col-span-full text-white text-glow-red text-md
+      <section className="h-12 w-full bg-striped-dark-alt col-span-full text-white text-glow-yellow text-md
       flex items-center relative overflow-hidden">
-        <div className="p-4  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700 "
+        <div className="p-4 font-black-outline-light  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700 "
          ref={projectOneTitle}>
-          <p>[01] PROJECT:</p> <p>EDGE SCOUT</p> 
+          <p>[02] PROJECT:</p> <p>EDGE SCOUT</p> 
         </div>
         <div className="h-full w-full bg-striped-dark-thick"></div>
 
@@ -100,7 +100,7 @@ function ProjectOne () {
           bg-black">
             
             <img className=" grayscale hover:cursor-pointer z-10 h-full" src={edgescoutproject} ref={imageRef}/>
-            <div className={`overlay absolute bg-red-900 bg-opacity-30 z-10 w-full h-full
+            <div className={`overlay absolute bg-yellow-700 bg-opacity-30 z-10 w-full h-full
             hover:bg-opacity-0 hover:cursor-pointer
             transition-all bg-cover`}
             onClick={handleViewSite}
@@ -115,7 +115,7 @@ function ProjectOne () {
           <div className="text-gray-400 text-sm z-50  w-full flex gap-4  justify-between  p-2 
           bg-black bg-opacity-50">
             
-            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-red-400 font-black-outline-light">
+            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-yellow-400 font-black-outline-light">
               A TRADING JOURNAL APP, BUILT TO HELP TRADERS FIND AND REFINE THEIR STRATEGIES FOR BETTER PROFITABILITY IN THE FINANCIAL MARKETS.
             </p>
             
@@ -151,11 +151,11 @@ function ProjectOne () {
           <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-2 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
           bg-black ">
             <div className="grid grid-cols-3 gap-1 transition-all">
-              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewSite}>
+              <button className="h-full w-full text-white bg-emerald-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-opacity-30" onClick={handleViewSite}>
                 VIEW SITE
               </button>
-              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewFrontEnd}>FRONT END REPO</button>
-              <button className="h-full w-full text-white bg-red-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-gray-800" onClick={handleViewBackEnd}>BACK END REPO</button>
+              <button className="h-full w-full text-white bg-gray-400 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-opacity-30" onClick={handleViewFrontEnd}>FRONT END REPO</button>
+              <button className="h-full w-full text-white bg-gray-500 bg-opacity-40 rounded-sm p-2 transition-all hover:bg-opacity-30" onClick={handleViewBackEnd}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">
               {

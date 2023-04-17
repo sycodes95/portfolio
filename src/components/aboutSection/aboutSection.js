@@ -207,7 +207,7 @@ function AboutSection () {
       </div> 
 
       <div className="ABOUT-CONTAINER flex relative overflow-hidden max-width-768px-overflow-visible 
-      justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000" ref={aboutContainerRef}>
+      justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000 max-height-screen-10" ref={aboutContainerRef}>
         
         <div className="relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-emerald
         border-4 border-opacity-50 border-black bg-dna -top-full transition-all  w-2/5 max-width-1440px-w-50pct
