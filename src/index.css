@@ -10,6 +10,11 @@
   font-family: Rajdhani;
   src: url(./fonts/Rajdhani-Medium.ttf);
 }
+
+@font-face {
+  font-family: FieldGothic;
+  src: url(./fonts/FieldGothicTEST-No.11.otf);
+}
 html {
   scroll-behavior: smooth;
 }

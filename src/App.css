@@ -32,29 +32,18 @@ input:focus, textarea:focus{
 }
 
 
-/* BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-*/
 
-.top-left-round{
-  border-top-left-radius: 6px;
-}
-
-.top-right-round{
-  border-top-right-radius: 6px;
-}
-
-.bottom-right-round{
-  border-bottom-right-radius: 6px;
-}
-
-.bottom-left-round{
-  border-bottom-left-radius: 6px;
-}
 
 /*FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-*/
 
 .font-black-outline-light{
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, rgb(0, 0, 0) 1px 0 4px,
   rgb(0, 0, 0) 1px 0 2px ; 
+}
+
+.font-green-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 255, 132);
 }
 
 .font-red-outline-light{
@@ -101,11 +90,13 @@ input:focus, textarea:focus{
   rgb(255, 255, 255) 0px 0 50px ;
   
 }
-
-
-.text-shadow-black{
-  text-shadow: 5px 5px 10px red;
+.home-text{
+  font-family: FieldGothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(2rem, 22vw, 30rem);
+  line-height: 0.8;
 }
+
+
 .text-glow-white{
   text-shadow:rgba(255, 255, 255, 0.87) 0px 0 1px,
   rgb(255, 255, 255) 0px 0 4px ;
@@ -139,6 +130,11 @@ input:focus, textarea:focus{
 .border-glow-emerald{
   box-shadow:rgba(5, 255, 184, 0.87) 0px 0 2px,
   rgba(5, 255, 193, 0.2) 0px 0 15px ;
+}
+
+.border-glow-emerald-long{
+  box-shadow:rgba(5, 255, 184, 0.87) 0px 0 0px,
+  rgba(5, 255, 193, 0.75) 0px 0 50px ;
 }
 
 .border-glow-red{
@@ -229,7 +225,7 @@ input:focus, textarea:focus{
 }
 
 .bg-jet-light{
-  background-color: rgb(37, 40, 48);
+  background-color: #111;
 }
 
 
