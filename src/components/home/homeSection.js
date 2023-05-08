@@ -29,8 +29,6 @@ function HomeSection(props) {
   const developer = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R']
 
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
-  
-  
 
   useEffect(()=>{
     let prevScroll = 0;
@@ -49,7 +47,14 @@ function HomeSection(props) {
           pixels = 0; 
         }
         homeIntroRefs.current.forEach(ref => {
-          ref.style.columnGap = pixels + 'vw'
+          let half = pixels / 4
+          console.log(ref.id);
+          if(ref.id === 'fullstack'){
+            console.log('iddd');
+            ref.style.columnGap = half + 'vw'
+          } else {
+            ref.style.columnGap = pixels + 'vw'
+          }
         })
         prevScroll = window.scrollY
       }
@@ -63,9 +68,27 @@ function HomeSection(props) {
     }
   },[])
 
-  useEffect(()=>{
+  // const handleMouseMove = (event) => {
+  //   const x = event.clientX;
+  //   const y = event.clientY;
     
-  },[])
+  //   bulbRef.current.style.marginLeft = `${x / 50}px`;
+  //   bulbRef.current.style.marginTop = `${y / 50}px`;
+  // };
+
+  // useEffect(() => {
+  //   document.addEventListener('mousemove', handleMouseMove);
+  //   return () => {
+  //     document.removeEventListener('mousemove', handleMouseMove);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   bulbRef.current.classList.add('TOP-BULB')
+  //   bulbRef.current.classList.remove('-top-3/4')
+  // }, []);
+
+  
 
   
   
@@ -89,8 +112,9 @@ function HomeSection(props) {
         absolute flex flex-col justify-center items-center h-full w-full home-text 
          break-word  font-bold" >
           
-          <div className="flex w-4/5 h-fit transition-all duration-500 gap-0"ref={ref => homeIntroRefs.current.push(ref)} >
-            <div className="flex gap-0 justify-center text-gray-300 transition-all duration-500" ref={ref => homeIntroRefs.current.push(ref)}>
+          <div className="flex w-4/5 h-fit transition-all duration-200 gap-0"ref={ref => homeIntroRefs.current.push(ref)} >
+
+            <div className="flex gap-0 justify-center text-gray-300 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               
               {
               kevin.map((char, index) => (
@@ -98,24 +122,24 @@ function HomeSection(props) {
               ))
               }
             </div>
-            <div className="flex gap-0 text-black text-opacity-0 font-green-outline transition-all duration-500" ref={ref => homeIntroRefs.current.push(ref)}>
+            <div className="flex gap-0 text-black text-opacity-0 font-yellow-outline transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               kim.map((char, index) => (
                 <span className="hover:text-green-400 hover:text-opacity-30 transition-colors cursor-default">{char}</span>
               ))
               }
             </div>
-            <div className="text-gray-300">/</div>
+            <div className="text-gray-300 pl-8">/</div>
           </div>
-          <div className="flex w-4/5 transition-all duration-500" ref={ref => homeIntroRefs.current.push(ref)} >
-            <div className="flex gap-0 justify-center text-gray-300 transition-all duration-500" ref={ref => homeIntroRefs.current.push(ref)}>
+          <div id="fullstack" className="flex w-4/5 gap-0 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)} >
+            <div id="fullstack" className="flex gap-0 justify-center text-gray-300 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               fullstack.map((char, index) => (
                 <span className="">{char}</span>
               ))
               }
             </div>
-            <div className="flex text-black text-opacity-0 font-green-outline transition-all duration-500" ref={ref => homeIntroRefs.current.push(ref)}>
+            <div id="fullstack" className="flex text-black text-opacity-0 font-yellow-outline transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               developer.map((char, index) => (
                 <span className="hover:text-green-400 hover:text-opacity-30 transition-colors cursor-default">{char}</span>

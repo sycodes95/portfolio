@@ -46,6 +46,17 @@ input:focus, textarea:focus{
   -webkit-text-stroke-color: rgb(0, 255, 132);
 }
 
+.font-yellow-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 0);
+  
+}
+
+.font-red-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 0, 0);
+}
+
 .font-red-outline-light{
   text-shadow: -1px 1px 0 #6a0000, 1px 1px 0 #6a0000, 1px -1px 0 #6a0000, -1px -1px 0 #6a0000, rgb(114, 0, 0) 1px 0 4px,
   rgb(113, 0, 0) 1px 0 2px ; 
@@ -137,16 +148,6 @@ input:focus, textarea:focus{
   rgba(5, 255, 193, 0.75) 0px 0 50px ;
 }
 
-.border-glow-red{
-  box-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
-  rgba(255, 0, 0, 0.2) 0px 0 25px ;
-}
-
-.border-glow-red-intro{
-  box-shadow:rgba(255, 0, 0, 0.8) 0px 0 2px,
-  rgba(255, 1, 1, 0.4) 0px 0 25px ;
-  
-}
 
 
 .border-glow-red-no-line{
@@ -226,6 +227,11 @@ input:focus, textarea:focus{
 
 .bg-jet-light{
   background-color: #111;
+}
+
+.bg-hex{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(1, 1, 1, 0.6)), url(/src/background-images/slash.webp);
+  
 }
 
 
