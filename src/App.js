@@ -92,25 +92,25 @@ function App() {
   
     
   return (
-    <div className='APP bg-jet-light relative' onLoad={handleScrollToTop}>
+    <div className='APP bg-mosaic-gradient relative' onLoad={handleScrollToTop}>
       
       
       <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 
-       p-2 text-xs gap-x-4 z-50 flex bg-black bg-opacity-80
-      -top-1/4 transition-all  rounded-md border-t-transparent duration-500'
+       p-2 text-xs gap-x-4 z-50 flex bg-black bg-opacity-80 
+      -top-1/4 transition-all border-t-4 border-white  duration-500'
       ref={navRef}>
           
         <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={handleScrollToTop}>
-        <p className='text-green-400'>01.</p> <p>HOME</p>
+        <p className='text-yellow-400'>01.</p> <p>HOME</p>
         </li>
         <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToProjects}>
-          <p className='text-green-400'>02.</p> <p>PROJECTS</p>
+          <p className='text-yellow-400'>02.</p> <p>PROJECTS</p>
         </li>
         <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToAbout}>
-          <p className='text-green-400'>03.</p> <p>ABOUT</p>
+          <p className='text-yellow-400'>03.</p> <p>ABOUT</p>
         </li>
         <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToContact}>
-          <p className='text-green-400'>04.</p> <p>CONTACT</p>
+          <p className='text-yellow-400'>04.</p> <p>CONTACT</p>
         </li>
         
       </ul>

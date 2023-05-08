@@ -105,8 +105,9 @@ function HomeSection(props) {
           />
         </div> */}
         
-        <section>
-          
+        <section id="home-lines-dec " className="absolute top-0 left-0 h-full w-full ">
+          <div className="h-16 w-16 absolute bottom-0 left-0   border-l-8 border-b-8 border-gray-300 "> </div>
+          {/* <div id="home-lines-dec-top" className="h-1 bg-gray-300 w-full">x</div> */}
         </section>
         <section className="
         absolute flex flex-col justify-center items-center h-full w-full home-text 

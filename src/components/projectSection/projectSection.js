@@ -126,9 +126,9 @@ function ProjectSection () {
     <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16  bg-hammer'>
         
       <section className=" relative  flex justify-center items-center 
-      rounded-sm h-0 transition-all duration-1000" ref={bannerLineRef}>
+      rounded-sm h-0 transition-all duration-1000 border-glow-yellow" ref={bannerLineRef}>
       
-        <div className="ICON-CONTAINER bg-yellow-700 bg-opacity-70 h-full w-full flex items-center relative ">
+        <div className="ICON-CONTAINER bg-yellow-400 bg-opacity-60 h-full w-full flex items-center relative ">
           
           <div className="flex justify-start ml-2 w-fit z-10  " >
             <Icon className=" text-black opacity-0 transition-all delay-500 duration-1000" 
@@ -136,8 +136,10 @@ function ProjectSection () {
             
           </div> 
 
-          <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-70
-          whitespace-nowrap res-font gap-x-12 max-width-768px-gap-x-none">
+          <div className="flex justify-center ml-2 w-full font-bold  text-gray-300 ;
+          whitespace-nowrap res-font gap-x-2 max-width-768px-gap-x-none home-text
+           font-black-outline-light ">
+            <p className=" transition-opacity delay-300 duration-75 text-black font-white-outline-light" >{'// '}</p>
             <p className="opacity-0 transition-opacity delay-300 duration-75" ref={projectsTitleP}>P</p>
             <p className="opacity-0 transition-opacity delay-300 duration-100" ref={projectsTitleR}>R</p>
             <p className="opacity-0 transition-opacity delay-300 duration-150" ref={projectsTitleO}>O</p>

@@ -63,7 +63,7 @@ function ContactSection () {
        rounded-sm h-0 transition-all duration-1000" ref={bannerLineRef}>
         
         <div className="ICON-CONTAINER
-         bg-blue-400 bg-opacity-25 bg-striped
+         bg-white bg-opacity-40 bg-striped
          h-full w-full 
          flex items-center" ref={bannerLineRef}> 
           

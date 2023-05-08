@@ -41,6 +41,11 @@ input:focus, textarea:focus{
   rgb(0, 0, 0) 1px 0 2px ; 
 }
 
+.font-white-outline-light{
+  text-shadow: -1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px -1px 0 #ffffff, -1px -1px 0 #ffffff, rgb(255, 255, 255) 1px 0 1px,
+  rgb(255, 255, 255) 1px 0 1px ; 
+}
+
 .font-green-outline{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 255, 132);
@@ -129,8 +134,8 @@ input:focus, textarea:focus{
 }
 
 .border-glow-yellow{
-  box-shadow:rgba(255, 179, 0, 0.87) 0px 0 2px,
-  rgba(255, 230, 0, 0.2) 0px 0 15px ;
+  box-shadow:rgba(255, 179, 0, 1) 0px 0 2px,
+  rgba(255, 230, 0, 0.1) 0px 0 35px ;
 }
 
 .border-glow-blue{
@@ -231,10 +236,15 @@ input:focus, textarea:focus{
 
 .bg-hex{
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(1, 1, 1, 0.6)), url(/src/background-images/slash.webp);
-  
 }
 
+.bg-mosaic{
+  background: url(/src/background-images/dark_mosaic.png);
+}
 
+.bg-mosaic-gradient{
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(1, 1, 1, 0.3)), url(/src/background-images/dark_mosaic.png);
+}
 .bg-edgescout{
   background-image:
   url(./images/edgescout.png);
@@ -258,6 +268,8 @@ input:focus, textarea:focus{
   background-size: 26px;
   background-repeat: round;
   position: absolute;
+  
+  
   top: 0;
   bottom: 0;
   left: 0;
