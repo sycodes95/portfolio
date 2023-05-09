@@ -178,16 +178,16 @@ function AboutSection () {
       ref={bannerLineRef}>
         
         <div className="ICON-CONTAINER
-         bg-green-300 bg-opacity-25
+         
          h-full w-full 
-         flex items-center 
+         flex justify-center items-center 
          ">
           <div className="flex justify-start ml-2 w-fit">
-            <Icon className=" text-black opacity-0 transition-all delay-500 duration-1000" 
-            path={mdiDna} size={1.5} ref={ref => aboutIconRef.current[0] = ref}/>
+            <Icon className=" text-white opacity-0 transition-all delay-500 duration-1000" 
+            path={mdiDna} size={4.2} ref={ref => aboutIconRef.current[0] = ref}/>
           </div>
 
-          <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-70
+          {/* <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-70
           whitespace-nowrap res-font transition-all gap-x-12 max-width-768px-gap-x-none ">
             <p className="opacity-0 transition-opacity delay-300 duration-75 " ref={aboutTitleA}>A</p>
             <p className="opacity-0 transition-opacity delay-300 duration-150" ref={aboutTitleB}>B</p>
@@ -200,7 +200,7 @@ function AboutSection () {
           <div className="flex justify-end mr-2 w-fit">
             <Icon className="text-black opacity-0 transition-all delay-500 duration-1000 flip" 
             path={mdiDna} size={1.5} ref={ref => aboutIconRef.current[1] = ref}/>
-          </div>
+          </div> */}
           
         </div>
         

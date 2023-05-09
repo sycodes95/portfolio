@@ -46,6 +46,12 @@ input:focus, textarea:focus{
   rgb(255, 255, 255) 1px 0 1px ; 
 }
 
+.font-white-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  
+}
+
 .font-green-outline{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 255, 132);
@@ -383,7 +389,7 @@ input:focus, textarea:focus{
 }
 
 .res-font{
-  font-size: clamp(50px, 8vw, 120px)
+  font-size: clamp(50px, 8vw, 200px)
 }
 
 .top-neg-5{

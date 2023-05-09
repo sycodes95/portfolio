@@ -105,15 +105,12 @@ function HomeSection(props) {
           />
         </div> */}
         
-        <section id="home-lines-dec " className="absolute top-0 left-0 h-full w-full ">
-          <div className="h-16 w-16 absolute bottom-0 left-0   border-l-8 border-b-8 border-gray-300 "> </div>
-          {/* <div id="home-lines-dec-top" className="h-1 bg-gray-300 w-full">x</div> */}
-        </section>
+        
         <section className="
         absolute flex flex-col justify-center items-center h-full w-full home-text 
          break-word  font-bold" >
           
-          <div className="flex w-4/5 h-fit transition-all duration-200 gap-0"ref={ref => homeIntroRefs.current.push(ref)} >
+          <div className="flex w-4/5 h-fit transition-all duration-200 gap-8" >
 
             <div className="flex gap-0 justify-center text-gray-300 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               
@@ -123,7 +120,7 @@ function HomeSection(props) {
               ))
               }
             </div>
-            <div className="flex gap-0 text-black text-opacity-0 font-yellow-outline transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
+            <div className="flex gap-0 text-gray-300 text-opacity-0 transition-all duration-300 font-white-outline" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               kim.map((char, index) => (
                 <span className="hover:text-green-400 hover:text-opacity-30 transition-colors cursor-default">{char}</span>
@@ -132,7 +129,7 @@ function HomeSection(props) {
             </div>
             <div className="text-gray-300 pl-8">/</div>
           </div>
-          <div id="fullstack" className="flex w-4/5 gap-0 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)} >
+          <div id="fullstack" className="flex w-4/5 gap-8 transition-all duration-300"  >
             <div id="fullstack" className="flex gap-0 justify-center text-gray-300 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               fullstack.map((char, index) => (
@@ -140,7 +137,7 @@ function HomeSection(props) {
               ))
               }
             </div>
-            <div id="fullstack" className="flex text-black text-opacity-0 font-yellow-outline transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
+            <div id="fullstack" className="flex text-gray-300 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               developer.map((char, index) => (
                 <span className="hover:text-green-400 hover:text-opacity-30 transition-colors cursor-default">{char}</span>

@@ -68,7 +68,7 @@ function ProjectSection () {
           bannerLineRef.current.classList.remove('h-0')
 
           projectIconRef.current.forEach(ref => {
-            ref.classList.add('opacity-100')
+            ref.classList.add('opacity-60')
             ref.classList.remove('opacity-0')
           })
 
@@ -126,20 +126,23 @@ function ProjectSection () {
     <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16  bg-hammer'>
         
       <section className=" relative  flex justify-center items-center 
-      rounded-sm h-0 transition-all duration-1000 border-glow-yellow" ref={bannerLineRef}>
+      rounded-sm h-0 transition-all duration-1000" ref={bannerLineRef}>
       
-        <div className="ICON-CONTAINER bg-yellow-400 bg-opacity-60 h-full w-full flex items-center relative ">
+        <div className="ICON-CONTAINER  h-2 w-full flex justify-center items-center relative ">
+          
           
           <div className="flex justify-start ml-2 w-fit z-10  " >
-            <Icon className=" text-black opacity-0 transition-all delay-500 duration-1000" 
-            path={mdiHammerWrench} size={1.5} ref={ref => projectIconRef.current[0] = ref}/>
+            <Icon className=" text-white opacity-0 transition-all delay-500 duration-1000" 
+            path={mdiHammerWrench} size={4.2} ref={ref => projectIconRef.current[1] = ref}/>
             
           </div> 
 
-          <div className="flex justify-center ml-2 w-full font-bold  text-gray-300 ;
-          whitespace-nowrap res-font gap-x-2 max-width-768px-gap-x-none home-text
-           font-black-outline-light ">
-            <p className=" transition-opacity delay-300 duration-75 text-black font-white-outline-light" >{'// '}</p>
+          
+          
+          {/* <div className="flex justify-center ml-2 w-full font-bold  text-black text-opacity-0 ;
+          whitespace-nowrap res-font gap-x-16 max-width-768px-gap-x-none home-text
+          font-white-outline ">
+            <p className="opacity-0 transition-opacity delay-300 duration-75" >-</p>
             <p className="opacity-0 transition-opacity delay-300 duration-75" ref={projectsTitleP}>P</p>
             <p className="opacity-0 transition-opacity delay-300 duration-100" ref={projectsTitleR}>R</p>
             <p className="opacity-0 transition-opacity delay-300 duration-150" ref={projectsTitleO}>O</p>
@@ -149,12 +152,12 @@ function ProjectSection () {
             <p className="opacity-0 transition-opacity delay-300 duration-700" ref={projectsTitleT}>T</p>
             <p className="opacity-0 transition-opacity delay-300 duration-1000" ref={projectsTitleS}>S</p>
             
-          </div>
+          </div> */}
 
-          <div className="flex justify-end mr-2 w-fit">
-            <Icon className=" text-black opacity-0 transition-all delay-500 duration-1000 flip" 
+          {/* <div className="flex justify-end mr-2 w-fit">
+            <Icon className=" text-white opacity-0 transition-all delay-500 duration-1000 flip" 
             path={mdiHammerWrench} size={1.5} ref={ref => projectIconRef.current[1] = ref}/>
-          </div>
+          </div> */}
           
         </div>
         
