@@ -14,7 +14,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: rgba(52, 58, 77, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 8px;
 }
 
@@ -118,6 +118,11 @@ input:focus, textarea:focus{
   line-height: 0.8;
 }
 
+.font-family-field-gothic{
+  font-family: FieldGothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
 
 .text-glow-white{
   text-shadow:rgba(255, 255, 255, 0.87) 0px 0 1px,
@@ -136,11 +141,11 @@ input:focus, textarea:focus{
 
 .border-glow-white{
   box-shadow:rgba(255, 255, 255, 0.87) 0px 0 2px,
-  rgba(255, 255, 255, 0.2) 0px 0 25px ;
+  rgba(255, 255, 255, 0.2) 0px 0 50px ;
 }
 
 .border-glow-yellow{
-  box-shadow:rgba(255, 179, 0, 1) 0px 0 2px,
+  box-shadow:rgb(255, 230, 0) 0px 0 2px,
   rgba(255, 230, 0, 0.1) 0px 0 35px ;
 }
 
@@ -249,7 +254,15 @@ input:focus, textarea:focus{
 }
 
 .bg-mosaic-gradient{
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(1, 1, 1, 0.3)), url(/src/background-images/dark_mosaic.png);
+  background: linear-gradient(rgba(31, 31, 27, 0.3), rgba(0, 0, 0, 0.3)), url(/src/background-images/subtle_carbon.webp);
+}
+
+.bg-holo{
+  background: url(/src/background-images/bg-holo.png);
+}
+
+.fill-holo {
+  fill: url(/src/background-images/bg-holo.png);
 }
 .bg-edgescout{
   background-image:
@@ -312,6 +325,7 @@ input:focus, textarea:focus{
   right: 0;
   opacity: 0.025;
   z-index: 0;
+  
 }
 
 .bg-at::before {

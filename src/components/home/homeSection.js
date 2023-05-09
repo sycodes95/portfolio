@@ -110,9 +110,9 @@ function HomeSection(props) {
         absolute flex flex-col justify-center items-center h-full w-full home-text 
          break-word  font-bold" >
           
-          <div className="flex w-4/5 h-fit transition-all duration-200 gap-8" >
+          <div className="flex w-4/5 h-fit transition-all duration-200 gap-8 " >
 
-            <div className="flex gap-0 justify-center text-gray-300 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
+            <div className="flex gap-0 justify-center text-gray-300 text-opacity-60 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               
               {
               kevin.map((char, index) => (
@@ -130,14 +130,14 @@ function HomeSection(props) {
             <div className="text-gray-300 pl-8">/</div>
           </div>
           <div id="fullstack" className="flex w-4/5 gap-8 transition-all duration-300"  >
-            <div id="fullstack" className="flex gap-0 justify-center text-gray-300 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
+            <div id="fullstack" className="flex gap-0 justify-center text-gray-300 text-opacity-60 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               fullstack.map((char, index) => (
                 <span className="">{char}</span>
               ))
               }
             </div>
-            <div id="fullstack" className="flex text-gray-300 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
+            <div id="fullstack" className="flex text-gray-300 text-opacity-60 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               developer.map((char, index) => (
                 <span className="hover:text-green-400 hover:text-opacity-30 transition-colors cursor-default">{char}</span>

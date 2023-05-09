@@ -8,10 +8,16 @@ import { mdiHammerWrench } from '@mdi/js';
 import warmlight from "../../images/warmlight.png"
 import spotlight1 from '../../images/spotlight1.png'
 import ProjectTwo from "./projectTwo/projectTwo";
-
+import blackHammer from "../../images/black-hammer.png"
+import hammersvg from "../../images/hammer-wrench.svg"
+import { ReactSVG } from "react-svg";
 function ProjectSection () {
 
-  
+  const projectsRepeat = Array.from({ length: 1000 }, () => 'PROJECTS-');
+
+  console.log(projectsRepeat);
+
+  const projectsRepeatRef = useRef(null)
   
   const projectOne = useRef(null)
 
@@ -41,6 +47,37 @@ function ProjectSection () {
   const projectsTitleS = useRef(null)
 
   const bannerLineRef = useRef(null)
+
+  useEffect(()=>{
+    let prevScroll = 0;
+    let percentage = 0;
+
+    const handleScroll = () =>{
+      
+      
+        
+        if(prevScroll < window.scrollY){
+          percentage += 0.25
+        } else {
+          percentage -= 0.25
+        }
+        if (window.scrollY === 0) {
+          percentage = 0; 
+        }
+
+        projectsRepeatRef.current.style.left = percentage + '%'
+        
+        prevScroll = window.scrollY
+      
+      
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+
+    return ()=> {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  },[])
   
   useEffect(() => {
     
@@ -68,7 +105,7 @@ function ProjectSection () {
           bannerLineRef.current.classList.remove('h-0')
 
           projectIconRef.current.forEach(ref => {
-            ref.classList.add('opacity-60')
+            ref.classList.add('opacity-100')
             ref.classList.remove('opacity-0')
           })
 
@@ -126,44 +163,31 @@ function ProjectSection () {
     <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16  bg-hammer'>
         
       <section className=" relative  flex justify-center items-center 
-      rounded-sm h-0 transition-all duration-1000" ref={bannerLineRef}>
+      rounded-sm h-28 gb-=olpa transition-all duration-1000" ref={bannerLineRef}>
       
-        <div className="ICON-CONTAINER  h-2 w-full flex justify-center items-center relative ">
+        <div className="ICON-CONTAINER bg-black bg-opacity-60 h-12 w-full flex justify-center items-center relative overflow-visible">
           
           
-          <div className="flex justify-start ml-2 w-fit z-10  " >
-            <Icon className=" text-white opacity-0 transition-all delay-500 duration-1000" 
-            path={mdiHammerWrench} size={4.2} ref={ref => projectIconRef.current[1] = ref}/>
+          {/* <div className="flex justify-start ml-2 w-fit z-10 relative rounded-full" >
             
-          </div> 
-
-          
-          
-          {/* <div className="flex justify-center ml-2 w-full font-bold  text-black text-opacity-0 ;
-          whitespace-nowrap res-font gap-x-16 max-width-768px-gap-x-none home-text
-          font-white-outline ">
-            <p className="opacity-0 transition-opacity delay-300 duration-75" >-</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-75" ref={projectsTitleP}>P</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-100" ref={projectsTitleR}>R</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-150" ref={projectsTitleO}>O</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-200" ref={projectsTitleJ}>J</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-300" ref={projectsTitleE}>E</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-500" ref={projectsTitleC}>C</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-700" ref={projectsTitleT}>T</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-1000" ref={projectsTitleS}>S</p>
+            <Icon className=" text-gray-300 opacity-0 transition-all delay-500 duration-1000  rounded-full" 
+            path={mdiHammerWrench} size={6.9} ref={ref => projectIconRef.current[1] = ref}/>
             
-          </div> */}
-
-          {/* <div className="flex justify-end mr-2 w-fit">
-            <Icon className=" text-white opacity-0 transition-all delay-500 duration-1000 flip" 
-            path={mdiHammerWrench} size={1.5} ref={ref => projectIconRef.current[1] = ref}/>
-          </div> */}
+          </div>  */}
+          <div className="absolute left-0 -translate-x-1/2 flex items-center w-fit text-gray-300 text-opacity-60 text-8xl font-thin font-family-field-gothic
+          overflow-hidden whitespace-nowrap transition-all duration-300" ref={projectsRepeatRef}>
+            {
+            projectsRepeat.map((str, index) => (
+              <p key={index}>{str}</p>
+            ))
+            }
+          </div>
           
         </div>
         
       </section>
       
-      <section className=' gap-x-8  overflow-hidden max-width-768px-overflow-visible' ref={projectOne}>
+      <section className='gap-x-8 overflow-hidden max-width-768px-overflow-visible' ref={projectOne}>
         
         <div className="flex justify-center">
 

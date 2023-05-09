@@ -207,9 +207,9 @@ function AboutSection () {
       </div> 
 
       <div className="ABOUT-CONTAINER flex relative overflow-hidden max-width-768px-overflow-visible 
-      justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000 max-height-screen-10" ref={aboutContainerRef}>
+      justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000 max-height-screen-10 " ref={aboutContainerRef}>
         
-        <div className="relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-emerald
+        <div className="relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-white rounded-xl
         border-4 border-opacity-50 border-black bg-dna -top-full transition-all  w-2/5 max-width-1440px-w-50pct
         max-width-1200px-w-60pct max-width-768px-width-full z-10 overflow-hidden" ref={aboutContentRef}>
           
@@ -233,7 +233,7 @@ function AboutSection () {
           border-l-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
           transition-all delay-500 duration-1000 " ref={aboutSideLeftRef}>
             
-            <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
+            <div className=" gap-y-2 gap-x-2  text-white text-xs font-black-outline-light leading-relaxed text-center"> 
 
               I AM A <span className="text-green-300">FULL-STACK DEVELOPER</span> WITH AN EYE FOR DESIGN.
               I TAKE PRIDE IN CRAFTING RESPONSIVE LAYOUTS AND WRITING EFFICIENT, EASY-TO-READ CODE.
@@ -268,7 +268,7 @@ function AboutSection () {
             <div className="text-white text-md border-b w-full flex justify-center">WHO AM I </div>
 
             
-            <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
+            <div className=" gap-y-2 gap-x-2  text-white text-xs font-black-outline-light leading-relaxed text-center"> 
 
               <p>
               I BELIEVE THAT SELF-REFLECTION IS CRUCIAL FOR PERSONAL AND PROFESSIONAL GROWTH. THROUGH SELF-ANALYSIS, I'VE LEARNED TO IDENTIFY MY STRENGTHS AND WEAKNESSES, AND USE THEM TO MY ADVANTAGE. FOR EXAMPLE, I'VE DISCOVERED THAT I HAVE A TENDENCY TO BECOME FRUSTRATED WHEN FACED WITH DIFFICULT PROBLEMS. HOWEVER, I'VE ALSO LEARNED THAT THIS FRUSTRATION CAN BE A SOURCE OF MOTIVATION FOR ME. INSTEAD OF GIVING UP
