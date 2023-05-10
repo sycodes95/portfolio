@@ -313,7 +313,7 @@ function AboutSection () {
           
           
           
-          <img className="SILHOUTTE invert opacity-60" src={silhoutte} ref={aboutSilhoutteRef}/>
+          <img className="SILHOUTTE invert opacity-40" src={silhoutte} ref={aboutSilhoutteRef}/>
           
         
         </div>

@@ -139,7 +139,7 @@ function ProjectSection () {
         </div>
       </section>
       
-      <section className='gap-x-8 overflow-hidden max-width-768px-overflow-visible ' >
+      <section className='gap-x-8 overflow-hidden max-width-768px-overflow-visible mt-16 ' >
         
         <div className="flex justify-center ">
           

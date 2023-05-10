@@ -79,16 +79,18 @@ function ProjectJobtrackr () {
   
   return (
     <div className='PROJECT-CONTAINER w-1/2 transition-all
-    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-white rounded-xl'
+    bg-black bg-opacity-25 flex border-glow-white overflow-hidden rounded-4xl 
+    max-width-1200px-w-60pct max-width-968px-w-70pct'
     >
       <section className=" w-full  col-span-full text-white font-black-outline-light text-md
       flex items-center relative overflow-hidden">
-        <div className="p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
+        <div className="
+        p-4 h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700 border-r-2 border-black"
          ref={projectTwoTitle}>
-          <p className="home-text text-gray-300 text-opacity-0 font-white-outline ">01</p>
+          <p className="project-number-text">01</p>
         </div>
 
-        <div className="p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
+        <div className=" p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
          >
           <img src={jobtrackr}/>
         </div>
@@ -101,13 +103,14 @@ function ProjectJobtrackr () {
       <section className="col-span-full h-full relative"> 
         
 
-        <div className=" bottom-0 z-50 w-full">
+        <div className="flex flex-col bottom-0 z-50 h-full w-full">
         
-          <div className="text-gray-400 text-sm z-50  w-full flex gap-4  justify-between  p-2 
+          <div className="relative flex-grow text-gray-400 text-sm z-50 h-full w-full flex gap-4  justify-between  p-2 
           bg-black bg-opacity-50">
-            
-            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-yellow-400 font-black-outline-light">
-              A JOB APPLICATION TRACKER, BUILT TO HELP JOB SEEKERS IMPROVE THEIR APPLICATION STRATEGIES IN THE JOB MARKET.
+            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-gray-400 font-black-outline-light
+            z-50">
+              
+              A JOB APPLICATION TRACKER, BUILT TO HELP JOB SEEKERS MANAGE AND IMPROVE THEIR APPLICATION STRATEGIES IN THE JOB MARKET.
             </p>
             
           </div>
@@ -133,22 +136,24 @@ function ProjectJobtrackr () {
                 SEARCH
               </p>
               <p className="w-full flex justify-center items-center p-1 gap-4 text-white  rounded-sm">
-                AUTHENTICATION
+                AUTH
               </p>
             </div>
             
           </div>
 
-          <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-2 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
+          <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-1 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
           bg-black ">
             <div className="grid grid-cols-3 gap-1">
-              <button className="h-full w-full bg-emerald-400 bg-opacity-40 text-white rounded-sm p-2 transition-all hover:bg-opacity-30" 
+              <button className="h-full w-full bg-emerald-400 bg-opacity-50 
+               text-white rounded-sm p-2 transition-all hover:bg-opacity-30" 
               onClick={handleViewSite}>
                 VIEW SITE
               </button>
-              <button className="h-full w-full bg-gray-400 bg-opacity-40 text-white rounded-sm transition-all hover:bg-opacity-30" 
+              <button className="h-full w-full bg-gray-400 bg-opacity-60 text-white rounded-sm transition-all
+               hover:bg-opacity-30" 
               onClick={handleViewFrontEnd}>FRONT END REPO</button>
-              <button className="h-full w-full bg-gray-500 bg-opacity-40 text-white rounded-sm transition-all hover:bg-opacity-30" 
+              <button className="h-full w-full bg-gray-400 bg-opacity-60 text-white rounded-sm transition-all hover:bg-opacity-30" 
               onClick={handleViewBackEnd}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">
