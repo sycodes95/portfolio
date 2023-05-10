@@ -80,7 +80,7 @@ function ProjectJobtrackr () {
 
         <section className="w-1/2 p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
          >
-          <p className="absolute top-0 left-4 text-black text-opacity-0 project-number-text font-white-outline">01</p>
+          <p className="absolute top-4 left-4 text-black text-opacity-0 project-number-text font-white-outline">01</p>
           <img src={jobtrackr}/>
         </section>
 

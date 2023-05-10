@@ -82,7 +82,7 @@ function ProjectEdgescout () {
       flex items-center relative overflow-hidden">
 
         <section className="w-1/2 p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700">
-          <p className="absolute top-0 left-4 project-number-text text-black text-opacity-0 font-white-outline">02</p>
+          <p className="absolute top-4 left-4 project-number-text text-black text-opacity-0 font-white-outline">02</p>
           <img src={edgescout}/>
         </section>
         <section className="w-1/2 flex flex-col bottom-0 z-50 h-full w-full">

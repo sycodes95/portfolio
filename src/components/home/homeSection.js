@@ -64,7 +64,7 @@ function HomeSection(props) {
 
   return (
     <section className="">
-      <div className="flex justify-center items-center min-h-screen w-full ">
+      <div className="relative flex justify-center items-center min-h-screen w-full ">
         
         <section className="
         flex flex-col items-center h-full w-full home-text overflow-hidden pt-32 pb-32
@@ -109,6 +109,17 @@ function HomeSection(props) {
             </div>
             <div className="text-gray-300">.</div>
           </div>
+        </section>
+
+        <section className="absolute bottom-24">
+          <button className="text-white flex flex-col items-center w-full hover:text-gray-400 transition-all duration-300"
+          onClick={scrollToProjects}>
+            <p>VIEW PROJECTS</p>
+            <div className="flex justify-center">
+              <Icon className="flex w-full" path={mdiChevronDown} size={1} />
+            </div>
+            
+          </button>
         </section>
 
       </div>

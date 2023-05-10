@@ -205,7 +205,7 @@ function AboutSection () {
     <div className='ABOUT-SECTION pb-24 pt-12 gap-y-16 flex flex-col  bg-dna-big relative' ref={aboutSectionRef}>
       
       <section>
-        <div className="relative flex justify-center w-full z-10 rounded-full" >
+        <div className="relative flex justify-center w-full z-10 " >
           <Icon className=" text-gray-300  transition-all delay-500 duration-1000  rounded-full" 
           path={mdiDna} size={4.2}/>
         </div> 
