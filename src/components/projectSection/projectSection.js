@@ -1,4 +1,4 @@
-import ProjectOne from "./projectOne/projectOne";
+import ProjectOne from "./projectEdgescout/projectEdgescout";
 
 import edgescoutPNG from "../../images/edgescout.png"
 import jobtrackrPNG from "../../images/jobtrackr.png"
@@ -12,6 +12,7 @@ import blackHammer from "../../images/black-hammer.png"
 import hammersvg from "../../images/hammer-wrench.svg"
 import { ReactSVG } from "react-svg";
 import ProjectJobtrackr from "./projectJobtrackr/projectJobtrackr";
+import ProjectEdgescout from "./projectEdgescout/projectEdgescout";
 function ProjectSection () {
 
   const projectsRepeat = Array.from({ length: 200 }, () => 'PROJECTS-');
@@ -118,7 +119,7 @@ function ProjectSection () {
   // }, []);
   
   return (
-    <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16  bg-hammer'>
+    <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16 bg-hammer'>
 
       <section>
         <div className="relative flex justify-center w-full z-10 rounded-full" >
@@ -139,31 +140,25 @@ function ProjectSection () {
         </div>
       </section>
       
-      <section className='gap-x-8 overflow-hidden max-width-768px-overflow-visible mt-16 ' >
+      <section className='gap-x-8 overflow-hidden max-width-768px-overflow-visible mt-16' >
         
-        <div className="flex justify-center ">
-          
-          <div className="flex justify-center opacity-100 transition-all delay-200 duration-1000 " >
-            <ProjectJobtrackr/> 
-          </div>
-
-          
-          
+        
+        <div className="flex justify-center opacity-100 transition-all delay-200 duration-1000 " >
+          <ProjectJobtrackr/> 
         </div>
+          
+        
 
       </section>
 
 
         
-      <section className=' gap-x-8 overflow-hidden max-width-768px-overflow-visible' >
-        
-        <div className="flex justify-center">
+      <section className=' gap-x-8 overflow-hidden max-width-768px-overflow-visible mt-16' >
           
-          <div className="flex justify-center transition-all delay-200 duration-1000" >
-            <ProjectOne/> 
-          </div>
-          
+        <div className="flex justify-center transition-all delay-200 duration-1000" >
+          <ProjectEdgescout/> 
         </div>
+          
 
       </section>
       

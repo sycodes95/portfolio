@@ -51,60 +51,6 @@ input:focus, textarea:focus{
   
 }
 
-.font-green-outline{
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(0, 255, 132);
-}
-
-.font-yellow-outline{
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(255, 255, 0);
-  
-}
-
-.font-red-outline{
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(255, 0, 0);
-}
-
-.font-red-outline-light{
-  text-shadow: -1px 1px 0 #6a0000, 1px 1px 0 #6a0000, 1px -1px 0 #6a0000, -1px -1px 0 #6a0000, rgb(114, 0, 0) 1px 0 4px,
-  rgb(113, 0, 0) 1px 0 2px ; 
-}
-
-
-
-.font-black-outline-strong{
-  text-shadow: -1px 4px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, rgb(0, 0, 0) 4px 0 10px,
-  rgb(62, 62, 62) 4px 0 10px ; 
-}
-
-.font-shadow-white{
-  text-shadow:rgba(255, 255, 255, 0.87) 0px 0 4px,
-  rgb(255, 255, 255) 0px 0 50px ;
-}
-
-.font-shadow-white-light{
-  text-shadow:
-  rgba(255, 255, 255, 0.87) 0px 0 4px,
-  rgb(255, 255, 255) 0px 0 10px ;
-}
-
-.font-black-outline-white-shadow{
-  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, rgba(255, 255, 255, 0.87) 0px 0 4px,
-  rgb(255, 255, 255) 0px 0 50px ; 
-}
-
-.font-bg-gradient {
-  background:linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.6)), url(./background-images/stripes.webp);
-  background-position: cover;
-  background-size: 125px;
-  background-clip: text;
-  
-  -webkit-background-clip: text; /* For Safari */
-  color: transparent;
-}
-
 .menu:hover{
   
   text-shadow:rgba(255, 255, 255, 0.87) 0px 0 4px,
@@ -119,7 +65,7 @@ input:focus, textarea:focus{
 
 .project-number-text{
   font-family: FieldGothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: clamp(2rem, 22vw, 30rem);
+  font-size: clamp(2rem, 8vw, 30rem);
   line-height:1;
 }
 
@@ -134,8 +80,13 @@ input:focus, textarea:focus{
   rgb(255, 255, 255) 0px 0 4px ;
 }
 
+.border-glow-none{
+  box-shadow:rgba(255, 255, 255, 0) 0px 0 2px,
+  rgba(255, 255, 255, 0) 0px 0 50px ;
+}
+
 .border-glow-white{
-  box-shadow:rgba(255, 255, 255, 0.87) 0px 0 2px,
+  box-shadow:rgba(255, 255, 255, 1) 0px 0 2px,
   rgba(255, 255, 255, 0.2) 0px 0 50px ;
 }
 
@@ -143,9 +94,6 @@ input:focus, textarea:focus{
   box-shadow:rgb(255, 230, 0) 0px 0 2px,
   rgba(255, 230, 0, 0.1) 0px 0 35px ;
 }
-
-
-
 
 .border-glow-red-no-line{
   box-shadow:rgba(255, 0, 0, 0.6) 0px 0 0px,

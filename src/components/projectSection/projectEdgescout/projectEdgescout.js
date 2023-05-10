@@ -1,10 +1,12 @@
 
 
+
+
 import { useEffect, useRef } from "react";
 import edgescoutproject from "../../../images/edgescoutproject.png"
 import jobtrackrproject from "../../../images/jobtrackrDemo.png"
-import jobtrackr from "../../../images/jobtrackr.png"
-function ProjectJobtrackr () {
+import edgescout from "../../../images/edgescout.png"
+function ProjectEdgescout () {
 
   const projectContainerRef = useRef(null)
 
@@ -30,20 +32,22 @@ function ProjectJobtrackr () {
       name: 'Express'
     },
     {
-      jsx: <i class="devicon-postgresql-plain-wordmark text-2xl  fill-current "></i>,
+      jsx: <i class="devicon-mongodb-plain-wordmark text-2xl  fill-current "></i>,
       name: 'PostgreSQL'
     },
   ]
 
+  
+
   const handleViewSite = () => {
-    window.open('https://jobtrackr.pro');
+    window.open('https://edgescout.up.railway.app/');
   }
 
   const handleViewFrontEnd = () => {
-    window.open('https://github.com/sycodes95/jobtrackr');
+    window.open('https://github.com/sycodes95/trading-journal');
   }
   const handleViewBackEnd = () => {
-    window.open('https://github.com/sycodes95/jobtrackr-api');
+    window.open('https://github.com/sycodes95/trading-journal-api');
   }
   
   useEffect(() => {
@@ -74,24 +78,21 @@ function ProjectJobtrackr () {
     bg-black bg-opacity-25 flex overflow-hidden rounded-4xl 
     max-width-1200px-w-60pct max-width-968px-w-70pct rounded-xl border-glow-none '
     ref={projectContainerRef}>
-
       <div className=" w-full  col-span-full text-white font-black-outline-light text-md
       flex items-center relative overflow-hidden">
 
-        <section className="w-1/2 p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
-         >
-          <p className="absolute top-0 left-4 text-black text-opacity-0 project-number-text font-white-outline">01</p>
-          <img src={jobtrackr}/>
+        <section className="w-1/2 p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700">
+          <p className="absolute top-0 left-4 project-number-text text-black text-opacity-0 font-white-outline">02</p>
+          <img src={edgescout}/>
         </section>
-
-        <section className="w-1/2 flex flex-col bottom-0 z-50 h-full">
+        <section className="w-1/2 flex flex-col bottom-0 z-50 h-full w-full">
         
           <div className="relative flex-grow text-gray-400 text-sm z-50 h-full w-full flex gap-4  justify-between  p-2 
           bg-black bg-opacity-50">
             <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-gray-400 font-black-outline-light
             z-50">
               
-              A JOB APPLICATION TRACKER, BUILT TO HELP JOB SEEKERS MANAGE AND IMPROVE THEIR APPLICATION STRATEGIES IN THE JOB MARKET.
+              A TRADING JOURNAL APP, BUILT TO HELP TRADERS FIND AND REFINE THEIR STRATEGIES FOR BETTER PROFITABILITY IN THE FINANCIAL MARKETS.
             </p>
             
           </div>
@@ -149,9 +150,11 @@ function ProjectJobtrackr () {
         </section>
 
       </div>
+
+
        
     </div>
   )
 }
 
-export default ProjectJobtrackr;
+export default ProjectEdgescout;

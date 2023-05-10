@@ -19,7 +19,10 @@ function AboutSection () {
     tab: 'GENERAL',
     
   })
-  const useObserver = useRef(true);
+
+  const aboutRepeat = Array.from({ length: 300 }, () => 'ABOUT-');
+
+  const aboutRepeatRef = useRef(null)
 
   const aboutSectionRef = useRef(null)
   const aboutContentRef = useRef(null)
@@ -168,43 +171,57 @@ function AboutSection () {
    
     
   }, []);
+
+  useEffect(()=>{
+    let prevScroll = 0;
+    let percentage = 0;
+
+    const handleScroll = () =>{
+        
+      if(prevScroll < window.scrollY){
+        percentage += 0.25
+      } else {
+        percentage -= 0.25
+      }
+      if (window.scrollY === 0) {
+        percentage = 0; 
+      }
+
+      aboutRepeatRef.current.style.left = percentage + '%'
+      
+      prevScroll = window.scrollY
+      
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+
+    return ()=> {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  },[])
   
 
   return (
-    <section className='ABOUT-SECTION pb-24 pt-12 flex flex-col  bg-dna-big relative' ref={aboutSectionRef}>
+    <div className='ABOUT-SECTION pb-24 pt-12 gap-y-16 flex flex-col  bg-dna-big relative' ref={aboutSectionRef}>
       
+      <section>
+        <div className="relative flex justify-center w-full z-10 rounded-full" >
+          <Icon className=" text-gray-300  transition-all delay-500 duration-1000  rounded-full" 
+          path={mdiDna} size={4.2}/>
+        </div> 
+      </section>
 
-      <div className="ABOUT-TITLE-BANNER flex justify-center items-center mb-4 rounded-sm h-0 transition-all duration-1000" 
-      ref={bannerLineRef}>
-        
-        <div className="ICON-CONTAINER
-         
-         h-full w-full 
-         flex justify-center items-center 
-         ">
-          <div className="flex justify-start ml-2 w-fit">
-            <Icon className=" text-white opacity-0 transition-all delay-500 duration-1000" 
-            path={mdiDna} size={4.2} ref={ref => aboutIconRef.current[0] = ref}/>
-          </div>
-
-          {/* <div className="flex justify-center ml-2 w-full font-bold font-black-outline-light text-white text-opacity-70
-          whitespace-nowrap res-font transition-all gap-x-12 max-width-768px-gap-x-none ">
-            <p className="opacity-0 transition-opacity delay-300 duration-75 " ref={aboutTitleA}>A</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-150" ref={aboutTitleB}>B</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-300" ref={aboutTitleO}>O</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-700" ref={aboutTitleU}>U</p>
-            <p className="opacity-0 transition-opacity delay-300 duration-1000" ref={aboutTitleT}>T</p>
-            
-          </div>
-
-          <div className="flex justify-end mr-2 w-fit">
-            <Icon className="text-black opacity-0 transition-all delay-500 duration-1000 flip" 
-            path={mdiDna} size={1.5} ref={ref => aboutIconRef.current[1] = ref}/>
-          </div> */}
-          
+      <section className="relative flex justify-center items-center 
+      rounded-sm transition-all duration-1000" ref={bannerLineRef}>
+        <div className="absolute left-0 -translate-x-1/2 flex items-center w-fit text-gray-300 text-opacity-60 text-8xl font-thin font-family-field-gothic
+        overflow-hidden whitespace-nowrap transition-all duration-300" ref={aboutRepeatRef}>
+          {
+          aboutRepeat.map((str, index) => (
+            <p key={index}>{str}</p>
+          ))
+          }
         </div>
-        
-      </div> 
+      </section>
 
       <div className="ABOUT-CONTAINER flex relative overflow-hidden max-width-768px-overflow-visible 
       justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000 max-height-screen-10 " ref={aboutContainerRef}>
@@ -320,7 +337,7 @@ function AboutSection () {
         
       </div>
 
-    </section>
+    </div>
 
   )
 }
