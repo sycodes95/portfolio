@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import edgescoutproject from "../../../images/edgescoutproject.png"
 import jobtrackrproject from "../../../images/jobtrackrDemo.png"
-
-function ProjectTwo () {
+import jobtrackr from "../../../images/jobtrackr.png"
+function ProjectJobtrackr () {
   
   const imageRef = useRef(null)
 
@@ -78,34 +78,28 @@ function ProjectTwo () {
   
   
   return (
-    <div className='PROJECT-CONTAINER w-2/4 transition-all
-    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-yellow rounded-xl'
+    <div className='PROJECT-CONTAINER w-1/2 transition-all
+    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-white rounded-xl'
     >
-      <section className="h-12 w-full  col-span-full text-white font-black-outline-light text-md
+      <section className=" w-full  col-span-full text-white font-black-outline-light text-md
       flex items-center relative overflow-hidden">
         <div className="p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
          ref={projectTwoTitle}>
-          <p>[01] PROJECT:</p> <p>JOB TRACKR</p> 
+          <p className="home-text text-gray-300 text-opacity-0 font-white-outline ">01</p>
         </div>
-        <div className="h-full w-full bg-striped-dark-thick"></div>
+
+        <div className="p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
+         >
+          <img src={jobtrackr}/>
+        </div>
+         
 
       </section>
 
+
+
       <section className="col-span-full h-full relative"> 
-        <div className="flex justify-center">
-          <div className="relative  flex justify-center items-center overflow-hidden
-          bg-black">
-            
-            <img className=" grayscale hover:cursor-pointer z-10 h-full" src={jobtrackrproject} ref={imageRef}/>
-            <div className={`overlay absolute bg-yellow-700 bg-opacity-30 z-10 w-full h-full
-            hover:bg-opacity-0 hover:cursor-pointer
-            transition-all bg-cover`}
-            onClick={handleViewSite}
-            >
-            </div>
-            
-          </div>
-        </div>
+        
 
         <div className=" bottom-0 z-50 w-full">
         
@@ -168,24 +162,9 @@ function ProjectTwo () {
           </div>
         </div>
       </section>
-      {
-      /*
-      
-      <div className="DEMO col-span-full"> 
-        <Demo/> 
-      </div>
-      <div className="DETAIL flex flex-grow z-30 -left-1/2">
-        <Detail/>
-      </div>
-      <div className="FEATURE flex flex-grow z-30">
-        <Feature/>
-      </div>
-      */
-      }
-      
        
     </div>
   )
 }
 
-export default ProjectTwo;
+export default ProjectJobtrackr;

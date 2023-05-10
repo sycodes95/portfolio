@@ -45,6 +45,12 @@ input:focus, textarea:focus{
   
 }
 
+.font-gray-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(117, 117, 117);
+  
+}
+
 .font-green-outline{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 255, 132);
