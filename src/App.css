@@ -10,21 +10,19 @@
 
 ::-webkit-scrollbar-track{
   background-color: rgba(0, 0, 0, 0);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb{
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.25) inset !important;
-    
-    
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.25) inset !important;
 }
 
 input:focus, textarea:focus{
@@ -39,11 +37,6 @@ input:focus, textarea:focus{
 .font-black-outline-light{
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, rgb(0, 0, 0) 1px 0 4px,
   rgb(0, 0, 0) 1px 0 2px ; 
-}
-
-.font-white-outline-light{
-  text-shadow: -1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px -1px 0 #ffffff, -1px -1px 0 #ffffff, rgb(255, 255, 255) 1px 0 1px,
-  rgb(255, 255, 255) 1px 0 1px ; 
 }
 
 .font-white-outline{
@@ -129,16 +122,6 @@ input:focus, textarea:focus{
   rgb(255, 255, 255) 0px 0 4px ;
 }
 
-.text-glow-red{
-  text-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
-  rgba(255, 1, 1, 0.564) 0px 0 10px ;
-}
-
-.text-glow-oj{
-  text-shadow:rgba(255, 136, 0, 0.6) 0px 0 2px,
-  rgba(255, 94, 0, 0.564) 0px 0 10px ;
-}
-
 .border-glow-white{
   box-shadow:rgba(255, 255, 255, 0.87) 0px 0 2px,
   rgba(255, 255, 255, 0.2) 0px 0 50px ;
@@ -149,20 +132,6 @@ input:focus, textarea:focus{
   rgba(255, 230, 0, 0.1) 0px 0 35px ;
 }
 
-.border-glow-blue{
-  box-shadow:rgba(0, 102, 255, 0.87) 0px 0 2px,
-  rgba(0, 94, 255, 0.2) 0px 0 15px ;
-}
-
-.border-glow-emerald{
-  box-shadow:rgba(5, 255, 184, 0.87) 0px 0 2px,
-  rgba(5, 255, 193, 0.2) 0px 0 15px ;
-}
-
-.border-glow-emerald-long{
-  box-shadow:rgba(5, 255, 184, 0.87) 0px 0 0px,
-  rgba(5, 255, 193, 0.75) 0px 0 50px ;
-}
 
 
 
@@ -254,7 +223,7 @@ input:focus, textarea:focus{
 }
 
 .bg-mosaic-gradient{
-  background: linear-gradient(rgba(31, 31, 27, 0.3), rgba(0, 0, 0, 0.3)), url(/src/background-images/subtle_carbon.webp);
+  background: linear-gradient(rgba(49, 49, 49, 0.2), rgba(49, 49, 49, 0.2)), url(/src/background-images/subtle_carbon.webp);
 }
 
 .bg-holo{
@@ -459,9 +428,6 @@ input:focus, textarea:focus{
   min-height: 40rem;
 }
 
-.HOME-SCREEN{
-  min-height: -webkit-fill-available;
-}
 
 .PROJECT-SECTION, .ABOUT-SECTION{
   width: 100%;

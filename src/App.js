@@ -37,7 +37,7 @@ function App() {
   
 
   useEffect(() => {
-    navRef.current.classList.add('top-0')
+    navRef.current.classList.add('top-10')
     navRef.current.classList.remove('-top-1/4')
     console.log(process.env.REACT_APP_CONTACT_FORM_EMAIL);
   }, []);
@@ -64,14 +64,13 @@ function App() {
       let currentScrollY = window.scrollY;
       console.log(currentScrollY);
       if (currentScrollY < lastScrollY) {
-        nav.classList.add('top-0')
-        nav.classList.remove('-top-10')
+        nav.classList.add('top-10')
+        nav.classList.remove('-top-1/4')
         console.log('lower');
         
       } else {
-        nav.classList.add('-top-10')
-        nav.classList.remove('top-0')
-        console.log('higher');
+        nav.classList.add('-top-1/4')
+        nav.classList.remove('top-10')
       }
       lastScrollY = currentScrollY
 
@@ -95,9 +94,9 @@ function App() {
     <div className='APP bg-mosaic-gradient relative' onLoad={handleScrollToTop}>
       
       
-      <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 
+      <ul className='nav w-fit fixed left-1/2  -translate-x-1/2 
        p-2 text-xs gap-x-4 z-50 flex bg-black bg-opacity-80 
-      -top-1/4 transition-all border-t-4 border-white  duration-500'
+      -top-1/4 transition-all rounded-lg border-glow-white  duration-500'
       ref={navRef}>
           
         <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={handleScrollToTop}>
@@ -115,7 +114,7 @@ function App() {
         
       </ul>
       
-      <section className='flex justify-center relative'>
+      <section className=''>
         <HomeSection projectsRef={projectsRef}/>
       </section>
 

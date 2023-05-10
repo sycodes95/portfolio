@@ -100,14 +100,10 @@ function ProjectSection () {
           projectOneDetails.current.classList.add('opacity-100');
           projectOneDetails.current.classList.remove('opacity-0');
 
-          bannerLineRef.current.classList.add('h-10')
-
-          bannerLineRef.current.classList.remove('h-0')
-
-          projectIconRef.current.forEach(ref => {
-            ref.classList.add('opacity-100')
-            ref.classList.remove('opacity-0')
-          })
+          // projectIconRef.current.forEach(ref => {
+          //   ref.classList.add('opacity-100')
+          //   ref.classList.remove('opacity-0')
+          // })
 
           const projectLettersArray = [
             projectsTitleP,
@@ -161,19 +157,19 @@ function ProjectSection () {
   
   return (
     <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16  bg-hammer'>
+
+      <section>
+          <div className="relative flex justify-center w-full z-10 rounded-full" >
+            <Icon className=" text-gray-300  transition-all delay-500 duration-1000  rounded-full" 
+            path={mdiHammerWrench} size={4.2} ref={ref => projectIconRef.current[1] = ref}/>
+          </div> 
+      </section>
         
-      <section className=" relative  flex justify-center items-center 
-      rounded-sm h-28 gb-=olpa transition-all duration-1000" ref={bannerLineRef}>
+      <section className="relative flex justify-center items-center 
+      rounded-sm transition-all duration-1000" ref={bannerLineRef}>
+       
       
-        <div className="ICON-CONTAINER bg-black bg-opacity-60 h-12 w-full flex justify-center items-center relative overflow-visible">
-          
-          
-          {/* <div className="flex justify-start ml-2 w-fit z-10 relative rounded-full" >
-            
-            <Icon className=" text-gray-300 opacity-0 transition-all delay-500 duration-1000  rounded-full" 
-            path={mdiHammerWrench} size={6.9} ref={ref => projectIconRef.current[1] = ref}/>
-            
-          </div>  */}
+          <div className="flex items-center">
           <div className="absolute left-0 -translate-x-1/2 flex items-center w-fit text-gray-300 text-opacity-60 text-8xl font-thin font-family-field-gothic
           overflow-hidden whitespace-nowrap transition-all duration-300" ref={projectsRepeatRef}>
             {
@@ -182,33 +178,18 @@ function ProjectSection () {
             ))
             }
           </div>
+          </div>
           
-        </div>
         
       </section>
+
       
-      <section className='gap-x-8 overflow-hidden max-width-768px-overflow-visible' ref={projectOne}>
+      
+      <section className='gap-x-8 overflow-hidden max-width-768px-overflow-visible ' ref={projectOne}>
         
-        <div className="flex justify-center">
-
-          <div className="SIDE-INFO  text-yellow-700 font-black-outline-light absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
-          flex justify-center items-center text-center text-8xl transition-all duration-700  right-corner-clip
-          border-l-8 border-yellow-700 p-2" ref={projectOneLeft}>
-            <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-l-2 border-yellow-700 border-dashed ">01</div>
-            
-          </div>
-
-          <div className="SIDE-INFO  text-white absolute -right-1/4  bg-black bg-opacity-25 w-48 h-48
-          flex justify-center items-center text-center text-8xl transition-all duration-700
-          border-r-8 border-yellow-700 p-2" ref={projectOneRight}>
-            <div className="p-2 bg-striped-3 w-full h-full flex justify-center items-center 
-            border-r-2 border-yellow-700 border-dashed">
-              <img src={jobtrackrPNG} alt=""/>
-            </div>
-            
-          </div>
-          <div className="flex justify-center opacity-0 transition-all delay-200 duration-1000" ref={projectOneDetails}>
+        <div className="flex justify-center ">
+          
+          <div className="flex justify-center opacity-100 transition-all delay-200 duration-1000 " ref={projectOneDetails}>
             <ProjectTwo/> 
           </div>
           

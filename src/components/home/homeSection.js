@@ -13,15 +13,9 @@ function HomeSection(props) {
 
   const projectsRef = props.projectsRef
 
-  const bulbRef = useRef(null);
-
-  const introRef = useRef(null)
-
   const arrowRef = useRef(null)
 
   const homeIntroRefs = useRef([])
-
-  const [scrollPosition, setScrollPosition] = useState(0)
 
   const kevin = ['K', 'E', 'V', 'I', 'N']
   const kim = ['K', 'I', 'M']
@@ -68,47 +62,13 @@ function HomeSection(props) {
     }
   },[])
 
-  // const handleMouseMove = (event) => {
-  //   const x = event.clientX;
-  //   const y = event.clientY;
-    
-  //   bulbRef.current.style.marginLeft = `${x / 50}px`;
-  //   bulbRef.current.style.marginTop = `${y / 50}px`;
-  // };
-
-  // useEffect(() => {
-  //   document.addEventListener('mousemove', handleMouseMove);
-  //   return () => {
-  //     document.removeEventListener('mousemove', handleMouseMove);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   bulbRef.current.classList.add('TOP-BULB')
-  //   bulbRef.current.classList.remove('-top-3/4')
-  // }, []);
-
-  
-
-  
-  
   return (
-    <section className="content-con max-h-screen w-full corners overflow-x-hidden">
-      <div id="" className="absolute top-0 w-full h-1 border-glow-emerald-long z-50"></div>
-      <div className="HOME-SCREEN relative flex justify-center items-center h-screen w-full ">
-        {/* <div className="absolute h-full w-full max-w-full flex justify-center overflow-hidden ">
-          <img
-            className="absolute -top-3/4 pointer-events-none BULB"
-            src={bulb}
-            ref={bulbRef}
-            alt=''
-          />
-        </div> */}
-        
+    <section className="">
+      <div className="flex justify-center items-center min-h-screen w-full ">
         
         <section className="
-        absolute flex flex-col justify-center items-center h-full w-full home-text 
-         break-word  font-bold" >
+        flex flex-col items-center h-full w-full home-text overflow-hidden pt-32 pb-32
+         " >
           
           <div className="flex w-4/5 h-fit transition-all duration-200 gap-8 " >
 
@@ -119,6 +79,7 @@ function HomeSection(props) {
                 <span className="">{char}</span>
               ))
               }
+              
             </div>
             <div className="flex gap-0 text-gray-300 text-opacity-0 transition-all duration-300 font-white-outline" ref={ref => homeIntroRefs.current.push(ref)}>
               {
@@ -147,20 +108,6 @@ function HomeSection(props) {
             <div className="text-gray-300">.</div>
           </div>
         </section>
-
-        <div className='absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2 p-2 bg-opacity-25   
-        text-white text-xs z-20 flex justify-center ARROW-CONTAINER'>
-          
-          <button className='flex flex-col justify-center items-center 
-          text-yellow-700 hover:text-yellow-600  text-opacity-50 opacity-0 delay-500 duration-1000 
-          rounded-md'
-          onClick={scrollToProjects} ref={arrowRef}>
-            <Icon   path={mdiChevronDown} size={2} />
-            <Icon  path={mdiChevronDown} size={2} />
-            <Icon  path={mdiChevronDown} size={2} />
-          </button>
-          
-        </div>
 
       </div>
 

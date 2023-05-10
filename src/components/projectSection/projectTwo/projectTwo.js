@@ -79,7 +79,7 @@ function ProjectTwo () {
   
   return (
     <div className='PROJECT-CONTAINER w-2/4 transition-all
-    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-yellow'
+    bg-black bg-opacity-25 grid grid-cols-2 gap-2 p-2 border-glow-yellow rounded-xl'
     >
       <section className="h-12 w-full  col-span-full text-white font-black-outline-light text-md
       flex items-center relative overflow-hidden">
