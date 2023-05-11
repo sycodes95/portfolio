@@ -85,19 +85,19 @@ function ProjectEdgescout () {
           <p className="absolute top-4 left-4 project-number-text text-black text-opacity-0 font-white-outline">02</p>
           <img src={edgescout}/>
         </section>
-        <section className="w-1/2 max-width-480px-width-full flex flex-col bottom-0 z-50 h-full">
+        <section className="w-1/2 max-width-480px-width-full flex flex-col bottom-0 z-30 h-full">
         
-          <div className="relative flex-grow text-gray-400 text-sm z-50 h-full w-full flex gap-4  justify-between  p-2 
+          <div className="relative flex-grow text-gray-400 text-sm h-full w-full flex gap-4  justify-between  p-2 
           bg-black bg-opacity-50">
             <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-gray-400 font-black-outline-light
-            z-50">
+            ">
               
               A TRADING JOURNAL APP, BUILT TO HELP TRADERS FIND AND REFINE THEIR STRATEGIES FOR BETTER PROFITABILITY IN THE FINANCIAL MARKETS.
             </p>
             
           </div>
 
-          <div className="text-gray-400 text-sm z-50  w-full flex flex-row  gap-4   p-2
+          <div className="text-gray-400 text-sm w-full flex flex-row  gap-4   p-2
           bg-black font-bold">
             
             <div className="flex w-full text-xs  max-width-480px-flex-col">

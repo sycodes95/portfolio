@@ -96,7 +96,7 @@ function App() {
       
       <ul className='nav w-fit fixed left-1/2  -translate-x-1/2 
        p-2 text-xs gap-x-4 z-50 flex bg-black bg-opacity-80 
-      -top-1/4 transition-all rounded-lg border-glow-white  duration-500'
+      -top-1/4 transition-all rounded-lg border-glow-white  duration-500 '
       ref={navRef}>
           
         <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={handleScrollToTop}>

@@ -223,11 +223,12 @@ function AboutSection () {
         </div>
       </section>
       <section className="w-full flex justify-center">
-      <div className="ABOUT-CONTAINER flex w-full relative overflow-hidden max-width-768px-overflow-visible 
+        
+      <div className="flex w-full relative overflow-hidden max-width-768px-overflow-visible 
       justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000 max-height-screen-10 " ref={aboutContainerRef}>
         
-        <div className="relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-white rounded-xl
-        border-4 border-opacity-50 border-black bg-dna -top-full transition-all  w-1/2 max-width-1440px-w-50pct
+        <div className="ABOUT-CONTAINER relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-white rounded-xl
+        border-4 border-opacity-50 border-black bg-dna -top-full transition-all  w-2/5 max-width-1440px-w-50pct
         max-width-1200px-w-60pct max-width-768px-width-full z-10 overflow-hidden" ref={aboutContentRef}>
           
           <section className="absolute -top-16 h-16 w-full bg-striped-dark-alt transition-all delay-500 duration-1000" ref={aboutHeaderRef}>
@@ -318,13 +319,13 @@ function AboutSection () {
             
           </section>
 
-          <section className="absolute bottom-0 -left-56 text-white border-l-4 border-red-600 border-opacity-50 
+          <section className="absolute bottom-0 -left-56 text-white border-l-4 border-gray-600 border-opacity-50 
           flex justify-evenly p-2 gap-2 bg-black bg-opacity-30 w-56 max-width-768px-left-0 transition-all duration-1000
           "> 
-            <button className={`rounded-sm  bg-opacity-50 text-white p-1 w-full border border-slate-500 border-opacity-0 hover:border-opacity-100
-            ${mobileTab.tab === 'GENERAL' && 'bg-slate-500'}`} onClick={handleMobileTab}>GENERAL</button>
-            <button className={`rounded-sm  bg-opacity-50 text-white p-1 w-full border border-slate-500 border-opacity-0 hover:border-opacity-100
-            ${mobileTab.tab === 'WHOAMI?' && 'bg-slate-500'}`} onClick={handleMobileTab}>WHOAMI?</button>
+            <button className={`rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
+            ${mobileTab.tab === 'GENERAL' && 'bg-gray-500'}`} onClick={handleMobileTab}>GENERAL</button>
+            <button className={`z-10 rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
+            ${mobileTab.tab === 'WHOAMI?' && 'bg-gray-500'}`} onClick={handleMobileTab}>WHOAMI?</button>
           </section>
 
           

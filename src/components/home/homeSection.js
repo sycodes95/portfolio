@@ -67,7 +67,7 @@ function HomeSection(props) {
       <div className="relative flex justify-center items-center min-h-screen w-full ">
         
         <section className="
-        flex flex-col items-center h-full w-full home-text overflow-hidden pt-32 pb-32
+        flex flex-col items-center h-full w-full home-text overflow-hidden pt-32 pb-32 
          " >
           
           <div className="flex w-4/5 h-fit transition-all duration-200 " >
