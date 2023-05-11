@@ -3,27 +3,26 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar{
-  width: 12px;
+  width: 10px;
   height: 10px;
   
 }
 
 ::-webkit-scrollbar-track{
-  background-color: rgb(0, 0, 0);
-  
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: rgba(75, 43, 43, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.25) inset !important;
-    
-    
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.25) inset !important;
 }
 
 input:focus, textarea:focus{
@@ -31,23 +30,7 @@ input:focus, textarea:focus{
 }
 
 
-/* BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-BORDERS-*/
 
-.top-left-round{
-  border-top-left-radius: 6px;
-}
-
-.top-right-round{
-  border-top-right-radius: 6px;
-}
-
-.bottom-right-round{
-  border-bottom-right-radius: 6px;
-}
-
-.bottom-left-round{
-  border-bottom-left-radius: 6px;
-}
 
 /*FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-*/
 
@@ -56,42 +39,16 @@ input:focus, textarea:focus{
   rgb(0, 0, 0) 1px 0 2px ; 
 }
 
-.font-red-outline-light{
-  text-shadow: -1px 1px 0 #6a0000, 1px 1px 0 #6a0000, 1px -1px 0 #6a0000, -1px -1px 0 #6a0000, rgb(114, 0, 0) 1px 0 4px,
-  rgb(113, 0, 0) 1px 0 2px ; 
-}
-
-
-
-.font-black-outline-strong{
-  text-shadow: -1px 4px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, rgb(0, 0, 0) 4px 0 10px,
-  rgb(62, 62, 62) 4px 0 10px ; 
-}
-
-.font-shadow-white{
-  text-shadow:rgba(255, 255, 255, 0.87) 0px 0 4px,
-  rgb(255, 255, 255) 0px 0 50px ;
-}
-
-.font-shadow-white-light{
-  text-shadow:
-  rgba(255, 255, 255, 0.87) 0px 0 4px,
-  rgb(255, 255, 255) 0px 0 10px ;
-}
-
-.font-black-outline-white-shadow{
-  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, rgba(255, 255, 255, 0.87) 0px 0 4px,
-  rgb(255, 255, 255) 0px 0 50px ; 
-}
-
-.font-bg-gradient {
-  background:linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.6)), url(./background-images/stripes.webp);
-  background-position: cover;
-  background-size: 125px;
-  background-clip: text;
+.font-white-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
   
-  -webkit-background-clip: text; /* For Safari */
-  color: transparent;
+}
+
+.font-gray-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(117, 117, 117);
+  
 }
 
 .menu:hover{
@@ -100,52 +57,43 @@ input:focus, textarea:focus{
   rgb(255, 255, 255) 0px 0 50px ;
   
 }
-
-
-.text-shadow-black{
-  text-shadow: 5px 5px 10px red;
+.home-text{
+  font-family: FieldGothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(2rem, 22vw, 30rem);
+  line-height: 0.8;
 }
+
+.project-number-text{
+  font-family: FieldGothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(2rem, 8vw, 30rem);
+  line-height:1;
+}
+
+.font-family-field-gothic{
+  font-family: FieldGothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
+
 .text-glow-white{
   text-shadow:rgba(255, 255, 255, 0.87) 0px 0 1px,
   rgb(255, 255, 255) 0px 0 4px ;
 }
 
-.text-glow-red{
-  text-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
-  rgba(255, 1, 1, 0.564) 0px 0 10px ;
-}
-
-.text-glow-oj{
-  text-shadow:rgba(255, 136, 0, 0.6) 0px 0 2px,
-  rgba(255, 94, 0, 0.564) 0px 0 10px ;
+.border-glow-none{
+  box-shadow:rgba(255, 255, 255, 0) 0px 0 2px,
+  rgba(255, 255, 255, 0) 0px 0 50px ;
 }
 
 .border-glow-white{
-  box-shadow:rgba(255, 255, 255, 0.87) 0px 0 2px,
-  rgba(255, 255, 255, 0.2) 0px 0 25px ;
+  box-shadow:rgba(255, 255, 255, 1) 0px 0 2px,
+  rgba(255, 255, 255, 0.2) 0px 0 50px ;
 }
 
 .border-glow-yellow{
-  box-shadow:rgba(251, 255, 0, 0.87) 0px 0 2px,
-  rgba(255, 230, 0, 0.2) 0px 0 15px ;
+  box-shadow:rgb(255, 230, 0) 0px 0 2px,
+  rgba(255, 230, 0, 0.1) 0px 0 35px ;
 }
-
-.border-glow-emerald{
-  box-shadow:rgba(5, 255, 184, 0.87) 0px 0 2px,
-  rgba(5, 255, 193, 0.2) 0px 0 15px ;
-}
-
-.border-glow-red{
-  box-shadow:rgba(255, 0, 0, 0.6) 0px 0 2px,
-  rgba(255, 0, 0, 0.2) 0px 0 25px ;
-}
-
-.border-glow-red-intro{
-  box-shadow:rgba(255, 0, 0, 0.8) 0px 0 2px,
-  rgba(255, 1, 1, 0.4) 0px 0 25px ;
-  
-}
-
 
 .border-glow-red-no-line{
   box-shadow:rgba(255, 0, 0, 0.6) 0px 0 0px,
@@ -190,6 +138,16 @@ input:focus, textarea:focus{
   
 }
 
+.bg-striped-dark-alt-yellow{
+  background: repeating-linear-gradient( 
+  45deg,
+  rgba(0, 0, 0, 0.1),
+  rgba(0, 0, 0, 0.1) 2px,
+  rgba(255, 221, 0, 0.3) 2px,
+  rgba(255, 221, 0, 0.3) 6px)
+  
+}
+
 .bg-striped-dark-alt-darker{
   background: repeating-linear-gradient( 
   45deg,
@@ -212,7 +170,29 @@ input:focus, textarea:focus{
   
 }
 
+.bg-jet-light{
+  background-color: #111;
+}
 
+.bg-hex{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(1, 1, 1, 0.6)), url(/src/background-images/slash.webp);
+}
+
+.bg-mosaic{
+  background: url(/src/background-images/dark_mosaic.png);
+}
+
+.bg-mosaic-gradient{
+  background: linear-gradient(rgba(49, 49, 49, 0.2), rgba(49, 49, 49, 0.2)), url(/src/background-images/subtle_carbon.webp);
+}
+
+.bg-holo{
+  background: url(/src/background-images/bg-holo.png);
+}
+
+.fill-holo {
+  fill: url(/src/background-images/bg-holo.png);
+}
 .bg-edgescout{
   background-image:
   url(./images/edgescout.png);
@@ -236,6 +216,8 @@ input:focus, textarea:focus{
   background-size: 26px;
   background-repeat: round;
   position: absolute;
+  
+  
   top: 0;
   bottom: 0;
   left: 0;
@@ -255,7 +237,7 @@ input:focus, textarea:focus{
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.05;
+  opacity: 0.025;
   z-index: 0;
 }
 
@@ -272,6 +254,7 @@ input:focus, textarea:focus{
   right: 0;
   opacity: 0.025;
   z-index: 0;
+  
 }
 
 .bg-at::before {
@@ -344,8 +327,12 @@ input:focus, textarea:focus{
   rgba(0, 0, 0, 0.2) 10px)
 }
 
+.bg-blur{
+  backdrop-filter: blur(5px);
+}
+
 .res-font{
-  font-size: clamp(50px, 8vw, 120px)
+  font-size: clamp(50px, 8vw, 200px)
 }
 
 .top-neg-5{
@@ -359,13 +346,14 @@ input:focus, textarea:focus{
   max-height: 125%;
 }
 
+
+
+
 .w-initial{
   width: initial;
 }
 
-.PRO-ONE-DIV{
-  
-}
+
 
 .BULB{
   
@@ -399,9 +387,6 @@ input:focus, textarea:focus{
   min-height: 40rem;
 }
 
-.HOME-SCREEN{
-  min-height: -webkit-fill-available;
-}
 
 .PROJECT-SECTION, .ABOUT-SECTION{
   width: 100%;
@@ -476,14 +461,28 @@ input:focus, textarea:focus{
   
 }
 
+@media (max-width: 968px) {
+  .max-width-968px-w-70pct{
+    width: 70%;
+  }
+  
+}
+
 
 
 @media (max-width: 768px) {
+  .max-height-screen-10{
+    max-height: calc(100vh - 3rem);
+    
+  }
   .max-width-768px-left-0{
     left: 0px;
   }
+  .max-width-768px-flex-col{
+    flex-direction: column;
+  }
   .max-width-768px-overflow-visible{
-    overflow: visible;
+    
   }
   .max-width-768px-width-full {
     width: 100%;
@@ -496,12 +495,10 @@ input:focus, textarea:focus{
     column-gap: 0.75rem;
   }
   
-  .PROJECT-SECTION, .ABOUT-SECTION, .CONTACT-SECTION {
-    width: 90%;
-  }
+  
   .PROJECT-CONTAINER, .ABOUT-CONTAINER  {
-    width: 100%;
-    grid-template-columns: 1fr;
+    width: 90%;
+    
   }
   .DEMO{
     grid-column: 1/2;
@@ -523,6 +520,12 @@ input:focus, textarea:focus{
 }
 
 @media (max-width: 480px) {
+  .max-width-480px-flex-col{
+    flex-direction: column;
+  }
+  .max-width-480px-width-full {
+    width: 100%;
+  }
   .max-width-480px-flex-col{
     flex-direction: column;
   }

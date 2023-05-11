@@ -63,7 +63,7 @@ function ContactSection () {
        rounded-sm h-0 transition-all duration-1000" ref={bannerLineRef}>
         
         <div className="ICON-CONTAINER
-         bg-yellow-400 bg-opacity-25 bg-striped
+         bg-white bg-opacity-40 bg-striped
          h-full w-full 
          flex items-center" ref={bannerLineRef}> 
           
@@ -112,8 +112,8 @@ function ContactSection () {
 
       
         <form className="CONTACT-FORM bg-black bg-opacity-30 flex flex-col gap-y-1 items-center 
-        p-2 text-white pb-8 w-96 max-width-768px-width-full border-4 border-black border-glow-yellow 
-        opacity-0 transition-opacity delay-500 duration-1000" 
+        p-2 text-white pb-8 w-96 max-width-768px-width-full border-4 border-black border-glow-white
+        opacity-0 transition-opacity delay-500 duration-1000 rounded-xl" 
         target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST" ref={formContainerRef}
         >
           

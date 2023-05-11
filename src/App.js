@@ -37,7 +37,7 @@ function App() {
   
 
   useEffect(() => {
-    navRef.current.classList.add('top-0')
+    navRef.current.classList.add('top-10')
     navRef.current.classList.remove('-top-1/4')
     console.log(process.env.REACT_APP_CONTACT_FORM_EMAIL);
   }, []);
@@ -64,14 +64,13 @@ function App() {
       let currentScrollY = window.scrollY;
       console.log(currentScrollY);
       if (currentScrollY < lastScrollY) {
-        nav.classList.add('top-0')
-        nav.classList.remove('-top-10')
+        nav.classList.add('top-10')
+        nav.classList.remove('-top-1/4')
         console.log('lower');
         
       } else {
-        nav.classList.add('-top-10')
-        nav.classList.remove('top-0')
-        console.log('higher');
+        nav.classList.add('-top-1/4')
+        nav.classList.remove('top-10')
       }
       lastScrollY = currentScrollY
 
@@ -92,30 +91,30 @@ function App() {
   
     
   return (
-    <div className='APP bg-dev-classic relative' onLoad={handleScrollToTop}>
+    <div className='APP bg-mosaic-gradient relative' onLoad={handleScrollToTop}>
       
       
-      <ul className='nav w-fit fixed left-1/2 -translate-x-1/2 h-10 
-       p-2 text-sm gap-x-4 z-50 flex bg-black bg-opacity-50
-      -top-1/4 transition-all border-t-4 border-b-2 border-b-white  border-red-800 border-opacity-50 duration-500'
+      <ul className='nav w-fit fixed left-1/2  -translate-x-1/2 
+       p-2 text-xs gap-x-4 z-50 flex bg-black bg-opacity-80 
+      -top-1/4 transition-all rounded-lg border-glow-white  duration-500'
       ref={navRef}>
           
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={handleScrollToTop}>
-          [HOME]
+        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={handleScrollToTop}>
+        <p className='text-gray-500'>01.</p> <p>HOME</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToProjects}>
-          [PROJECTS]
+        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToProjects}>
+          <p className='text-gray-500'>02.</p> <p>PROJECTS</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToAbout}>
-          [ABOUT]
+        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToAbout}>
+          <p className='text-gray-500'>03.</p> <p>ABOUT</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white transition-colors whitespace-nowrap' onClick={scrollToContact}>
-          [CONTACT]
+        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToContact}>
+          <p className='text-gray-500'>04.</p> <p>CONTACT</p>
         </li>
         
       </ul>
       
-      <section className='flex justify-center relative'>
+      <section className=''>
         <HomeSection projectsRef={projectsRef}/>
       </section>
 
