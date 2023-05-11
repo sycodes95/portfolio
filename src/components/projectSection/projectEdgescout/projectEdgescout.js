@@ -79,13 +79,13 @@ function ProjectEdgescout () {
     max-width-1200px-w-60pct max-width-968px-w-70pct rounded-xl border-glow-none '
     ref={projectContainerRef}>
       <div className=" w-full  col-span-full text-white font-black-outline-light text-md
-      flex items-center relative overflow-hidden">
+      flex max-width-480px-flex-col items-center relative overflow-hidden">
 
-        <section className="w-1/2 p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700">
+        <section className="w-1/2 max-width-480px-width-full p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700">
           <p className="absolute top-4 left-4 project-number-text text-black text-opacity-0 font-white-outline">02</p>
           <img src={edgescout}/>
         </section>
-        <section className="w-1/2 flex flex-col bottom-0 z-50 h-full w-full">
+        <section className="w-1/2 max-width-480px-width-full flex flex-col bottom-0 z-50 h-full">
         
           <div className="relative flex-grow text-gray-400 text-sm z-50 h-full w-full flex gap-4  justify-between  p-2 
           bg-black bg-opacity-50">

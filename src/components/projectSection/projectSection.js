@@ -124,7 +124,7 @@ function ProjectSection () {
       <section>
         <div className="relative flex justify-center w-full z-10 rounded-full" >
           <Icon className=" text-gray-300  transition-all delay-500 duration-1000  rounded-full" 
-          path={mdiHammerWrench} size={4.2} ref={ref => projectIconRef.current[1] = ref}/>
+          path={mdiHammerWrench} size={3.2} ref={ref => projectIconRef.current[1] = ref}/>
         </div> 
       </section>
         

@@ -478,6 +478,9 @@ input:focus, textarea:focus{
   .max-width-768px-left-0{
     left: 0px;
   }
+  .max-width-768px-flex-col{
+    flex-direction: column;
+  }
   .max-width-768px-overflow-visible{
     
   }
@@ -495,7 +498,7 @@ input:focus, textarea:focus{
   
   .PROJECT-CONTAINER, .ABOUT-CONTAINER  {
     width: 90%;
-    grid-template-columns: 1fr;
+    
   }
   .DEMO{
     grid-column: 1/2;
@@ -517,6 +520,12 @@ input:focus, textarea:focus{
 }
 
 @media (max-width: 480px) {
+  .max-width-480px-flex-col{
+    flex-direction: column;
+  }
+  .max-width-480px-width-full {
+    width: 100%;
+  }
   .max-width-480px-flex-col{
     flex-direction: column;
   }

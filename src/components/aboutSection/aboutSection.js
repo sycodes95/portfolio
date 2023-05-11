@@ -202,12 +202,12 @@ function AboutSection () {
   
 
   return (
-    <div className='ABOUT-SECTION pb-24 pt-12 gap-y-16 flex flex-col  bg-dna-big relative' ref={aboutSectionRef}>
+    <div className='ABOUT-SECTION w-full pb-24 pt-12 gap-y-16 flex flex-col bg-dna-big relative' ref={aboutSectionRef}>
       
       <section>
         <div className="relative flex justify-center w-full z-10 " >
           <Icon className=" text-gray-300  transition-all delay-500 duration-1000  rounded-full" 
-          path={mdiDna} size={4.2}/>
+          path={mdiDna} size={3.2}/>
         </div> 
       </section>
 
@@ -222,12 +222,12 @@ function AboutSection () {
           }
         </div>
       </section>
-
-      <div className="ABOUT-CONTAINER flex relative overflow-hidden max-width-768px-overflow-visible 
+      <section className="w-full flex justify-center">
+      <div className="ABOUT-CONTAINER flex w-full relative overflow-hidden max-width-768px-overflow-visible 
       justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000 max-height-screen-10 " ref={aboutContainerRef}>
         
         <div className="relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-white rounded-xl
-        border-4 border-opacity-50 border-black bg-dna -top-full transition-all  w-2/5 max-width-1440px-w-50pct
+        border-4 border-opacity-50 border-black bg-dna -top-full transition-all  w-1/2 max-width-1440px-w-50pct
         max-width-1200px-w-60pct max-width-768px-width-full z-10 overflow-hidden" ref={aboutContentRef}>
           
           <section className="absolute -top-16 h-16 w-full bg-striped-dark-alt transition-all delay-500 duration-1000" ref={aboutHeaderRef}>
@@ -336,6 +336,7 @@ function AboutSection () {
         </div>
         
       </div>
+      </section>
 
     </div>
 

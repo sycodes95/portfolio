@@ -91,7 +91,7 @@ function HomeSection(props) {
             </div>
             <div className="text-gray-400 pl-8">/</div>
           </div>
-          <div id="fullstack" className="flex w-4/5 gap-8 transition-all duration-300"  >
+          <div id="fullstack" className="flex w-4/5  transition-all duration-300"  >
             <div id="fullstack" className="flex gap-0 justify-center text-gray-300 text-opacity-60 transition-all duration-300" ref={ref => homeIntroRefs.current.push(ref)}>
               {
               fullstack.map((char, index) => (
