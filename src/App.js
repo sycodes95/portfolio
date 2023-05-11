@@ -39,7 +39,6 @@ function App() {
   useEffect(() => {
     navRef.current.classList.add('top-10')
     navRef.current.classList.remove('-top-1/4')
-    console.log(process.env.REACT_APP_CONTACT_FORM_EMAIL);
   }, []);
 
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -62,11 +61,9 @@ function App() {
     if(nav){
 
       let currentScrollY = window.scrollY;
-      console.log(currentScrollY);
       if (currentScrollY < lastScrollY) {
         nav.classList.add('top-10')
         nav.classList.remove('-top-1/4')
-        console.log('lower');
         
       } else {
         nav.classList.add('-top-1/4')

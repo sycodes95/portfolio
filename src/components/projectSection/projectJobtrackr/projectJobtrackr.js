@@ -56,7 +56,6 @@ function ProjectJobtrackr () {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          console.log('intersect');
           projectContainerRef.current.classList.add('border-glow-white');
           projectContainerRef.current.classList.remove('border-glow-none');
           

@@ -122,7 +122,6 @@ function AboutSection () {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          console.log('intersect');
           aboutContentRef.current.classList.add('top-0');
           aboutContentRef.current.classList.remove('-top-full');
           aboutHeaderRef.current.classList.add('top-0')

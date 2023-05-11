@@ -42,9 +42,7 @@ function HomeSection(props) {
         }
         homeIntroRefs.current.forEach(ref => {
           let half = pixels / 4
-          console.log(ref.id);
           if(ref.id === 'fullstack'){
-            console.log('iddd');
             ref.style.columnGap = half + 'vw'
           } else {
             ref.style.columnGap = pixels + 'vw'
