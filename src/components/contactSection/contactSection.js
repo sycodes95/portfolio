@@ -82,7 +82,7 @@ function ContactSection () {
   },[])
 
   return(
-    <div className="flex flex-col pb-24 pt-12 gap-y-16 w-full overflow-hidden" >
+    <div className="flex flex-col  pb-24 pt-12 gap-y-16 w-full overflow-hidden" >
       
       
       
@@ -107,10 +107,10 @@ function ContactSection () {
       </section>
           
         
-      <section className="w-full flex justify-center overflow-hidden mt-16 max-width-768px-overflow-visible " >
+      <section className="flex justify-center overflow-hidden mt-16 max-width-768px-overflow-visible " >
 
       
-        <form className="CONTACT-FORM bg-black bg-opacity-30 flex flex-col gap-y-1 items-center 
+        <form className="CONTACT-FORM  bg-black bg-opacity-30 flex flex-col gap-y-1 items-center 
         p-2 text-white pb-8 w-96 max-width-768px-width-full border-4 border-black border-glow-white
          transition-opacity delay-500 duration-1000 rounded-xl" 
         target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST" ref={formContainerRef}

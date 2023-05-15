@@ -496,7 +496,7 @@ input:focus, textarea:focus{
   }
   
   
-  .PROJECT-CONTAINER, .ABOUT-CONTAINER  {
+  .PROJECT-CONTAINER, .ABOUT-CONTAINER, .CONTACT-FORM  {
     width: 90%;
     
   }
