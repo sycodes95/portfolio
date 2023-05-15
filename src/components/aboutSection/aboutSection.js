@@ -60,39 +60,39 @@ function AboutSection () {
 
   const toolsElements = [
     {
-      jsx: <i class="devicon-javascript-plain text-4xl  fill-current"></i>,
+      jsx: <i className="devicon-javascript-plain text-4xl  fill-current"></i>,
       name: 'Javascript'
     },
     {
-      jsx: <i class="devicon-react-original text-4xl  fill-current "></i>,
+      jsx: <i className="devicon-react-original text-4xl  fill-current "></i>,
       name: 'React'
     },
     {
-      jsx: <i class="devicon-tailwindcss-plain text-4xl  fill-current "></i>,
+      jsx: <i className="devicon-tailwindcss-plain text-4xl  fill-current "></i>,
       name: 'Tailwind'
     },
     {
-      jsx: <i class="devicon-nodejs-plain text-4xl  fill-current "></i>,
+      jsx: <i className="devicon-nodejs-plain text-4xl  fill-current "></i>,
       name: 'Node JS'
     },
     {
-      jsx: <i class="devicon-express-original text-4xl  fill-current "></i>,
+      jsx: <i className="devicon-express-original text-4xl  fill-current "></i>,
       name: 'Express'
     },
     {
-      jsx: <i class="devicon-postgresql-plain-wordmark text-4xl  fill-current "></i>,
+      jsx: <i className="devicon-postgresql-plain-wordmark text-4xl  fill-current "></i>,
       name: 'PostgreSQL'
     },
     {
-      jsx: <i class="devicon-mongodb-plain-wordmark text-4xl  fill-current "></i>,
+      jsx: <i className="devicon-mongodb-plain-wordmark text-4xl  fill-current "></i>,
       name: 'Mongo DB'
     },
     {
-      jsx: <i class="devicon-git-plain text-4xl  fill-current"></i>,
+      jsx: <i className="devicon-git-plain text-4xl  fill-current"></i>,
       name: 'Git'
     },
     {
-      jsx: <i class="devicon-github-original text-4xl  fill-current"></i>,
+      jsx: <i className="devicon-github-original text-4xl  fill-current"></i>,
       name: 'Github'
     },
   ]
@@ -321,7 +321,7 @@ function AboutSection () {
           <section className="absolute bottom-0 -left-56 text-white border-l-4 border-gray-600 border-opacity-50 
           flex justify-evenly p-2 gap-2 bg-black bg-opacity-30 w-56 max-width-768px-left-0 transition-all duration-1000
           "> 
-            <button className={`rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
+            <button className={`z-10 rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
             ${mobileTab.tab === 'GENERAL' && 'bg-gray-500'}`} onClick={handleMobileTab}>GENERAL</button>
             <button className={`z-10 rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
             ${mobileTab.tab === 'WHOAMI?' && 'bg-gray-500'}`} onClick={handleMobileTab}>WHOAMI?</button>
