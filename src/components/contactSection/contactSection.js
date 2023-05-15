@@ -119,15 +119,16 @@ function ContactSection () {
           <input className="hidden " type="text" name="_honey"/>
           <input type="hidden" name="_captcha" value="false"/>
           
-          <label className="text-center font-black-outline-light flex flex-col ">Email <span className="text-xs text-red-700 ">(required)</span></label>
+          <label className="text-center font-black-outline-light flex flex-col ">Email <span className="text-xs text-emerald-400 ">(required)</span></label>
           <input className="bg-black bg-opacity-25 w-80 border-b-2 border-white border-opacity-50 z-50" type="email" name="email" placeholder="Email..." required/>
-          <label className="text-center font-black-outline-light flex flex-col">Phone <span className="text-xs text-red-300 ">(optional)</span></label>
+          <label className="text-center font-black-outline-light flex flex-col">Phone <span className="text-xs text-gray-300 ">(optional)</span></label>
           <input className="bg-black bg-opacity-25 w-80 z-50 border-b-2 border-white border-opacity-50" 
           type="tel" name="tel" placeholder="Phone...(optional)"/>
-          <label className="text-center font-black-outline-light flex flex-col ">Text <span className="text-xs text-red-700 ">(required)</span></label>
+          <label className="text-center font-black-outline-light flex flex-col ">Text <span className="text-xs text-emerald-400 ">(required)</span></label>
           <textarea className="bg-black bg-opacity-25 w-80 h-80 z-50 border-b-2 border-white border-opacity-50 resize-none" 
           type="text" name="text" placeholder="Text..." required/>
-          <button className="bg-red-700 bg-opacity-25 w-full hover:bg-opacity-50 transition-colors h-8 z-50 mt-8" type="submit">Submit</button>
+          <button className="bg-emerald-400 bg-opacity-50  rounded-sm 
+           w-full hover:bg-opacity-25 transition-colors h-8 z-50 mt-8" type="submit">Submit</button>
         </form>
       </section>
       <section className="h-fit w-full flex justify-center z-50 text-glow-white">

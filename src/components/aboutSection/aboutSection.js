@@ -16,7 +16,7 @@ import americanflag from "../../images/american-flag.png"
 function AboutSection () {
 
   const [mobileTab, setMobileTab] = useState({
-    tab: 'GENERAL',
+    tab: 'SUMMARY',
     
   })
 
@@ -46,14 +46,14 @@ function AboutSection () {
   
 
   const handleMobileTab = (e) => {
-    if(e.target.textContent === 'GENERAL'){
+    if(e.target.textContent === 'SUMMARY'){
       setMobileTab({
-        tab: 'GENERAL'
+        tab: 'SUMMARY'
       })
     }
-    if(e.target.textContent === 'WHOAMI?'){
+    if(e.target.textContent === 'SKILLS'){
       setMobileTab({
-        tab: 'WHOAMI?'
+        tab: 'SKILLS'
       })
     }
   }
@@ -99,11 +99,11 @@ function AboutSection () {
 
   useEffect(()=> {
     
-    if(window.innerWidth < 768 && mobileTab.tab === 'GENERAL'){
+    if(window.innerWidth < 768 && mobileTab.tab === 'SUMMARY'){
       aboutSideLeftRef.current.classList.remove('max-width-768px-neg-top-full')
       aboutSideRightRef.current.classList.add('max-width-768px-neg-top-full')
     }
-    if(window.innerWidth < 768 && mobileTab.tab === 'WHOAMI?'){
+    if(window.innerWidth < 768 && mobileTab.tab === 'SKILLS'){
       aboutSideLeftRef.current.classList.add('max-width-768px-neg-top-full')
       aboutSideRightRef.current.classList.remove('max-width-768px-neg-top-full')
     }
@@ -201,7 +201,7 @@ function AboutSection () {
   
 
   return (
-    <div className='ABOUT-SECTION w-full pb-24 pt-12 gap-y-16 flex flex-col bg-dna-big relative' ref={aboutSectionRef}>
+    <div className='ABOUT-SECTION  w-full pb-24 pt-12 gap-y-16 flex flex-col bg-dna-big relative' ref={aboutSectionRef}>
       
       <section>
         <div className="relative flex justify-center w-full z-10 " >
@@ -221,6 +221,7 @@ function AboutSection () {
           }
         </div>
       </section>
+
       <section className="w-full flex justify-center">
         
       <div className="flex w-full relative overflow-hidden max-width-768px-overflow-visible 
@@ -249,20 +250,30 @@ function AboutSection () {
           <section className="absolute top-1/2 -translate-y-1/2 -left-56 w-56 max-width-768px-width-full flex flex-col  items-center p-4 
           border-l-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
           transition-all delay-500 duration-1000 " ref={aboutSideLeftRef}>
+
+            <div className="text-white text-md border-b w-full flex justify-center">SUMMARY</div>
             
             <div className=" gap-y-2 gap-x-2  text-white text-xs font-black-outline-light leading-relaxed text-center"> 
 
-              I AM A <span className="text-green-300">FULL-STACK DEVELOPER</span> WITH AN EYE FOR DESIGN.
-              I TAKE PRIDE IN CRAFTING RESPONSIVE LAYOUTS AND WRITING EFFICIENT, EASY-TO-READ CODE.
-              ALONG WITH MY CORE DEVELOPMENT SKILLS,
-              I HAVE A DEEP PASSION FOR WORKING WITH DATA AND USING IT TO CREATE MEANINGFUL VISUALIZATIONS THAT CONVEY INSIGHTS IN AN ENGAGING WAY.
+              I am a <span className="text-green-300">Full-Stack Developer</span> with an eye for design.
+              I take pride in crafting responsive layouts and writing efficient, easy-to-read code.
+              Along with my core development skills,
+              I have a deep passion for working with data and using it to create meaningful visualizations that convey insights in an engaging way.
               
             </div>
+
+            
+          </section>
+
+
+          <section className="absolute top-1/2 -translate-y-1/2 -right-56 w-56  flex flex-col  items-center p-4 
+          border-r-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
+          transition-all delay-500 duration-1000 max-width-768px-width-full max-width-768px-neg-top-full " ref={aboutSideRightRef}>
 
             <div className="text-white text-md border-b w-full flex justify-center">SKILLS</div>
 
             <div className="grid grid-cols-3 justify-evenly  gap-y-2 gap-x-4 "> 
-            
+
               {
                 toolsElements.map(tools =>(
                   <div className='flex flex-col items-center gap-y-1 text-white font-black-outline-light col text-xs'>
@@ -275,45 +286,7 @@ function AboutSection () {
             <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
             <a className="text-green-300" href="https://github.com/sycodes95" target="_blank">https://github.com/sycodes95</a>
             </div>
-          </section>
-
-
-          <section className="absolute top-1/2 -translate-y-1/2 -right-56 w-56  flex flex-col  items-center p-4 
-          border-r-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
-          transition-all delay-500 duration-1000 max-width-768px-width-full max-width-768px-neg-top-full " ref={aboutSideRightRef}>
-
-            <div className="text-white text-md border-b w-full flex justify-center">WHO AM I </div>
-
-            
-            <div className=" gap-y-2 gap-x-2  text-white text-xs font-black-outline-light leading-relaxed text-center"> 
-
-              <p>
-              I BELIEVE THAT SELF-REFLECTION IS CRUCIAL FOR PERSONAL AND PROFESSIONAL GROWTH. THROUGH SELF-ANALYSIS, I'VE LEARNED TO IDENTIFY MY STRENGTHS AND WEAKNESSES, AND USE THEM TO MY ADVANTAGE. FOR EXAMPLE, I'VE DISCOVERED THAT I HAVE A TENDENCY TO BECOME FRUSTRATED WHEN FACED WITH DIFFICULT PROBLEMS. HOWEVER, I'VE ALSO LEARNED THAT THIS FRUSTRATION CAN BE A SOURCE OF MOTIVATION FOR ME. INSTEAD OF GIVING UP
-              OR BEING DISCOURAGED, I USE MY FRUSTRATION AS A CATALYST TO KEEP PUSHING FORWARD AGGRESIVELY UNTIL I FIND A SOLUTION. BY CONTINUALLY ANALYZING MY THOUGHTS, FEELINGS, AND SUBCONSCIOUS TENDENCIES, I'M ABLE TO IDENTIFY AREAS WHERE I CAN IMPROVE, AND FIND WAYS TO TURN WEAKNESS INTO STRENGTH.
-                
-              </p>
-              {
-              /*
-              <p>WHEN I'M NOT BUSY CODING, I LIKE TO PUNISH MYSELF WITH A GOOD OL' RUN AND SOME TORTUROUS BODY WEIGHT EXERCISES. 
-              HONESTLY, I HATE DOING IT, BUT I'M DETERMINED TO KEEP UP THE CHARADE OF BEING A HEALTHY AND ACTIVE PERSON.
-              </p>
-              <p>
-              WHEN I'M FEELING ESPECIALLY LAZY, I'LL FIRE UP STEAM AND DIVE INTO THE WORLD OF ROCKET LEAGUE, 
-              WHERE I HOLD THE RANK OF GRAND CHAMPION.
-              BECAUSE WHAT BETTER WAY TO OFFSET MY SEDENTARY CODING LIFESTYLE THAN WITH ADDITIONAL HOURS OF SITTING AND STARING AT A SCREEN, AM I RIGHT?
-              </p>
-              <p>
-              OCASSIONALLY, I LIKE TO WATCH THE UFC WHEN THE CARD LOOKS AMAZING, AS WELL AS THE PREMIER LEAGUE BECAUSE LET'S BE HONEST, WHO ACTUALLY WATCHES THE MLS?
-              </p>
-              */
-              }
-
-
-
-            
-                          
-            </div>
-            
+                        
             
             
           </section>
@@ -322,15 +295,16 @@ function AboutSection () {
           flex justify-evenly p-2 gap-2 bg-black bg-opacity-30 w-56 max-width-768px-left-0 transition-all duration-1000
           "> 
             <button className={`z-10 rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
-            ${mobileTab.tab === 'GENERAL' && 'bg-gray-500'}`} onClick={handleMobileTab}>GENERAL</button>
+            ${mobileTab.tab === 'SUMMARY' && 'bg-gray-500'}`} onClick={handleMobileTab}>SUMMARY</button>
             <button className={`z-10 rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
-            ${mobileTab.tab === 'WHOAMI?' && 'bg-gray-500'}`} onClick={handleMobileTab}>WHOAMI?</button>
+            ${mobileTab.tab === 'SKILLS' && 'bg-gray-500'}`} onClick={handleMobileTab}>SKILLS</button>
           </section>
 
           
           
           
-          <img className="SILHOUTTE invert opacity-40" src={silhoutte} ref={aboutSilhoutteRef}/>
+          
+          <img className="SILHOUTTE invert opacity-40 select-none h-96" src={silhoutte} ref={aboutSilhoutteRef}/>
           
         
         </div>

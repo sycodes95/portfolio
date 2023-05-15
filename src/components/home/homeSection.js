@@ -105,7 +105,7 @@ function HomeSection(props) {
               ))
               }
             </div>
-            <div className="text-gray-300">.</div>
+            <div className="text-gray-400">.</div>
           </div>
         </section>
 
