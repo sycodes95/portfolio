@@ -19,22 +19,6 @@ function ProjectSection () {
 
 
   const projectsRepeatRef = useRef(null)
-  
-  // const projectOne = useRef(null)
-
-  // const projectOneDetails = useRef(null)
-
-  // const projectOneLeft = useRef(null);
-
-  // const projectOneRight = useRef(null);
-
-  // const projectTwo = useRef(null)
-
-  // const projectTwoDetails = useRef(null)
-
-  // const projectTwoLeft = useRef(null);
-
-  // const projectTwoRight = useRef(null);
 
   const projectIconRef = useRef([]);
 
@@ -67,68 +51,31 @@ function ProjectSection () {
       window.removeEventListener('scroll', handleScroll)
     }
   },[])
-  
-  // useEffect(() => {
 
-  //   const options = {
-  //     root: null,
-  //     threshold: 0.5,
-  //   };
-    
-  //   const observer = new IntersectionObserver(entries => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-         
-  //         // projectIconRef.current.forEach(ref => {
-  //         //   ref.classList.add('opacity-100')
-  //         //   ref.classList.remove('opacity-0')
-  //         // })
-  //       } 
-  //     });
-  //   }, options);
-    
-  //   observer.observe();
-    
-  // }, []);
-
-  // useEffect(() => {
-
-  //   const options = {
-  //     root: null,
-  //     threshold: 0.5,
-  //   };
-    
-  //   const observer = new IntersectionObserver(entries => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-      
-  //         projectTwoLeft.current.classList.add('left-0');
-  //         projectTwoLeft.current.classList.remove('-left-1/4');
-
-  //         projectTwoRight.current.classList.add('right-0');
-  //         projectTwoRight.current.classList.remove('-right-1/4');
-
-  //         projectTwoDetails.current.classList.add('opacity-100');
-  //         projectTwoDetails.current.classList.remove('opacity-0');
-  //       } 
-  //     });
-  //   }, options);
-    
-  //   observer.observe(projectTwo.current);
-   
-  // }, []);
-  
   return (
     <div className='flex flex-col pt-12 pb-24 PROJECT-SECTION gap-y-16 bg-hammer'>
 
       <section>
         <div className="relative z-10 flex justify-center w-full rounded-full" >
-          <Icon className="text-gray-300 transition-all duration-1000 delay-500 rounded-full " 
-          path={mdiHammerWrench} size={3.2} ref={ref => projectIconRef.current[1] = ref}/>
+          
+          {/* <Icon className="text-white transition-all duration-1000 delay-500 rounded-full " 
+          path={mdiHammerWrench} size={2} ref={ref => projectIconRef.current[1] = ref}/> */}
+          
+          <div className="absolute top-0 z-40 flex">
+          <p className="text-6xl font-bold text-green-400">_</p>
+            <p className="text-6xl font-bold text-white text-opacity-0 font-white-outline">projects</p>
+            <p className="text-6xl font-bold text-green-400">_</p>
+          </div>
+          <div className="flex text-white ">
+            <p className="text-5xl font-bold text-white ">projects</p>
+          </div>
+          
+          
+          
         </div> 
       </section>
         
-      <section className="relative flex items-center justify-center transition-all duration-1000 rounded-sm" ref={bannerLineRef}>
+      {/* <section className="relative flex items-center justify-center transition-all duration-1000 rounded-sm" ref={bannerLineRef}>
         <div className="absolute right-0 flex items-center overflow-hidden text-4xl font-thin text-gray-300 transition-all duration-300 translate-x-1/2 w-fit text-opacity-60 font-family-field-gothic whitespace-nowrap" ref={projectsRepeatRef}>
           {
           projectsRepeat.map((str, index) => (
@@ -136,7 +83,7 @@ function ProjectSection () {
           ))
           }
         </div>
-      </section>
+      </section> */}
       
       <section className='mt-16 overflow-hidden gap-x-8 max-width-768px-overflow-visible' >
         

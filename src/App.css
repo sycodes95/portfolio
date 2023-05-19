@@ -35,7 +35,11 @@ input:focus, textarea:focus{
 /*FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-FONT-SHADOWS-*/
 
 
-
+.font-black-outline{
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(1, 1, 1);
+  
+}
 .font-white-outline{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
@@ -45,7 +49,11 @@ input:focus, textarea:focus{
 .font-gray-outline{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(117, 117, 117);
-  
+}
+
+.font-green-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 255, 162);
 }
 
 
@@ -84,9 +92,24 @@ input:focus, textarea:focus{
   
 }
 
-.font-family-field-ocera{
+.font-family-field-exoplane{
   font-family: Exoplane, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   
+}
+
+.font-family-field-ocera{
+  font-family: Ocera, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
+.font-10vw{
+  font-size: clamp(2rem, 10vw, 10rem);
+  line-height: 1;
+}
+
+.font-6vw{
+  font-size: clamp(2rem, 6vw, 10rem);
+  line-height: 1;
 }
 
 

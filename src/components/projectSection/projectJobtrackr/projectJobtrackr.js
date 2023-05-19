@@ -46,94 +46,89 @@ function ProjectJobtrackr () {
     window.open('https://github.com/sycodes95/jobtrackr-api');
   }
   
-  useEffect(() => {
+  // useEffect(() => {
 
-    const options = {
-      root: null,
-      threshold: 0.8,
-    };
+  //   const options = {
+  //     root: null,
+  //     threshold: 0.8,
+  //   };
     
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          projectContainerRef.current.classList.add('border-glow-white');
-          projectContainerRef.current.classList.remove('border-glow-none');
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         projectContainerRef.current.classList.add('border-glow-white');
+  //         projectContainerRef.current.classList.remove('border-glow-none');
           
-        }
-      });
-    }, options);
+  //       }
+  //     });
+  //   }, options);
     
-    observer.observe(projectContainerRef.current);
+  //   observer.observe(projectContainerRef.current);
     
-  }, []);
+  // }, []);
   
   
   return (
-    <div className='PROJECT-CONTAINER w-1/2 transition-all duration-1000
-    bg-black bg-opacity-25 flex  overflow-hidden rounded-4xl 
-    max-width-1200px-w-60pct max-width-968px-w-70pct rounded-xl border-glow-none '
+    <div className='flex w-1/2'
     ref={projectContainerRef}>
 
-      <div className=" w-full text-white font-black-outline-light text-md
-      flex max-width-480px-flex-col items-center relative overflow-hidden">
+      <div className="relative flex flex-col overflow-hidden text-white font-black-outline-light text-md max-width-480px-flex-col">
 
-        <section className="w-1/2 max-width-480px-width-full p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700"
+        <section className="flex flex-col h-full transition-all duration-700 max-width-480px-width-full whitespace-nowrap gap-x-2"
          >
-          <p className="absolute top-4 left-4 text-black text-opacity-0 project-number-text font-white-outline">01</p>
-          <img src={jobtrackr}/>
+          <div className="flex h-full">
+          <p className="flex h-full text-white text-opacity-0 top-4 left-4 home-text-small font-10vw font-white-outline">01</p>
+          <p className="flex text-green-400 top-4 left-4 home-text-small font-10vw">.</p>
+          <p className="flex text-green-400 top-4 left-4 home-text-small font-10vw"></p>
+          </div>
+          <div className="flex h-full">
+          <p className="flex w-full h-full font-bold text-green-400 font-6vw font-black-outline font-family-field-exoplane ">JOB Trackr</p>
+          
+          </div>
         </section>
 
-        <section className="w-1/2 max-width-480px-width-full flex flex-col bottom-0 z-30 h-full">
+        <section className="bottom-0 z-30 flex flex-col h-full">
         
-          <div className="relative flex-grow text-gray-400 text-sm h-full w-full flex gap-4  justify-between  p-2 
-          bg-black bg-opacity-50">
-            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-gray-400 font-black-outline-light
-            z-50">
+          <div className="relative flex flex-wrap h-full p-2 text-sm text-gray-400 bg-black bg-opacity-50">
+            <p className="z-50 flex items-center justify-center w-full gap-4 text-sm text-center text-gray-400 font-black-outline-light">
               
-              A JOB APPLICATION TRACKER, BUILT TO HELP JOB SEEKERS MANAGE AND IMPROVE THEIR APPLICATION STRATEGIES IN THE JOB MARKET.
+            Job application tracker for managing and gaining data driven insights into the users’ job hunting journey. Features
+            sorting, filtering, searching, and data visualizations.
             </p>
             
           </div>
 
-          <div className="text-gray-400 text-sm w-full flex flex-row  gap-4   p-2
-          bg-black font-bold">
+          {/* <div className="flex flex-row gap-4 p-2 text-sm font-bold text-gray-400 bg-black">
             
-            <div className="flex w-full text-xs  max-width-480px-flex-col">
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
-              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm relative">
+            <div className="flex w-full text-xs max-width-480px-flex-col">
+              <p className="relative flex items-center justify-center w-full gap-4 p-1 text-white border-r-2 border-white border-opacity-50 rounded-sm max-width-480px-border-none">
                 DATA VIS 
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
-              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
+              <p className="flex items-center justify-center w-full gap-4 p-1 text-white border-r-2 border-white border-opacity-50 rounded-sm max-width-480px-border-none">
                 CRUD
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
-              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
+              <p className="flex items-center justify-center w-full gap-4 p-1 text-white border-r-2 border-white border-opacity-50 rounded-sm max-width-480px-border-none">
                 FILTER
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
-              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
+              <p className="flex items-center justify-center w-full gap-4 p-1 text-white border-r-2 border-white border-opacity-50 rounded-sm max-width-480px-border-none">
                 SEARCH
               </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white  rounded-sm">
+              <p className="flex items-center justify-center w-full gap-4 p-1 text-white rounded-sm">
                 AUTH
               </p>
             </div>
             
           </div>
 
-          <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-1 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
-          bg-black ">
+          <div className="z-50 grid justify-between w-full grid-cols-1 gap-4 p-2 text-xs text-gray-400 bg-black max-width-1440px-grid-cols-1 ">
             <div className="grid grid-cols-3 gap-1">
-              <button className="h-full w-full bg-emerald-400 bg-opacity-50 
-               text-white rounded-sm p-2 transition-all hover:bg-opacity-30" 
+              <button className="w-full h-full p-2 text-white transition-all bg-opacity-50 rounded-sm bg-emerald-400 hover:bg-opacity-30" 
               onClick={handleViewSite}>
                 VIEW SITE
               </button>
-              <button className="h-full w-full bg-gray-400 bg-opacity-60 text-white rounded-sm transition-all
-               hover:bg-opacity-30" 
+              <button className="w-full h-full text-white transition-all bg-gray-400 rounded-sm bg-opacity-60 hover:bg-opacity-30" 
               onClick={handleViewFrontEnd}>FRONT END REPO</button>
-              <button className="h-full w-full bg-gray-400 bg-opacity-60 text-white rounded-sm transition-all hover:bg-opacity-30" 
+              <button className="w-full h-full text-white transition-all bg-gray-400 rounded-sm bg-opacity-60 hover:bg-opacity-30" 
               onClick={handleViewBackEnd}>BACK END REPO</button>
             </div>
             <div className="flex justify-between pl-4 pr-4">
@@ -144,7 +139,7 @@ function ProjectJobtrackr () {
               } 
             </div>
             
-          </div>
+          </div> */}
         </section>
 
       </div>
