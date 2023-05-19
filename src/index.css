@@ -15,6 +15,16 @@
   font-family: FieldGothic;
   src: url(./fonts/FieldGothicTEST-No.11.otf);
 }
+
+@font-face {
+  font-family: Ocera;
+  src: url(./fonts/OCERA.ttf);
+}
+
+@font-face {
+  font-family: Exoplane;
+  src: url(./fonts/Exoplane.otf);
+}
 html {
   scroll-behavior: smooth;
 }

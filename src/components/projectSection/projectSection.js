@@ -119,19 +119,17 @@ function ProjectSection () {
   // }, []);
   
   return (
-    <div className='PROJECT-SECTION flex flex-col pb-24 pt-12 gap-y-16 bg-hammer'>
+    <div className='flex flex-col pt-12 pb-24 PROJECT-SECTION gap-y-16 bg-hammer'>
 
       <section>
-        <div className="relative flex justify-center w-full z-10 rounded-full" >
-          <Icon className=" text-gray-300  transition-all delay-500 duration-1000  rounded-full" 
+        <div className="relative z-10 flex justify-center w-full rounded-full" >
+          <Icon className="text-gray-300 transition-all duration-1000 delay-500 rounded-full " 
           path={mdiHammerWrench} size={3.2} ref={ref => projectIconRef.current[1] = ref}/>
         </div> 
       </section>
         
-      <section className="relative flex justify-center items-center 
-      rounded-sm transition-all duration-1000" ref={bannerLineRef}>
-        <div className="absolute right-0 translate-x-1/2 flex items-center w-fit text-gray-300 text-opacity-60 text-8xl font-thin font-family-field-gothic
-        overflow-hidden whitespace-nowrap transition-all duration-300" ref={projectsRepeatRef}>
+      <section className="relative flex items-center justify-center transition-all duration-1000 rounded-sm" ref={bannerLineRef}>
+        <div className="absolute right-0 flex items-center overflow-hidden text-4xl font-thin text-gray-300 transition-all duration-300 translate-x-1/2 w-fit text-opacity-60 font-family-field-gothic whitespace-nowrap" ref={projectsRepeatRef}>
           {
           projectsRepeat.map((str, index) => (
             <p key={index}>{str}</p>
@@ -140,10 +138,10 @@ function ProjectSection () {
         </div>
       </section>
       
-      <section className='gap-x-8 overflow-hidden max-width-768px-overflow-visible mt-16' >
+      <section className='mt-16 overflow-hidden gap-x-8 max-width-768px-overflow-visible' >
         
         
-        <div className="flex justify-center opacity-100 transition-all delay-200 duration-1000 " >
+        <div className="flex justify-center transition-all duration-1000 delay-200 opacity-100 " >
           <ProjectJobtrackr/> 
         </div>
           
@@ -153,9 +151,9 @@ function ProjectSection () {
 
 
         
-      <section className=' gap-x-8 overflow-hidden max-width-768px-overflow-visible mt-16' >
+      <section className='mt-16 overflow-hidden gap-x-8 max-width-768px-overflow-visible' >
           
-        <div className="flex justify-center transition-all delay-200 duration-1000" >
+        <div className="flex justify-center transition-all duration-1000 delay-200" >
           <ProjectEdgescout/> 
         </div>
           
@@ -168,15 +166,13 @@ function ProjectSection () {
       
       {
         /*
-        <section className=' grid gap-x-8 shadow-md mt-24' ref={projectTwo}>
+        <section className='grid mt-24 shadow-md gap-x-8' ref={projectTwo}>
         
-          <div className="SIDE-INFO border-2 border-black text-white absolute -left-1/4 bg-black bg-opacity-25 w-48 h-48
-          flex justify-center items-center text-center text-8xl transition-all duration-500 bg-striped-3 right-corner-clip" ref={projectTwoLeft}>
+          <div className="absolute flex items-center justify-center w-48 h-48 text-center text-white transition-all duration-500 bg-black bg-opacity-25 border-2 border-black SIDE-INFO -left-1/4 text-8xl bg-striped-3 right-corner-clip" ref={projectTwoLeft}>
             <div className="">02</div>
           </div>
 
-          <div className="SIDE-INFO border-2 border-black text-white absolute -right-1/4 bg-black bg-opacity-25 w-48 h-48
-          flex justify-center items-center text-center text-8xl bg-striped-3 transition-all duration-500" ref={projectTwoRight}>
+          <div className="absolute flex items-center justify-center w-48 h-48 text-center text-white transition-all duration-500 bg-black bg-opacity-25 border-2 border-black SIDE-INFO -right-1/4 text-8xl bg-striped-3" ref={projectTwoRight}>
             <img src={edgescoutPNG}/>
           </div>
           <div className="flex justify-center h-auto ">

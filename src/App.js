@@ -88,25 +88,23 @@ function App() {
   
     
   return (
-    <div className='APP bg-mosaic-gradient relative' onLoad={handleScrollToTop}>
+    <div className='relative APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
       
       
-      <ul className='nav w-fit fixed left-1/2  -translate-x-1/2 
-       p-2 text-xs gap-x-4 z-50 flex bg-black bg-opacity-80 
-      -top-1/4 transition-all rounded-lg border-glow-white  duration-500 '
+      <ul className='fixed z-50 flex p-2 text-xs transition-all duration-500 -translate-x-1/2 bg-black rounded-sm nav w-fit left-1/2 gap-x-4 bg-opacity-80 -top-1/4 border-glow-white '
       ref={navRef}>
           
-        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={handleScrollToTop}>
-        <p className='text-gray-500'>01.</p> <p>HOME</p>
+        <li className='flex gap-1 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={handleScrollToTop}>
+        <p className='text-green-300'>01.</p> <p>HOME</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToProjects}>
-          <p className='text-gray-500'>02.</p> <p>PROJECTS</p>
+        <li className='flex gap-1 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToProjects}>
+          <p className='text-green-300'>02.</p> <p>PROJECTS</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToAbout}>
-          <p className='text-gray-500'>03.</p> <p>ABOUT</p>
+        <li className='flex gap-1 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToAbout}>
+          <p className='text-green-300'>03.</p> <p>ABOUT</p>
         </li>
-        <li className='menu transition-all cursor-pointer text-white hover:text-white whitespace-nowrap flex gap-1' onClick={scrollToContact}>
-          <p className='text-gray-500'>04.</p> <p>CONTACT</p>
+        <li className='flex gap-1 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToContact}>
+          <p className='text-green-300'>04.</p> <p>CONTACT</p>
         </li>
         
       </ul>
@@ -115,15 +113,15 @@ function App() {
         <HomeSection projectsRef={projectsRef}/>
       </section>
 
-      <section className='flex justify-center relative overflow-hidden' ref={projectsRef}>
+      <section className='relative flex justify-center overflow-hidden' ref={projectsRef}>
         <ProjectSection />
       </section>
 
-      <section className='flex justify-center relative overflow-hidden' ref={aboutRef}>
+      <section className='relative flex justify-center overflow-hidden' ref={aboutRef}>
         <AboutSection/>
       </section>
 
-      <section className='flex justify-center relative' ref={contactRef}>
+      <section className='relative flex justify-center' ref={contactRef}>
         <ContactSection/>
       </section>
 
