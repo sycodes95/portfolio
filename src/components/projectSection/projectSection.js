@@ -85,7 +85,7 @@ function ProjectSection () {
         </div>
       </section> */}
       
-      <section className='mt-16 overflow-hidden gap-x-8 max-width-768px-overflow-visible' >
+      <section className='mt-8 overflow-hidden gap-x-8 max-width-768px-overflow-visible' >
         
         
         <div className="flex justify-center transition-all duration-1000 delay-200 opacity-100 " >
