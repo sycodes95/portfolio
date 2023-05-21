@@ -112,10 +112,15 @@ input:focus, textarea:focus{
   line-height: 1;
 }
 
+.font-4vw{
+  font-size: clamp(2rem, 4vw, 10rem);
+  line-height: 1;
+}
+
 
 .text-glow-white{
-  text-shadow:rgba(255, 255, 255, 0.87) 0px 0 1px,
-  rgb(255, 255, 255) 0px 0 4px ;
+  text-shadow:rgba(255, 255, 255, 0) 0px 0 1px,
+  rgb(255, 255, 255, 0.3) 0px 0 42px ;
 }
 
 .border-glow-none{
@@ -128,242 +133,17 @@ input:focus, textarea:focus{
   rgba(255, 255, 255, 0.2) 0px 0 50px ;
 }
 
-.border-glow-yellow{
-  box-shadow:rgb(255, 230, 0) 0px 0 2px,
-  rgba(255, 230, 0, 0.1) 0px 0 35px ;
+.border-glow-white-bright{
+  box-shadow:rgba(255, 255, 255, 1) 0px 0 2px,
+  rgba(255, 255, 255, 0.2) 0px 0 50px ;
 }
-
-.border-glow-red-no-line{
-  box-shadow:rgba(255, 0, 0, 0.6) 0px 0 0px,
-  rgba(255, 0, 0, 0.2) 0px 0 25px ;
-}
-
-.border-glow-oj{
-  box-shadow:rgba(255, 136, 0, 0.6) 0px 0 2px,
-  rgba(255, 94, 0, 0.2) 0px 0 25px ;
-}
-
-
 
 /* BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-*/
-.bg-striped-dark-thick{
-  background: repeating-linear-gradient( 
-  105deg,
-  rgba(0, 0, 0, 0.1),
-  rgba(0, 0, 0, 0.1) 2px,
-  rgba(0, 0, 0, 0.3) 2px,
-  rgba(0, 0, 0, 0.3) 4px)
-  
-}
-
-.bg-striped-dark-thick-red{
-  background: repeating-linear-gradient( 
-  45deg,
-  rgba(0, 0, 0, 0.1),
-  rgba(26, 0, 0, 0.1) 2px,
-  rgba(75, 0, 0, 0.3) 2px,
-  rgba(29, 0, 0, 0.3) 10px)
-  
-}
-
-.bg-striped-dark-alt{
-  background: repeating-linear-gradient( 
-  45deg,
-  rgba(0, 0, 0, 0.1),
-  rgba(0, 0, 0, 0.1) 2px,
-  rgba(0, 0, 0, 0.3) 2px,
-  rgba(0, 0, 0, 0.3) 4px)
-  
-}
-
-.bg-striped-dark-alt-yellow{
-  background: repeating-linear-gradient( 
-  45deg,
-  rgba(0, 0, 0, 0.1),
-  rgba(0, 0, 0, 0.1) 2px,
-  rgba(255, 221, 0, 0.3) 2px,
-  rgba(255, 221, 0, 0.3) 6px)
-  
-}
-
-.bg-striped-dark-alt-darker{
-  background: repeating-linear-gradient( 
-  45deg,
-  rgba(0, 0, 0, 0.1),
-  rgba(0, 0, 0, 0.1) 2px,
-  rgba(0, 0, 0, 0.5) 2px,
-  rgba(0, 0, 0, 0.5) 4px)
-  
-}
-
-.bg-dev-classic{
-  background:
-  repeating-linear-gradient(
-     rgba(12, 10, 5, 0.5), rgba(1, 8, 17, 0.5)
-     )
-     ,url(./background-images/dev-pattern.png);
-  background-position: center;
-  background-size: 69px;
-  background-repeat:repeat;
-  
-}
-
-.bg-jet-light{
-  background-color: #111;
-}
-
-.bg-hex{
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(1, 1, 1, 0.6)), url(/src/background-images/slash.webp);
-}
-
-.bg-mosaic{
-  background: url(/src/background-images/dark_mosaic.png);
-}
 
 .bg-mosaic-gradient{
   background: linear-gradient(rgba(49, 49, 49, 0.2), rgba(49, 49, 49, 0.2)), url(/src/background-images/subtle_carbon.webp);
 }
 
-.bg-holo{
-  background: url(/src/background-images/bg-holo.png);
-}
-
-.fill-holo {
-  fill: url(/src/background-images/bg-holo.png);
-}
-.bg-edgescout{
-  background-image:
-  url(./images/edgescout.png);
-  background-position: center;
-  background-size: cover;
-}
-
-.bg-edgescout-black{
-  background:
-  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(./images/edgescout.png);
-  
-  background-position: center;
-  background-size: cover;
-  
-}
-
-.bg-dna::before {
-  content: "";
-  background-image: url("./images/dna.png");
-  background-position: center;
-  background-size: 26px;
-  background-repeat: round;
-  position: absolute;
-  
-  
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.4;
-  z-index: 0;
-}
-
-.bg-hammer::before {
-  content: "";
-  background-image: url("./images/hammer-wrench.png");
-  background-position: center;
-  background-size: 64px;
-  background-repeat:space;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.025;
-  z-index: 0;
-}
-
-.bg-dna-big::before {
-  content: "";
-  background-image: url("./images/dna-alt.png");
-  background-position: center;
-  background-size: 64px;
-  background-repeat: space;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.025;
-  z-index: 0;
-  
-}
-
-.bg-at::before {
-  content: "";
-  background-image: url("./images/at-custom.png");
-  background-position: center;
-  background-size: 64px;
-  background-repeat:space;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.025;
-  z-index: 0;
-}
-
-
-
-
-
-
-.bg-striped-content{
-  
-  background:linear-gradient(rgba(40, 40, 40, 0.78), rgba(0, 0, 0, 0.85)), url(./background-images/striped-mesh.jpg);
-  background-position: cover;
-  background-size: 500px;
-  
-}
-
-.bg-striped-content-red{
-  
-  background:linear-gradient(rgba(83, 0, 0, 0.85), rgba(105, 0, 0, 0.85)), url(./background-images/striped-mesh.jpg);
-  background-position: cover;
-  background-size: 500px;
-  
-}
-
-.bg-striped-content-big{
-  background:linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url(./background-images/striped-mesh.jpg);
-  background-position: cover;
-  background-size: 800px;
-}
-
-.bg-striped-white{
-  background: repeating-linear-gradient( 
-  45deg,
-  rgba(255, 255, 255, 0.1),
-  rgba(255, 255, 255, 0.1) 5px,
-  rgba(0, 0, 0, 0.3) 5px,
-  rgba(0, 0, 0, 0.3) 10px)
-}
-
-
-.bg-striped-3{
-  background: repeating-linear-gradient( 
-  45deg,
-  rgba(0, 0, 0, 0.1),
-  rgba(0, 0, 0, 0.1) 5px,
-  rgba(0, 0, 0, 0.3) 5px,
-  rgba(0, 0, 0, 0.3) 10px)
-}
-
-.bg-striped-2{
-  background: repeating-linear-gradient( 
-  45deg,
-  rgba(0, 0, 0, 0.1),
-  rgba(0, 0, 0, 0.1) 5px,
-  rgba(0, 0, 0, 0.2) 5px,
-  rgba(0, 0, 0, 0.2) 10px)
-}
 
 .bg-blur{
   backdrop-filter: blur(5px);

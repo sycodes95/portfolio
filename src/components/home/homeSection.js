@@ -63,16 +63,15 @@ function HomeSection(props) {
 
   return (
     <section className="">
-      <div className="relative flex items-center justify-center w-full min-h-screen ">
+      <div className="relative flex items-center justify-center w-full min-h-screen overflow-hidden">
+       
+
         <section className="absolute top-10 left-10">
           <div className="flex items-center p-4 text-white bg-green-400 rounded-sm home-text-xs">
             
           </div>
         </section>
 
-        
-
-        
         <section className="z-50 flex flex-col items-center w-full h-full pt-32 pb-32 overflow-hidden home-text" >
           
           <div className="flex justify-center w-full transition-all duration-200 h-fit home-text-big" ref={ref => homeIntroRefs.current.push(ref)}>

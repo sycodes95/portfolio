@@ -88,7 +88,7 @@ function App() {
   
     
   return (
-    <div className='relative APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
+    <div className='relative overflow-hidden APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
       
       
       <ul className='fixed z-50 flex p-2 text-xs transition-all duration-500 -translate-x-1/2 bg-black rounded-sm nav w-fit left-1/2 gap-x-4 bg-opacity-80 -top-1/4 border-glow-white '
