@@ -13,7 +13,7 @@ function HomeSection(props) {
 
   const projectsRef = props.projectsRef
 
-  const arrowRef = useRef(null)
+  const arrowRefs = useRef([])
 
   const homeIntroRefs = useRef([])
 
@@ -23,6 +23,33 @@ function HomeSection(props) {
   const developer = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R']
 
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+
+  useEffect(()=>{
+    setInterval(()=>{
+      arrowRefs.current.forEach((ref, index)=>{
+        let timing = (index + 1) * 100
+        console.log(arrowRefs);
+        console.log(ref.classList);
+        
+        setTimeout(()=>{
+          ref.classList.remove('opacity-0')
+          ref.classList.add('opacity-100')
+          
+        }, timing)
+
+        setTimeout(()=>{
+          ref.classList.remove('opacity-100')
+          ref.classList.add('opacity-0')
+          
+        }, (timing * 1000) / timing)
+        
+      })
+
+      
+
+    }, arrowRefs.current.length * 500)
+   
+  },[])
 
   useEffect(()=>{
     let prevScroll = 0;
@@ -72,7 +99,7 @@ function HomeSection(props) {
           </div>
         </section>
 
-        <section className="z-50 flex flex-col items-center w-full h-full pt-32 pb-32 overflow-hidden home-text" >
+        <section className="flex flex-col items-center w-full h-full pt-32 pb-32 overflow-hidden home-text" >
           
           <div className="flex justify-center w-full transition-all duration-200 h-fit home-text-big" ref={ref => homeIntroRefs.current.push(ref)}>
 
@@ -94,7 +121,7 @@ function HomeSection(props) {
             </div>
           </div>
 
-          <div id="fullstack" className="flex justify-center w-full transition-all duration-300 home-text-small"
+          <div id="fullstack" className="flex justify-center w-full transition-all duration-300 home-text-small max-width-768px-flex-col"
             ref={ref => homeIntroRefs.current.push(ref)} >
             <div id="fullstack" className="flex justify-center gap-0 text-white text-opacity-0 transition-all duration-300 font-white-outline"  
             ref={ref => homeIntroRefs.current.push(ref)}>
@@ -104,24 +131,27 @@ function HomeSection(props) {
               ))
               }
             </div>
-            <div id="fullstack" className="flex text-white transition-all duration-300 font-white-outline" 
+            <div id="fullstack" className="flex text-white transition-all duration-300 font-white-outline max-width-768px-flex-justify-center" 
             ref={ref => homeIntroRefs.current.push(ref)}>
               {
               developer.map((char, index) => (
                 <span className="transition-colors cursor-default hover:text-gray-400 hover:text-opacity-50">{char}</span>
               ))
               }
+              <div className="text-green-400">.</div>
+
             </div>
-            <div className="text-green-400">.</div>
           </div>
         </section>
 
-        <section className="absolute bottom-24">
+        <section className="absolute bottom-36">
           <button className="flex flex-col items-center w-full text-white transition-all duration-300 hover:text-gray-400"
           onClick={scrollToProjects}>
-            <p>VIEW PROJECTS</p>
-            <div className="flex justify-center">
-              <Icon className="flex w-full" path={mdiChevronDown} size={1} />
+            <div className="flex flex-col justify-center">
+              <Icon className="flex transition-opacity duration-500 opacity-0 h-fit w-2vw" path={mdiChevronDown} ref={ref => arrowRefs.current.push(ref)}/>
+              <Icon className="flex w-full transition-opacity duration-500 opacity-0 w-2vw" path={mdiChevronDown} ref={ref => arrowRefs.current.push(ref)}/>
+              <Icon className="flex w-full transition-opacity duration-500 opacity-0 w-2vw" path={mdiChevronDown} ref={ref => arrowRefs.current.push(ref)}/>
+
             </div>
             
           </button>

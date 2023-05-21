@@ -117,6 +117,12 @@ input:focus, textarea:focus{
   line-height: 1;
 }
 
+.w-2vw{
+  min-width: 2rem;
+  width: 2vw;
+  max-width: 3rem;
+}
+
 
 .text-glow-white{
   text-shadow:rgba(255, 255, 255, 0) 0px 0 1px,
@@ -298,6 +304,9 @@ input:focus, textarea:focus{
   }
   .max-width-768px-flex-col{
     flex-direction: column;
+  }
+  .max-width-768px-flex-justify-center{
+    justify-content: center;
   }
   .max-width-768px-overflow-visible{
     
