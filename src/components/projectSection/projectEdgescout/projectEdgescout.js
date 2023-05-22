@@ -1,20 +1,18 @@
 
 
-
-
 import { useEffect, useRef } from "react";
 import edgescoutproject from "../../../images/edgescoutproject.png"
 import jobtrackrproject from "../../../images/jobtrackrDemo.png"
-import edgescout from "../../../images/edgescout.png"
+import jobtrackr from "../../../images/jobtrackr.png"
+
+import Icon from '@mdi/react';
+import { mdiHammerWrench, mdiWeb, mdiApplicationOutline, mdiDatabaseOutline} from '@mdi/js';
+
 function ProjectEdgescout () {
 
   const projectContainerRef = useRef(null)
 
   const toolsElements = [
-    {
-      jsx: <i class="devicon-javascript-plain text-2xl  fill-current "></i>,
-      name: 'Javascript'
-    },
     {
       jsx: <i class="devicon-react-original text-2xl  fill-current "></i>,
       name: 'React'
@@ -25,19 +23,14 @@ function ProjectEdgescout () {
     },
     {
       jsx: <i class="devicon-nodejs-plain text-2xl  fill-current "></i>,
-      name: 'Node JS'
+      name: 'Node.Js'
     },
+    
     {
-      jsx: <i class="devicon-express-original text-2xl  fill-current "></i>,
-      name: 'Express'
-    },
-    {
-      jsx: <i class="devicon-mongodb-plain-wordmark text-2xl  fill-current "></i>,
-      name: 'PostgreSQL'
+      jsx: <i class="devicon-postgresql-plain-wordmark text-2xl  fill-current "></i>,
+      name: 'MongoDB'
     },
   ]
-
-  
 
   const handleViewSite = () => {
     window.open('https://edgescout.up.railway.app/');
@@ -50,110 +43,74 @@ function ProjectEdgescout () {
     window.open('https://github.com/sycodes95/trading-journal-api');
   }
   
-  useEffect(() => {
-
-    const options = {
-      root: null,
-      threshold: 0.8,
-    };
-    
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          projectContainerRef.current.classList.add('border-glow-white');
-          projectContainerRef.current.classList.remove('border-glow-none');
-          
-        }
-      });
-    }, options);
-    
-    observer.observe(projectContainerRef.current);
-    
-  }, []);
-  
   
   return (
-    <div className='PROJECT-CONTAINER w-1/2 transition-all duration-1000
-    bg-black bg-opacity-25 flex overflow-hidden rounded-4xl 
-    max-width-1200px-w-60pct max-width-968px-w-70pct rounded-xl border-glow-none '
+    <div className='flex justify-center h-fit'
     ref={projectContainerRef}>
-      <div className=" w-full  col-span-full text-white font-black-outline-light text-md
-      flex max-width-480px-flex-col items-center relative overflow-hidden">
 
-        <section className="w-1/2 max-width-480px-width-full p-4 bg-striped-dark-alt  h-full flex items-center whitespace-nowrap gap-x-2 transition-all duration-700">
-          <p className="absolute top-4 left-4 project-number-text text-black text-opacity-0 font-white-outline">02</p>
-          <img src={edgescout}/>
+      <div className="relative flex flex-col max-w-xl p-8 overflow-visible text-white width-768px-90pct font-black-outline-light text-md max-width-480px-flex-col">
+        <section>
+          <div className="absolute top-0 right-0 w-6 h-6 border-t border-r"></div>
+          <div className="absolute w-6 h-6 border-t border-r right-2 top-2 "></div>
+          <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l "></div>
+          <div className="absolute w-6 h-6 border-b border-l left-2 bottom-2"></div>
         </section>
-        <section className="w-1/2 max-width-480px-width-full flex flex-col bottom-0 z-30 h-full">
-        
-          <div className="relative flex-grow text-gray-400 text-sm h-full w-full flex gap-4  justify-between  p-2 
-          bg-black bg-opacity-50">
-            <p className="w-full flex text-xs text-center justify-center items-center gap-4 text-gray-400 font-black-outline-light
-            ">
-              
-              A TRADING JOURNAL APP, BUILT TO HELP TRADERS FIND AND REFINE THEIR STRATEGIES FOR BETTER PROFITABILITY IN THE FINANCIAL MARKETS.
-            </p>
-            
+        <section className="relative flex flex-col h-full gap-4 transition-all duration-700 max-width-480px-width-full whitespace-nowrap gap-x-2"
+         >
+          <div className="flex justify-end h-full">
+            <p className="flex h-full pl-1 pr-1 text-lg font-bold text-black bg-green-400 rounded-sm top-4 left-4 ">//project_02</p>
           </div>
 
-          <div className="text-gray-400 text-sm w-full flex flex-row  gap-4   p-2
-          bg-black font-bold">
-            
-            <div className="flex w-full text-xs  max-width-480px-flex-col">
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
-              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm relative">
-                DATA VIS 
-              </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
-              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
-                CRUD
-              </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
-              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
-                FILTER
-              </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white 
-              border-r-2 border-white border-opacity-50 max-width-480px-border-none rounded-sm">
-                SEARCH
-              </p>
-              <p className="w-full flex justify-center items-center p-1 gap-4 text-white  rounded-sm">
-                AUTH
-              </p>
-            </div>
-            
-          </div>
-
-          <div className="text-gray-400 text-xs z-50  w-full grid grid-cols-1 max-width-1440px-grid-cols-1 gap-4  justify-between  p-2 
-          bg-black ">
-            <div className="grid grid-cols-3 gap-1">
-              <button className="h-full w-full bg-emerald-400 bg-opacity-50 
-               text-white rounded-sm p-2 transition-all hover:bg-opacity-30" 
-              onClick={handleViewSite}>
-                VIEW SITE
-              </button>
-              <button className="h-full w-full bg-gray-400 bg-opacity-60 text-white rounded-sm transition-all
-               hover:bg-opacity-30" 
-              onClick={handleViewFrontEnd}>FRONT END REPO</button>
-              <button className="h-full w-full bg-gray-400 bg-opacity-60 text-white rounded-sm transition-all hover:bg-opacity-30" 
-              onClick={handleViewBackEnd}>BACK END REPO</button>
-            </div>
-            <div className="flex justify-between pl-4 pr-4">
+          <div className="flex justify-end w-full h-full pt-2"> 
+            <p className="z-50 flex h-full font-bold text-green-400 text-opacity-0 font-4vw font-white-outline text-glow-white font-family-field-exoplane">EDGE SCOUT</p>
+            {/* <div className="flex justify-between p-4 bg-black border-b gap-x-2 bg-opacity-20">
               {
               toolsElements.map(tool => (
                 tool.jsx
               ))
               } 
-            </div>
+            </div> */}
             
           </div>
+          <div id="description" className="flex p-4 text-sm text-right whitespace-pre-wrap bg-black border-r border-green-400 rounded-sm bg-opacity-40">
+            Trading journal app made to help traders track and refine their strategies with data visualization and analysis features.
+
+          </div>
+
+          <div className="flex justify-end">
+            {
+            toolsElements.map((tool, index) => (
+              <p key={index} className={`text-xs pl-4 
+              ${index !== toolsElements.length - 1 && 'pr-4' }
+              ${index !== toolsElements.length - 1 && 'border-r'}`}>{tool.name}</p>
+            ))
+            }
+          </div>
+
+          <div className="z-10 flex justify-end gap-4 pt-2">
+            <button className="transition-colors hover:text-green-400" onClick={handleViewSite}>
+              <Icon path={mdiWeb} size={1} />
+            </button>
+            <button className="transition-colors hover:text-green-400" onClick={handleViewFrontEnd}>
+              <Icon path={mdiApplicationOutline} size={1} />
+            </button>
+            <button className="transition-colors hover:text-green-400" onClick={handleViewBackEnd}>
+              <Icon path={mdiDatabaseOutline} size={1} />
+            </button>
+          </div>
+          <div className="absolute top-0 left-0 flex items-center justify-start w-full h-full">
+            <Icon className="h-full text-white text-opacity-5" path={mdiHammerWrench} />
+          </div>
+          
         </section>
 
+        
+          
+        
+
       </div>
-
-
        
     </div>
   )
 }
-
 export default ProjectEdgescout;

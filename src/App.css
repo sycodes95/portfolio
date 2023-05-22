@@ -36,8 +36,8 @@ input:focus, textarea:focus{
 
 
 .font-black-outline{
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgb(1, 1, 1);
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, rgb(0, 0, 0) 1px 0 4px,
+  rgb(0, 0, 0) 1px 0 2px ; 
   
 }
 .font-white-outline{
@@ -117,6 +117,10 @@ input:focus, textarea:focus{
   line-height: 1;
 }
 
+.font-1vw{
+  font-size: clamp(0.75rem, 0.75vw, 10rem);
+}
+
 .w-2vw{
   min-width: 2rem;
   width: 2vw;
@@ -146,6 +150,16 @@ input:focus, textarea:focus{
 
 /* BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-BACKGROUNDS-*/
 
+.bg-striped-dark-alt{
+  background: repeating-linear-gradient( 
+  135deg,
+  rgba(0, 0, 0, 0.1),
+  rgba(0, 0, 0, 0.1) 2px,
+  rgba(0, 0, 0, 0.3) 2px,
+  rgba(0, 0, 0, 0.3) 10px)
+  
+}
+
 .bg-mosaic-gradient{
   background: linear-gradient(rgba(49, 49, 49, 0.2), rgba(49, 49, 49, 0.2)), url(/src/background-images/subtle_carbon.webp);
 }
@@ -153,6 +167,16 @@ input:focus, textarea:focus{
 
 .bg-blur{
   backdrop-filter: blur(5px);
+}
+
+/* CLIP-PATH */
+
+.left-trap-clip{
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%)
+}
+
+.right-trap-clip{
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
 }
 
 .res-font{
@@ -313,6 +337,10 @@ input:focus, textarea:focus{
   }
   .max-width-768px-width-full {
     width: 100%;
+  }
+
+  .width-768px-90pct {
+    width: 90%;
   }
   .max-width-768px-neg-top-full {
     top: 200%;

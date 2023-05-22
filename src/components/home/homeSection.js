@@ -1,14 +1,8 @@
 import { useRef, useEffect, useState } from "react";
-import bulb from '../../images/bulb.png'
-import windowLight from '../../images/windowlight.png'
-import downArrow from '../../icons/down-arrow.svg'
-import smokebot from '../../images/smokebot.png'
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
+import smoke from '../../images/smokebot.png'
 
-
-import { ReactSVG } from "react-svg";
-import greendig from '../../background-images/green-teck.png'
 function HomeSection(props) {
 
   const projectsRef = props.projectsRef
@@ -89,15 +83,17 @@ function HomeSection(props) {
   },[])
 
   return (
-    <section className="">
-      <div className="relative flex items-center justify-center w-full min-h-screen overflow-hidden">
+    <section className="overflow-visible">
+      <div className="relative flex items-center justify-center w-full min-h-screen overflow-visible">
        
 
         <section className="absolute top-10 left-10">
-          <div className="flex items-center p-4 text-white bg-green-400 rounded-sm home-text-xs">
-            
+          <div className="flex items-center p-2 text-4xl font-bold text-white border-4 border-green-400 rounded-sm">
+           
           </div>
         </section>
+
+        
 
         <section className="flex flex-col items-center w-full h-full pt-32 pb-32 overflow-hidden home-text" >
           

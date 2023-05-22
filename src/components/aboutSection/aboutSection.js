@@ -8,7 +8,7 @@ import { useState, useEffect, useRef } from "react";
 import embers from "../../images/embers.png"
 import cartoonlight from "../../images/cartoonlight.png"
 import americanflag from "../../images/american-flag.png"
-
+import whitelight from "../../images/white-light-bit.png"
 
 
 
@@ -60,116 +60,56 @@ function AboutSection () {
 
   const toolsElements = [
     {
-      jsx: <i className="devicon-javascript-plain text-4xl  fill-current"></i>,
+      jsx: <i className="text-lg fill-current devicon-javascript-plain"></i>,
       name: 'Javascript'
     },
     {
-      jsx: <i className="devicon-react-original text-4xl  fill-current "></i>,
+      jsx: <i className="text-lg fill-current devicon-javascript-plain"></i>,
+      name: 'Typescript'
+    },
+    {
+      jsx: <i className="text-lg fill-current devicon-react-original "></i>,
       name: 'React'
     },
     {
-      jsx: <i className="devicon-tailwindcss-plain text-4xl  fill-current "></i>,
+      jsx: <i className="text-lg fill-current devicon-github-original"></i>,
+      name: 'Redux'
+    },
+    {
+      jsx: <i className="text-lg fill-current devicon-tailwindcss-plain "></i>,
       name: 'Tailwind'
     },
     {
-      jsx: <i className="devicon-nodejs-plain text-4xl  fill-current "></i>,
+      jsx: <i className="text-lg fill-current devicon-nodejs-plain "></i>,
       name: 'Node JS'
     },
     {
-      jsx: <i className="devicon-express-original text-4xl  fill-current "></i>,
+      jsx: <i className="text-lg fill-current devicon-express-original "></i>,
       name: 'Express'
     },
     {
-      jsx: <i className="devicon-postgresql-plain-wordmark text-4xl  fill-current "></i>,
+      jsx: <i className="text-lg fill-current devicon-postgresql-plain-wordmark "></i>,
       name: 'PostgreSQL'
     },
     {
-      jsx: <i className="devicon-mongodb-plain-wordmark text-4xl  fill-current "></i>,
+      jsx: <i className="text-lg fill-current devicon-mongodb-plain-wordmark "></i>,
       name: 'Mongo DB'
     },
     {
-      jsx: <i className="devicon-git-plain text-4xl  fill-current"></i>,
+      jsx: <i className="text-lg fill-current devicon-git-plain"></i>,
       name: 'Git'
     },
     {
-      jsx: <i className="devicon-github-original text-4xl  fill-current"></i>,
+      jsx: <i className="text-lg fill-current devicon-github-original"></i>,
       name: 'Github'
     },
+    
   ]
 
-  useEffect(()=> {
-    
-    if(window.innerWidth < 768 && mobileTab.tab === 'SUMMARY'){
-      aboutSideLeftRef.current.classList.remove('max-width-768px-neg-top-full')
-      aboutSideRightRef.current.classList.add('max-width-768px-neg-top-full')
-    }
-    if(window.innerWidth < 768 && mobileTab.tab === 'SKILLS'){
-      aboutSideLeftRef.current.classList.add('max-width-768px-neg-top-full')
-      aboutSideRightRef.current.classList.remove('max-width-768px-neg-top-full')
-    }
-  },[mobileTab.tab])
+  
 
   
-  useEffect(() => {
-    
-      
-
-    const options = {
-      root: null,
-      threshold: 0.2,
-    };
-    
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          aboutContentRef.current.classList.add('top-0');
-          aboutContentRef.current.classList.remove('-top-full');
-          aboutHeaderRef.current.classList.add('top-0')
-          aboutHeaderRef.current.classList.remove('-top-16');
-
-          aboutSideLeftRef.current.classList.add('left-0')
-          aboutSideLeftRef.current.classList.remove('-left-56');
-
-          aboutSideRightRef.current.classList.add('right-0')
-          aboutSideRightRef.current.classList.remove('-right-56');
-          
-          aboutSilhoutteRef.current.classList.add('opacity-100')
-          aboutSilhoutteRef.current.classList.remove('opacity-0')
-
-          aboutContainerRef.current.classList.add('opacity-100')
-          aboutContainerRef.current.classList.remove('opacity-0')
-
-          bannerLineRef.current.classList.add('h-10')
-
-          bannerLineRef.current.classList.remove('h-0')
-
-          aboutIconRef.current.forEach(ref => {
-            ref.classList.add('opacity-100')
-            ref.classList.remove('opacity-0')
-          })
-
-          const aboutLettersArray = [
-            aboutTitleA,
-            aboutTitleB,
-            aboutTitleO,
-            aboutTitleU,
-            aboutTitleT,
-          ]
-
-          aboutLettersArray.forEach(letter => {
-            letter.current.classList.add('opacity-100');
-            letter.current.classList.remove('opacity-0');
-          })
-
-        }
-      });
-    }, options);
-    
-    observer.observe(aboutSectionRef.current);
-    
-   
-    
-  }, []);
+  
 
   useEffect(()=>{
     let prevScroll = 0;
@@ -201,116 +141,89 @@ function AboutSection () {
   
 
   return (
-    <div className='ABOUT-SECTION  w-full pb-24 pt-12 gap-y-16 flex flex-col bg-dna-big relative' ref={aboutSectionRef}>
+    <div className='relative flex flex-col w-full max-w-xl gap-16 width-768px-90pct' ref={aboutSectionRef}>
       
-      <section>
-        <div className="relative flex justify-center w-full z-10 " >
-          <Icon className=" text-gray-300  transition-all delay-500 duration-1000  rounded-full" 
-          path={mdiDna} size={3.2}/>
+      <div>
+        <div className="relative z-10 flex justify-center w-full" >
+          
+          {/* <Icon className="text-white transition-all duration-1000 delay-500 rounded-full " 
+          path={mdiHammerWrench} size={2} ref={ref => projectIconRef.current[1] = ref}/> */}
+          
+          <div className="absolute top-0 z-40 flex">
+          <p className="text-6xl font-bold text-green-400">_</p>
+            <p className="text-6xl font-bold text-white text-opacity-0 font-white-outline">about</p>
+            <p className="text-6xl font-bold text-green-400">_</p>
+          </div>
+          <div className="flex text-white ">
+            <p className="text-5xl font-bold text-white ">about</p>
+          </div>
+          
+          
+          
         </div> 
-      </section>
+      </div>
 
-      <section className="relative flex justify-center items-center 
-      rounded-sm transition-all duration-1000" ref={bannerLineRef}>
-        <div className="absolute left-0 -translate-x-1/2 flex items-center w-fit text-gray-300 text-opacity-60 text-8xl font-thin font-family-field-gothic
-        overflow-hidden whitespace-nowrap transition-all duration-300" ref={aboutRepeatRef}>
-          {
-          aboutRepeat.map((str, index) => (
-            <p key={index}>{str}</p>
-          ))
-          }
-        </div>
-      </section>
 
-      <section className="w-full flex justify-center">
+      <div className="relative flex justify-center w-full overflow-visible text-white">
         
-      <div className="flex w-full relative overflow-hidden max-width-768px-overflow-visible 
-      justify-center mt-10 z-10 opacity-0 transition-all delay-200 duration-1000 max-height-screen-10 " ref={aboutContainerRef}>
-        
-        <div className="ABOUT-CONTAINER relative flex justify-center p-2 bg-black bg-opacity-25 border-glow-white rounded-xl
-        border-4 border-opacity-50 border-black bg-dna -top-full transition-all  w-2/5 max-width-1440px-w-50pct
-        max-width-1200px-w-60pct max-width-768px-width-full z-10 overflow-hidden" ref={aboutContentRef}>
-          
-          <section className="absolute -top-16 h-16 w-full bg-striped-dark-alt transition-all delay-500 duration-1000" ref={aboutHeaderRef}>
+        <section className="z-40 flex justify-center invert opacity-30">
+          <img className=" w-80" src={silhoutte} alt="silhoutte of man"/>
+        </section>
 
-            <div className="absolute -top-0 right-0 h-full
-            text-white text-opacity-70 text-4xl font-bold font-black-outline-light flex justify-center items-center p-4">
-              <Icon path={mdiCardAccountDetailsOutline} size={2} />
-            </div>
-            <div className="absolute flex flex-col top-0 left-0 h-16 text-white text-xs font-bold font-black-outline-light p-2 ">
-            
-              <span>ID : * * * * * * * *</span>
-              <span>DOB : * * * * - * * - * *</span>
-              
-              <span>LOCATION : LA County, CA</span>
-            </div>
+        <section className="absolute flex flex-col w-full gap-4">
 
-          </section>
-          
-          <section className="absolute top-1/2 -translate-y-1/2 -left-56 w-56 max-width-768px-width-full flex flex-col  items-center p-4 
-          border-l-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
-          transition-all delay-500 duration-1000 " ref={aboutSideLeftRef}>
-
-            <div className="text-white text-md border-b w-full flex justify-center">SUMMARY</div>
-            
-            <div className=" gap-y-2 gap-x-2  text-white text-xs font-black-outline-light leading-relaxed text-center"> 
-
-              I am a <span className="text-green-300">Full-Stack Developer</span> with an eye for design.
-              I take pride in crafting responsive layouts and writing efficient, easy-to-read code.
-              Along with my core development skills,
-              I have a deep passion for working with data and using it to create meaningful visualizations that convey insights in an engaging way.
+          <div className="flex justify-between gap-12">
+            <div className="relative flex items-center justify-between w-3/4 p-4 text-sm text-white bg-black bg-opacity-30 left-trap-clip"> 
+              <section className="relative flex flex-col justify-center gap-2 p-2 border-4 border-green-400 rounded-sm">
+                <Icon path={mdiDna} size={1.6} />
+                
+              </section>
               
             </div>
 
+            <div className="relative flex items-center justify-end w-3/4 p-4 text-sm text-white bg-black bg-opacity-30 right-trap-clip"> 
+              <section className="flex flex-col justify-center gap-2">
+                <a className="flex gap-2 transition-all duration-300 hover:rotate-45 hover:text-green-300" href="https://github.com/sycodes95" target="_blank">
+                  <i class="devicon-github-original text-2xl " onClick={window.open('https://github.com/sycodes95')}></i>
+                  <p>Github</p>
+                </a>
+              </section>
+            </div>
+          </div>
+          
+          <div className="flex justify-between">
             
-          </section>
-
-
-          <section className="absolute top-1/2 -translate-y-1/2 -right-56 w-56  flex flex-col  items-center p-4 
-          border-r-4 border-white border-opacity-40 bg-black bg-opacity-25 gap-y-4
-          transition-all delay-500 duration-1000 max-width-768px-width-full max-width-768px-neg-top-full " ref={aboutSideRightRef}>
-
-            <div className="text-white text-md border-b w-full flex justify-center">SKILLS</div>
-
-            <div className="grid grid-cols-3 justify-evenly  gap-y-2 gap-x-4 "> 
-
+            <div className="relative flex flex-col gap-1 p-4 text-white w-fit font-1vw "> 
+              <div className="flex justify-center text-3xl text-white text-opacity-0 font-family-field-exoplane font-green-outline">Skills</div>
+              
               {
-                toolsElements.map(tools =>(
-                  <div className='flex flex-col items-center gap-y-1 text-white font-black-outline-light col text-xs'>
-                    {tools.jsx}
-                  </div>
-                ))
+              toolsElements.map((tool, index) => (
+                <div className="flex items-center gap-2 pl-2 pr-2 whitespace-nowrap" key={index}>
+                  <p className="">{tool.jsx}</p>
+                  <p className="font-black-outline">{tool.name}</p>
+                </div>
+              ))
               }
             </div>
-            <div className="text-white text-md border-b w-full flex justify-center">GITHUB</div>
-            <div className=" gap-y-2 gap-x-2  text-white text-xs font-bold font-black-outline-light leading-relaxed text-center"> 
-            <a className="text-green-300" href="https://github.com/sycodes95" target="_blank">https://github.com/sycodes95</a>
+
+            <div className="relative flex flex-col w-40 gap-2 p-4 text-white font-1vw "> 
+              
+              <div className="text-2xl text-right text-white text-opacity-0 font-family-field-exoplane font-green-outline">Who Am I ?</div>
+              <div className="text-right font-black-outline">
+              "I am a <span className="text-green-300">Web Developer</span> with an eye for design.
+              I love crafting responsive layouts and writing clean code.
+              Along with my core development skills,
+              I have a deep passion for working with data and using it to create meaningful visualizations that convey insights in an engaging way."
+              </div>
             </div>
-                        
-            
-            
-          </section>
 
-          <section className="absolute bottom-0 -left-56 text-white border-l-4 border-gray-600 border-opacity-50 
-          flex justify-evenly p-2 gap-2 bg-black bg-opacity-30 w-56 max-width-768px-left-0 transition-all duration-1000
-          "> 
-            <button className={`z-10 rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
-            ${mobileTab.tab === 'SUMMARY' && 'bg-gray-500'}`} onClick={handleMobileTab}>SUMMARY</button>
-            <button className={`z-10 rounded-sm  bg-opacity-50 text-white p-1 w-full border border-gray-500 border-opacity-0 hover:border-opacity-100
-            ${mobileTab.tab === 'SKILLS' && 'bg-gray-500'}`} onClick={handleMobileTab}>SKILLS</button>
-          </section>
+          </div>
+          
+        </section>
 
-          
-          
-          
-          
-          <img className="SILHOUTTE invert opacity-40 select-none h-96" src={silhoutte} ref={aboutSilhoutteRef}/>
-          
-        
-        </div>
-        
       </div>
-      </section>
+
+      
 
     </div>
 
@@ -318,3 +231,15 @@ function AboutSection () {
 }
 
 export default AboutSection;
+
+{/* <div className="text-xs leading-relaxed text-center text-white gap-y-2 gap-x-2 font-black-outline-light"> 
+
+  I am a <span className="text-green-300">Full-Stack Developer</span> with an eye for design.
+  I take pride in crafting responsive layouts and writing efficient, easy-to-read code.
+  Along with my core development skills,
+  I have a deep passion for working with data and using it to create meaningful visualizations that convey insights in an engaging way.
+  
+</div> */}
+
+
+//<Icon path={mdiCardAccountDetailsOutline} size={2} />

@@ -6,7 +6,7 @@ import jobtrackrproject from "../../../images/jobtrackrDemo.png"
 import jobtrackr from "../../../images/jobtrackr.png"
 
 import Icon from '@mdi/react';
-import { mdiHammerWrench } from '@mdi/js';
+import { mdiHammerWrench, mdiWeb, mdiApplicationOutline, mdiDatabaseOutline} from '@mdi/js';
 
 function ProjectJobtrackr () {
 
@@ -26,10 +26,6 @@ function ProjectJobtrackr () {
       name: 'Node.Js'
     },
     {
-      jsx: <i class="devicon-express-original text-2xl  fill-current "></i>,
-      name: 'Express'
-    },
-    {
       jsx: <i class="devicon-postgresql-plain-wordmark text-2xl  fill-current "></i>,
       name: 'PostgreSQL'
     },
@@ -46,33 +42,12 @@ function ProjectJobtrackr () {
     window.open('https://github.com/sycodes95/jobtrackr-api');
   }
   
-  // useEffect(() => {
-
-  //   const options = {
-  //     root: null,
-  //     threshold: 0.8,
-  //   };
-    
-  //   const observer = new IntersectionObserver(entries => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         projectContainerRef.current.classList.add('border-glow-white');
-  //         projectContainerRef.current.classList.remove('border-glow-none');
-          
-  //       }
-  //     });
-  //   }, options);
-    
-  //   observer.observe(projectContainerRef.current);
-    
-  // }, []);
-  
   
   return (
-    <div className='flex h-fit'
+    <div className='flex justify-center h-fit'
     ref={projectContainerRef}>
 
-      <div className="relative flex flex-col max-w-xl p-8 overflow-visible text-white font-black-outline-light text-md max-width-480px-flex-col">
+      <div className="relative flex flex-col max-w-xl p-8 overflow-visible text-white width-768px-90pct font-black-outline-light text-md max-width-480px-flex-col">
         <section>
           <div className="absolute top-0 left-0 w-6 h-6 border-t border-l"></div>
           <div className="absolute w-6 h-6 border-t border-l left-2 top-2 "></div>
@@ -108,6 +83,18 @@ function ProjectJobtrackr () {
               ${index !== toolsElements.length - 1 && 'border-r'}`}>{tool.name}</p>
             ))
             }
+          </div>
+
+          <div className="z-10 flex gap-4 pt-2">
+            <button className="transition-colors hover:text-green-400" onClick={handleViewSite}>
+              <Icon path={mdiWeb} size={1} />
+            </button>
+            <button className="transition-colors hover:text-green-400" onClick={handleViewFrontEnd}>
+              <Icon path={mdiApplicationOutline} size={1} />
+            </button>
+            <button className="transition-colors hover:text-green-400" onClick={handleViewBackEnd}>
+              <Icon path={mdiDatabaseOutline} size={1} />
+            </button>
           </div>
           <div className="absolute top-0 right-0 flex items-center justify-end w-full h-full">
             <Icon className="h-full text-white text-opacity-5" path={mdiHammerWrench} />
