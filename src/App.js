@@ -36,9 +36,9 @@ function App() {
     navRef.current.classList.remove('-top-1/4')
   }, []);
 
-  const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' });
-  const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-  const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth' } && setHamburgerIsOpen(false));
+  const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: 'smooth' } && setHamburgerIsOpen(false));
+  const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: 'smooth' } && setHamburgerIsOpen(false));
 
   const handleScrollToTop = () => {
     
@@ -46,7 +46,7 @@ function App() {
       top: 0,
       behavior: 'smooth',
     });
-    
+    setHamburgerIsOpen(false)
   };
 
   let lastScrollY = 0
@@ -99,7 +99,7 @@ function App() {
       <div className='fixed z-50 flex items-center justify-end w-full h-20 gap-8 pr-8 text-sm transition-all duration-500 -top-1/4' on
       ref={navRef}>
         <ul className='flex gap-8 p-2 max-width-768px-hidden'>
-          <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={handleScrollToTop}>
+          <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap'  onClick={handleScrollToTop}>
           <Icon className='text-green-400' path={mdiHome} size={0.6} /> <p>HOME</p>
           </li>
           <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToProjects}>
@@ -124,18 +124,20 @@ function App() {
 
             <ul className='fixed top-0 right-0 z-20 flex-col items-center justify-center hidden h-full gap-8 p-2 bg-black bg-opacity-80 w-80 max-width-768px-visible'>
               <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={handleScrollToTop}>
-              <Icon className='text-green-400' path={mdiHome} size={0.6} /> <p>HOME</p>
+              <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>HOME</p>
               </li>
               <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToProjects}>
                 
-                <Icon className='text-green-400' path={mdiHammer} size={0.6} />
-                <p>PROJECTS</p>
+                {/* <Icon className='text-green-400' path={mdiHammer} size={0.6} /> */}
+                <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>PROJECTS</p>
               </li>
               <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToAbout}>
-                <Icon className='text-green-400' path={mdiHead} size={0.6} /> <p>ABOUT</p>
+                {/* <Icon className='text-green-400' path={mdiHead} size={0.6} />  */}
+                <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>ABOUT</p>
               </li>
               <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToContact}>
-              <Icon className='text-green-400' path={mdiEmail} size={0.6} /> <p>CONTACT</p>
+              {/* <Icon className='text-green-400' path={mdiEmail} size={0.6} />  */}
+              <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>CONTACT</p>
               </li>
             </ul>
             <div className='fixed top-0 left-0 w-full h-full backdrop-blur-md'></div>
