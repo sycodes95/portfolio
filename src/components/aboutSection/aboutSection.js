@@ -141,7 +141,7 @@ function AboutSection () {
   
 
   return (
-    <div className='relative flex flex-col w-full max-w-xl gap-16 width-768px-90pct' ref={aboutSectionRef}>
+    <div className='relative flex flex-col w-full max-w-xl gap-16 pt-12 width-768px-90pct' ref={aboutSectionRef}>
       
       <div>
         <div className="relative z-10 flex justify-center w-full" >

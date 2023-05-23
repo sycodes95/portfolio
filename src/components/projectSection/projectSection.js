@@ -53,7 +53,7 @@ function ProjectSection () {
   },[])
 
   return (
-    <div className='flex flex-col pt-12 pb-24 PROJECT-SECTION gap-y-16 bg-hammer'>
+    <div className='flex flex-col pt-12 PROJECT-SECTION gap-y-16 bg-hammer'>
 
       <section>
         <div className="relative z-10 flex justify-center w-full rounded-full" >

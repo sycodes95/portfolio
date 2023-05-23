@@ -3,19 +3,17 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar{
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   
 }
 
 ::-webkit-scrollbar-track{
   background-color: rgba(0, 0, 0, 0);
-  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
+  background-color: rgb(88, 255, 133)
 }
 
 input:-webkit-autofill,
@@ -118,7 +116,7 @@ input:focus, textarea:focus{
 }
 
 .font-1vw{
-  font-size: clamp(0.75rem, 0.75vw, 10rem);
+  font-size: clamp(0.75rem, 0.75vw, 1rem);
 }
 
 .w-2vw{
@@ -162,6 +160,10 @@ input:focus, textarea:focus{
 
 .bg-mosaic-gradient{
   background: linear-gradient(rgba(49, 49, 49, 0.2), rgba(49, 49, 49, 0.2)), url(/src/background-images/subtle_carbon.webp);
+}
+
+.bg-mosaic-half{
+  background: linear-gradient(rgba(49, 49, 49, 0.1), rgba(49, 49, 49, 0.1)), url(/src/background-images/subtle_carbon.webp);
 }
 
 
@@ -251,9 +253,7 @@ input:focus, textarea:focus{
 }
 
 
-.CONTACT-FORM > input, .CONTACT-FORM > textarea, .CONTACT-FORM > button {
-  width: 90%;
-}
+
 
 .TITLE{
   grid-column:1/2;
@@ -362,7 +362,7 @@ input:focus, textarea:focus{
   }
   
   
-  .PROJECT-CONTAINER, .ABOUT-CONTAINER, .CONTACT-FORM  {
+  .PROJECT-CONTAINER, .ABOUT-CONTAINER  {
     width: 90%;
     
   }

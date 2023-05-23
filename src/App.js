@@ -93,11 +93,14 @@ function App() {
   
     
   return (
-    <div className='relative overflow-hidden APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
+    <div className='relative flex flex-col gap-12 overflow-hidden APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
       
       
-      <div className='fixed z-50 flex items-center justify-end w-full h-20 gap-8 pr-8 text-sm transition-all duration-500 -top-1/4' on
+      <div className='fixed z-50 flex items-center justify-between w-full h-20 gap-8 pl-8 pr-8 text-sm transition-all duration-500 -top-1/4 bg-mosaic-half' on
       ref={navRef}>
+        <div className='flex items-center justify-center w-12 h-12 text-white border-4 border-green-400 rounded-sm'>
+          <p className='text-2xl font-family-field-ocera'>K</p>
+        </div>
         <ul className='flex gap-8 p-2 max-width-768px-hidden'>
           <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap'  onClick={handleScrollToTop}>
           <Icon className='text-green-400' path={mdiHome} size={0.6} /> <p>HOME</p>
@@ -115,7 +118,7 @@ function App() {
           </li>
         </ul>
         <div className='hidden max-width-768px-visible'>
-          <div className='fixed z-40 top-4 right-4'>
+          <div className='z-40 '>
             <Hamburger color='rgb(74 222 128)' toggled={hamburgerIsOpen} toggle={setHamburgerIsOpen} />
           </div>
           {

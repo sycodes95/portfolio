@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react"
 import Icon from '@mdi/react';
-import { mdiEmail } from '@mdi/js';
+import { mdiEmail, mdiSendOutline } from '@mdi/js';
 import yellowParticles from '../../images/yellow-particles.png'
 import embers from "../../images/embers.png"
 
@@ -82,62 +82,41 @@ function ContactSection () {
   },[])
 
   return(
-    <div className="flex flex-col  pb-24 pt-12 gap-y-16 w-full overflow-hidden" >
+    <div className="flex flex-col items-center w-full p-12 overflow-hidden bg-black bg-opacity-50 gap-y-8" >
       
       
       
      
       <section>
-        <div className="relative flex justify-center w-full z-10 rounded-full" >
-          <Icon className=" text-gray-300  transition-all delay-500 duration-1000  rounded-full" 
-          path={mdiEmail} size={3.2} />
-        </div> 
-      </section>
-        
-      <section className="relative flex justify-center items-center 
-      rounded-sm transition-all duration-1000" ref={bannerLineRef}>
-        <div className="absolute right-0 translate-x-1/2 flex items-center w-fit text-gray-300 text-opacity-60 text-8xl font-thin font-family-field-gothic
-        overflow-hidden whitespace-nowrap transition-all duration-300" ref={contactRepeatRef}>
-          {
-          contactRepeat.map((str, index) => (
-            <p key={index}>{str}</p>
-          ))
-          }
-        </div>
+       <p className="text-green-400 text-opacity-0 font-4vw font-family-field-exoplane font-green-outline">CONTACT ME!</p>
       </section>
           
         
-      <section className="flex justify-center overflow-hidden mt-16 max-width-768px-overflow-visible " >
+      <section className="relative flex justify-center p-4 overflow-hidden max-width-768px-overflow-visible" >
 
-      
-        <form className="CONTACT-FORM  bg-black bg-opacity-30 flex flex-col gap-y-1 items-center 
-        p-2 text-white pb-8 w-96 max-width-768px-width-full border-4 border-black border-glow-white
-         transition-opacity delay-500 duration-1000 rounded-xl" 
+          <div className="absolute top-0 right-0 w-2 h-2 border-t border-r"></div>
+          <div className="absolute top-0 left-0 w-2 h-2 border-t border-l"></div>
+          <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l"></div>
+          <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r"></div>
+
+
+        <form className="flex flex-col items-center p-2 pb-8 text-white transition-opacity duration-1000 delay-500 CONTACT-FORM gap-y-4 w-96 max-width-768px-width-full rounded-xl" 
         target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST" ref={formContainerRef}
         >
           
           <input className="hidden " type="text" name="_honey"/>
           <input type="hidden" name="_captcha" value="false"/>
           
-          <label className="text-center font-black-outline-light flex flex-col ">Email <span className="text-xs text-emerald-400 ">(required)</span></label>
-          <input className="bg-black bg-opacity-25 w-80 border-b-2 border-white border-opacity-50 z-50" type="email" name="email" placeholder="Email..." required/>
-          <label className="text-center font-black-outline-light flex flex-col">Phone <span className="text-xs text-gray-300 ">(optional)</span></label>
-          <input className="bg-black bg-opacity-25 w-80 z-50 border-b-2 border-white border-opacity-50" 
-          type="tel" name="tel" placeholder="Phone...(optional)"/>
-          <label className="text-center font-black-outline-light flex flex-col ">Text <span className="text-xs text-emerald-400 ">(required)</span></label>
-          <textarea className="bg-black bg-opacity-25 w-80 h-80 z-50 border-b-2 border-white border-opacity-50 resize-none" 
-          type="text" name="text" placeholder="Text..." required/>
-          <button className="bg-emerald-400 bg-opacity-50  rounded-sm 
-           w-full hover:bg-opacity-25 transition-colors h-8 z-50 mt-8" type="submit">Submit</button>
+          <label className="flex flex-col w-full text-left font-black-outline-light">Email </label>
+          
+          <input className="z-40 w-full p-1 bg-green-400 border border-green-400 rounded-sm bg-opacity-20" type="email" name="email" placeholder="Email..." required/>
+
+          <label className="flex w-full text-left font-black-outline-light">Message </label>
+          <textarea className="z-40 w-full p-1 bg-green-400 border border-green-400 rounded-sm bg-opacity-20 h-44" 
+          type="text" name="text" placeholder="Message..." required/>
+          <button className="z-50 flex items-center justify-center w-full h-8 mt-8 transition-colors bg-green-400 bg-opacity-50 rounded-sm hover:bg-opacity-25" type="submit"><Icon path={mdiSendOutline} size={1} /></button>
         </form>
       </section>
-      <section className="h-fit w-full flex justify-center z-50 text-glow-white">
-        <a href="https://github.com/sycodes95/portfolio" target="_blank" className="text-white hover:text-green-300 transition-all">DESIGNED AND CREATED BY KEVIN KIM</a>
-      </section>
-
-      
-
-
       
     </div>
   )
