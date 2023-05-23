@@ -62,7 +62,7 @@ function ProjectEdgescout () {
           </div>
 
           <div className="flex justify-end w-full h-full pt-2"> 
-            <p className="z-50 flex h-full font-bold text-green-400 text-opacity-0 font-4vw font-white-outline text-glow-white font-family-field-exoplane">EDGE SCOUT</p>
+            <p className="flex h-full font-bold text-green-400 text-opacity-0  font-4vw font-white-outline text-glow-white font-family-field-exoplane">EDGE SCOUT</p>
             {/* <div className="flex justify-between p-4 bg-black border-b gap-x-2 bg-opacity-20">
               {
               toolsElements.map(tool => (

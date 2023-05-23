@@ -84,7 +84,7 @@ function HomeSection(props) {
 
   return (
     <section className="overflow-visible">
-      <div className="relative flex items-center justify-center w-full min-h-screen overflow-visible">
+      <div className="relative flex items-center justify-center w-full overflow-visible min-height-100dvh">
        
 
         <section className="absolute top-10 left-10">

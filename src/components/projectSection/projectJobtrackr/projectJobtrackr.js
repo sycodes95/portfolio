@@ -60,7 +60,7 @@ function ProjectJobtrackr () {
             <p className="flex h-full pl-1 pr-1 text-lg font-bold text-black bg-green-400 rounded-sm top-4 left-4 ">//project_01</p>
           </div>
           <div className="flex flex-col w-full h-full pt-2"> 
-            <p className="z-50 flex w-full h-full font-bold text-green-400 text-opacity-0 font-4vw font-white-outline text-glow-white font-family-field-exoplane">JOB Trackr</p>
+            <p className="flex w-full h-full font-bold text-green-400 text-opacity-0 font-4vw font-white-outline text-glow-white font-family-field-exoplane">JOB Trackr</p>
             {/* <div className="flex justify-between p-4 bg-black border-b gap-x-2 bg-opacity-20">
               {
               toolsElements.map(tool => (

@@ -3,7 +3,7 @@ import { ReactSVG } from "react-svg";
 import triangledots from "../../icons/triangledots.svg"
 import silhoutte from "../../images/silhoutte.png"
 import Icon from '@mdi/react';
-import { mdiDna , mdiCardAccountDetailsOutline} from '@mdi/js';
+import { mdiDna , mdiCardAccountDetailsOutline, mdiFileDocumentOutline} from '@mdi/js';
 import { useState, useEffect, useRef } from "react";
 import embers from "../../images/embers.png"
 import cartoonlight from "../../images/cartoonlight.png"
@@ -64,7 +64,7 @@ function AboutSection () {
       name: 'Javascript'
     },
     {
-      jsx: <i className="text-lg fill-current devicon-javascript-plain"></i>,
+      jsx: <i className="text-lg fill-current devicon-typescript-plain"></i>,
       name: 'Typescript'
     },
     {
@@ -72,7 +72,7 @@ function AboutSection () {
       name: 'React'
     },
     {
-      jsx: <i className="text-lg fill-current devicon-github-original"></i>,
+      jsx: <i className="text-lg fill-current devicon-redux-original"></i>,
       name: 'Redux'
     },
     {
@@ -182,11 +182,18 @@ function AboutSection () {
             </div>
 
             <div className="relative flex items-center justify-end w-3/4 p-4 text-sm text-white bg-black bg-opacity-30 right-trap-clip"> 
-              <section className="flex flex-col justify-center gap-2">
-                <a className="flex gap-2 transition-all duration-300 hover:rotate-45 hover:text-green-300" href="https://github.com/sycodes95" target="_blank">
-                  <i class="devicon-github-original text-2xl " onClick={window.open('https://github.com/sycodes95')}></i>
+              <section className="flex flex-col items-end gap-2">
+
+                <a className="flex items-center gap-2 p-1 text-green-400 transition-all duration-300 hover:text-gray-400" href="https://drive.google.com/file/d/1U4K3tvlx0SibXKBSvG4fUq8StlV9MInh/view?usp=sharing" target="_blank">
+                  <Icon path={mdiFileDocumentOutline} size={0.8} />
+                  <p>Resume</p>
+                </a>
+
+                <a className="flex items-center justify-center gap-2 text-green-400 transition-all duration-300 hover:text-gray-400" href="https://github.com/sycodes95" target="_blank">
+                  <i class="devicon-github-original text-lg " ></i>
                   <p>Github</p>
                 </a>
+                
               </section>
             </div>
           </div>
@@ -194,11 +201,11 @@ function AboutSection () {
           <div className="flex justify-between">
             
             <div className="relative flex flex-col gap-1 p-4 text-white w-fit font-1vw "> 
-              <div className="flex justify-center text-3xl text-white text-opacity-0 font-family-field-exoplane font-green-outline">Skills</div>
+              <div className="flex text-2xl text-white text-opacity-0 font-family-field-exoplane font-green-outline">Skills</div>
               
               {
               toolsElements.map((tool, index) => (
-                <div className="flex items-center gap-2 pl-2 pr-2 whitespace-nowrap" key={index}>
+                <div className="flex items-center gap-2 whitespace-nowrap" key={index}>
                   <p className="">{tool.jsx}</p>
                   <p className="font-black-outline">{tool.name}</p>
                 </div>
