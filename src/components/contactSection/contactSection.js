@@ -1,96 +1,19 @@
 import { useEffect, useState, useRef } from "react"
 import Icon from '@mdi/react';
 import { mdiEmail, mdiSendOutline } from '@mdi/js';
-import yellowParticles from '../../images/yellow-particles.png'
-import embers from "../../images/embers.png"
 
 function ContactSection () {
-  const contactTitleLetters = useRef([])
-  const bannerLineRef = useRef(null)
 
-  const contactIconRef = useRef([]);
   const formContainerRef = useRef(null)
-
-  const contactRepeat = Array.from({ length: 200 }, () => 'CONTACT-');
 
   const contactRepeatRef = useRef(null)
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  // useEffect(() => {
-    
-      
-
-  //   const options = {
-  //     root: null,
-  //     threshold: 0.5,
-  //   };
-    
-  //   const observer = new IntersectionObserver(entries => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-
-  //         bannerLineRef.current.classList.add('h-10')
-  //         bannerLineRef.current.classList.remove('h-0')
-
-  //         formContainerRef.current.classList.add('opacity-100')
-  //         formContainerRef.current.classList.remove('opacity-0')
-
-  //         contactIconRef.current.forEach(ref => {
-  //           ref.classList.add('opacity-100')
-  //           ref.classList.remove('opacity-0')
-  //         })
-
-  //         contactTitleLetters.current.forEach(letter => {
-  //           letter.classList.add('opacity-100')
-  //           letter.classList.remove('opacity-0')
-  //         })
-  //       } 
-  //     });
-  //   }, options);
-    
-  //   observer.observe(bannerLineRef.current);
-    
-  // }, []);
-
-  useEffect(()=>{
-    let prevScroll = 0;
-    let percentage = 0;
-
-    const handleScroll = () =>{
-        
-      if(prevScroll < window.scrollY){
-        percentage += 0.25
-      } else {
-        percentage -= 0.25
-      }
-      if (window.scrollY === 0) {
-        percentage = 0; 
-      }
-
-      contactRepeatRef.current.style.right = percentage + '%'
-      
-      prevScroll = window.scrollY
-      
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-
-    return ()=> {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  },[])
-
   return(
     <div className="flex flex-col items-center w-full p-12 overflow-hidden bg-black bg-opacity-50 gap-y-8" >
-      
-      
-      
      
       <section>
-       <p className="text-green-400 text-opacity-0 font-4vw font-family-field-exoplane font-green-outline">CONTACT ME!</p>
+       <p className="text-green-400 text-opacity-0 font-4vw font-family-field-exoplane font-green-outline">CONTACT ME !</p>
       </section>
-          
         
       <section className="relative flex justify-center p-4 overflow-hidden max-width-768px-overflow-visible" >
 

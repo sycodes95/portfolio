@@ -11,6 +11,8 @@ function HomeSection(props) {
 
   const homeIntroRefs = useRef([])
 
+  const introTextRef = useRef(null)
+
   const kevin = ['K', 'E', 'V', 'I', 'N']
   const kim = ['K', 'I', 'M']
   const fullstack = ['F', 'U', 'L', 'L', 'S', 'T', 'A', 'C', 'K']
@@ -22,8 +24,6 @@ function HomeSection(props) {
     setInterval(()=>{
       arrowRefs.current.forEach((ref, index)=>{
         let timing = (index + 1) * 100
-        console.log(arrowRefs);
-        console.log(ref.classList);
         
         setTimeout(()=>{
           ref.classList.remove('opacity-0')
@@ -36,10 +36,7 @@ function HomeSection(props) {
           ref.classList.add('opacity-0')
           
         }, (timing * 1000) / timing)
-        
       })
-
-      
 
     }, arrowRefs.current.length * 500)
    
@@ -62,13 +59,8 @@ function HomeSection(props) {
           pixels = 0; 
         }
         homeIntroRefs.current.forEach(ref => {
-          // let half = pixels / 4
-          // if(ref.id === 'fullstack'){
-          //   ref.style.columnGap = half + 'vw'
-          // } else {
-          //   ref.style.columnGap = pixels + 'vw'
-          // }
           ref.style.columnGap = pixels + 'vw'
+          
         })
         prevScroll = window.scrollY
       }
@@ -80,6 +72,24 @@ function HomeSection(props) {
     return ()=> {
       window.removeEventListener('scroll', handleScroll)
     }
+  },[])
+
+  useEffect(()=>{
+    if(introTextRef.current) {
+      introTextRef.current.classList.remove('opacity-0')
+      introTextRef.current.classList.add('opacity-100')
+    }    
+    homeIntroRefs.current && homeIntroRefs.current.forEach(ref => {
+      if(ref.classList.contains('left-1/2')){
+        ref.classList.remove('left-1/2')
+        ref.classList.add('left-0')
+      } 
+      if(ref.classList.contains('right-1/2')){
+        ref.classList.remove('right-1/2')
+        ref.classList.add('right-0')
+      } 
+    })
+    
   },[])
 
   return (
@@ -95,9 +105,9 @@ function HomeSection(props) {
 
         
 
-        <section className="flex flex-col items-center w-full h-full pt-32 pb-32 overflow-hidden home-text" >
+        <section className="relative flex flex-col items-center w-full h-full pt-32 pb-32 overflow-hidden transition-opacity opacity-0 duration-2000 home-text" ref={introTextRef} >
           
-          <div className="flex justify-center w-full transition-all duration-200 h-fit home-text-big" ref={ref => homeIntroRefs.current.push(ref)}>
+          <div className="sticky flex transition-all duration-2000 left-1/2 w-fit h-fit home-text-big" ref={ref => homeIntroRefs.current.push(ref)}>
 
             <div className="flex justify-center gap-0 text-white transition-all duration-300 font-white-outline" ref={ref => homeIntroRefs.current.push(ref)}>
               
@@ -117,8 +127,8 @@ function HomeSection(props) {
             </div>
           </div>
 
-          <div id="fullstack" className="flex justify-center w-full transition-all duration-300 home-text-small max-width-768px-flex-col"
-            ref={ref => homeIntroRefs.current.push(ref)} >
+          <div id="fullstack" className="sticky flex transition-all duration-2000 right-1/2 w-fit home-text-small max-width-768px-flex-col" ref={ref => homeIntroRefs.current.push(ref)} >
+            
             <div id="fullstack" className="flex justify-center gap-0 text-white text-opacity-0 transition-all duration-300 font-white-outline"  
             ref={ref => homeIntroRefs.current.push(ref)}>
               {

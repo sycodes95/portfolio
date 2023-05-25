@@ -96,7 +96,7 @@ function App() {
     <div className='relative flex flex-col gap-12 overflow-hidden APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
       
       
-      <div className='fixed z-50 flex items-center justify-between w-full h-20 gap-8 pl-8 pr-8 text-sm transition-all duration-500 -top-1/4 bg-mosaic-half' on
+      <div className='fixed z-50 flex items-center justify-between w-full h-20 gap-8 pl-8 pr-8 text-sm transition-all duration-500 border-b-2 border-green-400 -top-1/4 bg-mosaic-half' 
       ref={navRef}>
         <div className='flex items-center justify-center w-12 h-12 text-white border-4 border-green-400 rounded-sm'>
           <p className='text-2xl font-family-field-ocera'>K</p>

@@ -25,38 +25,6 @@ function AboutSection () {
   const aboutRepeatRef = useRef(null)
 
   const aboutSectionRef = useRef(null)
-  const aboutContentRef = useRef(null)
-  const aboutHeaderRef = useRef(null)
-  const aboutSideLeftRef = useRef(null)
-  const aboutSideRightRef = useRef(null)
-  const aboutSilhoutteRef = useRef(null)
-  const aboutContainerRef = useRef(null)
-
-  const aboutTitleA = useRef(null)
-  const aboutTitleB = useRef(null)
-  const aboutTitleO = useRef(null)
-  const aboutTitleU = useRef(null)
-  const aboutTitleT = useRef(null)
-
-  const bannerLineRef = useRef(null)
-
-  const aboutIconRef = useRef([]);
-
-  
-  
-
-  const handleMobileTab = (e) => {
-    if(e.target.textContent === 'SUMMARY'){
-      setMobileTab({
-        tab: 'SUMMARY'
-      })
-    }
-    if(e.target.textContent === 'SKILLS'){
-      setMobileTab({
-        tab: 'SKILLS'
-      })
-    }
-  }
 
   const toolsElements = [
     {
@@ -105,40 +73,6 @@ function AboutSection () {
     },
     
   ]
-
-  
-
-  
-  
-
-  useEffect(()=>{
-    let prevScroll = 0;
-    let percentage = 0;
-
-    const handleScroll = () =>{
-        
-      if(prevScroll < window.scrollY){
-        percentage += 0.25
-      } else {
-        percentage -= 0.25
-      }
-      if (window.scrollY === 0) {
-        percentage = 0; 
-      }
-
-      aboutRepeatRef.current.style.left = percentage + '%'
-      
-      prevScroll = window.scrollY
-      
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-
-    return ()=> {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  },[])
-  
 
   return (
     <div className='relative flex flex-col w-full max-w-xl gap-16 pt-12 width-768px-90pct' ref={aboutSectionRef}>
