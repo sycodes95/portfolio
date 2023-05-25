@@ -12,6 +12,10 @@ function ProjectEdgescout () {
 
   const projectContainerRef = useRef(null)
 
+  const projectTitleRef = useRef(null)
+
+  const projectCornersRef = useRef([])
+
   const toolsElements = [
     {
       jsx: <i class="devicon-react-original text-2xl  fill-current "></i>,
@@ -43,17 +47,41 @@ function ProjectEdgescout () {
     window.open('https://github.com/sycodes95/trading-journal-api');
   }
   
+
+  useEffect(() => {
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          projectContainerRef.current.classList.remove('pt-10')
+          projectContainerRef.current.classList.add('pb-10')
+          projectContainerRef.current.classList.remove('opacity-0')
+          projectTitleRef.current.classList.add('text-glow-white')
+          projectCornersRef.current.forEach(ref => {
+            if(ref) ref.classList.remove('rotate-180')
+          })
+        } 
+      });
+    }, { root : null, threshold : 1});
+    
+    observer.observe(projectContainerRef.current);
+    
+  }, []);
   
   return (
-    <div className='flex justify-center h-fit'
+    <div className='flex justify-center pt-10 overflow-visible transition-all duration-1000 opacity-0 h-fit'
     ref={projectContainerRef}>
 
       <div className="relative flex flex-col max-w-xl p-8 overflow-visible text-white width-768px-90pct font-black-outline-light text-md max-width-480px-flex-col">
         <section>
-          <div className="absolute top-0 right-0 w-6 h-6 border-t border-r"></div>
-          <div className="absolute w-6 h-6 border-t border-r right-2 top-2 "></div>
-          <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l "></div>
-          <div className="absolute w-6 h-6 border-b border-l left-2 bottom-2"></div>
+          <div className="absolute top-0 right-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-t border-r"
+          ref={ref => projectCornersRef.current.push(ref)}></div>
+          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-t border-r right-2 top-2"
+          ref={ref => projectCornersRef.current.push(ref)}></div>
+          <div className="absolute bottom-0 left-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-b border-l"
+          ref={ref => projectCornersRef.current.push(ref)}></div>
+          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-b border-l left-2 bottom-2"
+          ref={ref => projectCornersRef.current.push(ref)}></div>
         </section>
         <section className="relative flex flex-col h-full gap-4 transition-all duration-700 max-width-480px-width-full whitespace-nowrap gap-x-2"
          >
@@ -62,7 +90,8 @@ function ProjectEdgescout () {
           </div>
 
           <div className="flex justify-end w-full h-full pt-2"> 
-            <p className="flex h-full font-bold text-green-400 text-opacity-0  font-4vw font-white-outline text-glow-white font-family-field-exoplane">EDGE SCOUT</p>
+            <p className="flex h-full font-bold text-green-400 text-opacity-0 transition-all duration-500 delay-1000 font-4vw font-white-outline font-family-field-exoplane"
+            ref={projectTitleRef}>EDGE SCOUT</p>
             {/* <div className="flex justify-between p-4 bg-black border-b gap-x-2 bg-opacity-20">
               {
               toolsElements.map(tool => (

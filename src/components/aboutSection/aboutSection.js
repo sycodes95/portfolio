@@ -20,9 +20,9 @@ function AboutSection () {
     
   })
 
-  const aboutRepeat = Array.from({ length: 300 }, () => 'ABOUT-');
+  const dnaContainerRef = useRef(null)
 
-  const aboutRepeatRef = useRef(null)
+  const dnaRef = useRef(null)
 
   const aboutSectionRef = useRef(null)
 
@@ -74,10 +74,27 @@ function AboutSection () {
     
   ]
 
+  useEffect(() => {
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          aboutSectionRef.current.classList.remove('pt-10')
+          aboutSectionRef.current.classList.remove('opacity-0')
+          dnaContainerRef.current.classList.add('rotate-180')
+          dnaRef.current.classList.remove('opacity-0')
+        } 
+      });
+    }, { root : null, threshold : 0.5});
+    
+    observer.observe(aboutSectionRef.current);
+    
+  }, []);
+
   return (
-    <div className='relative flex flex-col w-full max-w-xl gap-16 pt-12 width-768px-90pct' ref={aboutSectionRef}>
+    <div className='relative flex flex-col w-full max-w-xl gap-16 pt-12 width-768px-90pct' >
       
-      <div>
+      <div className="" >
         <div className="relative z-10 flex justify-center w-full" >
           
           {/* <Icon className="text-white transition-all duration-1000 delay-500 rounded-full " 
@@ -98,7 +115,8 @@ function AboutSection () {
       </div>
 
 
-      <div className="relative flex justify-center w-full overflow-visible text-white">
+      <div className="relative flex justify-center w-full pt-10 overflow-visible text-white transition-all duration-1000 opacity-0"
+      ref={aboutSectionRef}>
         
         <section className="z-40 flex justify-center invert opacity-30">
           <img className=" w-80" src={silhoutte} alt="silhoutte of man"/>
@@ -108,8 +126,10 @@ function AboutSection () {
 
           <div className="flex justify-between gap-12">
             <div className="relative flex items-center justify-between w-3/4 p-4 text-sm text-white bg-black bg-opacity-30 left-trap-clip"> 
-              <section className="relative flex flex-col justify-center gap-2 p-2 border-4 border-green-400 rounded-sm">
-                <Icon path={mdiDna} size={1.6} />
+              <section className="relative flex flex-col justify-center gap-2 p-2 transition-all duration-1000 border-4 border-green-400 rounded-sm"
+              ref={dnaContainerRef}>
+                <Icon className="transition-all duration-1000 delay-1000 opacity-0" path={mdiDna} size={1.6} 
+                ref={dnaRef}/>
                 
               </section>
               

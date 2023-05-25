@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
-import smoke from '../../images/smokebot.png'
+import whiteLight from '../../images/white-light-bit.png'
 
 function HomeSection(props) {
 
@@ -53,7 +53,7 @@ function HomeSection(props) {
         if(prevScroll < window.scrollY){
           pixels += 0.01
         } else {
-          pixels -= 0.01
+          pixels -= 0.01 
         }
         if (window.scrollY === 0) {
           pixels = 0; 
@@ -69,9 +69,9 @@ function HomeSection(props) {
     
     window.addEventListener('scroll', handleScroll)
 
-    return ()=> {
-      window.removeEventListener('scroll', handleScroll)
-    }
+    // return ()=> {
+    //   window.removeEventListener('scroll', handleScroll)
+    // }
   },[])
 
   useEffect(()=>{
@@ -89,6 +89,13 @@ function HomeSection(props) {
         ref.classList.add('right-0')
       } 
     })
+    setTimeout(()=>{
+      homeIntroRefs.current && homeIntroRefs.current.forEach(ref => {
+        if(ref.classList.contains('duration-2000')){
+          ref.classList.remove('duration-2000')
+        }
+      })
+    },2000)
     
   },[])
 
@@ -97,10 +104,8 @@ function HomeSection(props) {
       <div className="relative flex items-center justify-center w-full overflow-visible min-height-100dvh">
        
 
-        <section className="absolute top-10 left-10">
-          <div className="flex items-center p-2 text-4xl font-bold text-white border-4 border-green-400 rounded-sm">
-           
-          </div>
+        <section className="absolute top-0 ">
+          {/* <img className="bg-cover opacity-5" src={whiteLight}/> */}
         </section>
 
         
@@ -133,15 +138,15 @@ function HomeSection(props) {
             ref={ref => homeIntroRefs.current.push(ref)}>
               {
               fullstack.map((char, index) => (
-                <span className="">{char}</span>
+                <span className="hover:text-gray-400 hover:text-opacity-50">{char}</span>
               ))
               }
             </div>
-            <div id="fullstack" className="flex text-white transition-all duration-300 font-white-outline max-width-768px-flex-justify-center" 
+            <div id="fullstack" className="flex text-white transition-all duration-300 max-width-768px-flex-justify-center" 
             ref={ref => homeIntroRefs.current.push(ref)}>
               {
               developer.map((char, index) => (
-                <span className="transition-colors cursor-default hover:text-gray-400 hover:text-opacity-50">{char}</span>
+                <span className="transition-colors cursor-default font-white-outline">{char}</span>
               ))
               }
               <div className="text-green-400">.</div>
