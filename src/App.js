@@ -27,6 +27,7 @@ function App() {
   const contactRef = useRef(null)
   const arrowRef = useRef(null)
   const navRef = useRef(null)
+  const hamburgerMenuRef = useRef(null)
 
   const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false)
   
@@ -56,7 +57,7 @@ function App() {
     if(nav){
 
       let currentScrollY = window.scrollY;
-      if (currentScrollY < lastScrollY) {
+      if (currentScrollY < lastScrollY ) {
         nav.classList.add('top-0')
         nav.classList.remove('-top-1/4')
         
@@ -65,7 +66,7 @@ function App() {
         nav.classList.remove('top-0')
       }
       lastScrollY = currentScrollY
-      
+      console.log(lastScrollY);
     }
 
   }
@@ -76,7 +77,21 @@ function App() {
     }
   }
   useEffect(()=>{
-    hamburgerIsOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible'
+    if(hamburgerIsOpen){
+      document.body.style.overflow = 'hidden'
+      if(hamburgerMenuRef.current){
+        hamburgerMenuRef.current.classList.remove('-right-full')
+        hamburgerMenuRef.current.classList.add('right-0')
+      }
+      
+      
+    } else {
+      if(hamburgerMenuRef.current){
+        hamburgerMenuRef.current.classList.remove('right-0')
+        hamburgerMenuRef.current.classList.add('-right-full')
+      }
+      document.body.style.overflow = 'visible'
+    }
   },[hamburgerIsOpen])
   
   useEffect(()=>{
@@ -114,24 +129,32 @@ function App() {
             <Icon className='absolute text-green-400 text-opacity-25' path={mdiHammer} size={2} />
             <p className='z-10 text-lg font-family-field-exoplane '>PROJECTS</p>
           </li>
-          <li className='relative flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToAbout}>
+          <li className='relative flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-green-300 whitespace-nowrap' onClick={scrollToAbout}>
             <Icon className='absolute text-green-400 text-opacity-25' path={mdiHead} size={2} /> 
             <p className='text-lg font-family-field-exoplane'>ABOUT</p>
           </li>
-          <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToContact}>
-          <Icon className='text-green-400' path={mdiEmail} size={0.6} /> <p>CONTACT</p>
+          <li className='relative flex items-center justify-center gap-2 text-white transition-all cursor-pointer menu hover:text-green-300 whitespace-nowrap' onClick={scrollToContact}>
+          <Icon className='absolute text-green-400 text-opacity-25' path={mdiEmail} size={2} /> 
+          <p className='text-lg font-family-field-exoplane'>CONTACT</p>
+          </li>
+          <li className='z-10 flex flex-col justify-center text-white'>
+            <a className="flex items-center gap-2 p-1 text-green-400 transition-all duration-300 bg-green-400 border border-green-500 rounded-md bg-opacity-10 hover:bg-opacity-30" href="https://drive.google.com/file/d/1U4K3tvlx0SibXKBSvG4fUq8StlV9MInh/view?usp=sharing" target="_blank">
+              <p>Resume</p>
+            </a>    
+            
           </li>
         </ul>
         <div className='hidden max-width-768px-visible'>
           <div className='z-40 '>
             <Hamburger color='rgb(74 222 128)' toggled={hamburgerIsOpen} toggle={setHamburgerIsOpen} />
           </div>
-          {
-          hamburgerIsOpen &&
-          <div className='relative'>
+          
+          <div className=''>
             
-            <ul className='fixed top-0 right-0 z-20 flex-col items-center justify-center hidden h-full gap-8 p-2 bg-black bg-opacity-80 w-80 max-width-768px-visible'>
+            <ul className='fixed top-0 z-20 flex-col items-center justify-center hidden h-full gap-8 p-2 transition-all bg-black bg-opacity-80 w-72 max-width-768px-visible max-width-480px-width-full' ref={hamburgerMenuRef}>
+              
               <div className='absolute top-0 z-0 w-full h-full bg-burger-white'></div>
+              
               <li className='z-10 flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={handleScrollToTop}>
               <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>HOME</p>
               </li>
@@ -149,9 +172,12 @@ function App() {
               <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>CONTACT</p>
               </li>
             </ul>
+            {
+            hamburgerIsOpen &&
             <div className='fixed top-0 left-0 w-full h-full backdrop-blur-md' onClick={()=> setHamburgerIsOpen(false)}></div>
+            }
           </div>
-          }
+          
         </div>
         
       </div>

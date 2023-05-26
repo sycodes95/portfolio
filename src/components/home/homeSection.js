@@ -26,14 +26,20 @@ function HomeSection(props) {
         let timing = (index + 1) * 100
         
         setTimeout(()=>{
-          ref.classList.remove('opacity-0')
-          ref.classList.add('opacity-100')
+          if(ref){
+            ref.classList.remove('opacity-0')
+            ref.classList.add('opacity-100')
+          }
+          
           
         }, timing)
 
         setTimeout(()=>{
-          ref.classList.remove('opacity-100')
-          ref.classList.add('opacity-0')
+          if(ref){
+            ref.classList.remove('opacity-100')
+            ref.classList.add('opacity-0')
+          }
+          
           
         }, (timing * 1000) / timing)
       })
@@ -59,7 +65,8 @@ function HomeSection(props) {
           pixels = 0; 
         }
         homeIntroRefs.current.forEach(ref => {
-          ref.style.columnGap = pixels + 'vw'
+          if(ref) ref.style.columnGap = pixels + 'vw'
+          
           
         })
         prevScroll = window.scrollY
@@ -80,14 +87,13 @@ function HomeSection(props) {
       introTextRef.current.classList.add('opacity-100')
     }    
     homeIntroRefs.current && homeIntroRefs.current.forEach(ref => {
-      if(ref.classList.contains('left-1/2')){
+      if(ref){
         ref.classList.remove('left-1/2')
         ref.classList.add('left-0')
-      } 
-      if(ref.classList.contains('right-1/2')){
         ref.classList.remove('right-1/2')
         ref.classList.add('right-0')
       } 
+      
     })
     setTimeout(()=>{
       homeIntroRefs.current && homeIntroRefs.current.forEach(ref => {

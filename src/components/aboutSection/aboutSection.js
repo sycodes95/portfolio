@@ -15,16 +15,13 @@ import whitelight from "../../images/white-light-bit.png"
 
 function AboutSection () {
 
-  const [mobileTab, setMobileTab] = useState({
-    tab: 'SUMMARY',
-    
-  })
-
   const dnaContainerRef = useRef(null)
 
   const dnaRef = useRef(null)
 
   const aboutSectionRef = useRef(null)
+
+  const silhoutteRef = useRef(null)
 
   const toolsElements = [
     {
@@ -79,12 +76,15 @@ function AboutSection () {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          aboutSectionRef.current.classList.add('pb-10')
           aboutSectionRef.current.classList.remove('pt-10')
           aboutSectionRef.current.classList.remove('opacity-0')
           dnaContainerRef.current.classList.add('rotate-180')
           dnaRef.current.classList.remove('opacity-0')
           setTimeout(()=>{
             dnaContainerRef.current.classList.add('border-glow-green')
+            silhoutteRef.current.classList.remove('opacity-0')
+            silhoutteRef.current.classList.add('opacity-40')
           },1000)
           
         } 
@@ -99,12 +99,11 @@ function AboutSection () {
     <div className='relative flex flex-col items-center w-full gap-16 pt-12 width-768px-90pct' >
       <section className="absolute top-0 w-full h-full ">
       </section>
-      <div className="" >
-        <div className="relative z-10 flex justify-center w-full" >
-          
-          {/* <Icon className="text-white transition-all duration-1000 delay-500 rounded-full " 
-          path={mdiHammerWrench} size={2} ref={ref => projectIconRef.current[1] = ref}/> */}
-          
+      <section className="relative flex items-center w-full h-8 mt-4 overflow-visible bg-green-300 bg-opacity-40">
+        <div className="absolute z-10 w-full h-8 -translate-y-1/2 top-1/2 bg-dna-black">
+        </div>
+        <div className="relative z-10 flex justify-center w-full rounded-full" >
+         
           <div className="absolute top-0 z-40 flex">
           <p className="text-6xl font-bold text-green-400">_</p>
             <p className="text-6xl font-bold text-white text-opacity-0 font-white-outline">about</p>
@@ -114,17 +113,15 @@ function AboutSection () {
             <p className="text-5xl font-bold text-white ">about</p>
           </div>
           
-          
-          
         </div> 
-      </div>
+      </section>
 
 
-      <div className="relative flex justify-center w-full max-w-xl pt-10 overflow-visible text-white transition-all duration-1000 opacity-0"
+      <div className="relative flex justify-center w-full max-w-xl pt-10 overflow-visible text-white transition-all duration-1000 opacity-0 "
       ref={aboutSectionRef}>
         
-        <section className="z-40 flex justify-center invert opacity-30">
-          <img className=" w-80" src={silhoutte} alt="silhoutte of man"/>
+        <section className="z-40 flex justify-center transition-all duration-1000 opacity-0 holographic-effect" ref={silhoutteRef}>
+          <img className=" w-80 invert" src={silhoutte} alt="silhoutte of man"/>
         </section>
 
         <section className="absolute flex flex-col w-full gap-4">

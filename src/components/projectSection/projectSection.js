@@ -39,8 +39,9 @@ function ProjectSection () {
         percentage = 0; 
       }
 
-      projectsRepeatRef.current.style.right = percentage + '%'
-      
+      if(projectsRepeatRef.current){
+        projectsRepeatRef.current.style.right = percentage + '%'
+      }
       prevScroll = window.scrollY
       
     }
@@ -54,17 +55,12 @@ function ProjectSection () {
 
   return (
     <div className='relative flex flex-col pb-16 PROJECT-SECTION gap-y-16 '>
-      <section className="absolute top-0 w-full h-full">
-      </section>
+      
       <section className="relative flex items-center h-8 mt-4 overflow-visible bg-green-300 bg-opacity-40">
         <div className="absolute z-10 w-full h-8 -translate-y-1/2 top-1/2 bg-hammer-black">
         </div>
-        
         <div className="relative z-10 flex justify-center w-full rounded-full" >
-          
-          {/* <Icon className="text-white transition-all duration-1000 delay-500 rounded-full " 
-          path={mdiHammerWrench} size={2} ref={ref => projectIconRef.current[1] = ref}/> */}
-          
+         
           <div className="absolute top-0 z-40 flex">
           <p className="text-6xl font-bold text-green-400">_</p>
             <p className="text-6xl font-bold text-white text-opacity-0 font-white-outline">projects</p>
@@ -73,8 +69,6 @@ function ProjectSection () {
           <div className="flex text-white ">
             <p className="text-5xl font-bold text-white ">projects</p>
           </div>
-          
-          
           
         </div> 
       </section>

@@ -42,6 +42,10 @@ function ContactSection () {
           <button className="z-50 flex items-center justify-center w-full h-8 mt-8 transition-colors bg-green-400 bg-opacity-50 rounded-sm hover:bg-opacity-25" type="submit"><Icon path={mdiSendOutline} size={1} /></button>
         </form>
       </section>
+
+      <section>
+        <div className="text-white font-1vw font-family-field-exoplane">Designed and created by me :)</div>
+      </section>
       
     </div>
   )

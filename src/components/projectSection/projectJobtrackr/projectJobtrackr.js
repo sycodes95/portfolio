@@ -52,6 +52,7 @@ function ProjectJobtrackr () {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           projectContainerRef.current.classList.remove('pt-10')
+          projectContainerRef.current.classList.add('pb-10')
           projectContainerRef.current.classList.remove('opacity-0')
           projectTitleRef.current.classList.add('text-glow-white')
           projectCornersRef.current.forEach(ref => {
@@ -72,13 +73,13 @@ function ProjectJobtrackr () {
 
       <div className="relative flex flex-col max-w-xl p-8 overflow-visible text-white width-768px-90pct font-black-outline-light text-md max-width-480px-flex-col">
         <section>
-          <div className="absolute top-0 left-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-t-2 border-l-2" 
+          <div className="absolute top-0 left-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-t border-l" 
           ref={ref => projectCornersRef.current.push(ref)}></div>
-          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-t-2 border-l-2 left-2 top-2"
+          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-t border-l left-2 top-2"
           ref={ref => projectCornersRef.current.push(ref)}></div>
-          <div className="absolute bottom-0 right-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-b-2 border-r-2"
+          <div className="absolute bottom-0 right-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-b border-r"
           ref={ref => projectCornersRef.current.push(ref)}></div>
-          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-b-2 border-r-2 right-2 bottom-2" 
+          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-b border-r right-2 bottom-2" 
           ref={ref => projectCornersRef.current.push(ref)}></div>
         </section>
         <section className="relative flex flex-col h-full gap-4 transition-all duration-700 max-width-480px-width-full whitespace-nowrap gap-x-2"

@@ -13,8 +13,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: black;
-  border: rgb(88, 255, 133) solid 1px;
+  background-color: rgb(1, 255, 128);
   
 }
 
@@ -232,6 +231,13 @@ input:focus, textarea:focus{
   opacity: 0.1;
 }
 
+.bg-dna-black{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/head-black.png');
+  background-repeat: repeat;
+  background-size: 16px;
+  opacity: 0.4;
+}
+
 .bg-head-white{
   background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/head.png');
   background-repeat: repeat;
@@ -259,7 +265,32 @@ input:focus, textarea:focus{
   transition-duration: 2000ms;
 }
 
-/**/
+/* EFFECTS*/
+
+.holographic-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.holographic-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  
+  width: 100%;
+  height: 100%;
+  /* background-image: linear-gradient(to bottom right, #00eaff, #00c3ff, #def33f, #ff6a00, #ff84e6, #fff4f8); */
+  background-image: linear-gradient(to bottom right, #00ff9d, #82deff);
+  mix-blend-mode: screen; /* Adjust the blending mode to achieve desired effect */
+  opacity: 0.2; /* Adjust the opacity to control the holographic intensity */
+  z-index: 1;
+  mask-image: url('/src/images/silhoutte.png'); /* Apply the silhouette mask */
+  mask-repeat: no-repeat;
+  mask-position:top;
+  outline: 1px solid white;
+}
+
+
 
 .res-font{
   font-size: clamp(50px, 8vw, 200px)
