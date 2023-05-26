@@ -83,6 +83,10 @@ function AboutSection () {
           aboutSectionRef.current.classList.remove('opacity-0')
           dnaContainerRef.current.classList.add('rotate-180')
           dnaRef.current.classList.remove('opacity-0')
+          setTimeout(()=>{
+            dnaContainerRef.current.classList.add('border-glow-green')
+          },1000)
+          
         } 
       });
     }, { root : null, threshold : 0.5});
@@ -92,8 +96,9 @@ function AboutSection () {
   }, []);
 
   return (
-    <div className='relative flex flex-col w-full max-w-xl gap-16 pt-12 width-768px-90pct' >
-      
+    <div className='relative flex flex-col items-center w-full gap-16 pt-12 width-768px-90pct' >
+      <section className="absolute top-0 w-full h-full ">
+      </section>
       <div className="" >
         <div className="relative z-10 flex justify-center w-full" >
           
@@ -115,7 +120,7 @@ function AboutSection () {
       </div>
 
 
-      <div className="relative flex justify-center w-full pt-10 overflow-visible text-white transition-all duration-1000 opacity-0"
+      <div className="relative flex justify-center w-full max-w-xl pt-10 overflow-visible text-white transition-all duration-1000 opacity-0"
       ref={aboutSectionRef}>
         
         <section className="z-40 flex justify-center invert opacity-30">

@@ -93,26 +93,30 @@ function App() {
   
     
   return (
-    <div className='relative flex flex-col gap-12 overflow-hidden APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
+    <div className='relative flex flex-col overflow-hidden APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
       
       
-      <div className='fixed z-50 flex items-center justify-between w-full h-20 gap-8 pl-8 pr-8 text-sm transition-all duration-500 -top-1/4 bg-mosaic-half' 
+      <div className='fixed z-50 flex items-center justify-between w-full h-20 gap-8 pl-8 pr-8 text-sm transition-all duration-500 bg-black bg-opacity-80 -top-1/4' 
       ref={navRef}>
+        <div className='absolute top-0 left-0 w-full h-full bg-kevin-repeat'>
+
+        </div>
         <div className='flex items-center justify-center w-12 h-12 text-white border-4 border-green-400 rounded-sm'>
           <p className='text-2xl font-family-field-ocera'>K</p>
         </div>
         <ul className='flex gap-10 p-2 max-width-768px-hidden'>
           <li className='relative flex items-center justify-center gap-2 text-white transition-all cursor-pointer menu hover:text-green-300 whitespace-nowrap'  onClick={handleScrollToTop}>
           <Icon className='absolute text-green-400 text-opacity-25' path={mdiHome} size={2} /> 
-          <p className='z-10 font-family-field-exoplane'>HOME</p>
+          <p className='z-10 text-lg font-family-field-exoplane'>HOME</p>
           </li>
           <li className='relative flex items-center justify-center gap-2 text-white transition-all cursor-pointer menu hover:text-green-400 whitespace-nowrap' onClick={scrollToProjects}>
             
             <Icon className='absolute text-green-400 text-opacity-25' path={mdiHammer} size={2} />
-            <p className='z-10 font-family-field-exoplane '>PROJECTS</p>
+            <p className='z-10 text-lg font-family-field-exoplane '>PROJECTS</p>
           </li>
-          <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToAbout}>
-            <Icon className='text-green-400' path={mdiHead} size={0.6} /> <p>ABOUT</p>
+          <li className='relative flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToAbout}>
+            <Icon className='absolute text-green-400 text-opacity-25' path={mdiHead} size={2} /> 
+            <p className='text-lg font-family-field-exoplane'>ABOUT</p>
           </li>
           <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToContact}>
           <Icon className='text-green-400' path={mdiEmail} size={0.6} /> <p>CONTACT</p>
@@ -124,27 +128,28 @@ function App() {
           </div>
           {
           hamburgerIsOpen &&
-          <div className=''>
-
+          <div className='relative'>
+            
             <ul className='fixed top-0 right-0 z-20 flex-col items-center justify-center hidden h-full gap-8 p-2 bg-black bg-opacity-80 w-80 max-width-768px-visible'>
-              <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={handleScrollToTop}>
+              <div className='absolute top-0 z-0 w-full h-full bg-burger-white'></div>
+              <li className='z-10 flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={handleScrollToTop}>
               <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>HOME</p>
               </li>
-              <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToProjects}>
+              <li className='z-10 flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToProjects}>
                 
                 {/* <Icon className='text-green-400' path={mdiHammer} size={0.6} /> */}
                 <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>PROJECTS</p>
               </li>
-              <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToAbout}>
+              <li className='z-10 flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToAbout}>
                 {/* <Icon className='text-green-400' path={mdiHead} size={0.6} />  */}
                 <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>ABOUT</p>
               </li>
-              <li className='flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToContact}>
+              <li className='z-10 flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToContact}>
               {/* <Icon className='text-green-400' path={mdiEmail} size={0.6} />  */}
               <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>CONTACT</p>
               </li>
             </ul>
-            <div className='fixed top-0 left-0 w-full h-full backdrop-blur-md'></div>
+            <div className='fixed top-0 left-0 w-full h-full backdrop-blur-md' onClick={()=> setHamburgerIsOpen(false)}></div>
           </div>
           }
         </div>

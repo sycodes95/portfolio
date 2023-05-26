@@ -53,9 +53,13 @@ function ProjectSection () {
   },[])
 
   return (
-    <div className='flex flex-col pt-12 PROJECT-SECTION gap-y-16 bg-hammer'>
-
-      <section>
+    <div className='relative flex flex-col pb-16 PROJECT-SECTION gap-y-16 '>
+      <section className="absolute top-0 w-full h-full">
+      </section>
+      <section className="relative flex items-center h-8 mt-4 overflow-visible bg-green-300 bg-opacity-40">
+        <div className="absolute z-10 w-full h-8 -translate-y-1/2 top-1/2 bg-hammer-black">
+        </div>
+        
         <div className="relative z-10 flex justify-center w-full rounded-full" >
           
           {/* <Icon className="text-white transition-all duration-1000 delay-500 rounded-full " 

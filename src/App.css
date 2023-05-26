@@ -65,13 +65,13 @@ input:focus, textarea:focus{
 }
 .home-text-big{
   font-family: Exoplane, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: clamp(2rem, 10vw, 10rem);
+  font-size: clamp(3rem, 10vw, 10rem);
   line-height: 0.8;
 }
 
 .home-text-small{
   font-family: Exoplane, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: clamp(2rem, 5vw, 10rem);
+  font-size: clamp(2.5rem, 5vw, 10rem);
   line-height: 0.8;
 }
 
@@ -117,6 +117,11 @@ input:focus, textarea:focus{
   line-height: 1;
 }
 
+.font-2vw{
+  font-size: clamp(2rem, 2vw, 5rem);
+  line-height: 1;
+}
+
 .font-1vw{
   font-size: clamp(0.75rem, 0.75vw, 1rem);
 }
@@ -141,6 +146,11 @@ input:focus, textarea:focus{
 .border-glow-white{
   box-shadow:rgba(255, 255, 255, 1) 0px 0 2px,
   rgba(255, 255, 255, 0.2) 0px 0 50px ;
+}
+
+.border-glow-green{
+  box-shadow:rgb(0, 255, 115) 0px 0 2px,
+  rgba(2, 255, 150, 0.2) 0px 0 20px ;
 }
 
 .border-glow-white-bright{
@@ -173,6 +183,62 @@ input:focus, textarea:focus{
   backdrop-filter: blur(5px);
 }
 
+.bg-contact-repeat{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/at.png');
+  background-repeat: repeat;
+  background-size: 16px;
+  opacity: 0.1;
+}
+
+.bg-kevin-repeat{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/k.png');
+  background-repeat: repeat;
+  background-size: 16px;
+  opacity: 0.15;
+}
+
+.bg-kevin-repeat-dim{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/k.png');
+  background-repeat: repeat;
+  background-size: 24px;
+  opacity: 0.05;
+}
+
+.bg-hammer-black{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/hammer-black.png');
+  background-repeat: repeat;
+  background-size: 16px;
+  opacity: 0.4;
+}
+
+.bg-hammer-white{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/hammer-white.png');
+  background-repeat: repeat;
+  background-size: 24px;
+  opacity: 0.05;
+}
+
+.bg-burger-white{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/burger.png');
+  background-repeat: repeat;
+  background-size: 16px;
+  opacity: 0.1;
+}
+
+.bg-dna-white{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/dna.png');
+  background-repeat: repeat;
+  background-size: 24px;
+  opacity: 0.1;
+}
+
+.bg-head-white{
+  background: linear-gradient(rgba(0,0,0,0.69), rgba(0,0,0,0.69)), url('/src//icons/head.png');
+  background-repeat: repeat;
+  background-size: 24px;
+  opacity: 0.05;
+}
+
 /* CLIP-PATH */
 
 .left-trap-clip{
@@ -181,6 +247,10 @@ input:focus, textarea:focus{
 
 .right-trap-clip{
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+}
+
+.diamond-clip{
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 /* transition */

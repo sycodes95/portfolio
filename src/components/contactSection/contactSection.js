@@ -9,10 +9,12 @@ function ContactSection () {
   const contactRepeatRef = useRef(null)
 
   return(
-    <div className="flex flex-col items-center w-full p-12 overflow-hidden bg-black bg-opacity-50 gap-y-8" >
-     
-      <section>
-       <p className="text-green-400 text-opacity-0 font-4vw font-family-field-exoplane font-green-outline">CONTACT ME !</p>
+    <div className="relative flex flex-col items-center w-full p-12 overflow-hidden bg-black bg-opacity-50 gap-y-8 " >
+      <section className="absolute top-0 w-full h-full bg-contact-repeat ">
+
+      </section>
+      <section className="">
+       <p className="text-green-400 text-opacity-0 font-2vw font-family-field-ocera font-green-outline">CONTACT ME !</p>
       </section>
         
       <section className="relative flex justify-center p-4 overflow-hidden max-width-768px-overflow-visible" >
@@ -30,7 +32,7 @@ function ContactSection () {
           <input className="hidden " type="text" name="_honey"/>
           <input type="hidden" name="_captcha" value="false"/>
           
-          <label className="flex flex-col w-full text-left font-black-outline-light">Email </label>
+          <label className="flex flex-col w-full text-left font-black-outline-light ">Email </label>
           
           <input className="z-40 w-full p-1 bg-green-400 border border-green-400 rounded-sm bg-opacity-20" type="email" name="email" placeholder="Email..." required/>
 

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import Icon from '@mdi/react';
-import { mdiChevronDown } from '@mdi/js';
+import { mdiChevronDown, mdiArrowDownBoldHexagonOutline } from '@mdi/js';
 import whiteLight from '../../images/white-light-bit.png'
 
 function HomeSection(props) {
@@ -100,11 +100,11 @@ function HomeSection(props) {
   },[])
 
   return (
-    <section className="overflow-visible">
+    <section className="overflow-visible ">
       <div className="relative flex items-center justify-center w-full overflow-visible min-height-100dvh">
        
 
-        <section className="absolute top-0 ">
+        <section className="absolute top-0 w-full h-full ">
           {/* <img className="bg-cover opacity-5" src={whiteLight}/> */}
         </section>
 
@@ -156,12 +156,12 @@ function HomeSection(props) {
         </section>
 
         <section className="absolute bottom-36">
-          <button className="flex flex-col items-center w-full text-white transition-all duration-300 hover:text-gray-400"
+          <button className="flex flex-col items-center w-full text-white transition-all duration-300 hover:text-green-300"
           onClick={scrollToProjects}>
             <div className="flex flex-col justify-center">
-              <Icon className="flex transition-opacity duration-500 opacity-0 h-fit w-2vw" path={mdiChevronDown} ref={ref => arrowRefs.current.push(ref)}/>
-              <Icon className="flex w-full transition-opacity duration-500 opacity-0 w-2vw" path={mdiChevronDown} ref={ref => arrowRefs.current.push(ref)}/>
-              <Icon className="flex w-full transition-opacity duration-500 opacity-0 w-2vw" path={mdiChevronDown} ref={ref => arrowRefs.current.push(ref)}/>
+              <Icon className="flex transition-opacity duration-500 opacity-0 h-fit w-2vw" path={mdiArrowDownBoldHexagonOutline} ref={ref => arrowRefs.current.push(ref)}/>
+              <Icon className="flex w-full transition-opacity duration-500 opacity-0 w-2vw" path={mdiArrowDownBoldHexagonOutline} ref={ref => arrowRefs.current.push(ref)}/>
+              <Icon className="flex w-full transition-opacity duration-500 opacity-0 w-2vw" path={mdiArrowDownBoldHexagonOutline} ref={ref => arrowRefs.current.push(ref)}/>
 
             </div>
             

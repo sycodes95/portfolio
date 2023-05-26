@@ -101,7 +101,7 @@ function ProjectEdgescout () {
             </div> */}
             
           </div>
-          <div id="description" className="flex p-4 text-sm text-right whitespace-pre-wrap bg-black border-r border-green-400 rounded-sm bg-opacity-40">
+          <div id="description" className="flex p-4 text-right whitespace-pre-wrap bg-black border-r border-green-400 rounded-sm font-1vw bg-opacity-40">
             Trading journal app made to help traders track and refine their strategies with data visualization and analysis features.
 
           </div>
