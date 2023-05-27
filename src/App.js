@@ -10,7 +10,8 @@ import {
 mdiHome,
 mdiEmail,
 mdiHammer,
-mdiHead
+mdiHead,
+mdiFileDocumentOutline
 } from '@mdi/js';
 import ProjectSection from './components/projectSection/projectSection';
 import HomeSection from './components/home/homeSection';
@@ -138,7 +139,8 @@ function App() {
           <p className='text-lg font-family-field-exoplane'>CONTACT</p>
           </li>
           <li className='z-10 flex flex-col justify-center text-white'>
-            <a className="flex items-center gap-2 p-1 text-green-400 transition-all duration-300 bg-green-400 border border-green-500 rounded-md bg-opacity-10 hover:bg-opacity-30" href="https://drive.google.com/file/d/1U4K3tvlx0SibXKBSvG4fUq8StlV9MInh/view?usp=sharing" target="_blank">
+            <a className="flex items-center gap-1 p-1 text-green-400 transition-all duration-300 bg-green-400 border border-green-500 rounded-md bg-opacity-10 hover:bg-opacity-30" href="https://drive.google.com/file/d/1U4K3tvlx0SibXKBSvG4fUq8StlV9MInh/view?usp=sharing" target="_blank">
+              <Icon path={mdiFileDocumentOutline} size={0.6}/>
               <p>Resume</p>
             </a>    
             
@@ -170,6 +172,13 @@ function App() {
               <li className='z-10 flex items-center gap-2 text-white transition-all cursor-pointer menu hover:text-white whitespace-nowrap' onClick={scrollToContact}>
               {/* <Icon className='text-green-400' path={mdiEmail} size={0.6} />  */}
               <p className='text-4xl text-black text-opacity-0 font-white-outline font-family-field-exoplane'>CONTACT</p>
+              </li>
+              <li className='z-10 flex flex-col justify-center text-white'>
+                <a className="flex items-center gap-1 p-1 text-white transition-all duration-300 bg-white border border-white rounded-md bg-opacity-10 hover:bg-opacity-30" href="https://drive.google.com/file/d/1U4K3tvlx0SibXKBSvG4fUq8StlV9MInh/view?usp=sharing" target="_blank">
+                  <Icon path={mdiFileDocumentOutline} size={0.6}/>
+                  <p>Resume</p>
+                </a>    
+                
               </li>
             </ul>
             {

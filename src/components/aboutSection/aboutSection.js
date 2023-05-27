@@ -76,7 +76,6 @@ function AboutSection () {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          aboutSectionRef.current.classList.add('pb-10')
           aboutSectionRef.current.classList.remove('pt-10')
           aboutSectionRef.current.classList.remove('opacity-0')
           dnaContainerRef.current.classList.add('rotate-180')
