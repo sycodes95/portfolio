@@ -117,7 +117,7 @@ input:focus, textarea:focus{
 }
 
 .font-2vw{
-  font-size: clamp(2rem, 2vw, 5rem);
+  font-size: clamp(2rem, 3vw, 5rem);
   line-height: 1;
 }
 
@@ -135,6 +135,11 @@ input:focus, textarea:focus{
 .text-glow-white{
   text-shadow:rgba(255, 255, 255, 0) 0px 0 1px,
   rgb(255, 255, 255, 0.3) 0px 0 42px ;
+}
+
+.text-glow-green{
+  text-shadow:rgba(255, 255, 255, 0) 0px 0 1px,
+  rgb(117, 255, 165, 0.3) 0px 0 42px ;
 }
 
 .border-glow-none{

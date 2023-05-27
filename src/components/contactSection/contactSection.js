@@ -14,7 +14,7 @@ function ContactSection () {
 
       </section>
       <section className="">
-       <p className="text-green-400 text-opacity-0 font-2vw font-family-field-ocera font-green-outline">CONTACT ME !</p>
+       <p className="text-green-400 text-opacity-0 text-glow-green font-2vw font-family-field-ocera font-green-outline">CONTACT</p>
       </section>
         
       <section className="relative flex justify-center p-4 overflow-hidden max-width-768px-overflow-visible" >
