@@ -96,7 +96,7 @@ function ProjectSection () {
 
 
         
-      <section className='mt-16 overflow-hidden gap-x-8 max-width-768px-overflow-visible' >
+      <section className='overflow-hidden gap-x-8 max-width-768px-overflow-visible' >
           
         <div className="flex justify-center transition-all duration-1000 delay-200" >
           <ProjectEdgescout/> 
