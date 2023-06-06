@@ -95,7 +95,7 @@ function AboutSection () {
   }, []);
 
   return (
-    <div className='relative flex flex-col items-center w-full gap-16 pt-12 width-768px-90pct' >
+    <div className='relative flex flex-col items-center w-full gap-16 pt-12' >
       <section className="absolute top-0 w-full h-full ">
       </section>
       <section className="relative flex items-center w-full h-8 mt-4 overflow-visible bg-green-300 bg-opacity-40">
@@ -103,20 +103,20 @@ function AboutSection () {
         </div>
         <div className="relative z-10 flex justify-center w-full rounded-full" >
          
-          <div className="absolute top-0 z-40 flex">
+          <div className="top-0 z-40 flex ">
           <p className="text-6xl font-bold text-green-400">_</p>
             <p className="text-6xl font-bold text-white text-opacity-0 font-white-outline">about</p>
             <p className="text-6xl font-bold text-green-400">_</p>
           </div>
-          <div className="flex text-white ">
+          {/* <div className="flex text-white ">
             <p className="text-5xl font-bold text-white ">about</p>
-          </div>
+          </div> */}
           
         </div> 
       </section>
 
 
-      <div className="relative flex justify-center w-full max-w-xl pt-10 overflow-visible text-white transition-all duration-1000 opacity-0 "
+      <div className="relative flex justify-center w-full max-w-xl pt-10 overflow-visible text-white transition-all duration-1000 opacity-0 width-768px-90pct"
       ref={aboutSectionRef}>
         
         <section className="z-40 flex justify-center transition-all duration-1000 opacity-0 holographic-effect" ref={silhoutteRef}>

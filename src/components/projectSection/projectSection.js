@@ -61,14 +61,14 @@ function ProjectSection () {
         </div>
         <div className="relative z-10 flex justify-center w-full rounded-full" >
          
-          <div className="absolute top-0 z-40 flex">
-          <p className="text-6xl font-bold text-green-400">_</p>
+          <div className="top-0 z-40 flex">
+            <p className="text-6xl font-bold text-green-400">_</p>
             <p className="text-6xl font-bold text-white text-opacity-0 font-white-outline">projects</p>
             <p className="text-6xl font-bold text-green-400">_</p>
           </div>
-          <div className="flex text-white ">
+          {/* <div className="flex text-white ">
             <p className="text-5xl font-bold text-white ">projects</p>
-          </div>
+          </div> */}
           
         </div> 
       </section>

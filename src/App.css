@@ -42,7 +42,6 @@ input:focus, textarea:focus{
 .font-white-outline{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
-  
 }
 
 .font-gray-outline{
