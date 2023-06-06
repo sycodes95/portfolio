@@ -25,7 +25,7 @@ function ContactSection () {
           <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r"></div>
 
 
-        <form className="flex flex-col items-center p-2 pb-8 text-white transition-opacity duration-1000 delay-500 CONTACT-FORM gap-y-4 w-96 max-width-768px-width-full rounded-xl" 
+        <form className="flex flex-col items-center p-2 pb-8 text-white transition-opacity duration-1000 delay-500 CONTACT-FORM gap-y-4 w-96 max-width-480px-width-full rounded-xl" 
         target="_blank" action="https://formsubmit.co/123331be8f05163ba4dd9aeadde64f94" method="POST" ref={formContainerRef}
         >
           
