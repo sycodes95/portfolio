@@ -174,7 +174,7 @@ input:focus, textarea:focus{
 }
 
 .bg-mosaic-gradient{
-  background: linear-gradient(rgba(49, 49, 49, 0.2), rgba(49, 49, 49, 0.2)), url(/src/background-images/subtle_carbon.webp);
+  background: url(/src/background-images/subtle_carbon.webp);
 }
 
 .bg-mosaic-half{
