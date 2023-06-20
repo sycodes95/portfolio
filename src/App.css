@@ -63,7 +63,7 @@ input:focus, textarea:focus{
 }
 .home-text-big{
   font-family: Exoplane, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: clamp(3rem, 10vw, 10rem);
+  font-size: clamp(4.2rem, 10vw, 10rem);
   line-height: 0.8;
 }
 

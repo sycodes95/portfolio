@@ -118,7 +118,7 @@ function HomeSection(props) {
 
         <section className="relative flex flex-col items-center w-full h-full pt-32 pb-32 overflow-hidden transition-opacity opacity-0 duration-2000 home-text" ref={introTextRef} >
           
-          <div className="sticky flex transition-all duration-2000 left-1/2 w-fit h-fit home-text-big" ref={ref => homeIntroRefs.current.push(ref)}>
+          <div className="sticky flex transition-all duration-2000 w-fit h-fit home-text-big" ref={ref => homeIntroRefs.current.push(ref)}>
 
             <div className="flex justify-center gap-0 text-white transition-all duration-300 font-white-outline" ref={ref => homeIntroRefs.current.push(ref)}>
               
@@ -138,7 +138,7 @@ function HomeSection(props) {
             </div>
           </div>
 
-          <div id="fullstack" className="sticky flex transition-all duration-2000 right-1/2 w-fit home-text-small max-width-768px-flex-col" ref={ref => homeIntroRefs.current.push(ref)} >
+          <div id="fullstack" className="sticky flex transition-all duration-2000 w-fit home-text-small max-width-768px-flex-col" ref={ref => homeIntroRefs.current.push(ref)} >
             
             <div id="fullstack" className="flex justify-center gap-0 text-white text-opacity-0 transition-all duration-300 font-white-outline"  
             ref={ref => homeIntroRefs.current.push(ref)}>
