@@ -85,7 +85,7 @@ function ProjectJobtrackr () {
         <section className="relative flex flex-col h-full gap-4 transition-all duration-700 max-width-480px-width-full whitespace-nowrap gap-x-2"
          >
           <div className="flex h-full">
-            <p className="flex h-full pl-1 pr-1 text-lg font-bold text-black bg-green-400 rounded-sm top-4 left-4 ">//project_01</p>
+            <p className="flex h-full pl-1 pr-1 text-lg font-bold text-black bg-green-400 rounded-sm top-4 left-4 ">//project_02</p>
           </div>
           <div className="flex flex-col w-full h-full pt-2"> 
             <p className="flex w-full h-full font-bold text-green-400 text-opacity-0 transition-all duration-500 delay-1000 font-4vw font-white-outline font-family-field-exoplane" ref={projectTitleRef}>JOB TRACKR</p>

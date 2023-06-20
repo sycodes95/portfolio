@@ -1,14 +1,10 @@
 
 
 import { useEffect, useRef } from "react";
-import edgescoutproject from "../../../images/edgescoutproject.png"
-import jobtrackrproject from "../../../images/jobtrackrDemo.png"
-import jobtrackr from "../../../images/jobtrackr.png"
-
 import Icon from '@mdi/react';
 import { mdiHammerWrench, mdiWeb, mdiApplicationOutline, mdiDatabaseOutline} from '@mdi/js';
 
-function ProjectEdgescout () {
+function ProjectRlMechanics () {
 
   const projectContainerRef = useRef(null)
 
@@ -19,7 +15,15 @@ function ProjectEdgescout () {
   const toolsElements = [
     {
       jsx: <i class="devicon-react-original text-2xl  fill-current "></i>,
+      name: 'Typescript'
+    },
+    {
+      jsx: <i class="devicon-react-original text-2xl  fill-current "></i>,
       name: 'React'
+    },
+    {
+      jsx: <i class="devicon-react-original text-2xl  fill-current "></i>,
+      name: 'Redux'
     },
     {
       jsx: <i class="devicon-tailwindcss-plain text-2xl  fill-current "></i>,
@@ -29,22 +33,21 @@ function ProjectEdgescout () {
       jsx: <i class="devicon-nodejs-plain text-2xl  fill-current "></i>,
       name: 'Node.Js'
     },
-    
     {
       jsx: <i class="devicon-postgresql-plain-wordmark text-2xl  fill-current "></i>,
-      name: 'MongoDB'
+      name: 'PostgreSQL'
     },
   ]
 
   const handleViewSite = () => {
-    window.open('https://edgescout.up.railway.app/');
+    window.open('https://rlmechanics.up.railway.app/');
   }
 
   const handleViewFrontEnd = () => {
-    window.open('https://github.com/sycodes95/trading-journal');
+    window.open('https://github.com/sycodes95/rl-mechanics');
   }
   const handleViewBackEnd = () => {
-    window.open('https://github.com/sycodes95/trading-journal-api');
+    window.open('https://github.com/sycodes95/rl-mechanics-api');
   }
   
 
@@ -86,12 +89,12 @@ function ProjectEdgescout () {
         <section className="relative flex flex-col h-full gap-4 transition-all duration-700 max-width-480px-width-full whitespace-nowrap gap-x-2"
          >
           <div className="flex justify-end h-full">
-            <p className="flex h-full pl-1 pr-1 text-lg font-bold text-black bg-green-400 rounded-sm top-4 left-4 ">//project_03</p>
+            <p className="flex h-full pl-1 pr-1 text-lg font-bold text-black bg-green-400 rounded-sm top-4 left-4 ">//project_01</p>
           </div>
 
           <div className="flex justify-end w-full h-full pt-2"> 
-            <p className="flex h-full font-bold text-green-400 text-opacity-0 transition-all duration-500 delay-1000 font-4vw font-white-outline font-family-field-exoplane"
-            ref={projectTitleRef}>EDGE SCOUT</p>
+            <p className="flex h-full font-bold text-right text-green-400 text-opacity-0 whitespace-pre-wrap transition-all duration-500 delay-1000 font-4vw font-white-outline font-family-field-exoplane"
+            ref={projectTitleRef}>Rocket League Mechanics</p>
             {/* <div className="flex justify-between p-4 bg-black border-b gap-x-2 bg-opacity-20">
               {
               toolsElements.map(tool => (
@@ -102,8 +105,7 @@ function ProjectEdgescout () {
             
           </div>
           <div id="description" className="flex p-4 text-right whitespace-pre-wrap bg-black border-r border-green-400 rounded-sm font-1vw bg-opacity-40">
-            Trading journal app made to help traders track and refine their strategies with data visualization and analysis features.
-
+            A rocket league mechanic database, where you can browse and learn all of the known mechanics players have come up with since launch of the game!
           </div>
 
           <div className="flex justify-end">
@@ -142,4 +144,4 @@ function ProjectEdgescout () {
     </div>
   )
 }
-export default ProjectEdgescout;
+export default ProjectRlMechanics;

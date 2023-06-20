@@ -13,6 +13,7 @@ import hammersvg from "../../images/hammer-wrench.svg"
 import { ReactSVG } from "react-svg";
 import ProjectJobtrackr from "./projectJobtrackr/projectJobtrackr";
 import ProjectEdgescout from "./projectEdgescout/projectEdgescout";
+import ProjectRlMechanics from "./projectRlMechanics/projectRlMechanics";
 function ProjectSection () {
 
   const projectsRepeat = Array.from({ length: 200 }, () => 'PROJECTS-');
@@ -73,24 +74,19 @@ function ProjectSection () {
         </div> 
       </section>
         
-      {/* <section className="relative flex items-center justify-center transition-all duration-1000 rounded-sm" ref={bannerLineRef}>
-        <div className="absolute right-0 flex items-center overflow-hidden text-4xl font-thin text-gray-300 transition-all duration-300 translate-x-1/2 w-fit text-opacity-60 font-family-field-gothic whitespace-nowrap" ref={projectsRepeatRef}>
-          {
-          projectsRepeat.map((str, index) => (
-            <p key={index}>{str}</p>
-          ))
-          }
-        </div>
-      </section> */}
-      
       <section className='mt-8 overflow-visible gap-x-8 max-width-768px-overflow-visible' >
         
+        <div className="flex justify-center overflow-visible transition-all duration-1000 delay-200 opacity-100 " >
+          <ProjectRlMechanics/> 
+        </div>
+
+      </section>
+      
+      <section className='mt-8 overflow-visible gap-x-8 max-width-768px-overflow-visible' >
         
         <div className="flex justify-center overflow-visible transition-all duration-1000 delay-200 opacity-100 " >
           <ProjectJobtrackr/> 
         </div>
-          
-        
 
       </section>
 
@@ -101,36 +97,8 @@ function ProjectSection () {
         <div className="flex justify-center transition-all duration-1000 delay-200" >
           <ProjectEdgescout/> 
         </div>
-          
 
       </section>
-      
-      
-
-
-      
-      {
-        /*
-        <section className='grid mt-24 shadow-md gap-x-8' ref={projectTwo}>
-        
-          <div className="absolute flex items-center justify-center w-48 h-48 text-center text-white transition-all duration-500 bg-black bg-opacity-25 border-2 border-black SIDE-INFO -left-1/4 text-8xl bg-striped-3 right-corner-clip" ref={projectTwoLeft}>
-            <div className="">02</div>
-          </div>
-
-          <div className="absolute flex items-center justify-center w-48 h-48 text-center text-white transition-all duration-500 bg-black bg-opacity-25 border-2 border-black SIDE-INFO -right-1/4 text-8xl bg-striped-3" ref={projectTwoRight}>
-            <img src={edgescoutPNG}/>
-          </div>
-          <div className="flex justify-center h-auto ">
-            <ProjectOne/> 
-          </div>
-        </section>
-        */
-      }
-
-      
-      
-
-        
 
     </div>
 

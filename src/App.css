@@ -131,10 +131,10 @@ input:focus, textarea:focus{
 }
 
 
-.text-glow-white{
+/* .text-glow-white{
   text-shadow:rgba(255, 255, 255, 0) 0px 0 1px,
   rgb(255, 255, 255, 0.3) 0px 0 42px ;
-}
+} */
 
 .text-glow-green{
   text-shadow:rgba(255, 255, 255, 0) 0px 0 1px,
