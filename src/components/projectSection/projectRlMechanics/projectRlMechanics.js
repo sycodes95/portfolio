@@ -57,7 +57,6 @@ function ProjectRlMechanics () {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           projectContainerRef.current.classList.remove('pt-10')
-          projectContainerRef.current.classList.add('pb-10')
           projectContainerRef.current.classList.remove('opacity-0')
           projectTitleRef.current.classList.add('text-glow-white')
           projectCornersRef.current.forEach(ref => {
@@ -79,11 +78,11 @@ function ProjectRlMechanics () {
         <section>
           <div className="absolute top-0 right-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-t border-r"
           ref={ref => projectCornersRef.current.push(ref)}></div>
-          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-t border-r right-2 top-2"
+          <div className="absolute w-4 h-4 transition-all duration-1000 rotate-180 border-t border-r right-2 top-2"
           ref={ref => projectCornersRef.current.push(ref)}></div>
           <div className="absolute bottom-0 left-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-b border-l"
           ref={ref => projectCornersRef.current.push(ref)}></div>
-          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-b border-l left-2 bottom-2"
+          <div className="absolute w-4 h-4 transition-all duration-1000 rotate-180 border-b border-l left-2 bottom-2"
           ref={ref => projectCornersRef.current.push(ref)}></div>
         </section>
         <section className="relative flex flex-col h-full gap-4 transition-all duration-700 max-width-480px-width-full whitespace-nowrap gap-x-2"
@@ -104,16 +103,15 @@ function ProjectRlMechanics () {
             </div> */}
             
           </div>
-          <div id="description" className="flex p-4 text-right whitespace-pre-wrap bg-black border-r border-green-400 rounded-sm font-1vw bg-opacity-40">
+          <div id="description" className="flex p-4 text-right whitespace-pre-wrap bg-black border-r border-green-400 rounded-lg font-1vw bg-opacity-40">
             A rocket league mechanic database, where you can browse and learn all of the known mechanics players have come up with since launch of the game!
           </div>
 
-          <div className="flex justify-end">
+          <div className="z-20 flex flex-wrap justify-end gap-4">
             {
             toolsElements.map((tool, index) => (
-              <p key={index} className={`text-xs pl-4 
-              ${index !== toolsElements.length - 1 && 'pr-4' }
-              ${index !== toolsElements.length - 1 && 'border-r'}`}>{tool.name}</p>
+              <p key={index} className={`text-xs pt-1 pb-1 pl-2 pr-2 
+              rounded-xl text-green-400 border border-green-400 bg-green-400 bg-opacity-5 hover:bg-opacity-10 transition-all duration-300 cursor-default`}>{tool.name}</p>
             ))
             }
           </div>

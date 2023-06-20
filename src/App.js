@@ -109,18 +109,18 @@ function App() {
   
     
   return (
-    <div className='relative flex flex-col overflow-hidden APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
+    <div className='flex flex-col overflow-hidden APP bg-mosaic-gradient' onLoad={handleScrollToTop}>
       
       
-      <div className='fixed z-50 flex items-center justify-between w-full h-20 gap-8 pl-8 pr-8 text-sm transition-all duration-500 bg-black bg-opacity-80 -top-1/4' 
+      <div className='fixed z-50 flex items-center justify-between w-full h-20 gap-8 pl-8 pr-8 text-sm transition-all duration-500 -top-1/4 ' 
       ref={navRef}>
-        <div className='absolute top-0 left-0 w-full h-full bg-kevin-repeat'>
+        <div className='absolute top-0 left-0 w-full h-full backdrop-blur-md'>
 
         </div>
-        <div className='flex items-center justify-center w-12 h-12 text-white border-4 border-green-400 rounded-sm'>
+        <div className='z-50 flex items-center justify-center w-12 h-12 text-white border-4 border-green-400 rounded-sm'>
           <p className='text-2xl font-family-field-ocera'>K</p>
         </div>
-        <ul className='flex gap-10 p-2 max-width-768px-hidden'>
+        <ul className='flex gap-10 p-2 max-width-768px-hidden '>
           <li className='relative flex items-center justify-center gap-2 text-white transition-all cursor-pointer menu hover:text-green-300 whitespace-nowrap'  onClick={handleScrollToTop}>
           <Icon className='absolute text-green-400 text-opacity-25' path={mdiHome} size={2} /> 
           <p className='z-10 text-lg font-family-field-exoplane'>HOME</p>

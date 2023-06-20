@@ -95,7 +95,7 @@ function AboutSection () {
   }, []);
 
   return (
-    <div className='relative flex flex-col items-center w-full gap-16 pt-12' >
+    <div className='relative flex flex-col items-center w-full gap-16 pt-4' >
       <section className="absolute top-0 w-full h-full ">
       </section>
       <section className="relative flex items-center w-full h-8 mt-4 overflow-visible bg-green-300 bg-opacity-40">
@@ -105,7 +105,7 @@ function AboutSection () {
          
           <div className="top-0 z-40 flex ">
           <p className="text-6xl font-bold text-green-400">_</p>
-            <p className="text-6xl font-bold text-white text-opacity-0 font-white-outline">about</p>
+            <p className="text-6xl text-white font-family-field-exoplane">about</p>
             <p className="text-6xl font-bold text-green-400">_</p>
           </div>
           {/* <div className="flex text-white ">
@@ -127,7 +127,7 @@ function AboutSection () {
 
           <div className="flex justify-between gap-12">
             <div className="relative flex items-center justify-between w-3/4 p-4 text-sm text-white bg-black bg-opacity-30 left-trap-clip"> 
-              <section className="relative flex flex-col justify-center gap-2 p-2 transition-all duration-1000 border-4 border-green-400 rounded-sm"
+              <section className="relative flex flex-col justify-center gap-2 p-2 transition-all duration-1000 border border-green-400 rounded-sm"
               ref={dnaContainerRef}>
                 <Icon className="transition-all duration-1000 delay-1000 opacity-0" path={mdiDna} size={1.6} 
                 ref={dnaRef}/>

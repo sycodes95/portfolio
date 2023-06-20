@@ -55,7 +55,7 @@ function ProjectSection () {
   },[])
 
   return (
-    <div className='relative flex flex-col pb-16 PROJECT-SECTION gap-y-16 '>
+    <div className='relative flex flex-col pt-4 pb-16 PROJECT-SECTION gap-y-16 '>
       
       <section className="relative flex items-center h-8 mt-4 overflow-visible bg-green-300 bg-opacity-40">
         <div className="absolute z-10 w-full h-8 -translate-y-1/2 top-1/2 bg-hammer-black">
@@ -64,7 +64,7 @@ function ProjectSection () {
          
           <div className="top-0 z-40 flex">
             <p className="text-6xl font-bold text-green-400">_</p>
-            <p className="text-6xl font-bold text-white text-opacity-0 font-white-outline">projects</p>
+            <p className="text-6xl text-white font-family-field-exoplane">projects</p>
             <p className="text-6xl font-bold text-green-400">_</p>
           </div>
           {/* <div className="flex text-white ">

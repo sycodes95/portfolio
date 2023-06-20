@@ -75,11 +75,11 @@ function ProjectJobtrackr () {
         <section>
           <div className="absolute top-0 left-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-t border-l" 
           ref={ref => projectCornersRef.current.push(ref)}></div>
-          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-t border-l left-2 top-2"
+          <div className="absolute w-4 h-4 transition-all duration-1000 rotate-180 border-t border-l left-2 top-2"
           ref={ref => projectCornersRef.current.push(ref)}></div>
           <div className="absolute bottom-0 right-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-b border-r"
           ref={ref => projectCornersRef.current.push(ref)}></div>
-          <div className="absolute w-6 h-6 transition-all duration-1000 rotate-180 border-b border-r right-2 bottom-2" 
+          <div className="absolute w-4 h-4 transition-all duration-1000 rotate-180 border-b border-r right-2 bottom-2" 
           ref={ref => projectCornersRef.current.push(ref)}></div>
         </section>
         <section className="relative flex flex-col h-full gap-4 transition-all duration-700 max-width-480px-width-full whitespace-nowrap gap-x-2"
@@ -98,17 +98,16 @@ function ProjectJobtrackr () {
             </div> */}
             
           </div>
-          <div id="description" className="p-4 whitespace-pre-wrap bg-black border-l border-green-400 rounded-sm font-1vw bg-opacity-40">
+          <div id="description" className="flex p-4 text-left whitespace-pre-wrap bg-black border-l border-green-400 rounded-lg font-1vw bg-opacity-40">
             Job application tracker for managing and gaining data driven insights into the users’ job hunting journey. Features
             sorting, filtering, searching, and data visualizations.
           </div>
 
-          <div className="flex">
+          <div className="flex gap-4">
             {
             toolsElements.map((tool, index) => (
-              <p key={index} className={`text-xs pr-4 
-              ${index !== 0 && 'pl-4' }
-              ${index !== toolsElements.length - 1 && 'border-r'}`}>{tool.name}</p>
+              <p key={index} className={`text-xs pt-1 pb-1 pl-2 pr-2 
+              rounded-xl text-green-400 border border-green-400 bg-green-400 bg-opacity-5 hover:bg-opacity-10 transition-all duration-300 cursor-default`}>{tool.name}</p>
             ))
             }
           </div>
