@@ -92,7 +92,7 @@ function ProjectRlMechanics () {
           </div>
 
           <div className="flex justify-end w-full h-full pt-2"> 
-            <p className="flex h-full font-bold text-right text-green-400 text-opacity-0 whitespace-pre-wrap transition-all duration-500 delay-1000 font-4vw font-white-outline font-family-field-exoplane"
+            <p className="flex h-full text-right text-green-400 text-opacity-0 whitespace-pre-wrap transition-all duration-500 delay-1000 font-4vw font-white-outline font-family-field-exoplane"
             ref={projectTitleRef}>Rocket League Mechanics</p>
             {/* <div className="flex justify-between p-4 bg-black border-b gap-x-2 bg-opacity-20">
               {

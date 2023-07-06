@@ -117,11 +117,12 @@ input:focus, textarea:focus{
 
 .font-2vw{
   font-size: clamp(2rem, 3vw, 5rem);
-  line-height: 1;
+  
 }
 
 .font-1vw{
   font-size: clamp(0.75rem, 0.75vw, 1rem);
+  
 }
 
 .w-2vw{

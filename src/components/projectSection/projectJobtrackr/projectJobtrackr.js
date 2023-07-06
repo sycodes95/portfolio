@@ -71,7 +71,7 @@ function ProjectJobtrackr () {
     <div className='flex justify-center pt-10 overflow-visible transition-all duration-1000 opacity-0 h-fit'
     ref={projectContainerRef}>
 
-      <div className="relative flex flex-col max-w-xl p-8 overflow-visible text-white width-768px-90pct font-black-outline-light text-md max-width-480px-flex-col">
+      <div className="relative flex flex-col max-w-xl p-8 overflow-visible text-white transition-all duration-500 rounded-lg width-768px-90pct font-black-outline-light text-md max-width-480px-flex-col">
         <section>
           <div className="absolute top-0 left-0 w-6 h-6 transition-all duration-500 delay-1000 rotate-180 border-t border-l" 
           ref={ref => projectCornersRef.current.push(ref)}></div>
@@ -88,7 +88,7 @@ function ProjectJobtrackr () {
             <p className="flex h-full pl-1 pr-1 text-lg font-bold text-black bg-green-400 rounded-sm top-4 left-4 ">//project_02</p>
           </div>
           <div className="flex flex-col w-full h-full pt-2"> 
-            <p className="flex w-full h-full font-bold text-green-400 text-opacity-0 transition-all duration-500 delay-1000 font-4vw font-white-outline font-family-field-exoplane" ref={projectTitleRef}>JOB TRACKR</p>
+            <p className="flex w-full h-full text-green-400 text-opacity-0 transition-all duration-500 delay-1000 font-4vw font-white-outline font-family-field-exoplane" ref={projectTitleRef}>JOB TRACKR</p>
             {/* <div className="flex justify-between p-4 bg-black border-b gap-x-2 bg-opacity-20">
               {
               toolsElements.map(tool => (
